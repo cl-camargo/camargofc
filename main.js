@@ -243,6 +243,14 @@
         registrar(img, titulo, desc);
       });
 
+      // Fotos das notícias em destaque
+      document.querySelectorAll('.noticia-galeria figure').forEach(function (figure) {
+        const img = figure.querySelector('img');
+        if (!img) return;
+        const legenda = figure.querySelector('figcaption') ? figure.querySelector('figcaption').textContent.trim() : '';
+        registrar(img, img.alt || 'Camargo FC', legenda);
+      });
+
       // Elenco
       document.querySelectorAll('.jogador-card').forEach(function (card) {
         const img = card.querySelector('.jogador-avatar img');
@@ -344,4 +352,3 @@
 
     });
   })();
-

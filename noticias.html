@@ -64,6 +64,26 @@
     line-height: 1.7;
     margin-bottom: 0.75rem;
   }
+  .noticia-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 1rem 0;
+  }
+  .noticia-galeria figure { margin: 0; overflow: hidden; border-radius: 8px; background: #111; }
+  .noticia-galeria img { width: 100%; height: 240px; object-fit: cover; display: block; cursor: zoom-in; transition: transform 0.25s ease; }
+  .noticia-galeria img:hover { transform: scale(1.02); }
+  .noticia-galeria figcaption { padding: 8px 10px; color: #ddd; font-size: 12px; line-height: 1.4; }
+  .noticia-pontos {
+    margin: 1rem 0;
+    padding: 1rem 1.1rem;
+    border-left: 4px solid var(--vermelho, #c0192e);
+    background: #f7f7f7;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  .noticia-pontos strong { color: #111; }
 
   /* ACCORDION NOTÍCIAS */
   .noticias-accordion {
@@ -143,6 +163,8 @@
     .noticia-destaque-titulo { font-size: 1.5rem; }
     .noticias-acc-header { padding: 12px 14px; }
     .noticias-acc-titulo { font-size: 13px; }
+    .noticia-galeria { grid-template-columns: 1fr; }
+    .noticia-galeria img { height: 210px; }
   }
 </style>
 </head>
@@ -175,28 +197,47 @@
     <!-- NOTÍCIA EM DESTAQUE -->
     <div class="noticia-destaque">
       <div class="noticia-destaque-badge">
-        <span class="comp-badge" style="background:#2a2a0a;color:#f1c40f;">🟡 EMPATE</span>
+        <span class="comp-badge" style="background:#2a1010;color:#f05a67;">🤝 ENCONTRO</span>
         <span class="noticia-destaque-label">⭐ Destaque</span>
       </div>
-      <div class="noticia-destaque-titulo">SHOW DE ANDRÉ: 4 GOLS EM JOGO ELETRIZANTE COM O MILENA</div>
-      <p class="noticia-destaque-desc">Em um dos jogos mais emocionantes da temporada, o Camargo FC ficou no 4 × 4 com o MEC – Milena Esporte Clube, no Estádio Pereirão, em partida válida pela 14ª Liga Paraíso de Futebol – 2ª divisão.<br><br>O Camargo abriu o placar logo aos 13 min do 1º tempo, com André, mas viu o Milena crescer no jogo e virar para 1 × 3 ainda na etapa inicial.<br><br>No 2º tempo, a equipe apresentou uma reação impressionante: André, em grande fase, marcou mais três vezes — aos 11, 23 e 30 minutos — e vibrou junto com a torcida do Pereirão, o quarto gol dele na partida, virando o placar para 4 × 3. Empolgado com a virada, o Camargo seguiu em busca do quinto gol, mas acabou sofrendo o empate do Milena já nos minutos finais, fechando a partida em 4 × 4.<br><br>Apesar do resultado, a atuação de André, autor dos quatro gols do Camargo, e a reação da equipe no segundo tempo foram os grandes destaques da tarde. 🟢⚽</p>
-      <div class="comp-info" style="margin-bottom:0.6rem;"><span>📅 28/jun/2026</span><span>⚽ Estádio Pereirão</span></div>
-      <div style="font-size:12px;color:#555;border-top:1px solid #eee;padding-top:0.5rem;margin-bottom:0.75rem;">
-        <strong style="color:#111;display:block;margin-bottom:4px;">⚽ Gols Camargo FC</strong>
-        André 13' (1T) &nbsp;·&nbsp; André 11' (2T) &nbsp;·&nbsp; André 23' (2T) &nbsp;·&nbsp; André 30' (2T)
+      <div class="noticia-destaque-titulo">CAMARGO FC PARTICIPA DE ENCONTRO COM DIRIGENTES NO GABINETE DO PREFEITO</div>
+      <p class="noticia-destaque-desc">Na manhã de 9 de setembro, dirigentes das equipes que disputam as três divisões do futebol municipal e a categoria Master participaram de um café da manhã no gabinete do prefeito Celso Morais. O Camargo FC foi representado pelo atleta <strong>Ariostocly</strong>.<br><br>O encontro reuniu o prefeito Celso Morais, o vice-prefeito Ubiratan Carvalho, o secretário municipal de Esportes Josué Lobo e representantes dos clubes. Ao final da reunião, cada dirigente recebeu uma bola destinada à equipe que representava.</p>
+      <div class="noticia-pontos">
+        <strong>Fortalecimento do futebol local.</strong> Celso Morais defendeu a formação de equipes mais sólidas, organizadas e identificadas com Paraíso do Tocantins. O prefeito destacou que a valorização dos atletas da cidade deve reduzir a dependência de jogadores de fora e ajudar os clubes locais a chegarem mais competitivos a torneios como o Copão.<br><br>
+        <strong>Apoio e diálogo com os clubes.</strong> Josué Lobo ressaltou o trabalho da Secretaria de Esportes e a importância de manter a gestão próxima aos dirigentes, ouvindo críticas e apoiando a realização das competições amadoras do município.<br><br>
+        <strong>Identidade das equipes.</strong> Denys Kerson chamou atenção para a necessidade de preservar o trabalho e a identidade de cada clube. Sua participação reforçou que a união do futebol local deve caminhar junto com planejamento, elenco próprio e continuidade das equipes.
       </div>
-      <div style="font-size:12px;color:#555;border-top:1px solid #eee;padding-top:0.5rem;margin-bottom:0.75rem;">
-        <strong style="color:#111;display:block;margin-bottom:4px;">🟢 Escalação do Camargo</strong>
-        12 - Lucas Cauã (GOL) &nbsp;·&nbsp; 13 - Michael Davi (LD) &nbsp;·&nbsp; 4- Daniel (ZG) &nbsp;·&nbsp; 14 - David Novaes (ZG) &nbsp;·&nbsp; 7 - Fabiano (LE) &nbsp;·&nbsp; 5 - João Marcelo (VOL) &nbsp;·&nbsp; 10 - Chico (MLG) &nbsp;·&nbsp; 11 - Ariostocly (Meia) &nbsp;·&nbsp; 18 - João Marçal (PTE) &nbsp;·&nbsp; 17 - Yokida (PTD) &nbsp;·&nbsp; 9 - André (CA)
-        <br><br>
-        <strong style="color:#111;display:block;margin-bottom:4px;">🔄 Entraram no 2º tempo</strong>
-        19 - Janio (ZAG) &nbsp;·&nbsp; 8 - Caio (Meia) &nbsp;·&nbsp; 15 - Carlos Henrique (MAT)
+      <div class="noticia-galeria" aria-label="Fotos do encontro no gabinete do prefeito">
+        <figure><img src="Entrega_bola.jpeg" alt="Bolas entregues aos representantes das equipes"><figcaption>Bolas entregues às equipes participantes das competições municipais.</figcaption></figure>
+        <figure><img src="Entrega_bola2.jpeg" alt="Representantes durante a entrega das bolas"><figcaption>Autoridades e representantes durante a entrega simbólica.</figcaption></figure>
+        <figure><img src="Entrega_bola3.jpeg" alt="Dirigentes reunidos no gabinete do prefeito Celso Morais"><figcaption>O encontro reuniu dirigentes das três divisões e da categoria Master.</figcaption></figure>
+        <figure><img src="Entrega_bola4.jpeg" alt="Ariostocly representando o Camargo FC na reunião"><figcaption>Ariostocly representou o Camargo FC no encontro.</figcaption></figure>
       </div>
-      <button class="comp-share-btn" onclick="compartilharNoticia(this, 'SHOW DE ANDRÉ: 4 GOLS EM JOGO ELETRIZANTE COM O MILENA')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Compartilhar</button>
+      <div class="comp-info" style="margin-bottom:0.6rem;"><span>📅 09/set/2026 · 7h30</span><span>📍 Gabinete do prefeito Celso Morais</span></div>
+      <button class="comp-share-btn" onclick="compartilharNoticia(this, 'Camargo FC participa de encontro com dirigentes no gabinete do prefeito')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Compartilhar</button>
     </div>
 
     <!-- DEMAIS NOTÍCIAS (ACCORDION) -->
     <div class="noticias-accordion">
+
+      <!-- Item anterior em destaque -->
+      <div class="noticias-acc-item">
+        <button class="noticias-acc-header" onclick="toggleNoticia(this)">
+          <div class="noticias-acc-esq">
+            <span class="comp-badge" style="background:#2a2a0a;color:#f1c40f;margin-right:8px;">🟡 EMPATE</span>
+            <span class="noticias-acc-titulo">Show de André: 4 gols em jogo eletrizante com o Milena</span>
+          </div>
+          <div class="noticias-acc-dir">
+            <span class="noticias-acc-data">28/jun/2026</span>
+            <span class="noticias-acc-arrow">▼</span>
+          </div>
+        </button>
+        <div class="noticias-acc-body">
+          <p class="comp-desc">Em um dos jogos mais emocionantes da temporada, o Camargo FC ficou no <strong>4 × 4</strong> com o MEC – Milena Esporte Clube, no Estádio Pereirão, em partida válida pela 14ª Liga Paraíso de Futebol – 2ª divisão. André marcou os quatro gols do Camargo e comandou a reação da equipe no segundo tempo.</p>
+          <div class="comp-info" style="margin-bottom:0.75rem;"><span>📅 28/jun/2026</span><span>⚽ Estádio Pereirão</span></div>
+          <button class="comp-share-btn" onclick="compartilharNoticia(this, 'Show de André: 4 gols em jogo eletrizante com o Milena')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Compartilhar</button>
+        </div>
+      </div>
 
       <!-- Item 0 -->
       <div class="noticias-acc-item">
