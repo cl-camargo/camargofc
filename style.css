@@ -47,7 +47,7 @@
     font-size: 20px; color: var(--branco); letter-spacing: 1px;
     line-height: 1.1;
   }
-  .nav-nome span { color: var(--vermelho); display: block; font-size: 11px; letter-spacing: 3px; font-family: 'Inter', sans-serif; font-weight: 500; }
+  .nav-nome span { color: var(--vermelho); display: block; font-size: 12px; letter-spacing: 3px; font-family: 'Inter', sans-serif; font-weight: 500; }
 
   .nav-links { display: flex; gap: 0; }
   .nav-links a {
@@ -71,12 +71,12 @@
   }
   .nav-proximo-jogo:hover { border-color: var(--vermelho); }
   .nav-pj-label {
-    font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
     text-transform: uppercase; color: var(--vermelho); line-height: 1;
     margin-bottom: 3px;
   }
   .nav-pj-info {
-    font-size: 11px; color: rgba(255,255,255,0.75); white-space: nowrap;
+    font-size: 12px; color: rgba(255,255,255,0.75); white-space: nowrap;
     line-height: 1;
   }
   .nav-pj-info em { font-style: normal; color: rgba(255,255,255,0.4); margin: 0 2px; }
@@ -92,7 +92,7 @@
 
   .section-header { text-align: center; margin-bottom: 3.5rem; }
   .section-eyebrow {
-    font-size: 11px; font-weight: 600; letter-spacing: 4px;
+    font-size: 12px; font-weight: 600; letter-spacing: 4px;
     text-transform: uppercase; color: var(--vermelho);
     margin-bottom: 0.5rem;
   }
@@ -145,7 +145,7 @@
   .timeline-sub::before {
     content: '▸';
     color: var(--vermelho);
-    font-size: 11px;
+    font-size: 12px;
     flex-shrink: 0;
     margin-top: 1px;
   }
@@ -204,7 +204,7 @@
     display: inline-block;
     background: var(--preto);
     color: white;
-    font-size: 11px; font-weight: 600;
+    font-size: 12px; font-weight: 600;
     letter-spacing: 2px; text-transform: uppercase;
     padding: 3px 10px; margin-bottom: 1rem;
   }
@@ -304,14 +304,14 @@
   }
 
   .jogador-numero {
-    font-size: 11px; color: #999; line-height: 1;
+    font-size: 12px; color: #999; line-height: 1;
     margin-bottom: 0.3rem; letter-spacing: 1px; text-transform: uppercase;
   }
   .jogador-nome { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--preto); letter-spacing: 1px; line-height: 1.1; margin-bottom: 0.2rem; }
-  .jogador-posicao { font-size: 11px; color: #888; letter-spacing: 1px; text-transform: uppercase; }
+  .jogador-posicao { font-size: 12px; color: #888; letter-spacing: 1px; text-transform: uppercase; }
   .jogador-posicao-badge {
     display: inline-block; margin-top: 0.5rem;
-    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
     padding: 2px 8px;
     background: var(--preto); color: white;
   }
@@ -322,7 +322,7 @@
     margin: 3rem 0 1.5rem;
   }
   .comissao-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    font-size: 12px; font-weight: 700; letter-spacing: 3px;
     text-transform: uppercase; color: var(--vermelho);
     white-space: nowrap;
   }
@@ -363,7 +363,7 @@
   }
 
   .comissao-cargo {
-    font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
     text-transform: uppercase; color: var(--vermelho);
     margin-bottom: 0.2rem; line-height: 1;
   }
@@ -372,10 +372,10 @@
     font-size: 20px; color: var(--branco);
     letter-spacing: 1px; line-height: 1.1; margin-bottom: 0.2rem;
   }
-  .comissao-idade { font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 1px; }
+  .comissao-idade { font-size: 12px; color: rgba(255,255,255,0.35); letter-spacing: 1px; }
   .comissao-badge {
     display: inline-block; margin-top: 0.5rem;
-    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
     padding: 2px 8px;
     background: rgba(192,25,46,0.2); color: var(--vermelho);
     border: 1px solid rgba(192,25,46,0.35);
@@ -412,7 +412,7 @@
   }
   .patro-instagram {
     display: inline-flex; align-items: center; gap: 5px;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.3px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.3px;
     color: var(--vermelho);
     text-decoration: none;
     padding: 4px 10px;
@@ -551,7 +551,7 @@
     .hero-content { flex-direction: column; text-align: center; gap: 1.25rem; }
     .hero-escudo { width: 100px; }
     .hero h1 { font-size: 40px; }
-    .hero-sub { font-size: 11px; letter-spacing: 3px; }
+    .hero-sub { font-size: 12px; letter-spacing: 3px; }
     .hero-stats { justify-content: center; flex-wrap: wrap; gap: 1rem; }
     .hero-stat { min-width: 70px; }
     .hero-stat-num { font-size: 34px; }
@@ -561,7 +561,7 @@
     section { padding: 2.5rem 1.25rem; }
     .container { padding: 0; }
     .section-title { font-size: 30px; }
-    .section-eyebrow { font-size: 10px; }
+    .section-eyebrow { font-size: 12px; }
 
     /* — HISTÓRIA — */
     .historia-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -587,44 +587,44 @@
 
     /* — ELENCO — */
     .elenco-filtros { flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
-    .filtro-btn { font-size: 11px; padding: 7px 11px; }
+    .filtro-btn { font-size: 12px; padding: 7px 11px; }
     .elenco-grid { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
     .jogador-card { padding: 0.85rem 0.5rem; }
     .jogador-avatar { width: 56px; height: 74px; font-size: 14px; }
     .jogador-nome { font-size: 13px; }
-    .jogador-posicao { font-size: 10px; }
-    .jogador-numero { font-size: 9px; }
-    .jogador-posicao-badge { font-size: 9px; padding: 2px 5px; margin-top: 3px; }
+    .jogador-posicao { font-size: 12px; }
+    .jogador-numero { font-size: 12px; }
+    .jogador-posicao-badge { font-size: 12px; padding: 2px 5px; margin-top: 3px; }
     .comissao-grid { grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
     .comissao-card { padding: 0.85rem 0.5rem; }
     .comissao-avatar { width: 56px; height: 74px; }
     .comissao-avatar-placeholder { font-size: 26px; }
     .comissao-nome { font-size: 15px; }
-    .comissao-cargo { font-size: 9px; }
-    .comissao-idade { font-size: 9px; }
+    .comissao-cargo { font-size: 12px; }
+    .comissao-idade { font-size: 12px; }
     .comissao-header { margin: 2rem 0 1rem; }
 
     /* — AGENDA — */
     .agenda-jogo { padding: 0.9rem 1rem; }
-    .agenda-time-escudo { width: 44px; height: 44px; font-size: 11px; }
-    .agenda-time-nome { font-size: 11px; }
+    .agenda-time-escudo { width: 44px; height: 44px; font-size: 12px; }
+    .agenda-time-nome { font-size: 12px; }
     .agenda-vs { font-size: 22px; }
     .agenda-placar-final { font-size: 28px; }
-    .agenda-jogo-meta { gap: 0.4rem; font-size: 11px; }
-    .agenda-gols { font-size: 11px; }
+    .agenda-jogo-meta { gap: 0.4rem; font-size: 12px; }
+    .agenda-gols { font-size: 12px; }
 
     /* — JOGOS — */
     .jogos-tabs { flex-wrap: wrap; gap: 0; }
-    .jogos-tab { font-size: 11px; padding: 9px 10px; }
+    .jogos-tab { font-size: 12px; padding: 9px 10px; }
     .jogos-filtros { flex-direction: column; gap: 0.75rem; }
     .jogos-search-wrap { min-width: unset; width: 100%; }
     .jogos-result-filters { justify-content: flex-start; }
-    .res-btn { font-size: 11px; padding: 7px 10px; }
+    .res-btn { font-size: 12px; padding: 7px 10px; }
     .jstat-num { font-size: 22px; }
-    .jstat-label { font-size: 9px; }
+    .jstat-label { font-size: 12px; }
     .td-tipo, .td-local { display: none; }
     .jogos-tabela { font-size: 12px; }
-    .jogos-tabela thead th { padding: 8px 8px; font-size: 9px; }
+    .jogos-tabela thead th { padding: 8px 8px; font-size: 12px; }
     .jogos-tabela td { padding: 8px 8px; }
     .placar-badge { font-size: 14px; padding: 3px 7px; }
 
@@ -633,7 +633,7 @@
     .galeria-tab { font-size: 12px; padding: 9px 12px; }
     .galeria-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
     .galeria-card-titulo { font-size: 14px; }
-    .galeria-card-desc { font-size: 11px; }
+    .galeria-card-desc { font-size: 12px; }
 
     /* — LIGHTBOX mobile — */
     #lb-prev { left: 4px; padding: 10px 12px; font-size: 22px; }
@@ -641,7 +641,7 @@
     #lb-fechar { top: 12px; right: 12px; font-size: 26px; }
     #lb-img { max-height: 70vh; }
     #lb-legenda { font-size: 16px; margin-top: 0.6rem; }
-    #lb-sub { font-size: 11px; }
+    #lb-sub { font-size: 12px; }
 
     /* — TIMELINE — */
     .timeline { padding-left: 0.75rem; }
@@ -750,7 +750,7 @@
     font-size: 28px; color: var(--branco); display: block; line-height: 1;
   }
   .jstat-label {
-    font-size: 10px; color: #666; text-transform: uppercase;
+    font-size: 12px; color: #666; text-transform: uppercase;
     letter-spacing: 1px; font-weight: 600;
   }
 
@@ -761,7 +761,7 @@
   }
   .jogos-tabela thead th {
     background: #1c1c1c; color: #888;
-    font-size: 10px; font-weight: 700;
+    font-size: 12px; font-weight: 700;
     letter-spacing: 1.5px; text-transform: uppercase;
     padding: 10px 12px; text-align: left;
     border-bottom: 1px solid #2a2a2a;
@@ -777,13 +777,13 @@
     padding: 9px 12px; color: rgba(255,255,255,0.75);
     vertical-align: middle;
   }
-  .td-num { color: #444; font-size: 11px; width: 36px; }
+  .td-num { color: #444; font-size: 12px; width: 36px; }
   .td-data { white-space: nowrap; color: #666; font-size: 12px; width: 90px; }
   .td-adv { font-weight: 600; color: var(--branco); }
   .td-placar { width: 80px; text-align: center; }
   .td-res { width: 60px; text-align: center; }
   .td-tipo { font-size: 12px; color: #777; }
-  .td-local { font-size: 11px; color: #555; white-space: nowrap; }
+  .td-local { font-size: 12px; color: #555; white-space: nowrap; }
 
   .placar-badge {
     display: inline-block; padding: 4px 10px;
@@ -798,7 +798,7 @@
 
   .res-pill {
     display: inline-block; padding: 2px 8px;
-    font-size: 10px; font-weight: 800;
+    font-size: 12px; font-weight: 800;
     letter-spacing: 1px;
     background: #2a2a2a; color: #777;
   }
@@ -812,7 +812,7 @@
   .agenda-grupo { margin-bottom: 2.5rem; }
 
   .agenda-competicao {
-    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; color: var(--vermelho);
     margin-bottom: 1rem; padding-bottom: 0.4rem;
     border-bottom: 2px solid rgba(192,25,46,0.2);
@@ -836,7 +836,7 @@
     background: transparent;
     border: 1.5px solid #ddd;
     color: #888;
-    font-size: 11px; font-weight: 600;
+    font-size: 12px; font-weight: 600;
     letter-spacing: 0.3px;
     padding: 5px 10px;
     border-radius: 20px;
@@ -910,14 +910,14 @@
   .agenda-badge-proximo {
     display: inline-block;
     background: var(--vermelho); color: white;
-    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
     padding: 2px 8px; margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
   .agenda-badge-encerrado {
     display: inline-block;
     background: #1a3a1a; color: #2ecc71;
-    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
     padding: 2px 8px; margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
@@ -951,7 +951,7 @@
   .agenda-escalacao[open] summary::before { transform: rotate(90deg); }
   .escalacao-bloco { margin-top: 0.7rem; }
   .escalacao-bloco-titulo {
-    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
     text-transform: uppercase; color: #999; margin-bottom: 0.4rem;
   }
   .escalacao-lista {
@@ -969,7 +969,7 @@
   .escalacao-sub-item { font-size: 12px; color: #777; display: flex; align-items: baseline; gap: 3px; flex-wrap: wrap; }
   .escalacao-sub-item .escalacao-num { color: #bbb; }
   .escalacao-seta-saida, .escalacao-seta-entrada {
-    font-weight: 700; margin: 0 3px 0 8px; font-size: 11px;
+    font-weight: 700; margin: 0 3px 0 8px; font-size: 12px;
   }
   .escalacao-sub-item .escalacao-seta-saida:first-child { margin-left: 0; }
   .escalacao-seta-saida { color: #e74c3c; }
@@ -1203,7 +1203,7 @@
   .hero h1 span { color: var(--vermelho); display: block; }
 
   .hero-sub {
-    font-size: 10px; font-weight: 600;
+    font-size: 12px; font-weight: 600;
     color: rgba(255,255,255,0.5);
     letter-spacing: 3px; text-transform: uppercase;
     margin-bottom: 0.75rem;
@@ -1216,7 +1216,7 @@
   }
   .hero-stat { text-align: center; min-width: 54px; }
   .hero-stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--vermelho); line-height: 1; }
-  .hero-stat-label { font-size: 8px; color: rgba(255,255,255,0.45); letter-spacing: 1px; text-transform: uppercase; font-weight: 500; }
+  .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.58); letter-spacing: 1px; text-transform: uppercase; font-weight: 500; }
 
   .hero-btn {
     display: inline-block;
@@ -1224,7 +1224,7 @@
     background: var(--vermelho);
     color: var(--branco);
     text-decoration: none;
-    font-weight: 700; font-size: 11px;
+    font-weight: 700; font-size: 12px;
     letter-spacing: 2px; text-transform: uppercase;
     transition: background 0.2s, transform 0.1s;
   }
@@ -1330,7 +1330,7 @@
   .carousel-dot.ativo { background: var(--vermelho); transform: scale(1.3); }
 
   .carousel-contador {
-    font-size: 11px; color: rgba(255,255,255,0.4);
+    font-size: 12px; color: rgba(255,255,255,0.4);
     letter-spacing: 1px; margin-left: auto;
   }
 
@@ -1384,7 +1384,7 @@
     font-size: 12px;
   }
   .jogos-acc-badge {
-    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
     padding: 2px 8px;
     background: #2a2a2a; color: #666;
   }
@@ -1434,4 +1434,47 @@
 @media (min-width: 769px) {
   .nav-hamburger { display: none; }
   .nav-drawer { display: none; }
+}
+
+/* ===== ACESSIBILIDADE E FOCO ===== */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 99999;
+  padding: 10px 14px;
+  color: #fff;
+  background: #111;
+  border: 2px solid var(--vermelho);
+  transform: translateY(-150%);
+}
+.skip-link:focus { transform: translateY(0); }
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid #f1c40f;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* ===== ÚLTIMA NOTÍCIA NA HOME ===== */
+.home-news { padding: 3.5rem 0; background: #f4f4f4; }
+.home-news-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  overflow: hidden;
+  background: #fff;
+  border-left: 5px solid var(--vermelho);
+  box-shadow: 0 12px 32px rgba(0,0,0,.09);
+}
+.home-news-card img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+.home-news-content { display: flex; flex-direction: column; justify-content: center; padding: 2.25rem; }
+.home-news-content h2 { margin: .35rem 0 1rem; color: #111; font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1; letter-spacing: 1px; }
+.home-news-content p:not(.section-eyebrow) { margin-bottom: 1.4rem; color: #555; font-size: 16px; line-height: 1.7; }
+.home-news-content .hero-btn { align-self: flex-start; }
+@media (max-width: 768px) {
+  .home-news { padding: 2rem 0; }
+  .home-news-card { grid-template-columns: 1fr; }
+  .home-news-card img { min-height: 220px; max-height: 300px; }
+  .home-news-content { padding: 1.4rem; }
 }

@@ -3,33 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fotos, títulos, atletas marcantes, jogos e bastidores da história do Camargo Futebol Clube.">
+<link rel="canonical" href="https://cl-camargo.github.io/camargofc/galeria.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Galeria · Camargo Futebol Clube">
+<meta property="og:description" content="Fotos, títulos, atletas marcantes, jogos e bastidores da história do Camargo Futebol Clube.">
+<meta property="og:url" content="https://cl-camargo.github.io/camargofc/galeria.html">
+<meta property="og:image" content="https://cl-camargo.github.io/camargofc/Campeao2022.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Galeria · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- LIGHTBOX -->
 <div id="lightbox">
-  <button id="lb-fechar">✕</button>
+  <button id="lb-fechar" aria-label="Fechar imagem">✕</button>
   <div id="lb-contador"></div>
-  <button id="lb-prev">&#8249;</button>
+  <button id="lb-prev" aria-label="Imagem anterior">&#8249;</button>
   <div id="lb-img-wrap">
-    <img id="lb-img" src="" alt="">
+    <img id="lb-img" src="" alt="" decoding="async">
   </div>
-  <button id="lb-next">&#8250;</button>
+  <button id="lb-next" aria-label="Próxima imagem">&#8250;</button>
   <div id="lb-legenda"><span id="lb-sub"></span></div>
 </div>
 
 <div id="site-menu"></div>
 <div style="height:60px;"></div>
+<main id="conteudo">
 
 <!-- GALERIA -->
 <section id="galeria">
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">Fotos & Memórias</p>
-      <h2 class="section-title">Galeria</h2>
+      <h1 class="section-title">Galeria</h1>
       <div class="section-divider"></div>
     </div>
 
@@ -45,7 +56,7 @@
       <div class="galeria-grid">
         <div class="galeria-card">
           <div class="galeria-card-img">
-            <img src="Time2022.jpg" alt="Time 2022">
+            <img src="Time2022-jpg.webp" alt="Time 2022" decoding="async" width="1600" height="1200" loading="lazy">
           </div>
           <div class="galeria-card-info">
             <div class="galeria-card-titulo">Time Campeão de 2022</div>
@@ -53,7 +64,7 @@
         </div>
         <div class="galeria-card">
           <div class="galeria-card-img">
-            <img src="Campeao2022.jpg" alt="Campeão 2022">
+            <img src="Campeao2022-jpg.webp" alt="Campeão 2022" decoding="async" width="1600" height="1200" loading="lazy">
           </div>
           <div class="galeria-card-info">
             <div class="galeria-card-titulo">Campeão Liga Paraíso de Futebol - 2ª Divisão (2022)</div>
@@ -61,10 +72,10 @@
         </div>
         <div class="galeria-card">
           <div class="galeria-card-img">
-            <img src="CampeaoNG.jpeg" alt="Campeão NG">
+            <img src="CampeaoNG-jpeg.webp" alt="Campeão NG" decoding="async" width="1075" height="1200" loading="lazy">
           </div>
           <div class="galeria-card-info">
-            <div class="galeria-card-titulo">Campeão Tornieo Nova Geração (2023)</div>
+            <div class="galeria-card-titulo">Campeão Torneio Nova Geração (2023)</div>
           </div>
         </div>
       </div>
@@ -74,7 +85,7 @@
       <div class="galeria-grid">
         <div class="galeria-card">
           <div class="galeria-card-img portrait">
-            <img src="Chico.jpg" alt="Chico – Volante / Meia">
+            <img src="Chico-jpg.webp" alt="Chico – Volante / Meia" decoding="async" width="1600" height="1547" loading="lazy">
           </div>
           <div class="galeria-card-info">
             <div class="galeria-card-titulo">João Vitor 'Chico'</div>
@@ -83,7 +94,7 @@
         </div>
         <div class="galeria-card">
           <div class="galeria-card-img portrait">
-            <img src="Kiley.jpg" alt="Kiley – Lateral / Meia">
+            <img src="Kiley-jpg.webp" alt="Kiley – Lateral / Meia" decoding="async" width="524" height="655" loading="lazy">
           </div>
           <div class="galeria-card-info">
             <div class="galeria-card-titulo">Kiley</div>
@@ -125,9 +136,11 @@
 </section>
 
 
+</main>
+
 <!-- FOOTER -->
 <footer>
-  <img class="footer-escudo" src="LOGOSITE.png" alt="Escudo Camargo FC">
+  <img class="footer-escudo" src="LOGOSITE-png.webp" alt="Escudo Camargo FC" decoding="async" width="989" height="1600">
   <div class="footer-logo">Camargo Futebol Clube</div>
   <p>Fundado em 2015 · Unidos pela família, fortalecidos pelo futebol</p>
   <p style="margin-top:0.25rem; font-size: 12px; opacity: 0.4;">© 2026 Camargo FC · Todos os direitos reservados</p>
@@ -146,15 +159,15 @@
     </a>
   </div>
 
-  
+
   <div class="footer-patro">
     <div class="footer-patro-title">Patrocinadores e Apoio</div>
     <!-- ALTERE APENAS O NOME DAS IMAGENS ABAIXO -->
     <div class="footer-patro-grid">
-      <img src="VIP.png" alt="Patrocinador 1">
-      <img src="VIBER.png" alt="Patrocinador 2">
-      <img src="SOUZA.png" alt="Patrocinador 3">
-      <img src="Bambam.png" alt="Patrocinador 4">
+      <img src="VIP-png.webp" alt="Patrocinador 1" decoding="async" width="1064" height="1064" loading="lazy">
+      <img src="VIBER-png.webp" alt="Patrocinador 2" decoding="async" width="1600" height="1023" loading="lazy">
+      <img src="SOUZA-png.webp" alt="Patrocinador 3" decoding="async" width="1076" height="603" loading="lazy">
+      <img src="Bambam-png.webp" alt="Patrocinador 4" decoding="async" width="1333" height="1600" loading="lazy">
     </div>
   </div>
 

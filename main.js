@@ -52,11 +52,12 @@
     var isAberto = body.classList.contains('aberto');
 
     // Fecha todos
-    document.querySelectorAll('.jogos-acc-header').forEach(function(h) { h.classList.remove('aberto'); });
+    document.querySelectorAll('.jogos-acc-header').forEach(function(h) { h.classList.remove('aberto'); h.setAttribute('aria-expanded', 'false'); });
     document.querySelectorAll('.jogos-acc-body').forEach(function(b) { b.classList.remove('aberto'); });
 
     if (!isAberto) {
       btn.classList.add('aberto');
+      btn.setAttribute('aria-expanded', 'true');
       body.classList.add('aberto');
     }
   }

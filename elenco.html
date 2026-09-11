@@ -3,33 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Conheça o elenco atual, a comissão técnica e os atletas do Camargo Futebol Clube.">
+<link rel="canonical" href="https://cl-camargo.github.io/camargofc/elenco.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elenco · Camargo Futebol Clube">
+<meta property="og:description" content="Conheça o elenco atual, a comissão técnica e os atletas do Camargo Futebol Clube.">
+<meta property="og:url" content="https://cl-camargo.github.io/camargofc/elenco.html">
+<meta property="og:image" content="https://cl-camargo.github.io/camargofc/Time2022.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Elenco · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- LIGHTBOX -->
 <div id="lightbox">
-  <button id="lb-fechar">✕</button>
+  <button id="lb-fechar" aria-label="Fechar imagem">✕</button>
   <div id="lb-contador"></div>
-  <button id="lb-prev">&#8249;</button>
+  <button id="lb-prev" aria-label="Imagem anterior">&#8249;</button>
   <div id="lb-img-wrap">
-    <img id="lb-img" src="" alt="">
+    <img id="lb-img" src="" alt="" decoding="async">
   </div>
-  <button id="lb-next">&#8250;</button>
+  <button id="lb-next" aria-label="Próxima imagem">&#8250;</button>
   <div id="lb-legenda"><span id="lb-sub"></span></div>
 </div>
 
 <div id="site-menu"></div>
 <div style="height:60px;"></div>
+<main id="conteudo">
 
 <!-- ELENCO -->
 <section id="elenco">
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">Temporada 2026</p>
-      <h2 class="section-title">Elenco Atual</h2>
+      <h1 class="section-title">Elenco Atual</h1>
       <div class="section-divider"></div>
       <button class="compartilhar-btn" id="elenco-compartilhar-btn" type="button" style="margin-top:0.75rem;" onclick="(function(btn){var url=window.location.href.split('#')[0]+'#elenco';if(navigator.share){navigator.share({title:'Elenco Camargo FC',text:'Confira o elenco do Camargo FC!',url:url}).catch(function(){});} else{navigator.clipboard.writeText(url).then(function(){btn.classList.add('copiado');btn.textContent='✓ Link copiado!';setTimeout(function(){btn.classList.remove('copiado');btn.innerHTML=btn.getAttribute('data-original');},2000);}).catch(function(){});} })(this)"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><line x1='8.59' y1='13.51' x2='15.42' y2='17.49'/><line x1='15.41' y1='6.51' x2='8.59' y2='10.49'/></svg> Compartilhar Elenco</button>
     </div>
@@ -44,38 +55,38 @@
 
     <div class="elenco-grid" id="elencoGrid">
       <!-- GOLEIROS -->
-      <div class="jogador-card" data-pos="goleiro" data-foto="Jr.jpeg"><div class="jogador-avatar"><img src="Jr.jpeg" alt="Foto Jr"></div><div class="jogador-nome">José Ribamar Jr</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">33 anos</div><span class="jogador-posicao-badge">GL</span></div>
-      <div class="jogador-card" data-pos="goleiro" data-foto="fotos/iago.jpg"><div class="jogador-avatar"><img src="Iago.jpeg" alt="Foto Iago"></div><div class="jogador-nome">Iago</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">GL</span></div>
-      <div class="jogador-card" data-pos="goleiro" data-foto="LucasC.jpeg"><div class="jogador-avatar"><img src="LucasC.jpeg" alt="Foto Lucas Cauã"></div><div class="jogador-nome">Lucas Cauã</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">GL</span></div>
+      <div class="jogador-card" data-pos="goleiro" data-foto="Jr.jpeg"><div class="jogador-avatar"><img src="Jr.jpeg" alt="Foto Jr" decoding="async" width="334" height="444" loading="lazy"></div><div class="jogador-nome">José Ribamar Jr</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">33 anos</div><span class="jogador-posicao-badge">GL</span></div>
+      <div class="jogador-card" data-pos="goleiro" data-foto="fotos/iago.jpg"><div class="jogador-avatar"><img src="Iago.jpeg" alt="Foto Iago" decoding="async" width="569" height="768" loading="lazy"></div><div class="jogador-nome">Iago</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">GL</span></div>
+      <div class="jogador-card" data-pos="goleiro" data-foto="LucasC.jpeg"><div class="jogador-avatar"><img src="LucasC.jpeg" alt="Foto Lucas Cauã" decoding="async" width="939" height="1269" loading="lazy"></div><div class="jogador-nome">Lucas Cauã</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">GL</span></div>
       <!-- ZAGUEIROS -->
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Daniel.jpeg" alt="Foto Daniel"></div><div class="jogador-nome">Daniel</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">24 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Peixao.jpeg" alt="Foto David Peixão"></div><div class="jogador-nome">David Peixão</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">27 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Janio.jpeg" alt="Foto Janio"></div><div class="jogador-nome">Janio</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">28 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="GustavoG.jpeg" alt="Foto Gustavo Gomes"></div><div class="jogador-nome">Gustavo Gomes</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">15 anos</div><span class="jogador-posicao-badge">ZAG</span></div>      
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Leomar.jpeg" alt="Foto Leomar"></div><div class="jogador-nome">Leomar</div><div class="jogador-posicao">Zagueiro/Volante</div><div class="jogador-numero">30 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="JP.jpeg" alt="Foto JP"></div><div class="jogador-nome">João Paulo</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">28 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Daniel.jpeg" alt="Foto Daniel" decoding="async" width="358" height="389" loading="lazy"></div><div class="jogador-nome">Daniel</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">24 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Peixao.jpeg" alt="Foto David Peixão" decoding="async" width="447" height="596" loading="lazy"></div><div class="jogador-nome">David Peixão</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">27 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Janio.jpeg" alt="Foto Janio" decoding="async" width="181" height="241" loading="lazy"></div><div class="jogador-nome">Janio</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">28 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="GustavoG.jpeg" alt="Foto Gustavo Gomes" decoding="async" width="762" height="1157" loading="lazy"></div><div class="jogador-nome">Gustavo Gomes</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">15 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Leomar.jpeg" alt="Foto Leomar" decoding="async" width="228" height="301" loading="lazy"></div><div class="jogador-nome">Leomar</div><div class="jogador-posicao">Zagueiro/Volante</div><div class="jogador-numero">30 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="JP.jpeg" alt="Foto JP" decoding="async" width="170" height="228" loading="lazy"></div><div class="jogador-nome">João Paulo</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">28 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
       <!-- LATERAIS -->
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Fabiano.jpeg" alt="Foto Fabiano"></div><div class="jogador-nome">Fabiano</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">30 anos</div><span class="jogador-posicao-badge">LD</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="GabrielA.jpg" alt="Foto GabrielA"></div><div class="jogador-nome">Gabriel Antonio</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">23 anos</div><span class="jogador-posicao-badge">LD</span></div>      
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Michael.jpeg" alt="Foto Michael Davi"></div><div class="jogador-nome">Michael Davi</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">LD</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Eduardo.jpeg" alt="Foto Eduardo N."></div><div class="jogador-nome">Eduardo N.</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">LE</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Guilherme.jpeg" alt="Foto Guilherme"></div><div class="jogador-nome">Guilherme</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">LE</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Fabiano.jpeg" alt="Foto Fabiano" decoding="async" width="278" height="359" loading="lazy"></div><div class="jogador-nome">Fabiano</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">30 anos</div><span class="jogador-posicao-badge">LD</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="GabrielA.jpg" alt="Foto GabrielA" decoding="async" width="358" height="362" loading="lazy"></div><div class="jogador-nome">Gabriel Antonio</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">23 anos</div><span class="jogador-posicao-badge">LD</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Michael.jpeg" alt="Foto Michael Davi" decoding="async" width="420" height="593" loading="lazy"></div><div class="jogador-nome">Michael Davi</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">LD</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Eduardo.jpeg" alt="Foto Eduardo N." decoding="async" width="412" height="521" loading="lazy"></div><div class="jogador-nome">Eduardo N.</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">LE</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Guilherme.jpeg" alt="Foto Guilherme" decoding="async" width="268" height="370" loading="lazy"></div><div class="jogador-nome">Guilherme</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">LE</span></div>
       <!-- VOLANTES -->
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="DaviLucas.jpeg" alt="Foto Davi Lucas"></div><div class="jogador-nome">Davi Lucas</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">VOL</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="DavidNovaes.jpeg" alt="Foto David Novaes"></div><div class="jogador-nome">David Novaes</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">26 anos</div><span class="jogador-posicao-badge">VOL</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="JoaoMarcelo.jpeg" alt="Foto João Marcelo"></div><div class="jogador-nome">João Marcelo</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">21 anos</div><span class="jogador-posicao-badge">VOL</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Chico.jpeg" alt="Foto Chico"></div><div class="jogador-nome">Chico</div><div class="jogador-posicao">Volante / Meia</div><div class="jogador-numero">26 anos</div><span class="jogador-posicao-badge">VOL/MEI</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="DaviLucas.jpeg" alt="Foto Davi Lucas" decoding="async" width="789" height="1002" loading="lazy"></div><div class="jogador-nome">Davi Lucas</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">VOL</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="DavidNovaes.jpeg" alt="Foto David Novaes" decoding="async" width="512" height="677" loading="lazy"></div><div class="jogador-nome">David Novaes</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">26 anos</div><span class="jogador-posicao-badge">VOL</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="JoaoMarcelo.jpeg" alt="Foto João Marcelo" decoding="async" width="212" height="282" loading="lazy"></div><div class="jogador-nome">João Marcelo</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">21 anos</div><span class="jogador-posicao-badge">VOL</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Chico.jpeg" alt="Foto Chico" decoding="async" width="488" height="565" loading="lazy"></div><div class="jogador-nome">Chico</div><div class="jogador-posicao">Volante / Meia</div><div class="jogador-numero">26 anos</div><span class="jogador-posicao-badge">VOL/MEI</span></div>
       <!-- MEIAS -->
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="CarlosH.jpeg" alt="Foto Carlos Henrique"></div><div class="jogador-nome">Carlos Henrique</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">MEI</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Caio.jpeg" alt="Foto Caio"></div><div class="jogador-nome">Caio</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">MEI</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Ari.jpeg" alt="Foto Ariostocly"></div><div class="jogador-nome">Ariostocly</div><div class="jogador-posicao">Meia Atacante</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">MEI/ATA</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="CarlosH.jpeg" alt="Foto Carlos Henrique" decoding="async" width="900" height="1214" loading="lazy"></div><div class="jogador-nome">Carlos Henrique</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">MEI</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Caio.jpeg" alt="Foto Caio" decoding="async" width="202" height="271" loading="lazy"></div><div class="jogador-nome">Caio</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">MEI</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Ari.jpeg" alt="Foto Ariostocly" decoding="async" width="1267" height="1600" loading="lazy"></div><div class="jogador-nome">Ariostocly</div><div class="jogador-posicao">Meia Atacante</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">MEI/ATA</span></div>
       <!-- PONTAS / ATACANTES -->
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="JoaoMarcal.jpeg" alt="Foto João Marçal"></div><div class="jogador-nome">João Marçal</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">PTA</span></div>
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Clovis.jpeg" alt="Foto Clovis Henrique"></div><div class="jogador-nome">Clovis Henrique</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">19 anos</div><span class="jogador-posicao-badge">PTA</span></div>
-     <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Yokida.jpeg" alt="Foto Yokida"></div><div class="jogador-nome">Yokida</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">31 anos</div><span class="jogador-posicao-badge">PTA</span></div>
-     <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="GabrielT.jpeg" alt="Foto Gabriel Tolintino"></div><div class="jogador-nome">Gabriel Tolintino</div><div class="jogador-posicao">Ponta / Atacante</div><div class="jogador-numero">25 anos</div><span class="jogador-posicao-badge">PTA/ATA</span></div>
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Andre.jpeg" alt="Foto André"></div><div class="jogador-nome">André</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">25 anos</div><span class="jogador-posicao-badge">ATA</span></div>
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="ArthurB.png" alt="Foto Arthur Sousa Bileu"></div><div class="jogador-nome">Arthur Sousa Bileu</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">ATA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="JoaoMarcal.jpeg" alt="Foto João Marçal" decoding="async" width="283" height="379" loading="lazy"></div><div class="jogador-nome">João Marçal</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">PTA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Clovis.jpeg" alt="Foto Clovis Henrique" decoding="async" width="214" height="285" loading="lazy"></div><div class="jogador-nome">Clovis Henrique</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">19 anos</div><span class="jogador-posicao-badge">PTA</span></div>
+     <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Yokida.jpeg" alt="Foto Yokida" decoding="async" width="273" height="364" loading="lazy"></div><div class="jogador-nome">Yokida</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">31 anos</div><span class="jogador-posicao-badge">PTA</span></div>
+     <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="GabrielT.jpeg" alt="Foto Gabriel Tolintino" decoding="async" width="1186" height="1599" loading="lazy"></div><div class="jogador-nome">Gabriel Tolintino</div><div class="jogador-posicao">Ponta / Atacante</div><div class="jogador-numero">25 anos</div><span class="jogador-posicao-badge">PTA/ATA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Andre.jpeg" alt="Foto André" decoding="async" width="1023" height="1600" loading="lazy"></div><div class="jogador-nome">André</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">25 anos</div><span class="jogador-posicao-badge">ATA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="ArthurB.png" alt="Foto Arthur Sousa Bileu" decoding="async" width="239" height="225" loading="lazy"></div><div class="jogador-nome">Arthur Sousa Bileu</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">ATA</span></div>
     </div>
 
     <!-- COMISSÃO TÉCNICA -->
@@ -88,8 +99,8 @@
       <div class="comissao-card">
         <div class="comissao-avatar">
           <img src="CL.jpg" alt="Carlos Leandro"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-          <span class="comissao-avatar-placeholder" style="display:none;"><img src="CL.jpg" alt="Foto CL"></span>
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" decoding="async" width="465" height="604" loading="lazy">
+          <span class="comissao-avatar-placeholder" style="display:none;"><img src="CL.jpg" alt="Foto CL" decoding="async" width="465" height="604" loading="lazy"></span>
         </div>
         <div class="comissao-cargo">Técnico</div>
         <div class="comissao-nome">Carlos Leandro</div>
@@ -100,8 +111,8 @@
       <div class="comissao-card">
         <div class="comissao-avatar">
           <img src="Diogo.jpg" alt="Diogo Souza"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-          <span class="comissao-avatar-placeholder" style="display:none;"><img src="Diogo.jpg" alt="Foto Diogo"></span>
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" decoding="async" width="252" height="370" loading="lazy">
+          <span class="comissao-avatar-placeholder" style="display:none;"><img src="Diogo.jpg" alt="Foto Diogo" decoding="async" width="252" height="370" loading="lazy"></span>
         </div>
         <div class="comissao-cargo">Auxiliar Técnico</div>
         <div class="comissao-nome">Diogo Souza</div>
@@ -112,8 +123,8 @@
       <div class="comissao-card">
         <div class="comissao-avatar">
           <img src="KD.png" alt="Karllos Danyel"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-          <span class="comissao-avatar-placeholder" style="display:none;"><img src="KD.png" alt="Foto KD"></span>
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" decoding="async" width="252" height="318" loading="lazy">
+          <span class="comissao-avatar-placeholder" style="display:none;"><img src="KD.png" alt="Foto KD" decoding="async" width="252" height="318" loading="lazy"></span>
         </div>
         <div class="comissao-cargo">Auxiliar Técnico</div>
         <div class="comissao-nome">Karllos Danyel</div>
@@ -124,8 +135,8 @@
       <div class="comissao-card">
         <div class="comissao-avatar">
           <img src="Warly.jpeg" alt="Warly"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-          <span class="comissao-avatar-placeholder" style="display:none;"><img src="Warly.jpeg" alt="Foto Warly"></span>
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" decoding="async" width="233" height="310" loading="lazy">
+          <span class="comissao-avatar-placeholder" style="display:none;"><img src="Warly.jpeg" alt="Foto Warly" decoding="async" width="233" height="310" loading="lazy"></span>
         </div>
         <div class="comissao-cargo">Auxiliar Técnico</div>
         <div class="comissao-nome">Warly</div>
@@ -141,9 +152,11 @@
 
 
 
+</main>
+
 <!-- FOOTER -->
 <footer>
-  <img class="footer-escudo" src="LOGOSITE.png" alt="Escudo Camargo FC">
+  <img class="footer-escudo" src="LOGOSITE-png.webp" alt="Escudo Camargo FC" decoding="async" width="989" height="1600">
   <div class="footer-logo">Camargo Futebol Clube</div>
   <p>Fundado em 2015 · Unidos pela família, fortalecidos pelo futebol</p>
   <p style="margin-top:0.25rem; font-size: 12px; opacity: 0.4;">© 2026 Camargo FC · Todos os direitos reservados</p>
@@ -162,15 +175,15 @@
     </a>
   </div>
 
-  
+
   <div class="footer-patro">
     <div class="footer-patro-title">Patrocinadores e Apoio</div>
     <!-- ALTERE APENAS O NOME DAS IMAGENS ABAIXO -->
     <div class="footer-patro-grid">
-      <img src="VIP.png" alt="Patrocinador 1">
-      <img src="VIBER.png" alt="Patrocinador 2">
-      <img src="SOUZA.png" alt="Patrocinador 3">
-      <img src="Bambam.png" alt="Patrocinador 4">
+      <img src="VIP-png.webp" alt="Patrocinador 1" decoding="async" width="1064" height="1064" loading="lazy">
+      <img src="VIBER-png.webp" alt="Patrocinador 2" decoding="async" width="1600" height="1023" loading="lazy">
+      <img src="SOUZA-png.webp" alt="Patrocinador 3" decoding="async" width="1076" height="603" loading="lazy">
+      <img src="Bambam-png.webp" alt="Patrocinador 4" decoding="async" width="1333" height="1600" loading="lazy">
     </div>
   </div>
 
