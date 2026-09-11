@@ -99,7 +99,8 @@
       { legenda: 'Campeão Liga Paraíso 2022', sub: 'Título histórico do Camargo FC' },
       { legenda: 'Campeão Torneio Nova Geração 2023', sub: 'Mais um título para a galeria' },
       { legenda: 'Kiley – Ídolo do Camargo FC', sub: 'Meia / Lateral · Campo: 19 jogos · 4 gols · 3 ass.' },
-      { legenda: 'Chico – Capitão 2026', sub: 'Volante/Meia · 30 jogos · 1 gol · 2 ass.' }
+      { legenda: 'Chico – Capitão 2026', sub: 'Volante/Meia · 30 jogos · 1 gol · 2 ass.' },
+      { legenda: 'Camargo FC presente no encontro com dirigentes', sub: 'Ariostocly representou o clube · Leia a notícia completa' }
     ];
 
     var carouselEl = document.getElementById('heroCarousel');
