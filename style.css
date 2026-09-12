@@ -81,6 +81,8 @@
   }
   .nav-pj-info em { font-style: normal; color: rgba(255,255,255,0.4); margin: 0 2px; }
 
+  .nav-spacer { height: 60px; }
+
   @media (max-width: 768px) {
     .nav-proximo-jogo { display: none; }
   }
@@ -501,11 +503,73 @@
   }
   .footer-cor { width: 24px; height: 8px; }
 
+  /* ===== RESPONSIVE — MENU COMPACTO (≤1100px) ===== */
+  @media (max-width: 1100px) {
+    .nav-links, .nav-proximo-jogo { display: none; }
+    .nav-hamburger {
+      display: flex;
+      width: 44px;
+      height: 44px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--branco);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-hamburger.aberto span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.aberto span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.aberto span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-drawer {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 1rem 0 calc(1rem + env(safe-area-inset-bottom));
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      background: rgba(0,0,0,0.97);
+      border-top: 2px solid var(--vermelho);
+    }
+    .nav-drawer.aberto { display: flex; }
+    .nav-drawer a {
+      width: 100%;
+      padding: 11px 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.8);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      letter-spacing: 3px;
+      text-align: center;
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-drawer a:hover { color: var(--vermelho); background: rgba(192,25,46,0.07); }
+  }
+
   /* ===== RESPONSIVE — MOBILE (≤768px) ===== */
   @media (max-width: 768px) {
 
     /* — NAV — */
     nav { padding: 0 1rem; height: 56px; }
+    .nav-spacer { height: 56px; }
     .nav-links { display: none; }
     .nav-nome { font-size: 17px; }
     .nav-proximo-jogo { display: none; }
@@ -530,8 +594,11 @@
       position: fixed; top: 56px; left: 0; right: 0; bottom: 0;
       background: rgba(0,0,0,0.97);
       display: none; flex-direction: column;
-      align-items: center; justify-content: center;
+      align-items: center; justify-content: flex-start;
       gap: 0; z-index: 99;
+      padding: 0.75rem 0 calc(0.75rem + env(safe-area-inset-bottom));
+      overflow-y: auto;
+      overscroll-behavior: contain;
       border-top: 2px solid var(--vermelho);
     }
     .nav-drawer.aberto { display: flex; }
@@ -539,8 +606,8 @@
       color: rgba(255,255,255,0.8);
       text-decoration: none;
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 28px; letter-spacing: 3px;
-      padding: 14px 2rem; width: 100%; text-align: center;
+      font-size: 23px; letter-spacing: 3px;
+      padding: 10px 2rem; width: 100%; text-align: center;
       border-bottom: 1px solid rgba(255,255,255,0.06);
       transition: color 0.2s, background 0.2s;
     }
@@ -605,7 +672,8 @@
     .comissao-header { margin: 2rem 0 1rem; }
 
     /* — AGENDA — */
-    .agenda-jogo { padding: 0.9rem 1rem; }
+    .agenda-jogo { padding: 3.25rem 1rem 0.9rem; }
+    .compartilhar-btn { top: 0.7rem; right: 0.75rem; }
     .agenda-time-escudo { width: 44px; height: 44px; font-size: 12px; }
     .agenda-time-nome { font-size: 12px; }
     .agenda-vs { font-size: 22px; }
@@ -669,6 +737,7 @@
     .agenda-time { min-width: 80px; }
     .jogos-stats-bar { flex-wrap: wrap; }
     .jstat { min-width: calc(33% - 1px); }
+    .nav-drawer a { font-size: 21px; padding: 8px 1.25rem; }
   }
 
   /* ===== RESPONSIVE — MUITO PEQUENO (≤360px) ===== */
@@ -1398,11 +1467,16 @@
   .jogos-acc-header.aberto .jogos-acc-badge { background: rgba(192,25,46,0.2); color: var(--vermelho); }
 
   .jogos-acc-arrow {
-    font-size: 12px; color: #555;
-    transition: transform 0.3s;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    color: #555;
+    transform: rotate(45deg);
+    transition: transform 0.3s, color 0.2s;
     flex-shrink: 0;
   }
-  .jogos-acc-header.aberto .jogos-acc-arrow { transform: rotate(180deg); color: var(--vermelho); }
+  .jogos-acc-header.aberto .jogos-acc-arrow { transform: rotate(225deg); color: var(--vermelho); }
 
   .jogos-acc-body {
     display: none;
@@ -1414,6 +1488,7 @@
   @media (max-width: 768px) {
     /* — HERO — */
     /* hero mobile: empilha */
+    .hero { margin-top: 56px; }
     .hero-top { flex-direction: column; min-height: auto; height: auto; max-height: none; }
     .hero-panel-left {
       width: 100%;
@@ -1450,7 +1525,7 @@
 .nav-links a.nav-ativo { color: var(--vermelho); border-bottom: 2px solid var(--vermelho); padding-bottom: 2px; }
 
 /* hamburguer oculto no desktop */
-@media (min-width: 769px) {
+@media (min-width: 1101px) {
   .nav-hamburger { display: none; }
   .nav-drawer { display: none; }
 }

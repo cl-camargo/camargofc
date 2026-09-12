@@ -123,7 +123,7 @@
   .noticias-acc-header.aberto { background: #1a1a1a; }
   .noticias-acc-header.aberto .noticias-acc-titulo { color: #fff; }
   .noticias-acc-header.aberto .noticias-acc-data { color: rgba(255,255,255,0.5); }
-  .noticias-acc-header.aberto .noticias-acc-arrow { color: var(--vermelho, #c0192e); transform: rotate(180deg); }
+  .noticias-acc-header.aberto .noticias-acc-arrow { color: var(--vermelho, #c0192e); }
   .noticias-acc-esq {
     display: flex;
     align-items: center;
@@ -151,9 +151,39 @@
     white-space: nowrap;
   }
   .noticias-acc-arrow {
-    font-size: 12px;
-    color: #aaa;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    color: #888;
+    transform: rotate(45deg);
     transition: transform 0.25s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .noticias-acc-header.aberto .noticias-acc-arrow {
+    transform: rotate(225deg);
+  }
+  .noticias-status {
+    display: inline-flex;
+    min-width: 82px;
+    min-height: 24px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+  }
+  .status-empate { background: #2a2a0a; color: #f1c40f; }
+  .status-reforco, .status-vitoria { background: #1a3a1a; color: #2ecc71; }
+  .status-derrota { background: #3a1a1a; color: #e74c3c; }
+  .status-andamento, .status-semestre { background: #c0192e; color: #fff; }
+  .status-futuro { background: #2a2a2a; color: #ddd; }
   }
   .noticias-acc-body {
     display: none;
@@ -170,8 +200,13 @@
   @media (max-width: 600px) {
     .noticia-destaque { padding: 1.1rem 1rem; }
     .noticia-destaque-titulo { font-size: 1.5rem; }
-    .noticias-acc-header { padding: 12px 14px; }
-    .noticias-acc-titulo { font-size: 13px; }
+    .noticias-acc-header { align-items: flex-start; padding: 12px; gap: 8px; }
+    .noticias-acc-esq { flex-direction: column; align-items: flex-start; gap: 7px; }
+    .noticias-status { min-width: 0; min-height: 22px; margin-right: 0; padding: 3px 8px; }
+    .noticias-acc-titulo { font-size: 13px; white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.35; }
+    .noticias-acc-dir { gap: 9px; padding-top: 3px; }
+    .noticias-acc-data { font-size: 11px; }
+    .noticias-acc-body { padding: 1rem; }
     .noticia-galeria { grid-template-columns: 1fr; }
     .noticia-galeria img { height: 210px; }
   }
@@ -193,7 +228,7 @@
 </div>
 
 <div id="site-menu"></div>
-<div style="height:60px;"></div>
+<div class="nav-spacer" aria-hidden="true"></div>
 <main id="conteudo">
 
 <!-- COMPETIÇÕES -->
@@ -236,12 +271,12 @@
       <div class="noticias-acc-item">
         <button class="noticias-acc-header" aria-expanded="false" onclick="toggleNoticia(this)">
           <div class="noticias-acc-esq">
-            <span class="comp-badge" style="background:#2a2a0a;color:#f1c40f;margin-right:8px;">🟡 EMPATE</span>
+            <span class="noticias-status status-empate">Empate</span>
             <span class="noticias-acc-titulo">Show de André: 4 gols em jogo eletrizante com o Milena</span>
           </div>
           <div class="noticias-acc-dir">
             <span class="noticias-acc-data">28/jun/2026</span>
-            <span class="noticias-acc-arrow">▼</span>
+            <span class="noticias-acc-arrow" aria-hidden="true"></span>
           </div>
         </button>
         <div class="noticias-acc-body">
@@ -255,12 +290,12 @@
       <div class="noticias-acc-item">
         <button class="noticias-acc-header" aria-expanded="false" onclick="toggleNoticia(this)">
           <div class="noticias-acc-esq">
-            <span class="comp-badge" style="background:#1a3a1a;color:#2ecc71;margin-right:8px;">✔ REFORÇOS</span>
+            <span class="noticias-status status-reforco">Reforços</span>
             <span class="noticias-acc-titulo">Muralha Reforçada</span>
           </div>
           <div class="noticias-acc-dir">
             <span class="noticias-acc-data">25/jun/2026</span>
-            <span class="noticias-acc-arrow">▼</span>
+            <span class="noticias-acc-arrow" aria-hidden="true"></span>
           </div>
         </button>
         <div class="noticias-acc-body">
@@ -274,12 +309,12 @@
       <div class="noticias-acc-item">
         <button class="noticias-acc-header" aria-expanded="false" onclick="toggleNoticia(this)">
           <div class="noticias-acc-esq">
-            <span class="comp-badge" style="background:#3a1a1a;color:#e74c3c;margin-right:8px;">❌ Derrota</span>
+            <span class="noticias-status status-derrota">Derrota</span>
             <span class="noticias-acc-titulo">Estreia Amarga</span>
           </div>
           <div class="noticias-acc-dir">
             <span class="noticias-acc-data">18/jun/2026</span>
-            <span class="noticias-acc-arrow">▼</span>
+            <span class="noticias-acc-arrow" aria-hidden="true"></span>
           </div>
         </button>
         <div class="noticias-acc-body">
@@ -297,12 +332,12 @@
       <div class="noticias-acc-item">
         <button class="noticias-acc-header" aria-expanded="false" onclick="toggleNoticia(this)">
           <div class="noticias-acc-esq">
-            <span class="comp-badge" style="background:#1a3a1a;color:#2ecc71;margin-right:8px;">✔ Vitória</span>
+            <span class="noticias-status status-vitoria">Vitória</span>
             <span class="noticias-acc-titulo">Amistoso Preparatório</span>
           </div>
           <div class="noticias-acc-dir">
             <span class="noticias-acc-data">14/jun/2026</span>
-            <span class="noticias-acc-arrow">▼</span>
+            <span class="noticias-acc-arrow" aria-hidden="true"></span>
           </div>
         </button>
         <div class="noticias-acc-body">
@@ -320,12 +355,12 @@
       <div class="noticias-acc-item">
         <button class="noticias-acc-header" aria-expanded="false" onclick="toggleNoticia(this)">
           <div class="noticias-acc-esq">
-            <span class="comp-badge ativo" style="margin-right:8px;">Em andamento</span>
+            <span class="noticias-status status-andamento">Em andamento</span>
             <span class="noticias-acc-titulo">Liga Municipal 2ª Divisão - 2026</span>
           </div>
           <div class="noticias-acc-dir">
             <span class="noticias-acc-data">Jun–Out 2026</span>
-            <span class="noticias-acc-arrow">▼</span>
+            <span class="noticias-acc-arrow" aria-hidden="true"></span>
           </div>
         </button>
         <div class="noticias-acc-body">
@@ -339,12 +374,12 @@
       <div class="noticias-acc-item">
         <button class="noticias-acc-header" aria-expanded="false" onclick="toggleNoticia(this)">
           <div class="noticias-acc-esq">
-            <span class="comp-badge ativo" style="margin-right:8px;">2º Semestre</span>
+            <span class="noticias-status status-semestre">2º semestre</span>
             <span class="noticias-acc-titulo">Liga Municipal de Futsal 2026</span>
           </div>
           <div class="noticias-acc-dir">
             <span class="noticias-acc-data">A confirmar</span>
-            <span class="noticias-acc-arrow">▼</span>
+            <span class="noticias-acc-arrow" aria-hidden="true"></span>
           </div>
         </button>
         <div class="noticias-acc-body">
@@ -358,12 +393,12 @@
       <div class="noticias-acc-item">
         <button class="noticias-acc-header" aria-expanded="false" onclick="toggleNoticia(this)">
           <div class="noticias-acc-esq">
-            <span class="comp-badge" style="margin-right:8px;">Futuro</span>
+            <span class="noticias-status status-futuro">Futuro</span>
             <span class="noticias-acc-titulo">Equipe Feminina</span>
           </div>
           <div class="noticias-acc-dir">
             <span class="noticias-acc-data">A confirmar</span>
-            <span class="noticias-acc-arrow">▼</span>
+            <span class="noticias-acc-arrow" aria-hidden="true"></span>
           </div>
         </button>
         <div class="noticias-acc-body">
