@@ -1561,7 +1561,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   border-left: 5px solid var(--vermelho);
   box-shadow: 0 12px 32px rgba(0,0,0,.09);
 }
-.home-news-card img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+.home-news-card > img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
 .home-news-content { display: flex; flex-direction: column; justify-content: center; padding: 2.25rem; }
 .home-news-content h2 { margin: .35rem 0 1rem; color: #111; font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1; letter-spacing: 1px; }
 .home-news-content p:not(.section-eyebrow) { margin-bottom: 1.4rem; color: #555; font-size: 16px; line-height: 1.7; }
@@ -1569,7 +1569,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (max-width: 768px) {
   .home-news { padding: 2rem 0; }
   .home-news-card { grid-template-columns: 1fr; }
-  .home-news-card img { min-height: 220px; max-height: 300px; }
+  .home-news-card > img { min-height: 220px; max-height: 300px; }
   .home-news-content { padding: 1.4rem; }
 }
 
@@ -1762,5 +1762,77 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .agenda-jogo.agenda-linha-item .agenda-placar-final {
     min-width: 62px;
     font-size: 25px;
+  }
+}
+
+
+/* Composição de escudos no destaque da notícia */
+.home-news-emblemas {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 42% 46%, rgba(192,25,46,.28), transparent 34%),
+    linear-gradient(135deg, #070707 0%, #171717 55%, #2b0c11 100%);
+  isolation: isolate;
+}
+.home-news-emblemas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(115deg, transparent 0 47%, rgba(255,255,255,.035) 47% 49%, transparent 49%),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(255,255,255,.018) 35px);
+}
+.home-news-escudo-adversario,
+.home-news-escudo-camargo {
+  position: absolute;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 14px rgba(0,0,0,.5));
+}
+.home-news-escudo-adversario {
+  top: 50%;
+  left: 60%;
+  width: 128px;
+  height: 158px;
+  opacity: .78;
+  transform: translate(-50%, -50%) rotate(6deg);
+}
+.home-news-escudo-camargo {
+  z-index: 2;
+  top: 48%;
+  left: 42%;
+  width: 190px;
+  height: 245px;
+  transform: translate(-50%, -50%);
+}
+.home-news-duelo {
+  position: absolute;
+  z-index: 3;
+  right: 18px;
+  bottom: 18px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  background: rgba(0,0,0,.62);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  backdrop-filter: blur(5px);
+}
+@media (max-width: 768px) {
+  .home-news-emblemas { min-height: 250px; }
+  .home-news-escudo-adversario {
+    left: 61%;
+    width: 98px;
+    height: 122px;
+  }
+  .home-news-escudo-camargo {
+    left: 43%;
+    width: 145px;
+    height: 188px;
   }
 }
