@@ -1836,3 +1836,13 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     height: 188px;
   }
 }
+
+
+/* Goleiros: estatística específica da posição */
+.jogador-estatisticas-goleiro {
+  grid-template-columns: 1fr;
+}
+.jogador-estatisticas-goleiro span {
+  max-width: 90px;
+  margin: 0 auto;
+}
