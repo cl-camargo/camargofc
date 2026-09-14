@@ -286,6 +286,92 @@
     });
   })();
 
+
+  /* ===== COMPARTILHAMENTO UNIVERSAL ===== */
+  (function () {
+    var ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+    function feedback(btn, mensagem) {
+      if (!btn) return;
+      var original = btn.getAttribute('data-share-original') || btn.innerHTML;
+      btn.setAttribute('data-share-original', original);
+      btn.classList.add('copiado');
+      btn.innerHTML = ICON_CHECK + ' ' + mensagem;
+      window.setTimeout(function () {
+        btn.classList.remove('copiado');
+        btn.innerHTML = original;
+      }, 2000);
+    }
+
+    function abrirWhatsApp(btn, texto, url) {
+      var mensagem = [texto, url].filter(Boolean).join('\n');
+      var janela = window.open('https://wa.me/?text=' + encodeURIComponent(mensagem), '_blank', 'noopener,noreferrer');
+      if (janela) {
+        feedback(btn, 'Abrindo...');
+      } else {
+        window.prompt('Copie o link abaixo:', url);
+      }
+    }
+
+    function copiarLink(btn, url, texto) {
+      function copiarModoCompativel() {
+        var campo = document.createElement('textarea');
+        campo.value = url;
+        campo.setAttribute('readonly', '');
+        campo.style.position = 'fixed';
+        campo.style.opacity = '0';
+        document.body.appendChild(campo);
+        campo.select();
+        campo.setSelectionRange(0, campo.value.length);
+        var copiou = false;
+        try { copiou = document.execCommand('copy'); } catch (erro) {}
+        document.body.removeChild(campo);
+        if (copiou) {
+          feedback(btn, 'Link copiado!');
+        } else {
+          abrirWhatsApp(btn, texto, url);
+        }
+      }
+
+      if (window.isSecureContext && navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () {
+          feedback(btn, 'Link copiado!');
+        }).catch(copiarModoCompativel);
+      } else {
+        copiarModoCompativel();
+      }
+    }
+
+    window.compartilharConteudo = function (btn, opcoes) {
+      opcoes = opcoes || {};
+      var titulo = opcoes.titulo || document.title;
+      var texto = opcoes.texto || titulo;
+      var url = opcoes.url || window.location.href;
+
+      try {
+        url = new URL(url, window.location.href).href;
+      } catch (erro) {
+        url = window.location.href;
+      }
+
+      var dados = { title: titulo, text: texto, url: url };
+      if (typeof navigator.share === 'function') {
+        if (typeof navigator.canShare === 'function' && !navigator.canShare(dados)) {
+          copiarLink(btn, url, texto);
+          return;
+        }
+        navigator.share(dados).catch(function (erro) {
+          if (!erro || erro.name !== 'AbortError') {
+            copiarLink(btn, url, texto);
+          }
+        });
+        return;
+      }
+
+      copiarLink(btn, url, texto);
+    };
+  })();
+
   /* ===== COMPARTILHAR LINK (AGENDA E ELENCO) ===== */
   (function () {
     var ICON_SHARE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>';
@@ -302,19 +388,11 @@
     }
 
     function compartilhar(el, titulo, texto, url) {
-      if (navigator.share) {
-        navigator.share({ title: titulo, text: texto, url: url }).catch(function () {});
-        return;
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(function () {
-          feedbackOk(el, el.innerHTML, true);
-        }).catch(function () {
-          window.prompt('Copie o link abaixo:', url);
-        });
-      } else {
-        window.prompt('Copie o link abaixo:', url);
-      }
+      window.compartilharConteudo(el, {
+        titulo: titulo,
+        texto: texto,
+        url: url
+      });
     }
 
     function montarUrlComAncora(id) {
