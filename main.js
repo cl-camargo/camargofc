@@ -177,6 +177,10 @@
     const lbSub   = document.getElementById('lb-sub');
     const lbCont  = document.getElementById('lb-contador');
 
+    // Algumas páginas não usam galeria. Nelas, encerra somente este módulo
+    // para que os demais recursos (como compartilhamento) continuem ativos.
+    if (!lb || !lbImg || !lbLeg || !lbSub || !lbCont) return;
+
     function abrir(idx) {
       indice = idx;
       renderizar();
