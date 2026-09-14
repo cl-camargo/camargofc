@@ -1606,3 +1606,161 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   font-size: 20px;
   font-weight: 400;
 }
+
+
+/* Agenda em linha do tempo · setembro de 2026 */
+.agenda-ordem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: .8rem;
+  padding: 6px 11px;
+  border: 1px solid rgba(192,25,46,.18);
+  border-radius: 999px;
+  background: rgba(192,25,46,.06);
+  color: #7b2330;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+.agenda-ordem span { color: var(--vermelho); font-size: 15px; }
+.agenda-temporada-label { margin: 0 0 .8rem 34px; }
+.agenda-timeline {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 2.75rem;
+}
+.agenda-timeline::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 7px;
+  width: 2px;
+  border-radius: 99px;
+  background: linear-gradient(to bottom, var(--vermelho), #d9d9d9 24%, #d9d9d9);
+}
+.agenda-timeline-curta::before {
+  background: linear-gradient(to bottom, var(--vermelho), #d9d9d9);
+}
+.agenda-jogo.agenda-linha-item {
+  border: 1px solid #e7e7e7 !important;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  padding: 1.35rem 1.5rem;
+  overflow: visible;
+  box-shadow: 0 5px 18px rgba(0,0,0,.065);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.agenda-jogo.agenda-linha-item::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: -34px;
+  width: 14px;
+  height: 14px;
+  border: 4px solid var(--cinza-claro);
+  border-radius: 50%;
+  background: #b8b8b8;
+  box-sizing: content-box;
+}
+.agenda-jogo.agenda-linha-item:has(.agenda-badge-proximo)::before {
+  background: var(--vermelho);
+  box-shadow: 0 0 0 5px rgba(192,25,46,.12);
+}
+.agenda-jogo.agenda-linha-item:hover {
+  border-color: rgba(192,25,46,.35) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 9px 26px rgba(0,0,0,.095);
+}
+.agenda-jogo.agenda-linha-item .agenda-jogo-times {
+  max-width: 660px;
+  margin: .25rem auto 0;
+}
+.agenda-jogo.agenda-linha-item .agenda-time-escudo {
+  width: 78px;
+  height: 88px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+.agenda-jogo.agenda-linha-item .agenda-time-escudo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 5px rgba(0,0,0,.14));
+}
+.agenda-jogo.agenda-linha-item .agenda-time.destaque .agenda-time-escudo {
+  border: 0;
+}
+.agenda-jogo.agenda-linha-item .agenda-time-nome {
+  max-width: 210px;
+  font-size: 13px;
+}
+.agenda-jogo.agenda-linha-item .agenda-badge-proximo,
+.agenda-jogo.agenda-linha-item .agenda-badge-encerrado {
+  border-radius: 999px;
+  padding: 5px 10px;
+  line-height: 1;
+}
+.agenda-jogo.agenda-linha-item .agenda-placar-final {
+  min-width: 105px;
+  padding: 0 .5rem;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .agenda-temporada-label { margin-left: 22px; }
+  .agenda-timeline { padding-left: 22px; }
+  .agenda-timeline::before { left: 4px; }
+  .agenda-jogo.agenda-linha-item {
+    padding: 3.25rem .85rem 1rem;
+    border-radius: 12px;
+  }
+  .agenda-jogo.agenda-linha-item::before {
+    top: 20px;
+    left: -26px;
+    width: 11px;
+    height: 11px;
+    border-width: 3px;
+  }
+  .agenda-jogo.agenda-linha-item .agenda-jogo-times {
+    flex-wrap: nowrap;
+    gap: .35rem;
+  }
+  .agenda-jogo.agenda-linha-item .agenda-time {
+    min-width: 0;
+  }
+  .agenda-jogo.agenda-linha-item .agenda-time-escudo {
+    width: 58px;
+    height: 66px;
+  }
+  .agenda-jogo.agenda-linha-item .agenda-time-nome {
+    max-width: 120px;
+    font-size: 10px;
+    letter-spacing: .2px;
+  }
+  .agenda-jogo.agenda-linha-item .agenda-vs {
+    padding: 0 .15rem;
+    font-size: 22px;
+  }
+  .agenda-jogo.agenda-linha-item .agenda-placar-final {
+    min-width: 74px;
+    padding: 0 .15rem;
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 360px) {
+  .agenda-jogo.agenda-linha-item .agenda-time-escudo {
+    width: 50px;
+    height: 58px;
+  }
+  .agenda-jogo.agenda-linha-item .agenda-time-nome { font-size: 9px; }
+  .agenda-jogo.agenda-linha-item .agenda-placar-final {
+    min-width: 62px;
+    font-size: 25px;
+  }
+}
