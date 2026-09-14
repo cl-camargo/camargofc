@@ -481,20 +481,11 @@
 <script>
 function compartilharNoticia(btn, titulo, caminho) {
   var url = caminho ? new URL(caminho, window.location.href).href : window.location.href.split('#')[0] + '#competicoes';
-  var texto = titulo + ' — Camargo FC';
-  var original = btn.innerHTML;
-  if (navigator.share) {
-    navigator.share({ title: titulo, text: texto, url: url }).catch(function(){});
-  } else {
-    navigator.clipboard.writeText(url).then(function() {
-      btn.classList.add('copiado');
-      btn.textContent = '✓ Link copiado!';
-      setTimeout(function() {
-        btn.classList.remove('copiado');
-        btn.innerHTML = original;
-      }, 2000);
-    }).catch(function(){});
-  }
+  window.compartilharConteudo(btn, {
+    titulo: titulo,
+    texto: titulo + ' — Camargo FC',
+    url: url
+  });
 }
 </script>
 <script>
