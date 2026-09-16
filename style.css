@@ -1034,15 +1034,22 @@
     font-family: 'Bebas Neue', sans-serif; font-size: 13px;
     color: #aaa; min-width: 18px;
   }
-  .escalacao-subs-lista { display: flex; flex-direction: column; gap: 3px; }
-  .escalacao-sub-item { font-size: 12px; color: #777; display: flex; align-items: baseline; gap: 3px; flex-wrap: wrap; }
-  .escalacao-sub-item .escalacao-num { color: #bbb; }
-  .escalacao-seta-saida, .escalacao-seta-entrada {
-    font-weight: 700; margin: 0 3px 0 8px; font-size: 12px;
+  .escalacao-subs-lista { display: flex; flex-direction: column; gap: 6px; }
+  .escalacao-sub-item {
+    min-height: 36px; padding: 6px 8px; border: 1px solid #e8e8e8; border-radius: 8px;
+    background: #fafafa; font-size: 12px; color: #555;
+    display: flex; align-items: center; gap: 5px; flex-wrap: wrap;
   }
-  .escalacao-sub-item .escalacao-seta-saida:first-child { margin-left: 0; }
-  .escalacao-seta-saida { color: #e74c3c; }
-  .escalacao-seta-entrada { color: #2ecc71; }
+  .escalacao-sub-item .escalacao-num { font-weight: 700; }
+  .escalacao-seta-saida, .escalacao-seta-entrada {
+    width: 22px; height: 22px; border-radius: 50%;
+    display: inline-grid; place-items: center; flex: 0 0 22px;
+    font-size: 15px; line-height: 1; font-weight: 900;
+  }
+  .escalacao-seta-saida { color: #b9152b; background: #fde8eb; }
+  .escalacao-seta-entrada { color: #147a3e; background: #e4f7eb; margin-left: auto; }
+  .escalacao-seta-saida + .escalacao-num { color: #b9152b; }
+  .escalacao-seta-entrada + .escalacao-num { color: #147a3e; }
 
   /* ===== GALERIA ===== */
   #galeria { background: var(--preto); }
