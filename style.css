@@ -1873,3 +1873,55 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   max-width: 90px;
   margin: 0 auto;
 }
+
+
+/* JOGADORES QUE SAÍRAM DO ELENCO */
+.ex-elenco-header {
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+}
+.ex-elenco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: .75rem;
+  max-width: 760px;
+}
+.ex-elenco-card {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  min-width: 0;
+  padding: .65rem .8rem;
+  background: #f2f2f2;
+  border-left: 3px solid #777;
+}
+.ex-elenco-avatar {
+  width: 48px;
+  height: 64px;
+  flex: 0 0 48px;
+  border-radius: 3px;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(.22);
+}
+.ex-elenco-card strong,
+.ex-elenco-card span {
+  display: block;
+}
+.ex-elenco-card strong {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--preto);
+  font-size: 18px;
+  letter-spacing: .6px;
+  line-height: 1.05;
+}
+.ex-elenco-card span {
+  margin-top: .2rem;
+  color: #777;
+  font-size: 11px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+@media (max-width: 520px) {
+  .ex-elenco-grid { grid-template-columns: 1fr; }
+}
