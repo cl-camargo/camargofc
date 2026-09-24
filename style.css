@@ -1111,20 +1111,25 @@
     margin: 0.55rem 0 0.7rem;
   }
   .conquista {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    width: 100%;
     max-width: 100%;
-    padding: 0.28rem 0.48rem;
-    border: 1px solid rgba(255,255,255,0.12);
+    box-sizing: border-box;
+    padding: 0.38rem 0.52rem;
+    border: 1px solid rgba(255,255,255,0.18);
     border-radius: 4px;
-    font-size: 0.68rem;
-    line-height: 1.25;
+    color: #f5f5f5;
+    background: rgba(255,255,255,0.06);
+    font-size: 0.72rem;
+    line-height: 1.35;
     font-weight: 700;
     letter-spacing: 0.02em;
   }
-  .conquista-ouro { color: #ffd76a; background: rgba(185,132,15,0.12); }
-  .conquista-prata { color: #e0e4ea; background: rgba(170,178,190,0.1); }
-  .conquista-ng { color: #ff7d89; background: rgba(192,25,46,0.12); }
+  .conquista-ouro { color: #ffe08a; background: rgba(185,132,15,0.18); }
+  .conquista-prata { color: #edf1f6; background: rgba(170,178,190,0.14); }
+  .conquista-ng { color: #ff9ca6; background: rgba(192,25,46,0.18); }
+  .conquista-society { color: #9fe8ff; background: rgba(24,135,180,0.18); }
   .galeria-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
   .galeria-card-img .galeria-placeholder {
     display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
@@ -1137,11 +1142,13 @@
     padding: 0.85rem 1rem;
   }
   .galeria-card-titulo {
+    display: block;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 17px; color: var(--branco); letter-spacing: 1px;
-    margin-bottom: 0.2rem;
+    font-size: 17px; color: #ffffff; letter-spacing: 1px;
+    margin-bottom: 0.45rem;
   }
-  .galeria-card-desc { font-size: 12px; color: #666; }
+  .galeria-card-desc { font-size: 12px; line-height: 1.55; color: #cfd2d6; }
+  .galeria-card-desc strong { color: #ffffff; }
 
   .galeria-aviso {
     grid-column: 1 / -1;
