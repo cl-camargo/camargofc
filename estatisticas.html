@@ -30,37 +30,50 @@
       <p class="stats-intro">Jogos e gols registrados entre 2021 e 2026. Selecione a temporada e a modalidade para consultar o desempenho de cada atleta.</p>
     </div>
 
-    <nav class="jogos-subnav" aria-label="Navegação da área de jogos">
-      <a class="jogos-subnav-link" href="jogos.html#jogos">Histórico de partidas</a>
-      <a class="jogos-subnav-link ativo" href="estatisticas.html#estatisticas" aria-current="page">Estatísticas de jogadores</a>
-    </nav>
+    <details class="jogos-area-menu">
+      <summary>
+        <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Área de Jogos</span>
+        <span class="jogos-menu-arrow" aria-hidden="true"></span>
+      </summary>
+      <nav class="jogos-area-links" aria-label="Navegação da área de jogos">
+        <a class="" href="jogos.html#jogos">Histórico de partidas</a>
+        <a class="ativo" href="estatisticas.html#estatisticas" aria-current="page">Estatísticas de jogadores</a>
+      </nav>
+    </details>
 
-    <div class="stats-filtros" aria-label="Filtros das estatísticas">
-      <label class="stats-campo">Temporada
-        <select id="statsAno">
-          <option value="todos">Todos os anos</option>
-        </select>
-      </label>
-      <label class="stats-campo">Modalidade
-        <select id="statsModalidade"></select>
-      </label>
-      <label class="stats-campo stats-busca">Jogador
-        <input id="statsBusca" type="search" placeholder="Buscar jogador..." autocomplete="off">
-      </label>
-      <label class="stats-campo">Ordenar por
-        <select id="statsOrdem">
-          <option value="jogos">Mais jogos</option>
-          <option value="gols">Mais gols</option>
-          <option value="nome">Nome</option>
-        </select>
-      </label>
-    </div>
+    <details class="stats-filter-menu">
+      <summary>
+        <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Pesquisar e filtrar jogadores</span>
+        <span class="jogos-menu-arrow" aria-hidden="true"></span>
+      </summary>
+      <div class="stats-filtros" aria-label="Filtros das estatísticas">
+        <label class="stats-campo">Temporada
+          <select id="statsAno">
+            <option value="todos">Todos os anos</option>
+          </select>
+        </label>
+        <label class="stats-campo">Modalidade
+          <select id="statsModalidade"></select>
+        </label>
+        <label class="stats-campo stats-busca">Jogador
+          <input id="statsBusca" type="search" placeholder="Buscar jogador..." autocomplete="off">
+        </label>
+        <label class="stats-campo">Ordenar por
+          <select id="statsOrdem">
+            <option value="gols" selected>Mais gols</option>
+            <option value="jogos">Mais jogos</option>
+            <option value="nome">Nome</option>
+          </select>
+        </label>
+      </div>
+    </details>
 
     <div class="jogos-stats-bar stats-resumo" aria-live="polite">
-      <div class="jstat"><span class="jstat-num" id="resumoAtletas">0</span><span class="jstat-label">Atletas</span></div>
-      <div class="jstat"><span class="jstat-num" id="resumoJogos">0</span><span class="jstat-label">Participações</span></div>
-      <div class="jstat"><span class="jstat-num" id="resumoGols">0</span><span class="jstat-label">Gols</span></div>
-      <div class="jstat jstat-v"><span class="jstat-num" id="resumoArtilheiro">—</span><span class="jstat-label">Artilheiro</span></div>
+      <div class="jstat"><span class="jstat-num" id="resumoAtletas">0</span><span class="jstat-label">Jogadores</span></div>
+      <div class="jstat jstat-v"><span class="jstat-num stats-nome-destaque" id="resumoArtilheiro">—</span><span class="jstat-label">Artilheiro</span></div>
+      <div class="jstat"><span class="jstat-num stats-nome-destaque" id="resumoMaisJogos">—</span><span class="jstat-label">Mais jogos</span></div>
     </div>
 
     <div class="stats-contexto" id="statsContexto"></div>
@@ -185,13 +198,11 @@
       return "<tr><td><span class='stats-pos'>" + (indice + 1) + "</span></td><td class='stats-jogador'>" + escapar(nome(item.jogador)) + "</td><td><strong>" + item.jogos + "</strong></td><td><strong>" + item.gols + "</strong></td><td>" + media + "</td></tr>";
     }).join("");
     vazio.hidden = lista.length > 0;
-    var jogos = lista.reduce(function (soma, item) { return soma + item.jogos; }, 0);
-    var gols = lista.reduce(function (soma, item) { return soma + item.gols; }, 0);
     var artilheiro = lista.slice().sort(function (a, b) { return b.gols - a.gols || b.jogos - a.jogos; })[0];
+    var maisJogos = lista.slice().sort(function (a, b) { return b.jogos - a.jogos || b.gols - a.gols; })[0];
     document.getElementById("resumoAtletas").textContent = lista.length;
-    document.getElementById("resumoJogos").textContent = jogos;
-    document.getElementById("resumoGols").textContent = gols;
     document.getElementById("resumoArtilheiro").textContent = artilheiro ? nome(artilheiro.jogador) : "—";
+    document.getElementById("resumoMaisJogos").textContent = maisJogos ? nome(maisJogos.jogador) : "—";
     var modalidadeNome = dados.modalidades.find(function (item) { return item.id === modalidade.value; }).nome;
     document.getElementById("statsContexto").textContent = (ano.value === "todos" ? "Total histórico" : "Temporada " + ano.value) + " · " + modalidadeNome;
     renderGoleiros();

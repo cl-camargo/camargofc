@@ -2106,3 +2106,132 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .stats-resumo .jstat:last-child { min-width: 0; }
   .stats-tabela { min-width: 620px; }
 }
+
+
+/* Correções mobile da área Jogos e Estatísticas */
+#estatisticas {
+  background: #0d0d0d;
+  color: #d8d8d8;
+  color-scheme: dark;
+}
+.jogos-area-menu,
+.stats-filter-menu {
+  margin: 0 0 1.25rem;
+  border: 1px solid #333;
+  background: #171717;
+}
+.jogos-area-menu summary,
+.stats-filter-menu summary {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  gap: .8rem;
+  padding: .85rem 1rem;
+  color: #f2f2f2;
+  background: #191919;
+  cursor: pointer;
+  list-style: none;
+  font-size: .85rem;
+  font-weight: 700;
+}
+.jogos-area-menu summary::-webkit-details-marker,
+.stats-filter-menu summary::-webkit-details-marker { display: none; }
+.jogos-menu-hamb {
+  display: grid;
+  width: 22px;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+.jogos-menu-hamb i {
+  display: block;
+  height: 2px;
+  background: var(--vermelho);
+}
+.jogos-menu-arrow {
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  border-right: 2px solid #777;
+  border-bottom: 2px solid #777;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+.jogos-area-menu[open] .jogos-menu-arrow,
+.stats-filter-menu[open] .jogos-menu-arrow { transform: rotate(225deg); }
+.jogos-area-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  padding: 1px;
+  background: #333;
+}
+.jogos-area-links a {
+  padding: .9rem .75rem;
+  color: #bdbdbd;
+  background: #111;
+  text-align: center;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: 700;
+}
+.jogos-area-links a.ativo {
+  color: #fff;
+  background: rgba(192,25,46,.24);
+  box-shadow: inset 0 -3px 0 var(--vermelho);
+}
+.stats-filter-menu .stats-filtros {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #333;
+}
+.stats-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: #151515;
+}
+.stats-resumo .jstat,
+.stats-resumo .jstat:last-child {
+  min-width: 0;
+  background: #191919;
+}
+.stats-resumo .stats-nome-destaque,
+.stats-resumo .jstat:last-child .jstat-num {
+  font-size: 1rem;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+.stats-contexto {
+  color: #fff !important;
+  background: #241417 !important;
+}
+.stats-tabela-wrap,
+.stats-tabela,
+.stats-tabela tbody,
+.stats-tabela tbody tr,
+.stats-tabela tbody td {
+  color: #d9d9d9 !important;
+  background: #151515 !important;
+}
+.stats-tabela thead,
+.stats-tabela thead tr,
+.stats-tabela thead th {
+  color: #a9a9a9 !important;
+  background: #101010 !important;
+}
+.stats-tabela tbody tr:nth-child(even) td { background: #1b1b1b !important; }
+.stats-tabela tbody tr:hover td { background: #242424 !important; }
+.stats-tabela .stats-jogador,
+.stats-tabela td strong { color: #fff !important; }
+@media (max-width: 520px) {
+  #estatisticas .container,
+  #jogos .container { padding-top: 1rem; }
+  .jogos-area-menu,
+  .stats-filter-menu { margin-top: 0; }
+  .jogos-area-links { grid-template-columns: 1fr; }
+  .stats-resumo { grid-template-columns: 1fr; }
+  .stats-resumo .jstat { min-height: 94px; }
+  .stats-tabela-wrap {
+    border: 1px solid #2a2a2a;
+    background: #151515 !important;
+  }
+}

@@ -44,10 +44,17 @@
       <div class="section-divider"></div>
     </div>
 
-    <nav class="jogos-subnav" aria-label="Navegação da área de jogos">
-      <a class="jogos-subnav-link ativo" href="jogos.html#jogos" aria-current="page">Histórico de partidas</a>
-      <a class="jogos-subnav-link" href="estatisticas.html#estatisticas">Estatísticas de jogadores</a>
-    </nav>
+    <details class="jogos-area-menu">
+      <summary>
+        <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Área de Jogos</span>
+        <span class="jogos-menu-arrow" aria-hidden="true"></span>
+      </summary>
+      <nav class="jogos-area-links" aria-label="Navegação da área de jogos">
+        <a class="ativo" href="jogos.html#jogos" aria-current="page">Histórico de partidas</a>
+        <a class="" href="estatisticas.html#estatisticas">Estatísticas de jogadores</a>
+      </nav>
+    </details>
 
     <!-- Accordion de modalidades -->
     <div class="jogos-accordion" id="jogosAccordion">
