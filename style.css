@@ -1973,3 +1973,136 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (max-width: 520px) {
   .ex-elenco-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Navegação e estatísticas históricas */
+.jogos-subnav {
+  display: flex;
+  gap: .65rem;
+  flex-wrap: wrap;
+  margin: 0 0 1.5rem;
+}
+.jogos-subnav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: .7rem 1rem;
+  border: 1px solid rgba(255,255,255,.15);
+  color: #c8c8c8;
+  background: #191919;
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s ease;
+}
+.jogos-subnav-link:hover,
+.jogos-subnav-link.ativo {
+  color: #fff;
+  border-color: var(--vermelho);
+  background: rgba(192,25,46,.18);
+}
+.stats-intro {
+  max-width: 760px;
+  margin: .75rem auto 0;
+  color: #b9b9b9;
+  line-height: 1.65;
+}
+.stats-filtros {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .85rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255,255,255,.1);
+  background: #171717;
+}
+.stats-campo {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  color: #a9a9a9;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.stats-campo select,
+.stats-campo input {
+  width: 100%;
+  min-height: 42px;
+  padding: .65rem .75rem;
+  border: 1px solid #363636;
+  border-radius: 3px;
+  outline: none;
+  color: #f4f4f4;
+  background: #0e0e0e;
+  font: 500 .82rem 'Inter', sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.stats-campo select:focus,
+.stats-campo input:focus { border-color: var(--vermelho); }
+.stats-resumo { margin: 0 0 1rem; }
+.stats-resumo .jstat:last-child { min-width: 180px; }
+.stats-resumo .jstat:last-child .jstat-num { font-size: 1.1rem; }
+.stats-contexto {
+  padding: .75rem 1rem;
+  border-left: 3px solid var(--vermelho);
+  color: #fff;
+  background: rgba(192,25,46,.08);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: .06em;
+}
+.stats-tabela-wrap { margin-top: 0; }
+.stats-tabela th:nth-child(n+3),
+.stats-tabela td:nth-child(n+3) { text-align: center; }
+.stats-jogador { color: #fff; font-weight: 700; }
+.stats-pos {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #292929;
+  font-weight: 700;
+}
+.stats-tabela tbody tr:nth-child(-n+3) .stats-pos { background: var(--vermelho); }
+.stats-vazio {
+  padding: 2rem;
+  text-align: center;
+  color: #aaa;
+  border: 1px solid #2b2b2b;
+}
+.stats-goleiros {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.stats-subheader h2 {
+  margin: .15rem 0 .35rem;
+  color: #fff;
+  font: 2rem 'Bebas Neue', sans-serif;
+  letter-spacing: .05em;
+}
+.stats-subheader > p:last-child { margin: 0 0 1rem; color: #aaa; }
+.stats-fonte {
+  margin-top: 1rem;
+  color: #777;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+@media (max-width: 800px) {
+  .stats-filtros { grid-template-columns: 1fr 1fr; }
+  .stats-resumo .jstat:last-child { min-width: 130px; }
+}
+@media (max-width: 520px) {
+  .jogos-subnav { display: grid; grid-template-columns: 1fr; }
+  .stats-filtros { grid-template-columns: 1fr; }
+  .stats-resumo { display: grid; grid-template-columns: 1fr 1fr; }
+  .stats-resumo .jstat:last-child { min-width: 0; }
+  .stats-tabela { min-width: 620px; }
+}

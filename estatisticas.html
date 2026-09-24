@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Estatísticas históricas dos jogadores do Camargo FC por temporada e modalidade.">
+<link rel="canonical" href="https://camargofc.com.br/estatisticas.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Estatísticas · Camargo Futebol Clube">
+<meta property="og:description" content="Jogos e gols dos atletas do Camargo FC por ano, modalidade e total histórico.">
+<meta property="og:url" content="https://camargofc.com.br/estatisticas.html">
+<meta property="og:image" content="https://camargofc.com.br/LOGOSITE-png.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
+<title>Estatísticas · Camargo Futebol Clube</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div id="site-menu"></div>
+<div class="nav-spacer" aria-hidden="true"></div>
+<main id="conteudo">
+<section id="estatisticas">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Números que contam a história</p>
+      <h1 class="section-title">Estatísticas de Jogadores</h1>
+      <div class="section-divider"></div>
+      <p class="stats-intro">Jogos e gols registrados entre 2021 e 2026. Selecione a temporada e a modalidade para consultar o desempenho de cada atleta.</p>
+    </div>
+
+    <nav class="jogos-subnav" aria-label="Navegação da área de jogos">
+      <a class="jogos-subnav-link" href="jogos.html#jogos">Histórico de partidas</a>
+      <a class="jogos-subnav-link ativo" href="estatisticas.html#estatisticas" aria-current="page">Estatísticas de jogadores</a>
+    </nav>
+
+    <div class="stats-filtros" aria-label="Filtros das estatísticas">
+      <label class="stats-campo">Temporada
+        <select id="statsAno">
+          <option value="todos">Todos os anos</option>
+        </select>
+      </label>
+      <label class="stats-campo">Modalidade
+        <select id="statsModalidade"></select>
+      </label>
+      <label class="stats-campo stats-busca">Jogador
+        <input id="statsBusca" type="search" placeholder="Buscar jogador..." autocomplete="off">
+      </label>
+      <label class="stats-campo">Ordenar por
+        <select id="statsOrdem">
+          <option value="jogos">Mais jogos</option>
+          <option value="gols">Mais gols</option>
+          <option value="nome">Nome</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="jogos-stats-bar stats-resumo" aria-live="polite">
+      <div class="jstat"><span class="jstat-num" id="resumoAtletas">0</span><span class="jstat-label">Atletas</span></div>
+      <div class="jstat"><span class="jstat-num" id="resumoJogos">0</span><span class="jstat-label">Participações</span></div>
+      <div class="jstat"><span class="jstat-num" id="resumoGols">0</span><span class="jstat-label">Gols</span></div>
+      <div class="jstat jstat-v"><span class="jstat-num" id="resumoArtilheiro">—</span><span class="jstat-label">Artilheiro</span></div>
+    </div>
+
+    <div class="stats-contexto" id="statsContexto"></div>
+    <div class="tabela-wrap stats-tabela-wrap">
+      <table class="jogos-tabela stats-tabela">
+        <thead>
+          <tr><th>Pos.</th><th>Jogador</th><th>Jogos</th><th>Gols</th><th>Gols/jogo</th></tr>
+        </thead>
+        <tbody id="statsCorpo"></tbody>
+      </table>
+    </div>
+    <p class="stats-vazio" id="statsVazio" hidden>Nenhum jogador encontrado para os filtros selecionados.</p>
+
+    <section class="stats-goleiros" aria-labelledby="tituloGoleiros">
+      <div class="stats-subheader">
+        <p class="section-eyebrow">Defesa da meta</p>
+        <h2 id="tituloGoleiros">Estatísticas de goleiros</h2>
+        <p>Jogos no gol, gols sofridos, minutos registrados e média por partida.</p>
+      </div>
+      <div class="tabela-wrap stats-tabela-wrap">
+        <table class="jogos-tabela stats-tabela">
+          <thead>
+            <tr><th>Goleiro</th><th>Ano</th><th>Jogos no gol</th><th>Gols sofridos</th><th>Minutos</th><th>Média</th></tr>
+          </thead>
+          <tbody id="goleirosCorpo"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="stats-fonte">Fonte: Histórico Camargo FC 2021–2026. Dados de 2026 atualizados até <span id="statsAtualizacao"></span>.</p>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <img class="footer-escudo" src="LOGOSITE-png.webp" alt="Escudo Camargo FC" decoding="async" width="989" height="1600">
+  <div class="footer-logo">Camargo Futebol Clube</div>
+  <p>Fundado em 2015 · Unidos pela família, fortalecidos pelo futebol</p>
+  <p style="margin-top:0.25rem; font-size: 12px; opacity: 0.4;">© 2026 Camargo FC · Todos os direitos reservados</p>
+  <div class="footer-contatos">
+    <a href="https://instagram.com/camargofc.pso" target="_blank" rel="noopener" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      @camargofc.pso
+    </a>
+    <a href="https://wa.me/5563992994110" target="_blank" rel="noopener" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      (63) 99299-4110
+    </a>
+    <a href="mailto:camargofc.pso@gmail.com" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      camargofc.pso@gmail.com
+    </a>
+  </div>
+
+
+  <div class="footer-patro">
+    <div class="footer-patro-title">Patrocinadores e Apoio</div>
+    <!-- ALTERE APENAS O NOME DAS IMAGENS ABAIXO -->
+    <div class="footer-patro-grid">
+      <img src="VIP-png.webp" alt="Patrocinador 1" decoding="async" width="1064" height="1064" loading="lazy">
+      <img src="VIBER-png.webp" alt="Patrocinador 2" decoding="async" width="1600" height="1023" loading="lazy">
+      <img src="SOUZA-png.webp" alt="Patrocinador 3" decoding="async" width="1076" height="603" loading="lazy">
+      <img src="Bambam-png.webp" alt="Patrocinador 4" decoding="async" width="1333" height="1600" loading="lazy">
+    </div>
+  </div>
+
+  <div class="footer-cores">
+    <div class="footer-cor" style="background: #c0192e;"></div>
+    <div class="footer-cor" style="background: #111111;"></div>
+    <div class="footer-cor" style="background: #f5f5f5;"></div>
+  </div>
+</footer>
+
+
+<script src="menu-loader.js"></script>
+<script src="estatisticas-data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var dados = window.CAMARGO_STATS;
+  var ano = document.getElementById("statsAno");
+  var modalidade = document.getElementById("statsModalidade");
+  var busca = document.getElementById("statsBusca");
+  var ordem = document.getElementById("statsOrdem");
+  var corpo = document.getElementById("statsCorpo");
+  var goleirosCorpo = document.getElementById("goleirosCorpo");
+  var vazio = document.getElementById("statsVazio");
+
+  function escapar(texto) {
+    return String(texto).replace(/[&<>"']/g, function (char) {
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char];
+    });
+  }
+  function nome(texto) {
+    return texto.toLocaleLowerCase("pt-BR").replace(/(^|[\s(])\p{L}/gu, function (letra) { return letra.toLocaleUpperCase("pt-BR"); });
+  }
+  function normalizar(texto) {
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+  }
+  function metrica(registro) {
+    return modalidade.value === "todas" ? registro.total : registro[modalidade.value];
+  }
+  function registrosAtuais() {
+    return ano.value === "todos" ? dados.totais.slice() : dados.registros.filter(function (item) { return String(item.ano) === ano.value; });
+  }
+  function renderJogadores() {
+    var termo = normalizar(busca.value.trim());
+    var lista = registrosAtuais().map(function (item) {
+      var valor = metrica(item);
+      return { jogador: item.jogador, jogos: valor.jogos, gols: valor.gols };
+    }).filter(function (item) {
+      return (item.jogos > 0 || item.gols > 0) && (!termo || normalizar(item.jogador).includes(termo));
+    });
+    lista.sort(function (a, b) {
+      if (ordem.value === "nome") return a.jogador.localeCompare(b.jogador, "pt-BR");
+      if (ordem.value === "gols") return b.gols - a.gols || b.jogos - a.jogos || a.jogador.localeCompare(b.jogador, "pt-BR");
+      return b.jogos - a.jogos || b.gols - a.gols || a.jogador.localeCompare(b.jogador, "pt-BR");
+    });
+    corpo.innerHTML = lista.map(function (item, indice) {
+      var media = item.jogos ? (item.gols / item.jogos).toFixed(2).replace(".", ",") : "0,00";
+      return "<tr><td><span class='stats-pos'>" + (indice + 1) + "</span></td><td class='stats-jogador'>" + escapar(nome(item.jogador)) + "</td><td><strong>" + item.jogos + "</strong></td><td><strong>" + item.gols + "</strong></td><td>" + media + "</td></tr>";
+    }).join("");
+    vazio.hidden = lista.length > 0;
+    var jogos = lista.reduce(function (soma, item) { return soma + item.jogos; }, 0);
+    var gols = lista.reduce(function (soma, item) { return soma + item.gols; }, 0);
+    var artilheiro = lista.slice().sort(function (a, b) { return b.gols - a.gols || b.jogos - a.jogos; })[0];
+    document.getElementById("resumoAtletas").textContent = lista.length;
+    document.getElementById("resumoJogos").textContent = jogos;
+    document.getElementById("resumoGols").textContent = gols;
+    document.getElementById("resumoArtilheiro").textContent = artilheiro ? nome(artilheiro.jogador) : "—";
+    var modalidadeNome = dados.modalidades.find(function (item) { return item.id === modalidade.value; }).nome;
+    document.getElementById("statsContexto").textContent = (ano.value === "todos" ? "Total histórico" : "Temporada " + ano.value) + " · " + modalidadeNome;
+    renderGoleiros();
+  }
+  function renderGoleiros() {
+    var lista = dados.goleiros.filter(function (item) {
+      return (ano.value === "todos" || String(item.ano) === ano.value) && (!busca.value.trim() || normalizar(item.jogador).includes(normalizar(busca.value.trim())));
+    }).sort(function (a, b) { return b.jogosNoGol - a.jogosNoGol || a.jogador.localeCompare(b.jogador, "pt-BR"); });
+    goleirosCorpo.innerHTML = lista.map(function (item) {
+      var minutos = item.minutos === null ? "—" : item.minutos;
+      return "<tr><td class='stats-jogador'>" + escapar(nome(item.jogador)) + "</td><td>" + item.ano + "</td><td><strong>" + item.jogosNoGol + "</strong></td><td>" + item.golsSofridos + "</td><td>" + minutos + "</td><td>" + item.media.toFixed(2).replace(".", ",") + "</td></tr>";
+    }).join("");
+  }
+
+  dados.anos.forEach(function (valor) {
+    ano.insertAdjacentHTML("beforeend", "<option value='" + valor + "'>" + valor + "</option>");
+  });
+  dados.modalidades.forEach(function (item) {
+    modalidade.insertAdjacentHTML("beforeend", "<option value='" + item.id + "'>" + escapar(item.nome) + "</option>");
+  });
+  document.getElementById("statsAtualizacao").textContent = dados.atualizadoAte;
+  [ano, modalidade, busca, ordem].forEach(function (controle) { controle.addEventListener("input", renderJogadores); });
+  renderJogadores();
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html>
