@@ -1096,7 +1096,35 @@
     display: flex; align-items: center; justify-content: center;
     overflow: hidden; position: relative;
   }
-  .galeria-card-img.portrait { aspect-ratio: 3/4; }
+  .galeria-card-img.portrait { aspect-ratio: 4/5; }
+  .galeria-card-img.portrait img {
+    object-fit: cover;
+    object-position: center 18%;
+    transform: scale(1.06);
+    transform-origin: center 18%;
+  }
+  .galeria-card-conquistas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    margin: 0.55rem 0 0.7rem;
+  }
+  .conquista {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 0.28rem 0.48rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 4px;
+    font-size: 0.68rem;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .conquista-ouro { color: #ffd76a; background: rgba(185,132,15,0.12); }
+  .conquista-prata { color: #e0e4ea; background: rgba(170,178,190,0.1); }
+  .conquista-ng { color: #ff7d89; background: rgba(192,25,46,0.12); }
   .galeria-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
   .galeria-card-img .galeria-placeholder {
     display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
