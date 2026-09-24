@@ -436,3 +436,17 @@
 
     });
   })();
+
+/* Menus retráteis de Jogos e Estatísticas — compatível com Safari/iOS */
+(function () {
+  document.querySelectorAll('.menu-retratil .jogos-menu-toggle').forEach(function (botao) {
+    var painel = document.getElementById(botao.getAttribute('aria-controls'));
+    if (!painel) return;
+    botao.addEventListener('click', function () {
+      var abrir = botao.getAttribute('aria-expanded') !== 'true';
+      botao.setAttribute('aria-expanded', String(abrir));
+      botao.closest('.menu-retratil').classList.toggle('aberto', abrir);
+      painel.hidden = !abrir;
+    });
+  });
+})();

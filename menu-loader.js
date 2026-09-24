@@ -18,8 +18,9 @@
   function ativarMenu() {
     // Marca o link da página atual como ativo
     var pagina = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a[data-page]').forEach(function (link) {
-      if (link.dataset.page === pagina) {
+    document.querySelectorAll('.nav-links a[data-page], .nav-links a[data-pages]').forEach(function (link) {
+      var paginas = (link.dataset.pages || link.dataset.page || '').split(/\s+/);
+      if (paginas.indexOf(pagina) !== -1) {
         link.classList.add('nav-ativo');
       }
     });
