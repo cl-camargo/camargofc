@@ -1107,7 +1107,13 @@
     transform: scale(1.18);
   }
   .galeria-card-img.portrait img.portrait-zoom-strong {
-    transform: scale(1.34);
+    transform: scale(1.75);
+    transform-origin: center 80%;
+  }
+  .galeria-card-img.portrait img.portrait-markinhos {
+    object-position: center top;
+    transform: scale(1.03);
+    transform-origin: center top;
   }
   .galeria-card-conquistas {
     display: flex;
@@ -1136,6 +1142,7 @@
   .conquista-prata { color: #edf1f6; background: rgba(170,178,190,0.14); }
   .conquista-ng { color: #ff9ca6; background: rgba(192,25,46,0.18); }
   .conquista-society { color: #9fe8ff; background: rgba(24,135,180,0.18); }
+  .conquista-individual { color: #f1c8ff; background: rgba(142,68,173,0.2); }
   .galeria-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
   .galeria-card-img .galeria-placeholder {
     display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
