@@ -95,7 +95,7 @@
   /* ===== CARROSSEL HERO ===== */
   (function() {
     var slides = [
-      { legenda: 'Time Campeão de 2022', sub: 'Liga Paraíso de Futebol · 2ª Divisão' },
+      { legenda: 'Semifinal · Camargo FC × Real Tocantins', sub: 'Domingo, 27/set · 17h30 · Transmissão em breve' },
       { legenda: 'Campeão Liga Paraíso 2022', sub: 'Título histórico do Camargo FC' },
       { legenda: 'Campeão Torneio Nova Geração 2023', sub: 'Mais um título para a galeria' },
       { legenda: 'Kiley – Ídolo do Camargo FC', sub: 'Histórico: 48 jogos · 14 gols · Society e Campo' },

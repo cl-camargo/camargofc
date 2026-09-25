@@ -37,7 +37,8 @@
 .home-stream-stage img{height:100%;width:100%;object-fit:contain}
 .home-stream-status{position:absolute;left:1rem;bottom:1rem;background:#b71026;color:#fff;padding:.65rem .9rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 3px 18px #000a}
 .home-stream-stage iframe{width:100%;height:100%;border:0}
-@media(max-width:650px){.home-stream{padding:2rem 0}.home-stream-stage{aspect-ratio:4/5}.home-stream-status{left:.5rem;bottom:.5rem;font-size:.72rem}}
+@media(max-width:650px){.home-stream{padding:2rem 0}.home-stream-stage{aspect-ratio:16/9}.home-stream-status{left:.5rem;bottom:.5rem;font-size:.72rem}}
+.carousel-slide--flyer img{object-fit:contain;object-position:center;opacity:1;background:#111}
 </style>
 </head>
 <body>
@@ -96,9 +97,9 @@
     <div class="hero-carousel" id="heroCarousel">
       <div class="carousel-track" id="carouselTrack">
 
-        <!-- SLIDE 1 – Campeões de 2022 -->
-        <a class="carousel-slide carousel-slide-link" href="noticia-titulo-liga-paraiso-2022.html" aria-label="Ler a campanha de 2022 e as escalações">
-          <img src="Time2022-jpg.webp" alt="Camargo FC – Time Campeão 2022" width="1600" height="1200">
+        <!-- SLIDE 1 – Transmissão da semifinal -->
+        <a class="carousel-slide carousel-slide-link carousel-slide--flyer" href="#transmissao" aria-label="Ver espaço da transmissão da semifinal contra o Real Tocantins">
+          <img src="semifinal-camargo-real-video.webp" alt="Flyer da semifinal Camargo FC contra Real Tocantins, domingo 27 de setembro às 17h30" width="1672" height="941">
         </a>
 
         <!-- SLIDE 2 -->
@@ -130,8 +131,8 @@
 
       <!-- Legenda sobre o carrossel -->
       <div class="carousel-overlay">
-        <div class="carousel-legenda" id="carouselLegenda">Time Campeão de 2022</div>
-        <div class="carousel-sublinha" id="carouselSublinha">Liga Paraíso de Futebol · 2ª Divisão</div>
+        <div class="carousel-legenda" id="carouselLegenda">Semifinal · Camargo FC × Real Tocantins</div>
+        <div class="carousel-sublinha" id="carouselSublinha">Domingo, 27/set · 17h30 · Transmissão em breve</div>
         <div class="carousel-controles">
           <button class="carousel-btn" id="carouselPrev" aria-label="Slide anterior">&#8249;</button>
           <div class="carousel-dots" id="carouselDots"></div>
@@ -169,7 +170,7 @@
     <h2 id="home-stream-title">Transmissão ao vivo</h2>
     <p class="home-stream-intro">Domingo, 27 de setembro, às 17h30 · Estádio Antônio Damião. Acompanhe o jogo aqui no site.</p>
     <div class="home-stream-stage" aria-label="Transmissão em breve">
-      <img src="semifinal-camargo-real-2026.jpg" alt="Flyer da semifinal Camargo FC contra Real Tocantins em 27 de setembro às 17h30" width="1080" height="1350" loading="lazy" decoding="async">
+      <img src="semifinal-camargo-real-video.webp" alt="Flyer horizontal da semifinal Camargo FC contra Real Tocantins em 27 de setembro às 17h30" width="1672" height="941" loading="lazy" decoding="async">
       <span class="home-stream-status">Transmissão em breve</span>
     </div>
   </div>
@@ -234,7 +235,7 @@
 </footer>
 
 <script src="menu-loader.js"></script>
-<script src="main.js?v=20260925-9"></script>
+<script src="main.js?v=20260925-10"></script>
 <script>
   // Oculta a chamada após o dia da partida em Paraíso do Tocantins.
   if (Date.now() > Date.parse("2026-09-28T00:00:00-03:00")) {
