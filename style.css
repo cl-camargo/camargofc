@@ -2437,7 +2437,7 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* Goleiros consolidados e responsivos — 25/09/2026 */
 #estatisticas .stats-goleiros.stats-section-item {
-  margin-top: 2rem;
+  margin-top: 0;
   padding-top: 0;
   border-top: 0;
 }
@@ -2499,4 +2499,26 @@ html,body{max-width:100%;overflow-x:hidden}
   #estatisticas .stats-goalkeeper-table td:nth-child(4) { display: none; }
   #estatisticas .stats-goalkeeper-table th:nth-child(5),
   #estatisticas .stats-goalkeeper-table td:nth-child(5) { width: 52px; }
+}
+
+
+/* Busca sob demanda de goleiros e título geral — 25/09/2026 */
+#estatisticas .stats-goalie-prompt {
+  margin: .75rem 0 0;
+  padding: 1rem;
+  border: 1px dashed #3a3a3a;
+  color: #a9a9a9;
+  background: #111;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+#estatisticas #goleirosTabelaWrap[hidden],
+#estatisticas #goleirosInstrucao[hidden] { display: none !important; }
+@media (max-width: 520px) {
+  #estatisticas .section-title {
+    max-width: 100%;
+    font-size: clamp(2.35rem, 11vw, 3.6rem);
+    line-height: .98;
+    overflow-wrap: normal;
+  }
 }

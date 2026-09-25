@@ -2,19 +2,22 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Estatísticas históricas dos jogadores do Camargo FC por temporada e modalidade.">
+<meta name="description" content="Histórico de partidas, placares e estatísticas dos jogadores do Camargo FC por temporada e modalidade.">
 <link rel="canonical" href="https://camargofc.com.br/estatisticas.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Estatísticas · Camargo Futebol Clube">
-<meta property="og:description" content="Jogos e gols dos atletas do Camargo FC por ano, modalidade e total histórico.">
+<meta property="og:description" content="Partidas, placares, jogos e gols do Camargo FC por ano, modalidade e total histórico.">
 <meta property="og:url" content="https://camargofc.com.br/estatisticas.html">
 <meta property="og:image" content="https://camargofc.com.br/LOGOSITE-png.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Estatísticas · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260925-6">
+<link rel="stylesheet" href="style.css?v=20260925-7">
 <style id="mobile-critical-stats">
 /* CSS crítico inline: evita cache antigo no Safari/iPhone */
 .menu-retratil { position: relative; z-index: 1; }
@@ -118,9 +121,9 @@ html,body{max-width:100%;overflow-x:hidden}
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">Números que contam a história</p>
-      <h1 class="section-title">Estatísticas de Jogadores</h1>
+      <h1 class="section-title">Histórico e Estatísticas</h1>
       <div class="section-divider"></div>
-      <p class="stats-intro">Jogos e gols registrados entre 2021 e 2026. Selecione a temporada e a modalidade para consultar o desempenho de cada atleta.</p>
+      <p class="stats-intro">Partidas, placares, gols e participações registrados entre 2021 e 2026. Consulte o histórico do clube e o desempenho de cada atleta.</p>
     </div>
 
     <div class="stats-section-stack">
@@ -502,6 +505,10 @@ html,body{max-width:100%;overflow-x:hidden}
     </div>
     <p class="stats-vazio" id="statsVazio" hidden>Nenhum jogador encontrado para os filtros selecionados.</p>
 
+
+        </div>
+      </section>
+
     <section class="stats-goleiros stats-section-item" aria-labelledby="tituloGoleiros">
       <button class="stats-section-toggle" type="button" aria-expanded="false" aria-controls="statsPanelGoleiros">
         <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -518,7 +525,8 @@ html,body{max-width:100%;overflow-x:hidden}
           <input id="goleirosBusca" type="search" placeholder="Buscar goleiro..." autocomplete="off">
         </label>
         <p class="stats-goalie-context" id="goleirosContexto">Total histórico · todos os anos</p>
-        <div class="tabela-wrap stats-tabela-wrap">
+        <p class="stats-goalie-prompt" id="goleirosInstrucao">Digite o nome do goleiro para consultar os dados.</p>
+        <div class="tabela-wrap stats-tabela-wrap" id="goleirosTabelaWrap" hidden>
           <table class="jogos-tabela stats-tabela stats-goalkeeper-table">
             <thead>
               <tr><th>Goleiro</th><th>Jogos</th><th>Gols sofridos</th><th>Minutos</th><th>Média</th></tr>
@@ -529,11 +537,9 @@ html,body{max-width:100%;overflow-x:hidden}
         <p class="stats-vazio" id="goleirosVazio" hidden>Nenhum goleiro encontrado.</p>
       </div>
     </section>
+    </div>
 
     <p class="stats-fonte">Fonte: Histórico Camargo FC 2021–2026. Dados de 2026 atualizados até <span id="statsAtualizacao"></span>.</p>
-        </div>
-      </section>
-    </div>
   </div>
 </section>
 </main>
@@ -595,6 +601,8 @@ html,body{max-width:100%;overflow-x:hidden}
   var goleirosBusca = document.getElementById("goleirosBusca");
   var goleirosVazio = document.getElementById("goleirosVazio");
   var goleirosContexto = document.getElementById("goleirosContexto");
+  var goleirosInstrucao = document.getElementById("goleirosInstrucao");
+  var goleirosTabelaWrap = document.getElementById("goleirosTabelaWrap");
   var vazio = document.getElementById("statsVazio");
 
   function escapar(texto) {
@@ -645,6 +653,17 @@ html,body{max-width:100%;overflow-x:hidden}
   }
   function renderGoleiros() {
     var termo = normalizar(goleirosBusca.value.trim());
+    goleirosContexto.textContent = ano.value === "todos" ? "Total histórico · todos os anos" : "Temporada " + ano.value;
+
+    if (!termo) {
+      goleirosCorpo.innerHTML = "";
+      goleirosTabelaWrap.hidden = true;
+      goleirosVazio.hidden = true;
+      goleirosInstrucao.hidden = false;
+      return;
+    }
+
+    goleirosInstrucao.hidden = true;
     var agrupados = {};
 
     dados.goleiros.forEach(function (item) {
@@ -684,7 +703,7 @@ html,body{max-width:100%;overflow-x:hidden}
       return "<tr><td class='stats-jogador'>" + escapar(item.jogador) + "</td><td><strong>" + item.jogosNoGol + "</strong></td><td>" + item.golsSofridos + "</td><td>" + minutos + "</td><td>" + media.toFixed(2).replace(".", ",") + "</td></tr>";
     }).join("");
 
-    goleirosContexto.textContent = ano.value === "todos" ? "Total histórico · todos os anos" : "Temporada " + ano.value;
+    goleirosTabelaWrap.hidden = lista.length === 0;
     goleirosVazio.hidden = lista.length > 0;
   }
 
