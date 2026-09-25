@@ -27,7 +27,7 @@
 </script>
 <title>Camargo Futebol Clube · Site Oficial</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260925-8">
+<link rel="stylesheet" href="style.css?v=20260925-10">
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -58,6 +58,7 @@
       <div class="hero-text">
         <p class="hero-sub">Desde 2015</p>
         <h1>Camargo <span>Futebol Clube</span></h1>
+        <p class="hero-origem">Nascido como time da família em 2015. Desde 2020, uma equipe amadora nos campeonatos.</p>
         <div class="hero-stats">
           <div class="hero-stat">
             <div class="hero-stat-num">11</div>
@@ -132,6 +133,24 @@
   </div>
 </section>
 
+<!-- PRÓXIMO JOGO -->
+<section class="home-next-match" id="homeNextMatch" aria-labelledby="home-next-title">
+  <div class="container">
+    <div class="home-next-card">
+      <div class="home-next-heading">
+        <p class="section-eyebrow">Próximo jogo · Semifinal</p>
+        <h2 id="home-next-title">Camargo FC <span>×</span> Real Tocantins</h2>
+        <p>14ª Liga Paraíso de Futebol · 2ª Divisão</p>
+      </div>
+      <div class="home-next-details">
+        <span><strong>27 SET</strong> Domingo</span>
+        <span><strong>17h30</strong> Antônio Damião</span>
+      </div>
+      <a class="hero-btn" href="agenda.html">Ver agenda</a>
+    </div>
+  </div>
+</section>
+
 <!-- ÚLTIMA NOTÍCIA -->
 <section class="home-news" aria-labelledby="home-news-title">
   <div class="container">
@@ -192,6 +211,13 @@
 
 <script src="menu-loader.js"></script>
 <script src="main.js?v=20260925-9"></script>
+<script>
+  // Oculta a chamada após o dia da partida em Paraíso do Tocantins.
+  if (Date.now() > Date.parse("2026-09-28T00:00:00-03:00")) {
+    var proximoJogo = document.getElementById("homeNextMatch");
+    if (proximoJogo) proximoJogo.hidden = true;
+  }
+</script>
 
 </body>
 </html>
