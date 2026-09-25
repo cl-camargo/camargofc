@@ -2433,3 +2433,70 @@ html,body{max-width:100%;overflow-x:hidden}
  #estatisticas .stats-goalkeeper-table,#statsPanelPartidas .jogos-tabela{min-width:620px}
  #estatisticas .stats-goleiros .stats-tabela-wrap,#statsPanelPartidas .tabela-wrap{width:100%;max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
 }
+
+
+/* Goleiros consolidados e responsivos — 25/09/2026 */
+#estatisticas .stats-goleiros.stats-section-item {
+  margin-top: 2rem;
+  padding-top: 0;
+  border-top: 0;
+}
+#estatisticas .stats-goalkeeper-panel { min-width: 0; }
+#estatisticas .stats-goalie-search {
+  width: min(100%, 420px);
+  margin-bottom: .75rem;
+}
+#estatisticas .stats-goalie-context {
+  margin: 0 0 .75rem;
+  color: #a9a9a9;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+#estatisticas .stats-goalkeeper-table th:first-child,
+#estatisticas .stats-goalkeeper-table td:first-child { text-align: left; }
+
+@media (max-width: 700px) {
+  #estatisticas .stats-goalkeeper-panel { padding: 8px; overflow: hidden; }
+  #estatisticas .stats-goalie-search,
+  #estatisticas .stats-goalie-search input {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  #estatisticas .stats-goleiros .stats-tabela-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden !important;
+  }
+  #estatisticas .stats-goalkeeper-table {
+    display: table;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+  }
+  #estatisticas .stats-goalkeeper-table th,
+  #estatisticas .stats-goalkeeper-table td {
+    min-width: 0;
+    padding: 10px 5px !important;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  #estatisticas .stats-goalkeeper-table th:nth-child(1),
+  #estatisticas .stats-goalkeeper-table td:nth-child(1) {
+    width: auto;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  #estatisticas .stats-goalkeeper-table th:nth-child(2),
+  #estatisticas .stats-goalkeeper-table td:nth-child(2) { width: 50px; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(3),
+  #estatisticas .stats-goalkeeper-table td:nth-child(3) { width: 68px; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(4),
+  #estatisticas .stats-goalkeeper-table td:nth-child(4) { display: none; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(5),
+  #estatisticas .stats-goalkeeper-table td:nth-child(5) { width: 52px; }
+}
