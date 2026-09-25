@@ -2295,3 +2295,41 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     justify-content: center;
   }
 }
+
+/* Ranking de gols responsivo — 25/09/2026 */
+#estatisticas .section-title { color: #fff !important; }
+@media (max-width: 520px) {
+  #estatisticas { overflow-x: hidden; }
+  #estatisticas .stats-tabela-wrap { width: 100%; max-width: 100%; overflow: hidden; }
+  #estatisticas .stats-ranking-table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+  }
+  #estatisticas .stats-ranking-table th,
+  #estatisticas .stats-ranking-table td { padding: 12px 8px; }
+  #estatisticas .stats-ranking-table th:nth-child(1),
+  #estatisticas .stats-ranking-table td:nth-child(1) { width: 64px; text-align: center; }
+  #estatisticas .stats-ranking-table th:nth-child(2),
+  #estatisticas .stats-ranking-table td:nth-child(2) { width: auto; }
+  #estatisticas .stats-ranking-table th:nth-child(3),
+  #estatisticas .stats-ranking-table td:nth-child(3),
+  #estatisticas .stats-ranking-table th:nth-child(5),
+  #estatisticas .stats-ranking-table td:nth-child(5) { display: none; }
+  #estatisticas .stats-ranking-table th:nth-child(4),
+  #estatisticas .stats-ranking-table td:nth-child(4) { width: 72px; text-align: center; }
+  #estatisticas .stats-ranking-table td:nth-child(4)::after {
+    content: " gols";
+    display: block;
+    margin-top: 2px;
+    color: #8f8f8f;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  #estatisticas .stats-ranking-table .stats-jogador {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: 15px;
+  }
+}

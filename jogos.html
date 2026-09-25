@@ -14,7 +14,25 @@
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Jogos · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20260925-1">
+<style id="mobile-critical-menu">
+/* CSS crítico inline: evita cache antigo no Safari/iPhone */
+.menu-retratil { position: relative; z-index: 1; }
+.menu-retratil-conteudo[hidden] { display: none !important; }
+.jogos-menu-toggle {
+  -webkit-appearance: none; appearance: none;
+  display: flex; width: 100%; min-height: 54px;
+  align-items: center; gap: .8rem; padding: .85rem 1rem;
+  border: 0; border-radius: 0; background: #191919; color: #f2f2f2;
+  font: inherit; font-size: .85rem; font-weight: 700; text-align: left;
+}
+.menu-retratil.aberto .jogos-menu-arrow { transform: rotate(225deg); }
+@media (max-width: 520px) {
+  #jogos { overflow-x: hidden; }
+  #jogos .container { width: 100%; max-width: 100%; padding-left: 16px; padding-right: 16px; }
+  #jogos .jogos-area-menu { width: 100%; margin-left: 0; margin-right: 0; }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -428,9 +446,9 @@
   </div>
 </footer>
 
-<script src="menu-loader.js"></script>
+<script src="menu-loader.js?v=20260925-1"></script>
 <script src="jogos-data.js"></script>
-<script src="main.js"></script>
+<script src="main.js?v=20260925-1"></script>
 
 </body>
 </html>

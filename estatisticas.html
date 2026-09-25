@@ -14,7 +14,51 @@
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Estatísticas · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20260925-1">
+<style id="mobile-critical-stats">
+/* CSS crítico inline: evita cache antigo no Safari/iPhone */
+.menu-retratil { position: relative; z-index: 1; }
+.menu-retratil-conteudo[hidden] { display: none !important; }
+.jogos-menu-toggle {
+  -webkit-appearance: none; appearance: none;
+  display: flex; width: 100%; min-height: 54px;
+  align-items: center; gap: .8rem; padding: .85rem 1rem;
+  border: 0; border-radius: 0; background: #191919; color: #f2f2f2;
+  font: inherit; font-size: .85rem; font-weight: 700; text-align: left;
+}
+.menu-retratil.aberto .jogos-menu-arrow { transform: rotate(225deg); }
+#estatisticas .section-title { color: #fff !important; }
+@media (max-width: 520px) {
+  #estatisticas { overflow-x: hidden; }
+  #estatisticas .container { width: 100%; max-width: 100%; padding-left: 16px; padding-right: 16px; }
+  #estatisticas .jogos-area-menu,
+  #estatisticas .stats-filter-menu { width: 100%; margin-left: 0; margin-right: 0; }
+  #estatisticas .stats-tabela-wrap { width: 100%; max-width: 100%; overflow: hidden; }
+  #estatisticas .stats-ranking-table {
+    width: 100% !important; min-width: 0 !important; table-layout: fixed;
+  }
+  #estatisticas .stats-ranking-table th,
+  #estatisticas .stats-ranking-table td { padding: 12px 8px; }
+  #estatisticas .stats-ranking-table th:nth-child(1),
+  #estatisticas .stats-ranking-table td:nth-child(1) { width: 64px; text-align: center; }
+  #estatisticas .stats-ranking-table th:nth-child(2),
+  #estatisticas .stats-ranking-table td:nth-child(2) { width: auto; }
+  #estatisticas .stats-ranking-table th:nth-child(3),
+  #estatisticas .stats-ranking-table td:nth-child(3),
+  #estatisticas .stats-ranking-table th:nth-child(5),
+  #estatisticas .stats-ranking-table td:nth-child(5) { display: none; }
+  #estatisticas .stats-ranking-table th:nth-child(4),
+  #estatisticas .stats-ranking-table td:nth-child(4) { width: 72px; text-align: center; }
+  #estatisticas .stats-ranking-table td:nth-child(4)::after {
+    content: " gols"; display: block; margin-top: 2px;
+    color: #8f8f8f; font-size: 10px; font-weight: 600; text-transform: uppercase;
+  }
+  #estatisticas .stats-ranking-table .stats-jogador {
+    white-space: normal; overflow-wrap: anywhere; font-size: 15px;
+  }
+  #estatisticas .stats-contexto { font-size: 18px; line-height: 1.2; padding: 14px 12px; }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -78,7 +122,7 @@
 
     <div class="stats-contexto" id="statsContexto"></div>
     <div class="tabela-wrap stats-tabela-wrap">
-      <table class="jogos-tabela stats-tabela">
+      <table class="jogos-tabela stats-tabela stats-ranking-table">
         <thead>
           <tr><th>Pos.</th><th>Jogador</th><th>Jogos</th><th>Gols</th><th>Gols/jogo</th></tr>
         </thead>
@@ -94,7 +138,7 @@
         <p>Jogos no gol, gols sofridos, minutos registrados e média por partida.</p>
       </div>
       <div class="tabela-wrap stats-tabela-wrap">
-        <table class="jogos-tabela stats-tabela">
+        <table class="jogos-tabela stats-tabela stats-goalkeeper-table">
           <thead>
             <tr><th>Goleiro</th><th>Ano</th><th>Jogos no gol</th><th>Gols sofridos</th><th>Minutos</th><th>Média</th></tr>
           </thead>
@@ -149,7 +193,7 @@
 </footer>
 
 
-<script src="menu-loader.js"></script>
+<script src="menu-loader.js?v=20260925-1"></script>
 <script src="estatisticas-data.js"></script>
 <script>
 (function () {
@@ -228,6 +272,6 @@
   renderJogadores();
 })();
 </script>
-<script src="main.js"></script>
+<script src="main.js?v=20260925-1"></script>
 </body>
 </html>
