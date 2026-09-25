@@ -2370,3 +2370,18 @@ a:focus-visible, button:focus-visible, input:focus-visible {
  #estatisticas .stats-ranking-table td:nth-child(4)::after{content:none}
  #estatisticas .stats-ranking-table .stats-jogador{font-size:14px;line-height:1.2}
 }
+
+/* Isola os menus internos do seletor global nav (position:fixed) */
+.stats-dual-menu{
+  position:static!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  z-index:auto!important;
+  width:100%!important;
+  height:auto!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+}

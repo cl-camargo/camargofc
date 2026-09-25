@@ -14,7 +14,7 @@
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Estatísticas · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260925-2">
+<link rel="stylesheet" href="style.css?v=20260925-3">
 <style id="mobile-critical-stats">
 /* CSS crítico inline: evita cache antigo no Safari/iPhone */
 .menu-retratil { position: relative; z-index: 1; }
@@ -59,7 +59,7 @@
   #estatisticas .stats-contexto { font-size: 18px; line-height: 1.2; padding: 14px 12px; }
 }
 
-.stats-dual-menu { display: grid; gap: 10px; margin: 0 0 18px; }
+.stats-dual-menu { position:static!important; inset:auto!important; z-index:auto!important; width:100%!important; height:auto!important; padding:0!important; border:0!important; background:transparent!important; display:grid; gap:10px; margin:0 0 18px; }
 .stats-dual-link { display:flex; align-items:center; gap:12px; width:100%; min-height:62px; padding:12px 14px; background:#181818; border:1px solid #333; color:#eee; text-decoration:none; }
 .stats-dual-link.ativo { border-color:#c0192e; box-shadow:inset 4px 0 0 #c0192e; background:#251316; }
 .stats-dual-link > span:nth-child(2) { display:grid; gap:2px; }
@@ -89,7 +89,7 @@
       <p class="stats-intro">Jogos e gols registrados entre 2021 e 2026. Selecione a temporada e a modalidade para consultar o desempenho de cada atleta.</p>
     </div>
 
-    <nav class="stats-dual-menu" aria-label="Seções de estatísticas">
+    <div class="stats-dual-menu" role="navigation" aria-label="Seções de estatísticas">
       <a class="stats-dual-link" href="jogos.html#jogos">
         <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
         <span><strong>Partidas por modalidade</strong><small>Placares e histórico de jogos</small></span>
@@ -100,7 +100,7 @@
         <span><strong>Jogadores</strong><small>Gols e partidas disputadas</small></span>
         <span class="stats-dual-arrow" aria-hidden="true"></span>
       </a>
-    </nav>
+    </div>
 
     <div class="stats-filtros stats-filtros-diretos" aria-label="Filtros das estatísticas">
       <label class="stats-campo">Temporada
