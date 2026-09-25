@@ -2333,3 +2333,40 @@ a:focus-visible, button:focus-visible, input:focus-visible {
     font-size: 15px;
   }
 }
+
+/* Navegação direta: Partidas e Jogadores */
+.stats-dual-menu{display:grid;gap:10px;margin:0 0 18px}
+.stats-dual-link{display:flex;align-items:center;gap:12px;width:100%;min-height:62px;padding:12px 14px;background:#181818;border:1px solid #333;color:#eee;text-decoration:none;transition:border-color .2s,background .2s}
+.stats-dual-link:hover{border-color:#666;background:#202020}
+.stats-dual-link.ativo{border-color:var(--vermelho);box-shadow:inset 4px 0 0 var(--vermelho);background:#251316}
+.stats-dual-link>span:nth-child(2){display:grid;gap:2px}
+.stats-dual-link strong{font-size:15px;line-height:1.2}
+.stats-dual-link small{color:#888;font-size:11px;line-height:1.2}
+.stats-dual-arrow{width:9px;height:9px;margin-left:auto;border-top:2px solid #777;border-right:2px solid #777;transform:rotate(45deg)}
+.stats-filtros-diretos{margin:0 0 18px}
+
+/* Pódio dos artilheiros */
+.stats-ranking-table tr.stats-top-1 td{background:rgba(212,175,55,.12)!important}
+.stats-ranking-table tr.stats-top-2 td{background:rgba(192,192,192,.10)!important}
+.stats-ranking-table tr.stats-top-3 td{background:rgba(205,127,50,.11)!important}
+.stats-ranking-table tr.stats-top-1{box-shadow:inset 4px 0 0 #d4af37}
+.stats-ranking-table tr.stats-top-2{box-shadow:inset 4px 0 0 #c0c0c0}
+.stats-ranking-table tr.stats-top-3{box-shadow:inset 4px 0 0 #cd7f32}
+.stats-ranking-table tr.stats-top-1 .stats-pos{background:#d4af37!important;color:#111!important}
+.stats-ranking-table tr.stats-top-2 .stats-pos{background:#c0c0c0!important;color:#111!important}
+.stats-ranking-table tr.stats-top-3 .stats-pos{background:#cd7f32!important;color:#111!important}
+
+@media(max-width:520px){
+ .stats-dual-menu{gap:8px;margin-bottom:14px}
+ .stats-dual-link{min-height:58px;padding:10px 12px}
+ #estatisticas .stats-filtros-diretos{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px}
+ #estatisticas .stats-filtros-diretos .stats-busca{grid-column:1/-1}
+ #estatisticas .stats-ranking-table{width:100%!important;min-width:0!important;table-layout:fixed}
+ #estatisticas .stats-ranking-table th,#estatisticas .stats-ranking-table td{padding:11px 6px}
+ #estatisticas .stats-ranking-table th:nth-child(1),#estatisticas .stats-ranking-table td:nth-child(1){width:52px}
+ #estatisticas .stats-ranking-table th:nth-child(2),#estatisticas .stats-ranking-table td:nth-child(2){width:auto}
+ #estatisticas .stats-ranking-table th:nth-child(3),#estatisticas .stats-ranking-table td:nth-child(3){display:table-cell;width:58px;text-align:center}
+ #estatisticas .stats-ranking-table th:nth-child(4),#estatisticas .stats-ranking-table td:nth-child(4){display:table-cell;width:72px;text-align:center}
+ #estatisticas .stats-ranking-table td:nth-child(4)::after{content:none}
+ #estatisticas .stats-ranking-table .stats-jogador{font-size:14px;line-height:1.2}
+}

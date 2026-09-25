@@ -14,7 +14,7 @@
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Jogos · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260925-1">
+<link rel="stylesheet" href="style.css?v=20260925-2">
 <style id="mobile-critical-menu">
 /* CSS crítico inline: evita cache antigo no Safari/iPhone */
 .menu-retratil { position: relative; z-index: 1; }
@@ -32,6 +32,13 @@
   #jogos .container { width: 100%; max-width: 100%; padding-left: 16px; padding-right: 16px; }
   #jogos .jogos-area-menu { width: 100%; margin-left: 0; margin-right: 0; }
 }
+
+.stats-dual-menu { display:grid; gap:10px; margin:0 0 18px; }
+.stats-dual-link { display:flex; align-items:center; gap:12px; width:100%; min-height:62px; padding:12px 14px; background:#181818; border:1px solid #333; color:#eee; text-decoration:none; }
+.stats-dual-link.ativo { border-color:#c0192e; box-shadow:inset 4px 0 0 #c0192e; background:#251316; }
+.stats-dual-link > span:nth-child(2){display:grid;gap:2px;}
+.stats-dual-link strong{font-size:15px}.stats-dual-link small{color:#888;font-size:11px}
+.stats-dual-arrow{width:9px;height:9px;margin-left:auto;border-top:2px solid #777;border-right:2px solid #777;transform:rotate(45deg)}
 </style>
 </head>
 <body>
@@ -62,17 +69,18 @@
       <div class="section-divider"></div>
     </div>
 
-    <div class="jogos-area-menu menu-retratil">
-      <button class="jogos-menu-toggle" type="button" aria-expanded="false" aria-controls="menuAreaEstatisticas">
+    <nav class="stats-dual-menu" aria-label="Seções de estatísticas">
+      <a class="stats-dual-link ativo" href="jogos.html#jogos" aria-current="page">
         <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>Área de Estatísticas</span>
-        <span class="jogos-menu-arrow" aria-hidden="true"></span>
-      </button>
-      <nav class="jogos-area-links menu-retratil-conteudo" id="menuAreaEstatisticas" aria-label="Navegação da área de estatísticas" hidden>
-        <a class="ativo" href="jogos.html#jogos" aria-current="page">Histórico de partidas</a>
-        <a class="" href="estatisticas.html#estatisticas">Estatísticas de jogadores</a>
-      </nav>
-    </div>
+        <span><strong>Partidas por modalidade</strong><small>Placares e histórico de jogos</small></span>
+        <span class="stats-dual-arrow" aria-hidden="true"></span>
+      </a>
+      <a class="stats-dual-link" href="estatisticas.html#estatisticas">
+        <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><strong>Jogadores</strong><small>Gols e partidas disputadas</small></span>
+        <span class="stats-dual-arrow" aria-hidden="true"></span>
+      </a>
+    </nav>
 
     <!-- Accordion de modalidades -->
     <div class="jogos-accordion" id="jogosAccordion">
@@ -446,9 +454,9 @@
   </div>
 </footer>
 
-<script src="menu-loader.js?v=20260925-1"></script>
+<script src="menu-loader.js?v=20260925-2"></script>
 <script src="jogos-data.js"></script>
-<script src="main.js?v=20260925-1"></script>
+<script src="main.js?v=20260925-2"></script>
 
 </body>
 </html>

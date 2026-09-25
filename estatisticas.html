@@ -14,7 +14,7 @@
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Estatísticas · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260925-1">
+<link rel="stylesheet" href="style.css?v=20260925-2">
 <style id="mobile-critical-stats">
 /* CSS crítico inline: evita cache antigo no Safari/iPhone */
 .menu-retratil { position: relative; z-index: 1; }
@@ -58,6 +58,21 @@
   }
   #estatisticas .stats-contexto { font-size: 18px; line-height: 1.2; padding: 14px 12px; }
 }
+
+.stats-dual-menu { display: grid; gap: 10px; margin: 0 0 18px; }
+.stats-dual-link { display:flex; align-items:center; gap:12px; width:100%; min-height:62px; padding:12px 14px; background:#181818; border:1px solid #333; color:#eee; text-decoration:none; }
+.stats-dual-link.ativo { border-color:#c0192e; box-shadow:inset 4px 0 0 #c0192e; background:#251316; }
+.stats-dual-link > span:nth-child(2) { display:grid; gap:2px; }
+.stats-dual-link strong { font-size:15px; }
+.stats-dual-link small { color:#888; font-size:11px; }
+.stats-dual-arrow { width:9px; height:9px; margin-left:auto; border-top:2px solid #777; border-right:2px solid #777; transform:rotate(45deg); }
+@media(max-width:520px){
+ #estatisticas .stats-ranking-table th:nth-child(3), #estatisticas .stats-ranking-table td:nth-child(3),
+ #estatisticas .stats-ranking-table th:nth-child(4), #estatisticas .stats-ranking-table td:nth-child(4){display:table-cell;}
+ #estatisticas .stats-ranking-table th:nth-child(3), #estatisticas .stats-ranking-table td:nth-child(3){width:58px;text-align:center;}
+ #estatisticas .stats-ranking-table th:nth-child(4), #estatisticas .stats-ranking-table td:nth-child(4){width:72px;text-align:center;}
+ #estatisticas .stats-ranking-table td:nth-child(4)::after{content:none;}
+}
 </style>
 </head>
 <body>
@@ -74,44 +89,29 @@
       <p class="stats-intro">Jogos e gols registrados entre 2021 e 2026. Selecione a temporada e a modalidade para consultar o desempenho de cada atleta.</p>
     </div>
 
-    <div class="jogos-area-menu menu-retratil">
-      <button class="jogos-menu-toggle" type="button" aria-expanded="false" aria-controls="menuAreaEstatisticas">
+    <nav class="stats-dual-menu" aria-label="Seções de estatísticas">
+      <a class="stats-dual-link" href="jogos.html#jogos">
         <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>Área de Estatísticas</span>
-        <span class="jogos-menu-arrow" aria-hidden="true"></span>
-      </button>
-      <nav class="jogos-area-links menu-retratil-conteudo" id="menuAreaEstatisticas" aria-label="Navegação da área de estatísticas" hidden>
-        <a class="" href="jogos.html#jogos">Histórico de partidas</a>
-        <a class="ativo" href="estatisticas.html#estatisticas" aria-current="page">Estatísticas de jogadores</a>
-      </nav>
-    </div>
+        <span><strong>Partidas por modalidade</strong><small>Placares e histórico de jogos</small></span>
+        <span class="stats-dual-arrow" aria-hidden="true"></span>
+      </a>
+      <a class="stats-dual-link ativo" href="estatisticas.html#estatisticas" aria-current="page">
+        <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><strong>Jogadores</strong><small>Gols e partidas disputadas</small></span>
+        <span class="stats-dual-arrow" aria-hidden="true"></span>
+      </a>
+    </nav>
 
-    <div class="stats-filter-menu menu-retratil">
-      <button class="jogos-menu-toggle" type="button" aria-expanded="false" aria-controls="menuFiltrosJogadores">
-        <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>Pesquisar e filtrar jogadores</span>
-        <span class="jogos-menu-arrow" aria-hidden="true"></span>
-      </button>
-      <div class="stats-filtros menu-retratil-conteudo" id="menuFiltrosJogadores" aria-label="Filtros das estatísticas" hidden>
-        <label class="stats-campo">Temporada
-          <select id="statsAno">
-            <option value="todos">Todos os anos</option>
-          </select>
-        </label>
-        <label class="stats-campo">Modalidade
-          <select id="statsModalidade"></select>
-        </label>
-        <label class="stats-campo stats-busca">Jogador
-          <input id="statsBusca" type="search" placeholder="Buscar jogador..." autocomplete="off">
-        </label>
-        <label class="stats-campo">Ordenar por
-          <select id="statsOrdem">
-            <option value="gols" selected>Mais gols</option>
-            <option value="jogos">Mais jogos</option>
-            <option value="nome">Nome</option>
-          </select>
-        </label>
-      </div>
+    <div class="stats-filtros stats-filtros-diretos" aria-label="Filtros das estatísticas">
+      <label class="stats-campo">Temporada
+        <select id="statsAno"><option value="todos">Todos os anos</option></select>
+      </label>
+      <label class="stats-campo">Modalidade
+        <select id="statsModalidade"></select>
+      </label>
+      <label class="stats-campo stats-busca">Jogador
+        <input id="statsBusca" type="search" placeholder="Buscar jogador..." autocomplete="off">
+      </label>
     </div>
 
     <div class="jogos-stats-bar stats-resumo" aria-live="polite">
@@ -124,7 +124,7 @@
     <div class="tabela-wrap stats-tabela-wrap">
       <table class="jogos-tabela stats-tabela stats-ranking-table">
         <thead>
-          <tr><th>Pos.</th><th>Jogador</th><th>Jogos</th><th>Gols</th><th>Gols/jogo</th></tr>
+          <tr><th>Pos.</th><th>Jogador</th><th>Gols</th><th>Partidas</th></tr>
         </thead>
         <tbody id="statsCorpo"></tbody>
       </table>
@@ -193,7 +193,7 @@
 </footer>
 
 
-<script src="menu-loader.js?v=20260925-1"></script>
+<script src="menu-loader.js?v=20260925-2"></script>
 <script src="estatisticas-data.js"></script>
 <script>
 (function () {
@@ -202,7 +202,6 @@
   var ano = document.getElementById("statsAno");
   var modalidade = document.getElementById("statsModalidade");
   var busca = document.getElementById("statsBusca");
-  var ordem = document.getElementById("statsOrdem");
   var corpo = document.getElementById("statsCorpo");
   var goleirosCorpo = document.getElementById("goleirosCorpo");
   var vazio = document.getElementById("statsVazio");
@@ -230,16 +229,14 @@
       var valor = metrica(item);
       return { jogador: item.jogador, jogos: valor.jogos, gols: valor.gols };
     }).filter(function (item) {
-      return (item.jogos > 0 || item.gols > 0) && (!termo || normalizar(item.jogador).includes(termo));
+      return item.gols > 0 && (!termo || normalizar(item.jogador).includes(termo));
     });
     lista.sort(function (a, b) {
-      if (ordem.value === "nome") return a.jogador.localeCompare(b.jogador, "pt-BR");
-      if (ordem.value === "gols") return b.gols - a.gols || b.jogos - a.jogos || a.jogador.localeCompare(b.jogador, "pt-BR");
-      return b.jogos - a.jogos || b.gols - a.gols || a.jogador.localeCompare(b.jogador, "pt-BR");
+      return b.gols - a.gols || b.jogos - a.jogos || a.jogador.localeCompare(b.jogador, "pt-BR");
     });
     corpo.innerHTML = lista.map(function (item, indice) {
-      var media = item.jogos ? (item.gols / item.jogos).toFixed(2).replace(".", ",") : "0,00";
-      return "<tr><td><span class='stats-pos'>" + (indice + 1) + "</span></td><td class='stats-jogador'>" + escapar(nome(item.jogador)) + "</td><td><strong>" + item.jogos + "</strong></td><td><strong>" + item.gols + "</strong></td><td>" + media + "</td></tr>";
+      var classePodio = indice < 3 ? " stats-top-" + (indice + 1) : "";
+      return "<tr class='" + classePodio.trim() + "'><td><span class='stats-pos'>" + (indice + 1) + "</span></td><td class='stats-jogador'>" + escapar(nome(item.jogador)) + "</td><td class='stats-gols'><strong>" + item.gols + "</strong></td><td class='stats-jogos'><strong>" + item.jogos + "</strong></td></tr>";
     }).join("");
     vazio.hidden = lista.length > 0;
     var artilheiro = lista.slice().sort(function (a, b) { return b.gols - a.gols || b.jogos - a.jogos; })[0];
@@ -268,10 +265,10 @@
     modalidade.insertAdjacentHTML("beforeend", "<option value='" + item.id + "'>" + escapar(item.nome) + "</option>");
   });
   document.getElementById("statsAtualizacao").textContent = dados.atualizadoAte;
-  [ano, modalidade, busca, ordem].forEach(function (controle) { controle.addEventListener("input", renderJogadores); });
+  [ano, modalidade, busca].forEach(function (controle) { controle.addEventListener("input", renderJogadores); });
   renderJogadores();
 })();
 </script>
-<script src="main.js?v=20260925-1"></script>
+<script src="main.js?v=20260925-2"></script>
 </body>
 </html>
