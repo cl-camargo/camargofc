@@ -2385,3 +2385,26 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   border:0!important;
   background:transparent!important;
 }
+
+/* Painéis retráteis de Partidas e Jogadores */
+.stats-section-stack{display:grid;gap:10px;margin:0 0 18px}
+.stats-section-item{border:1px solid #333;background:#151515}
+.stats-section-toggle{-webkit-appearance:none;appearance:none;display:flex;width:100%;min-height:62px;align-items:center;gap:12px;padding:12px 14px;border:0;border-radius:0;background:#181818;color:#eee;font:inherit;text-align:left;cursor:pointer}
+.stats-section-toggle>span:nth-child(2){display:grid;gap:2px}
+.stats-section-toggle strong{font-size:15px;line-height:1.2}
+.stats-section-toggle small{color:#888;font-size:11px;line-height:1.2}
+.stats-section-arrow{width:9px;height:9px;margin-left:auto;border-right:2px solid #777;border-bottom:2px solid #777;transform:rotate(45deg);transition:transform .2s}
+.stats-section-item.aberto>.stats-section-toggle{background:#251316;box-shadow:inset 4px 0 0 var(--vermelho)}
+.stats-section-item.aberto>.stats-section-toggle .stats-section-arrow{transform:rotate(225deg)}
+.stats-section-panel[hidden]{display:none!important}
+.stats-section-panel{padding:12px}
+.stats-player-panel{padding:14px}
+#statsPanelPartidas .jogos-accordion{margin:0}
+#statsPanelJogadores .stats-filtros-diretos{grid-template-columns:repeat(4,minmax(0,1fr))}
+#statsPanelJogadores .stats-busca{grid-column:auto}
+@media(max-width:700px){
+ .stats-section-toggle{min-height:58px;padding:10px 12px}
+ .stats-section-panel,.stats-player-panel{padding:8px}
+ #statsPanelJogadores .stats-filtros-diretos{grid-template-columns:1fr 1fr}
+ #statsPanelJogadores .stats-busca{grid-column:1/-1}
+}

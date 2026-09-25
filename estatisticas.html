@@ -14,7 +14,7 @@
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Estatísticas · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260925-3">
+<link rel="stylesheet" href="style.css?v=20260925-4">
 <style id="mobile-critical-stats">
 /* CSS crítico inline: evita cache antigo no Safari/iPhone */
 .menu-retratil { position: relative; z-index: 1; }
@@ -74,6 +74,15 @@
  #estatisticas .stats-ranking-table td:nth-child(4)::after{content:none;}
 }
 </style>
+<style id="stats-accordion-critical">
+.stats-section-stack{display:grid;gap:10px;margin:0 0 18px}
+.stats-section-item{border:1px solid #333;background:#151515}
+.stats-section-toggle{-webkit-appearance:none;appearance:none;display:flex;width:100%;min-height:62px;align-items:center;gap:12px;padding:12px 14px;border:0;border-radius:0;background:#181818;color:#eee;font:inherit;text-align:left}
+.stats-section-toggle>span:nth-child(2){display:grid;gap:2px}.stats-section-toggle strong{font-size:15px}.stats-section-toggle small{color:#888;font-size:11px}
+.stats-section-arrow{width:9px;height:9px;margin-left:auto;border-right:2px solid #777;border-bottom:2px solid #777;transform:rotate(45deg);transition:transform .2s}
+.stats-section-item.aberto>.stats-section-toggle .stats-section-arrow{transform:rotate(225deg)}
+.stats-section-panel[hidden]{display:none!important}.stats-section-panel{padding:12px}.stats-player-panel{padding:14px}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -89,25 +98,362 @@
       <p class="stats-intro">Jogos e gols registrados entre 2021 e 2026. Selecione a temporada e a modalidade para consultar o desempenho de cada atleta.</p>
     </div>
 
-    <div class="stats-dual-menu" role="navigation" aria-label="Seções de estatísticas">
-      <a class="stats-dual-link" href="jogos.html#jogos">
-        <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span><strong>Partidas por modalidade</strong><small>Placares e histórico de jogos</small></span>
-        <span class="stats-dual-arrow" aria-hidden="true"></span>
-      </a>
-      <a class="stats-dual-link ativo" href="estatisticas.html#estatisticas" aria-current="page">
-        <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span><strong>Jogadores</strong><small>Gols e partidas disputadas</small></span>
-        <span class="stats-dual-arrow" aria-hidden="true"></span>
-      </a>
-    </div>
+    <div class="stats-section-stack">
+      <section class="stats-section-item">
+        <button class="stats-section-toggle" type="button" aria-expanded="false" aria-controls="statsPanelPartidas">
+          <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><strong>Partidas por modalidade</strong><small>Placares e histórico de jogos</small></span>
+          <span class="stats-section-arrow" aria-hidden="true"></span>
+        </button>
+        <div class="stats-section-panel" id="statsPanelPartidas" hidden>
+          <div class="jogos-accordion" id="jogosAccordion">
 
-    <div class="stats-filtros stats-filtros-diretos" aria-label="Filtros das estatísticas">
+      <!-- ⚽ CAMPO -->
+      <div class="jogos-acc-item">
+        <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-campo')">
+          <div class="jogos-acc-titulo">
+            <span class="jogos-acc-emoji">⚽</span> Campo (Futebol 11)
+          </div>
+          <div class="jogos-acc-meta">
+            <span class="jogos-acc-badge">49 jogos</span>
+            <span class="jogos-acc-arrow" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="jogos-acc-body" id="acc-campo">
+          <!-- Filter bar campo -->
+          <div class="jogos-filtros">
+            <div class="jogos-search-wrap">
+              <input type="text" class="acc-search" aria-label="Buscar jogos" data-acc="acc-campo" placeholder="🔍  Buscar adversário, competição..." oninput="filtrarJogosAcc(this)">
+            </div>
+            <div class="jogos-result-filters">
+              <button class="res-btn ativo" onclick="filtrarResAcc(this,'todos','acc-campo')">Todos</button>
+              <button class="res-btn vitoria" onclick="filtrarResAcc(this,'V','acc-campo')">Vitória</button>
+              <button class="res-btn empate" onclick="filtrarResAcc(this,'E','acc-campo')">Empate</button>
+              <button class="res-btn derrota" onclick="filtrarResAcc(this,'D','acc-campo')">Derrota</button>
+            </div>
+          </div>
+      <div class="jogos-stats-bar">
+        <div class="jstat"><span class="jstat-num">49</span><span class="jstat-label">Jogos</span></div>
+        <div class="jstat jstat-v"><span class="jstat-num">19</span><span class="jstat-label">Vitórias</span></div>
+        <div class="jstat jstat-e"><span class="jstat-num">11</span><span class="jstat-label">Empates</span></div>
+        <div class="jstat jstat-d"><span class="jstat-num">19</span><span class="jstat-label">Derrotas</span></div>
+        <div class="jstat"><span class="jstat-num">101×100</span><span class="jstat-label">Gols F/S</span></div>
+        <div class="jstat"><span class="jstat-num">46.3%</span><span class="jstat-label">Aproveit.</span></div>
+      </div>
+      <div class="tabela-wrap">
+        <table class="jogos-tabela">
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Data</th>
+              <th>Adversário</th>
+              <th>Placar</th>
+              <th>Res.</th>
+              <th>Competição</th>
+              <th>Local</th>
+            </tr>
+          </thead>
+          <tbody id="tab-society-body">
+                <!-- Dados carregados de jogos-data.js -->
+          </tbody>
+        </table>
+      </div>
+        </div><!-- /jogos-acc-body acc-campo -->
+      </div><!-- /jogos-acc-item campo -->
+
+      <!-- 🏟️ SOCIETY -->
+      <div class="jogos-acc-item">
+        <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-society')">
+          <div class="jogos-acc-titulo">
+            <span class="jogos-acc-emoji">🏟️</span> Society (Futebol 7)
+          </div>
+          <div class="jogos-acc-meta">
+            <span class="jogos-acc-badge">113 jogos</span>
+            <span class="jogos-acc-arrow" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="jogos-acc-body" id="acc-society">
+          <div class="jogos-filtros">
+            <div class="jogos-search-wrap">
+              <input type="text" class="acc-search" aria-label="Buscar jogos" data-acc="acc-society" placeholder="🔍  Buscar adversário, competição..." oninput="filtrarJogosAcc(this)">
+            </div>
+            <div class="jogos-result-filters">
+              <button class="res-btn ativo" onclick="filtrarResAcc(this,'todos','acc-society')">Todos</button>
+              <button class="res-btn vitoria" onclick="filtrarResAcc(this,'V','acc-society')">Vitória</button>
+              <button class="res-btn empate" onclick="filtrarResAcc(this,'E','acc-society')">Empate</button>
+              <button class="res-btn derrota" onclick="filtrarResAcc(this,'D','acc-society')">Derrota</button>
+            </div>
+          </div>
+    <div id="tab-campo" class="jogos-tab-content ativo">
+      <div class="jogos-stats-bar">
+        <div class="jstat"><span class="jstat-num">113</span><span class="jstat-label">Jogos</span></div>
+        <div class="jstat jstat-v"><span class="jstat-num">49</span><span class="jstat-label">Vitórias</span></div>
+        <div class="jstat jstat-e"><span class="jstat-num">25</span><span class="jstat-label">Empates</span></div>
+        <div class="jstat jstat-d"><span class="jstat-num">39</span><span class="jstat-label">Derrotas</span></div>
+        <div class="jstat"><span class="jstat-num">418×354</span><span class="jstat-label">Gols F/S</span></div>
+        <div class="jstat"><span class="jstat-num">50.7%</span><span class="jstat-label">Aproveit.</span></div>
+      </div>
+      <div class="tabela-wrap">
+        <table class="jogos-tabela">
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Data</th>
+              <th>Adversário</th>
+              <th>Placar</th>
+              <th>Res.</th>
+              <th>Competição</th>
+              <th>Local</th>
+            </tr>
+          </thead>
+          <tbody id="tab-campo-body">
+                <!-- Dados carregados de jogos-data.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+        </div><!-- /jogos-acc-body acc-society -->
+      </div><!-- /jogos-acc-item society -->
+
+      <!-- 👦 CAMARGO JR -->
+      <div class="jogos-acc-item">
+        <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-junior')">
+          <div class="jogos-acc-titulo">
+            <span class="jogos-acc-emoji">👦</span> Society / Camargo JR
+          </div>
+          <div class="jogos-acc-meta">
+            <span class="jogos-acc-badge">23 jogos</span>
+            <span class="jogos-acc-arrow" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="jogos-acc-body" id="acc-junior">
+          <div class="jogos-filtros">
+            <div class="jogos-search-wrap">
+              <input type="text" class="acc-search" aria-label="Buscar jogos" data-acc="acc-junior" placeholder="🔍  Buscar adversário, competição..." oninput="filtrarJogosAcc(this)">
+            </div>
+            <div class="jogos-result-filters">
+              <button class="res-btn ativo" onclick="filtrarResAcc(this,'todos','acc-junior')">Todos</button>
+              <button class="res-btn vitoria" onclick="filtrarResAcc(this,'V','acc-junior')">Vitória</button>
+              <button class="res-btn empate" onclick="filtrarResAcc(this,'E','acc-junior')">Empate</button>
+              <button class="res-btn derrota" onclick="filtrarResAcc(this,'D','acc-junior')">Derrota</button>
+            </div>
+          </div>
+    <div id="tab-junior" class="jogos-tab-content ativo">
+      <div class="jogos-stats-bar">
+        <div class="jstat"><span class="jstat-num">23</span><span class="jstat-label">Jogos</span></div>
+        <div class="jstat jstat-v"><span class="jstat-num">15</span><span class="jstat-label">Vitórias</span></div>
+        <div class="jstat jstat-e"><span class="jstat-num">4</span><span class="jstat-label">Empates</span></div>
+        <div class="jstat jstat-d"><span class="jstat-num">4</span><span class="jstat-label">Derrotas</span></div>
+        <div class="jstat"><span class="jstat-num">91×45</span><span class="jstat-label">Gols F/S</span></div>
+        <div class="jstat"><span class="jstat-num">71.0%</span><span class="jstat-label">Aproveit.</span></div>
+      </div>
+      <div class="tabela-wrap">
+        <table class="jogos-tabela">
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Data</th>
+              <th>Adversário</th>
+              <th>Placar</th>
+              <th>Res.</th>
+              <th>Competição</th>
+              <th>Local</th>
+            </tr>
+          </thead>
+          <tbody id="tab-junior-body">
+                <!-- Dados carregados de jogos-data.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+        </div><!-- /jogos-acc-body acc-junior -->
+      </div><!-- /jogos-acc-item junior -->
+
+      <!-- 🥅 FUTSAL -->
+      <div class="jogos-acc-item">
+        <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-futsal')">
+          <div class="jogos-acc-titulo">
+            <span class="jogos-acc-emoji">🥅</span> Futsal
+          </div>
+          <div class="jogos-acc-meta">
+            <span class="jogos-acc-badge">35 jogos</span>
+            <span class="jogos-acc-arrow" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="jogos-acc-body" id="acc-futsal">
+          <div class="jogos-filtros">
+            <div class="jogos-search-wrap">
+              <input type="text" class="acc-search" aria-label="Buscar jogos" data-acc="acc-futsal" placeholder="🔍  Buscar adversário, competição..." oninput="filtrarJogosAcc(this)">
+            </div>
+            <div class="jogos-result-filters">
+              <button class="res-btn ativo" onclick="filtrarResAcc(this,'todos','acc-futsal')">Todos</button>
+              <button class="res-btn vitoria" onclick="filtrarResAcc(this,'V','acc-futsal')">Vitória</button>
+              <button class="res-btn empate" onclick="filtrarResAcc(this,'E','acc-futsal')">Empate</button>
+              <button class="res-btn derrota" onclick="filtrarResAcc(this,'D','acc-futsal')">Derrota</button>
+            </div>
+          </div>
+    <div id="tab-futsal" class="jogos-tab-content ativo">
+      <div class="jogos-stats-bar">
+        <div class="jstat"><span class="jstat-num">35</span><span class="jstat-label">Jogos</span></div>
+        <div class="jstat jstat-v"><span class="jstat-num">13</span><span class="jstat-label">Vitórias</span></div>
+        <div class="jstat jstat-e"><span class="jstat-num">9</span><span class="jstat-label">Empates</span></div>
+        <div class="jstat jstat-d"><span class="jstat-num">13</span><span class="jstat-label">Derrotas</span></div>
+        <div class="jstat"><span class="jstat-num">128×92</span><span class="jstat-label">Gols F/S</span></div>
+        <div class="jstat"><span class="jstat-num">45.7%</span><span class="jstat-label">Aproveit.</span></div>
+      </div>
+      <div class="tabela-wrap">
+        <table class="jogos-tabela">
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Data</th>
+              <th>Adversário</th>
+              <th>Placar</th>
+              <th>Res.</th>
+              <th>Competição</th>
+              <th>Local</th>
+            </tr>
+          </thead>
+          <tbody id="tab-futsal-body">
+                <!-- Dados carregados de jogos-data.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+        </div><!-- /jogos-acc-body acc-futsal -->
+      </div><!-- /jogos-acc-item futsal -->
+
+      <!-- 🏖️ BEACH SOCCER -->
+      <div class="jogos-acc-item">
+        <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-beach')">
+          <div class="jogos-acc-titulo">
+            <span class="jogos-acc-emoji">🏖️</span> Beach Soccer
+          </div>
+          <div class="jogos-acc-meta">
+            <span class="jogos-acc-badge">13 jogos</span>
+            <span class="jogos-acc-arrow" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="jogos-acc-body" id="acc-beach">
+          <div class="jogos-filtros">
+            <div class="jogos-search-wrap">
+              <input type="text" class="acc-search" aria-label="Buscar jogos" data-acc="acc-beach" placeholder="🔍  Buscar adversário, competição..." oninput="filtrarJogosAcc(this)">
+            </div>
+            <div class="jogos-result-filters">
+              <button class="res-btn ativo" onclick="filtrarResAcc(this,'todos','acc-beach')">Todos</button>
+              <button class="res-btn vitoria" onclick="filtrarResAcc(this,'V','acc-beach')">Vitória</button>
+              <button class="res-btn empate" onclick="filtrarResAcc(this,'E','acc-beach')">Empate</button>
+              <button class="res-btn derrota" onclick="filtrarResAcc(this,'D','acc-beach')">Derrota</button>
+            </div>
+          </div>
+    <div id="tab-beach" class="jogos-tab-content ativo">
+      <div class="jogos-stats-bar">
+        <div class="jstat"><span class="jstat-num">13</span><span class="jstat-label">Jogos</span></div>
+        <div class="jstat jstat-v"><span class="jstat-num">7</span><span class="jstat-label">Vitórias</span></div>
+        <div class="jstat jstat-e"><span class="jstat-num">4</span><span class="jstat-label">Empates</span></div>
+        <div class="jstat jstat-d"><span class="jstat-num">2</span><span class="jstat-label">Derrotas</span></div>
+        <div class="jstat"><span class="jstat-num">31×24</span><span class="jstat-label">Gols F/S</span></div>
+        <div class="jstat"><span class="jstat-num">64.1%</span><span class="jstat-label">Aproveit.</span></div>
+      </div>
+      <div class="tabela-wrap">
+        <table class="jogos-tabela">
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Data</th>
+              <th>Adversário</th>
+              <th>Placar</th>
+              <th>Res.</th>
+              <th>Competição</th>
+              <th>Local</th>
+            </tr>
+          </thead>
+          <tbody id="tab-beach-body">
+                <!-- Dados carregados de jogos-data.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+        </div><!-- /jogos-acc-body acc-beach -->
+      </div><!-- /jogos-acc-item beach -->
+
+      <!-- 👩 FEMININO -->
+      <div class="jogos-acc-item">
+        <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-feminino')">
+          <div class="jogos-acc-titulo">
+            <span class="jogos-acc-emoji">👩</span> Feminino
+          </div>
+          <div class="jogos-acc-meta">
+            <span class="jogos-acc-badge">12 jogos</span>
+            <span class="jogos-acc-arrow" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="jogos-acc-body" id="acc-feminino">
+          <div class="jogos-filtros">
+            <div class="jogos-search-wrap">
+              <input type="text" class="acc-search" aria-label="Buscar jogos" data-acc="acc-feminino" placeholder="🔍  Buscar adversário, competição..." oninput="filtrarJogosAcc(this)">
+            </div>
+            <div class="jogos-result-filters">
+              <button class="res-btn ativo" onclick="filtrarResAcc(this,'todos','acc-feminino')">Todos</button>
+              <button class="res-btn vitoria" onclick="filtrarResAcc(this,'V','acc-feminino')">Vitória</button>
+              <button class="res-btn empate" onclick="filtrarResAcc(this,'E','acc-feminino')">Empate</button>
+              <button class="res-btn derrota" onclick="filtrarResAcc(this,'D','acc-feminino')">Derrota</button>
+            </div>
+          </div>
+    <div id="tab-feminino" class="jogos-tab-content ativo">
+      <div class="jogos-stats-bar">
+        <div class="jstat"><span class="jstat-num">12</span><span class="jstat-label">Jogos</span></div>
+        <div class="jstat jstat-v"><span class="jstat-num">0</span><span class="jstat-label">Vitórias</span></div>
+        <div class="jstat jstat-e"><span class="jstat-num">3</span><span class="jstat-label">Empates</span></div>
+        <div class="jstat jstat-d"><span class="jstat-num">9</span><span class="jstat-label">Derrotas</span></div>
+        <div class="jstat"><span class="jstat-num">9×56</span><span class="jstat-label">Gols F/S</span></div>
+        <div class="jstat"><span class="jstat-num">8.3%</span><span class="jstat-label">Aproveit.</span></div>
+      </div>
+      <div class="tabela-wrap">
+        <table class="jogos-tabela">
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Data</th>
+              <th>Adversário</th>
+              <th>Placar</th>
+              <th>Res.</th>
+              <th>Competição</th>
+              <th>Local</th>
+            </tr>
+          </thead>
+          <tbody id="tab-feminino-body">
+                <!-- Dados carregados de jogos-data.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+        </div><!-- /jogos-acc-body acc-feminino -->
+      </div><!-- /jogos-acc-item feminino -->
+
+    </div><!-- /jogos-accordion -->
+        </div>
+      </section>
+
+      <section class="stats-section-item aberto">
+        <button class="stats-section-toggle" type="button" aria-expanded="true" aria-controls="statsPanelJogadores">
+          <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><strong>Jogadores</strong><small>Ranking por gols ou partidas disputadas</small></span>
+          <span class="stats-section-arrow" aria-hidden="true"></span>
+        </button>
+        <div class="stats-section-panel stats-player-panel" id="statsPanelJogadores">
+          <div class="stats-filtros stats-filtros-diretos" aria-label="Filtros das estatísticas">
       <label class="stats-campo">Temporada
         <select id="statsAno"><option value="todos">Todos os anos</option></select>
       </label>
       <label class="stats-campo">Modalidade
         <select id="statsModalidade"></select>
+      </label>
+      <label class="stats-campo">Exibir ranking por
+        <select id="statsRanking">
+          <option value="gols" selected>Mais gols</option>
+          <option value="jogos">Mais partidas</option>
+        </select>
       </label>
       <label class="stats-campo stats-busca">Jogador
         <input id="statsBusca" type="search" placeholder="Buscar jogador..." autocomplete="off">
@@ -148,6 +494,9 @@
     </section>
 
     <p class="stats-fonte">Fonte: Histórico Camargo FC 2021–2026. Dados de 2026 atualizados até <span id="statsAtualizacao"></span>.</p>
+        </div>
+      </section>
+    </div>
   </div>
 </section>
 </main>
@@ -194,6 +543,7 @@
 
 
 <script src="menu-loader.js?v=20260925-2"></script>
+<script src="jogos-data.js"></script>
 <script src="estatisticas-data.js"></script>
 <script>
 (function () {
@@ -202,6 +552,7 @@
   var ano = document.getElementById("statsAno");
   var modalidade = document.getElementById("statsModalidade");
   var busca = document.getElementById("statsBusca");
+  var ranking = document.getElementById("statsRanking");
   var corpo = document.getElementById("statsCorpo");
   var goleirosCorpo = document.getElementById("goleirosCorpo");
   var vazio = document.getElementById("statsVazio");
@@ -229,23 +580,27 @@
       var valor = metrica(item);
       return { jogador: item.jogador, jogos: valor.jogos, gols: valor.gols };
     }).filter(function (item) {
-      return item.gols > 0 && (!termo || normalizar(item.jogador).includes(termo));
+      return (ranking.value === "gols" ? item.gols > 0 : item.jogos > 0) && (!termo || normalizar(item.jogador).includes(termo));
     });
     lista.sort(function (a, b) {
-      return b.gols - a.gols || b.jogos - a.jogos || a.jogador.localeCompare(b.jogador, "pt-BR");
+      if (ranking.value === "jogos") {
+        return b.jogos - a.jogos || b.gols - a.gols || a.jogador.localeCompare(b.jogador, "pt-BR");
+      }
+      return b.gols - a.gols || a.jogos - b.jogos || a.jogador.localeCompare(b.jogador, "pt-BR");
     });
     corpo.innerHTML = lista.map(function (item, indice) {
       var classePodio = indice < 3 ? " stats-top-" + (indice + 1) : "";
       return "<tr class='" + classePodio.trim() + "'><td><span class='stats-pos'>" + (indice + 1) + "</span></td><td class='stats-jogador'>" + escapar(nome(item.jogador)) + "</td><td class='stats-gols'><strong>" + item.gols + "</strong></td><td class='stats-jogos'><strong>" + item.jogos + "</strong></td></tr>";
     }).join("");
     vazio.hidden = lista.length > 0;
-    var artilheiro = lista.slice().sort(function (a, b) { return b.gols - a.gols || b.jogos - a.jogos; })[0];
+    var artilheiro = lista.slice().sort(function (a, b) { return b.gols - a.gols || a.jogos - b.jogos; })[0];
     var maisJogos = lista.slice().sort(function (a, b) { return b.jogos - a.jogos || b.gols - a.gols; })[0];
     document.getElementById("resumoAtletas").textContent = lista.length;
     document.getElementById("resumoArtilheiro").textContent = artilheiro ? nome(artilheiro.jogador) : "—";
     document.getElementById("resumoMaisJogos").textContent = maisJogos ? nome(maisJogos.jogador) : "—";
     var modalidadeNome = dados.modalidades.find(function (item) { return item.id === modalidade.value; }).nome;
-    document.getElementById("statsContexto").textContent = (ano.value === "todos" ? "Total histórico" : "Temporada " + ano.value) + " · " + modalidadeNome;
+    var rankingNome = ranking.value === "gols" ? "Ranking por gols" : "Ranking por partidas";
+    document.getElementById("statsContexto").textContent = (ano.value === "todos" ? "Total histórico" : "Temporada " + ano.value) + " · " + modalidadeNome + " · " + rankingNome;
     renderGoleiros();
   }
   function renderGoleiros() {
@@ -254,7 +609,7 @@
     }).sort(function (a, b) { return b.jogosNoGol - a.jogosNoGol || a.jogador.localeCompare(b.jogador, "pt-BR"); });
     goleirosCorpo.innerHTML = lista.map(function (item) {
       var minutos = item.minutos === null ? "—" : item.minutos;
-      return "<tr><td class='stats-jogador'>" + escapar(nome(item.jogador)) + "</td><td>" + item.ano + "</td><td><strong>" + item.jogosNoGol + "</strong></td><td>" + item.golsSofridos + "</td><td>" + minutos + "</td><td>" + item.media.toFixed(2).replace(".", ",") + "</td></tr>";
+      return "<tr><td class='stats-jogador'>" + escapar(nome(item.jogador).replace(/\s*\(gol\)\s*/gi, " ").trim()) + "</td><td>" + item.ano + "</td><td><strong>" + item.jogosNoGol + "</strong></td><td>" + item.golsSofridos + "</td><td>" + minutos + "</td><td>" + item.media.toFixed(2).replace(".", ",") + "</td></tr>";
     }).join("");
   }
 
@@ -265,10 +620,24 @@
     modalidade.insertAdjacentHTML("beforeend", "<option value='" + item.id + "'>" + escapar(item.nome) + "</option>");
   });
   document.getElementById("statsAtualizacao").textContent = dados.atualizadoAte;
-  [ano, modalidade, busca].forEach(function (controle) { controle.addEventListener("input", renderJogadores); });
+  [ano, modalidade, busca, ranking].forEach(function (controle) { controle.addEventListener("input", renderJogadores); });
   renderJogadores();
 })();
 </script>
-<script src="main.js?v=20260925-2"></script>
+<script>
+(function () {
+  document.querySelectorAll(".stats-section-toggle").forEach(function (botao) {
+    var painel = document.getElementById(botao.getAttribute("aria-controls"));
+    if (!painel) return;
+    botao.addEventListener("click", function () {
+      var abrir = botao.getAttribute("aria-expanded") !== "true";
+      botao.setAttribute("aria-expanded", String(abrir));
+      botao.closest(".stats-section-item").classList.toggle("aberto", abrir);
+      painel.hidden = !abrir;
+    });
+  });
+})();
+</script>
+<script src="main.js?v=20260925-4"></script>
 </body>
 </html>
