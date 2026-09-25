@@ -17,7 +17,7 @@
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Estatísticas · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260925-7">
+<link rel="stylesheet" href="style.css?v=20260925-8">
 <style id="mobile-critical-stats">
 /* CSS crítico inline: evita cache antigo no Safari/iPhone */
 .menu-retratil { position: relative; z-index: 1; }
@@ -512,7 +512,7 @@ html,body{max-width:100%;overflow-x:hidden}
     <section class="stats-goleiros stats-section-item" aria-labelledby="tituloGoleiros">
       <button class="stats-section-toggle" type="button" aria-expanded="false" aria-controls="statsPanelGoleiros">
         <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span><strong id="tituloGoleiros">Goleiros</strong><small>Totais por goleiro e busca</small></span>
+        <span><strong id="tituloGoleiros">Goleiros</strong><small>Ranking de jogos por ano e modalidade</small></span>
         <span class="stats-section-arrow" aria-hidden="true"></span>
       </button>
       <div class="stats-section-panel stats-goalkeeper-panel" id="statsPanelGoleiros" hidden>
@@ -521,20 +521,28 @@ html,body{max-width:100%;overflow-x:hidden}
           <h2>Estatísticas de goleiros</h2>
           <p>Dados consolidados por goleiro no período selecionado.</p>
         </div>
-        <label class="stats-campo stats-goalie-search">Buscar goleiro
-          <input id="goleirosBusca" type="search" placeholder="Buscar goleiro..." autocomplete="off">
-        </label>
-        <p class="stats-goalie-context" id="goleirosContexto">Total histórico · todos os anos</p>
-        <p class="stats-goalie-prompt" id="goleirosInstrucao">Digite o nome do goleiro para consultar os dados.</p>
-        <div class="tabela-wrap stats-tabela-wrap" id="goleirosTabelaWrap" hidden>
+        <div class="stats-goalie-filters">
+          <label class="stats-campo">Temporada
+            <select id="goleirosAno"><option value="todos">Todos os anos</option></select>
+          </label>
+          <label class="stats-campo">Modalidade
+            <select id="goleirosModalidade"></select>
+          </label>
+          <label class="stats-campo stats-goalie-search">Buscar goleiro
+            <input id="goleirosBusca" type="search" placeholder="Buscar goleiro..." autocomplete="off">
+          </label>
+        </div>
+        <p class="stats-goalie-context" id="goleirosContexto">Total histórico · todas as modalidades · ranking por jogos</p>
+        <p class="stats-goalie-note" id="goleirosNota" hidden>Na modalidade selecionada, o ranking considera as participações registradas. Gols sofridos e minutos são exibidos no total do período.</p>
+        <div class="tabela-wrap stats-tabela-wrap" id="goleirosTabelaWrap">
           <table class="jogos-tabela stats-tabela stats-goalkeeper-table">
             <thead>
-              <tr><th>Goleiro</th><th>Jogos</th><th>Gols sofridos</th><th>Minutos</th><th>Média</th></tr>
+              <tr><th>Pos.</th><th>Goleiro</th><th>Jogos</th><th>Gols sofridos</th><th>Minutos</th><th>Média</th></tr>
             </thead>
             <tbody id="goleirosCorpo"></tbody>
           </table>
         </div>
-        <p class="stats-vazio" id="goleirosVazio" hidden>Nenhum goleiro encontrado.</p>
+        <p class="stats-vazio" id="goleirosVazio" hidden>Nenhum goleiro encontrado para os filtros selecionados.</p>
       </div>
     </section>
     </div>
@@ -599,9 +607,11 @@ html,body{max-width:100%;overflow-x:hidden}
   var corpo = document.getElementById("statsCorpo");
   var goleirosCorpo = document.getElementById("goleirosCorpo");
   var goleirosBusca = document.getElementById("goleirosBusca");
+  var goleirosAno = document.getElementById("goleirosAno");
+  var goleirosModalidade = document.getElementById("goleirosModalidade");
   var goleirosVazio = document.getElementById("goleirosVazio");
   var goleirosContexto = document.getElementById("goleirosContexto");
-  var goleirosInstrucao = document.getElementById("goleirosInstrucao");
+  var goleirosNota = document.getElementById("goleirosNota");
   var goleirosTabelaWrap = document.getElementById("goleirosTabelaWrap");
   var vazio = document.getElementById("statsVazio");
 
@@ -649,29 +659,31 @@ html,body{max-width:100%;overflow-x:hidden}
     var modalidadeNome = dados.modalidades.find(function (item) { return item.id === modalidade.value; }).nome;
     var rankingNome = ranking.value === "gols" ? "Ranking por gols" : "Ranking por partidas";
     document.getElementById("statsContexto").textContent = (ano.value === "todos" ? "Total histórico" : "Temporada " + ano.value) + " · " + modalidadeNome + " · " + rankingNome;
-    renderGoleiros();
   }
   function renderGoleiros() {
     var termo = normalizar(goleirosBusca.value.trim());
-    goleirosContexto.textContent = ano.value === "todos" ? "Total histórico · todos os anos" : "Temporada " + ano.value;
-
-    if (!termo) {
-      goleirosCorpo.innerHTML = "";
-      goleirosTabelaWrap.hidden = true;
-      goleirosVazio.hidden = true;
-      goleirosInstrucao.hidden = false;
-      return;
-    }
-
-    goleirosInstrucao.hidden = true;
+    var modalidadeId = goleirosModalidade.value;
+    var modalidadeNome = dados.modalidades.find(function (item) {
+      return item.id === modalidadeId;
+    }).nome;
     var agrupados = {};
+    var participacoes = {};
+
+    var registros = goleirosAno.value === "todos"
+      ? dados.totais
+      : dados.registros.filter(function (item) { return String(item.ano) === goleirosAno.value; });
+
+    registros.forEach(function (registro) {
+      var nomeLimpo = nome(registro.jogador).replace(/\s*\(gol\)\s*/gi, " ").trim();
+      var chave = normalizar(nomeLimpo);
+      var valor = modalidadeId === "todas" ? registro.total : registro[modalidadeId];
+      participacoes[chave] = (participacoes[chave] || 0) + (valor ? Number(valor.jogos) || 0 : 0);
+    });
 
     dados.goleiros.forEach(function (item) {
-      if (ano.value !== "todos" && String(item.ano) !== ano.value) return;
+      if (goleirosAno.value !== "todos" && String(item.ano) !== goleirosAno.value) return;
 
       var nomeLimpo = nome(item.jogador).replace(/\s*\(gol\)\s*/gi, " ").trim();
-      if (termo && !normalizar(nomeLimpo).includes(termo)) return;
-
       var chave = normalizar(nomeLimpo);
       if (!agrupados[chave]) {
         agrupados[chave] = {
@@ -692,31 +704,43 @@ html,body{max-width:100%;overflow-x:hidden}
     });
 
     var lista = Object.keys(agrupados).map(function (chave) {
-      return agrupados[chave];
+      var item = agrupados[chave];
+      if (modalidadeId !== "todas") item.jogosNoGol = participacoes[chave] || 0;
+      return item;
+    }).filter(function (item) {
+      return item.jogosNoGol > 0 && (!termo || normalizar(item.jogador).includes(termo));
     }).sort(function (a, b) {
       return b.jogosNoGol - a.jogosNoGol || a.jogador.localeCompare(b.jogador, "pt-BR");
     });
 
-    goleirosCorpo.innerHTML = lista.map(function (item) {
-      var minutos = item.possuiMinutos ? item.minutos : "—";
-      var media = item.jogosNoGol ? item.golsSofridos / item.jogosNoGol : 0;
-      return "<tr><td class='stats-jogador'>" + escapar(item.jogador) + "</td><td><strong>" + item.jogosNoGol + "</strong></td><td>" + item.golsSofridos + "</td><td>" + minutos + "</td><td>" + media.toFixed(2).replace(".", ",") + "</td></tr>";
+    goleirosCorpo.innerHTML = lista.map(function (item, indice) {
+      var classePodio = indice < 3 ? "stats-top-" + (indice + 1) : "";
+      var detalhar = modalidadeId === "todas";
+      var minutos = detalhar && item.possuiMinutos ? item.minutos : "—";
+      var golsSofridos = detalhar ? item.golsSofridos : "—";
+      var media = detalhar && item.jogosNoGol ? (item.golsSofridos / item.jogosNoGol).toFixed(2).replace(".", ",") : "—";
+      return "<tr class='" + classePodio + "'><td><span class='stats-pos'>" + (indice + 1) + "</span></td><td class='stats-jogador'>" + escapar(item.jogador) + "</td><td><strong>" + item.jogosNoGol + "</strong></td><td>" + golsSofridos + "</td><td>" + minutos + "</td><td>" + media + "</td></tr>";
     }).join("");
 
+    goleirosContexto.textContent = (goleirosAno.value === "todos" ? "Total histórico" : "Temporada " + goleirosAno.value) + " · " + modalidadeNome + " · ranking por jogos";
+    goleirosNota.hidden = modalidadeId === "todas";
     goleirosTabelaWrap.hidden = lista.length === 0;
     goleirosVazio.hidden = lista.length > 0;
   }
 
   dados.anos.forEach(function (valor) {
     ano.insertAdjacentHTML("beforeend", "<option value='" + valor + "'>" + valor + "</option>");
+    goleirosAno.insertAdjacentHTML("beforeend", "<option value='" + valor + "'>" + valor + "</option>");
   });
   dados.modalidades.forEach(function (item) {
     modalidade.insertAdjacentHTML("beforeend", "<option value='" + item.id + "'>" + escapar(item.nome) + "</option>");
+    goleirosModalidade.insertAdjacentHTML("beforeend", "<option value='" + item.id + "'>" + escapar(item.nome) + "</option>");
   });
   document.getElementById("statsAtualizacao").textContent = dados.atualizadoAte;
   [ano, modalidade, busca, ranking].forEach(function (controle) { controle.addEventListener("input", renderJogadores); });
-  goleirosBusca.addEventListener("input", renderGoleiros);
+  [goleirosAno, goleirosModalidade, goleirosBusca].forEach(function (controle) { controle.addEventListener("input", renderGoleiros); });
   renderJogadores();
+  renderGoleiros();
 })();
 </script>
 <script>

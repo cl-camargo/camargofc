@@ -2522,3 +2522,50 @@ html,body{max-width:100%;overflow-x:hidden}
     overflow-wrap: normal;
   }
 }
+
+
+/* Ranking e filtros próprios dos goleiros — 25/09/2026 */
+#estatisticas .stats-goalie-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  margin-bottom: .8rem;
+}
+#estatisticas .stats-goalie-note {
+  margin: 0 0 .75rem;
+  padding: .7rem .8rem;
+  border-left: 3px solid #c0192e;
+  color: #aaa;
+  background: #181214;
+  font-size: .75rem;
+  line-height: 1.45;
+}
+#estatisticas .stats-goalkeeper-table tr.stats-top-1 td { background: rgba(212,175,55,.12) !important; }
+#estatisticas .stats-goalkeeper-table tr.stats-top-2 td { background: rgba(192,192,192,.10) !important; }
+#estatisticas .stats-goalkeeper-table tr.stats-top-3 td { background: rgba(205,127,50,.11) !important; }
+#estatisticas .stats-goalkeeper-table tr.stats-top-1 { box-shadow: inset 4px 0 0 #d4af37; }
+#estatisticas .stats-goalkeeper-table tr.stats-top-2 { box-shadow: inset 4px 0 0 #c0c0c0; }
+#estatisticas .stats-goalkeeper-table tr.stats-top-3 { box-shadow: inset 4px 0 0 #cd7f32; }
+#estatisticas .stats-goalkeeper-table tr.stats-top-1 .stats-pos { background:#d4af37 !important; color:#111 !important; }
+#estatisticas .stats-goalkeeper-table tr.stats-top-2 .stats-pos { background:#c0c0c0 !important; color:#111 !important; }
+#estatisticas .stats-goalkeeper-table tr.stats-top-3 .stats-pos { background:#cd7f32 !important; color:#111 !important; }
+
+@media (max-width: 700px) {
+  #estatisticas .stats-goalie-filters {
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: 8px;
+  }
+  #estatisticas .stats-goalie-filters .stats-goalie-search { grid-column: 1 / -1; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(1),
+  #estatisticas .stats-goalkeeper-table td:nth-child(1) { display: table-cell; width: 42px; text-align:center; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(2),
+  #estatisticas .stats-goalkeeper-table td:nth-child(2) { display: table-cell; width: auto; text-align:left; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(3),
+  #estatisticas .stats-goalkeeper-table td:nth-child(3) { display: table-cell; width: 48px; text-align:center; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(4),
+  #estatisticas .stats-goalkeeper-table td:nth-child(4) { display: table-cell; width: 58px; text-align:center; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(5),
+  #estatisticas .stats-goalkeeper-table td:nth-child(5) { display:none; }
+  #estatisticas .stats-goalkeeper-table th:nth-child(6),
+  #estatisticas .stats-goalkeeper-table td:nth-child(6) { display:table-cell; width:48px; text-align:center; }
+}
