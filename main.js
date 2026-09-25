@@ -98,8 +98,8 @@
       { legenda: 'Time Campeão de 2022', sub: 'Liga Paraíso de Futebol · 2ª Divisão' },
       { legenda: 'Campeão Liga Paraíso 2022', sub: 'Título histórico do Camargo FC' },
       { legenda: 'Campeão Torneio Nova Geração 2023', sub: 'Mais um título para a galeria' },
-      { legenda: 'Kiley – Ídolo do Camargo FC', sub: 'Meia / Lateral · Campo: 19 jogos · 4 gols · 3 ass.' },
-      { legenda: 'Chico – Capitão 2026', sub: 'Volante/Meia · 30 jogos · 1 gol · 2 ass.' },
+      { legenda: 'Kiley – Ídolo do Camargo FC', sub: 'Histórico: 48 jogos · 14 gols · Society e Campo' },
+      { legenda: 'Chico – Capitão 2026', sub: 'Histórico: 42 jogos · 2 gols · Society e Campo' },
       { legenda: 'Classificados para a semifinal', sub: 'Camargo FC 6 × 2 Nova Geração · Leia a notícia completa' }
     ];
 
