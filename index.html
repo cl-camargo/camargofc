@@ -40,6 +40,18 @@
 @media(max-width:650px){.home-stream{padding:2rem 0}.home-stream-stage{aspect-ratio:16/9}.home-stream-status{left:.5rem;bottom:.5rem;font-size:.72rem}}
 .carousel-slide--flyer img{object-fit:contain;object-position:center;opacity:1;background:#111}
 </style>
+<style id="home-modalidades-style">
+.home-modalidades{padding:clamp(2.5rem,5vw,4rem) 0;background:#f5f5f5;color:#1b1b1b}
+.home-modalidades h2{font:clamp(2rem,4vw,3rem)/1.1 'Bebas Neue',sans-serif;margin:.25rem 0 .5rem}
+.home-modalidades .section-eyebrow{color:#b4142a}
+.home-modalidades-intro{color:#555;line-height:1.6;margin:0 0 1.5rem;max-width:650px}
+.home-modalidades-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.home-modalidade{display:grid;gap:.3rem;padding:1.15rem;background:#fff;border-left:3px solid #c0192e;box-shadow:0 3px 12px #0000000d}
+.home-modalidade span{font-size:1.6rem}.home-modalidade strong{font-size:.98rem}.home-modalidade small{font-size:.78rem;color:#5c5c5c}
+.home-modalidades-link{display:inline-block;margin-top:1.3rem;color:#a91429;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.home-modalidades-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:400px){.home-modalidades-grid{grid-template-columns:1fr 1fr}.home-modalidade{padding:.85rem}.home-modalidade strong{font-size:.85rem}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -85,8 +97,8 @@
             <div class="hero-stat-label">Atletas no elenco</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-num">4</div>
-            <div class="hero-stat-label">Modalidades</div>
+            <div class="hero-stat-num">6</div>
+            <div class="hero-stat-label">Categorias no histórico</div>
           </div>
         </div>
         <a href="historia.html#historia" class="hero-btn">Conheça o clube</a>
@@ -142,6 +154,24 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- MODALIDADES E CATEGORIAS -->
+<section class="home-modalidades" id="modalidades" aria-labelledby="home-modalidades-title">
+  <div class="container">
+    <p class="section-eyebrow">O futebol em várias formas</p>
+    <h2 id="home-modalidades-title">Modalidades e categorias</h2>
+    <p class="home-modalidades-intro">O histórico do Camargo FC registra jogos em seis categorias. Cada uma guarda um capítulo da nossa trajetória.</p>
+    <div class="home-modalidades-grid">
+      <div class="home-modalidade"><span aria-hidden="true">⚽</span><strong>Futebol de campo</strong><small>Competições no campo</small></div>
+      <div class="home-modalidade"><span aria-hidden="true">🏟️</span><strong>Society</strong><small>Futebol 7</small></div>
+      <div class="home-modalidade"><span aria-hidden="true">🥅</span><strong>Futsal</strong><small>Jogos de quadra</small></div>
+      <div class="home-modalidade"><span aria-hidden="true">🏖️</span><strong>Futebol de areia</strong><small>Jogos na areia</small></div>
+      <div class="home-modalidade"><span aria-hidden="true">👩</span><strong>Feminino</strong><small>Partidas do time feminino</small></div>
+      <div class="home-modalidade"><span aria-hidden="true">🧒</span><strong>Time Júnior de Society</strong><small>Partidas da categoria júnior</small></div>
+    </div>
+    <a class="home-modalidades-link" href="estatisticas.html">Ver jogos e estatísticas →</a>
   </div>
 </section>
 

@@ -17,6 +17,17 @@
 <link rel="stylesheet" href="style.css">
 <style>.galeria-card:target{scroll-margin-top:110px;outline:2px solid #c0192e;outline-offset:3px}</style>
 <style>.galeria-campanha-link{display:inline-block;margin-top:.6rem;color:#f2b7bd;font-size:.82rem;font-weight:700;text-decoration:underline;text-underline-offset:3px}</style>
+<style id="galeria-conquistas-style">
+.galeria-conquistas{margin-bottom:2.3rem;scroll-margin-top:110px}
+.galeria-conquistas h2,.galeria-fotos-titulo{font-family:'Bebas Neue',sans-serif;color:#f5f5f5;letter-spacing:.04em}
+.galeria-conquistas h2{font-size:clamp(2rem,4vw,2.8rem);margin:.25rem 0 1.2rem}
+.galeria-fotos-titulo{font-size:1.7rem;margin:0 0 1rem}
+.galeria-conquistas .titulo-card{color:#eee}
+.galeria-conquistas .titulo-card-link{display:block;color:inherit;text-decoration:none;cursor:pointer}
+.galeria-conquistas .titulo-card-link:focus-visible{outline:3px solid #e5b447;outline-offset:4px}
+.galeria-conquistas .titulo-cta{display:block;margin-top:.75rem;color:#f1b8be;font-size:.78rem;font-weight:700}
+.galeria-card:target{scroll-margin-top:110px}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -47,14 +58,46 @@
     </div>
 
     <div class="galeria-tabs">
-      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-titulos')">🏆 Títulos</button>
-      <button class="galeria-tab ativo" onclick="abrirGaleria(this,'gal-atletas')">👤 Atletas Marcantes </button>
+      <button class="galeria-tab ativo" onclick="abrirGaleria(this,'gal-titulos')">🏆 Conquistas</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-atletas')">👤 Jogadores históricos</button>
       <button class="galeria-tab" onclick="abrirGaleria(this,'gal-jogos')">⚽ Jogos</button>
       <button class="galeria-tab" onclick="abrirGaleria(this,'gal-bastidores')">🎬 Bastidores</button>
     </div>
 
-    <!-- Títulos -->
-    <div id="gal-titulos" class="galeria-tab-content">
+    <!-- Conquistas -->
+    <div id="gal-titulos" class="galeria-tab-content ativo">
+      <div id="titulos" class="galeria-conquistas">
+        <p class="section-eyebrow">Nossa trajetória</p>
+        <h2>Conquistas do Camargo FC</h2>
+    <div class="titulos-grid">
+      <a class="titulo-card titulo-card-link" href="noticia-titulo-liga-paraiso-2022.html" aria-label="Ler a reportagem completa do título da Liga Paraíso de 2022">
+        <span class="titulo-icon">🏆</span>
+        <div class="titulo-nome">Liga Municipal 2ª Divisão </div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2022</div>
+        <span class="titulo-cta">Ver campanha e escalações →</span>
+      </a>
+      <div class="titulo-card">
+        <span class="titulo-icon">🏆</span>
+        <div class="titulo-nome">Taça Nova Geração</div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2023</div>
+      </div>
+      <div class="titulo-card">
+        <span class="titulo-icon">🥇</span>
+        <div class="titulo-nome">Torneio de Inverno</div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2020</div>
+      </div>
+      <div class="titulo-card">
+        <span class="titulo-icon">🌟</span>
+        <div class="titulo-nome">Quadrangulares</div>
+        <div class="titulo-qtd">4</div>
+        <div class="titulo-anos">2017-2019-2020-2021</div>
+      </div>
+    </div>
+      </div>
+      <h3 class="galeria-fotos-titulo">Fotos das conquistas</h3>
       <div class="galeria-grid">
         <div class="galeria-card">
           <div class="galeria-card-img">
@@ -83,7 +126,7 @@
       </div>
     </div>
     <!-- Atletas -->
-    <div id="gal-atletas" class="galeria-tab-content ativo">
+    <div id="gal-atletas" class="galeria-tab-content">
       <div class="galeria-grid">
         <div style="grid-column:1/-1; margin:0 0 1.25rem;">
           <p class="section-eyebrow" style="margin-bottom:.25rem;">Memória rubro-negra</p>
@@ -270,6 +313,23 @@
 
 <script src="menu-loader.js"></script>
 <script src="main.js"></script>
+<script>
+(function () {
+  function abrirDestino() {
+    var hash = decodeURIComponent(window.location.hash.slice(1));
+    if (!hash) return;
+    var alvo = document.getElementById(hash);
+    if (!alvo) return;
+    var painel = alvo.classList.contains("galeria-tab-content") ? alvo : alvo.closest(".galeria-tab-content");
+    if (!painel) return;
+    var botao = document.querySelector('.galeria-tab[onclick*="' + painel.id + '"]');
+    if (botao) abrirGaleria(botao, painel.id);
+    requestAnimationFrame(function () { alvo.scrollIntoView({block:"start"}); });
+  }
+  window.addEventListener("hashchange", abrirDestino);
+  abrirDestino();
+})();
+</script>
 
 </body>
 </html>

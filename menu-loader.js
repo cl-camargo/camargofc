@@ -2,7 +2,7 @@
   var placeholder = document.getElementById('site-menu');
   if (!placeholder) return;
 
-  fetch('menu.html')
+  fetch('menu.html?v=20260925-2')
     .then(function (resp) {
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       return resp.text();
