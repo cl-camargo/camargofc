@@ -111,6 +111,21 @@ html,body{max-width:100%;overflow-x:hidden}
  #estatisticas .stats-goleiros .stats-tabela-wrap,#statsPanelPartidas .tabela-wrap{width:100%;max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
 }
 </style>
+<style id="stats-ranking-mobile-header">
+@media(max-width:700px){
+  #estatisticas .stats-ranking-table th:nth-child(1),
+  #estatisticas .stats-ranking-table td:nth-child(1){width:42px!important}
+  #estatisticas .stats-ranking-table th:nth-child(3),
+  #estatisticas .stats-ranking-table td:nth-child(3){width:42px!important}
+  #estatisticas .stats-ranking-table th:nth-child(4),
+  #estatisticas .stats-ranking-table td:nth-child(4){width:76px!important}
+  #estatisticas .stats-ranking-table th:nth-child(4){
+    font-size:11px!important;letter-spacing:0!important;
+    white-space:nowrap!important;text-align:center;
+    padding-left:2px!important;padding-right:2px!important;
+  }
+}
+</style>
 <style id="stats-light-theme">
 /* Tema claro exclusivo da página Estatísticas */
 #estatisticas{background:#fff!important;color:#171717!important;color-scheme:light}
@@ -702,14 +717,17 @@ html,body{max-width:100%;overflow-x:hidden}
       if (ranking.value === "jogos") {
         return b.jogos - a.jogos || b.gols - a.gols || a.jogador.localeCompare(b.jogador, "pt-BR");
       }
-      return b.gols - a.gols || a.jogos - b.jogos || a.jogador.localeCompare(b.jogador, "pt-BR");
+      return b.gols - a.gols || a.jogos - b.jogos ||
+        (ano.value === "2022" && modalidade.value === "campo" && normalizar(a.jogador) === "victor vasco" ? -1 : 0) ||
+        (ano.value === "2022" && modalidade.value === "campo" && normalizar(b.jogador) === "victor vasco" ? 1 : 0) ||
+        a.jogador.localeCompare(b.jogador, "pt-BR");
     });
     corpo.innerHTML = lista.map(function (item, indice) {
       var classePodio = indice < 3 ? " stats-top-" + (indice + 1) : "";
       return "<tr class='" + classePodio.trim() + "'><td><span class='stats-pos'>" + (indice + 1) + "</span></td><td class='stats-jogador'>" + escapar(nome(item.jogador)) + "</td><td class='stats-gols'><strong>" + item.gols + "</strong></td><td class='stats-jogos'><strong>" + item.jogos + "</strong></td></tr>";
     }).join("");
     vazio.hidden = lista.length > 0;
-    var artilheiro = lista.slice().sort(function (a, b) { return b.gols - a.gols || a.jogos - b.jogos; })[0];
+    var artilheiro = ranking.value === "gols" ? lista[0] : lista.slice().sort(function (a, b) { return b.gols - a.gols || a.jogos - b.jogos; })[0];
     var maisJogos = lista.slice().sort(function (a, b) { return b.jogos - a.jogos || b.gols - a.gols; })[0];
     document.getElementById("resumoAtletas").textContent = lista.length;
     document.getElementById("resumoArtilheiro").textContent = artilheiro ? nome(artilheiro.jogador) : "—";
