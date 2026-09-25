@@ -28,6 +28,17 @@
 <title>Camargo Futebol Clube · Site Oficial</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=20260925-10">
+<style>
+.home-stream{padding:3.5rem 0;background:#161616;color:#f5f5f5;border-top:4px solid #c0192e}
+.home-stream .section-eyebrow{color:#ef5c6c}
+.home-stream h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.04em;margin:.3rem 0}
+.home-stream-intro{color:#c9c9c9;line-height:1.55;margin:0 0 1.4rem}
+.home-stream-stage{position:relative;display:flex;justify-content:center;align-items:center;background:#080808;border:1px solid #424242;aspect-ratio:16/9;overflow:hidden}
+.home-stream-stage img{height:100%;width:100%;object-fit:contain}
+.home-stream-status{position:absolute;left:1rem;bottom:1rem;background:#b71026;color:#fff;padding:.65rem .9rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 3px 18px #000a}
+.home-stream-stage iframe{width:100%;height:100%;border:0}
+@media(max-width:650px){.home-stream{padding:2rem 0}.home-stream-stage{aspect-ratio:4/5}.home-stream-status{left:.5rem;bottom:.5rem;font-size:.72rem}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -147,6 +158,19 @@
         <span><strong>17h30</strong> Antônio Damião</span>
       </div>
       <a class="hero-btn" href="agenda.html">Ver agenda</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSMISSÃO DA SEMIFINAL: substituir o conteúdo de .home-stream-stage pelo iframe do YouTube quando o link estiver disponível -->
+<section class="home-stream" id="transmissao" aria-labelledby="home-stream-title">
+  <div class="container">
+    <p class="section-eyebrow">Camargo FC × Real Tocantins · Semifinal</p>
+    <h2 id="home-stream-title">Transmissão ao vivo</h2>
+    <p class="home-stream-intro">Domingo, 27 de setembro, às 17h30 · Estádio Antônio Damião. Acompanhe o jogo aqui no site.</p>
+    <div class="home-stream-stage" aria-label="Transmissão em breve">
+      <img src="semifinal-camargo-real-2026.jpg" alt="Flyer da semifinal Camargo FC contra Real Tocantins em 27 de setembro às 17h30" width="1080" height="1350" loading="lazy" decoding="async">
+      <span class="home-stream-status">Transmissão em breve</span>
     </div>
   </div>
 </section>
