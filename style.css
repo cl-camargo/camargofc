@@ -2408,3 +2408,28 @@ a:focus-visible, button:focus-visible, input:focus-visible {
  #statsPanelJogadores .stats-filtros-diretos{grid-template-columns:1fr 1fr}
  #statsPanelJogadores .stats-busca{grid-column:1/-1}
 }
+
+/* Trava definitiva de largura no painel de estatísticas */
+html,body{max-width:100%;overflow-x:hidden}
+#estatisticas,#estatisticas .container,#estatisticas .stats-section-stack,#estatisticas .stats-section-item,#estatisticas .stats-section-panel,#estatisticas .stats-player-panel{min-width:0;max-width:100%;box-sizing:border-box}
+@media(max-width:700px){
+ #estatisticas{width:100%;padding-left:0!important;padding-right:0!important;overflow-x:hidden}
+ #estatisticas>.container{width:100%;max-width:100%;min-width:0;margin:0;padding-left:12px!important;padding-right:12px!important;overflow:hidden;box-sizing:border-box}
+ #estatisticas .stats-section-stack,#estatisticas .stats-section-item,#estatisticas .stats-section-panel,#estatisticas .stats-player-panel,
+ #estatisticas .stats-filtros-diretos,#estatisticas .stats-resumo,#estatisticas .stats-contexto,#estatisticas .stats-tabela-wrap,#estatisticas .stats-goleiros{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+ #estatisticas .stats-section-panel{overflow:hidden}
+ #estatisticas .stats-filtros-diretos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;padding:10px}
+ #estatisticas .stats-filtros-diretos .stats-busca{grid-column:auto}
+ #estatisticas .stats-campo,#estatisticas .stats-campo input,#estatisticas .stats-campo select{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+ #estatisticas .stats-resumo{display:grid;grid-template-columns:1fr!important}
+ #estatisticas .stats-resumo .jstat,#estatisticas .stats-resumo .jstat:last-child{width:100%;max-width:100%;min-width:0!important;box-sizing:border-box}
+ #estatisticas .stats-contexto{white-space:normal;overflow-wrap:anywhere;font-size:15px!important}
+ #estatisticas .stats-ranking-table{display:table;width:100%!important;max-width:100%!important;min-width:0!important;table-layout:fixed}
+ #estatisticas .stats-ranking-table th:nth-child(1),#estatisticas .stats-ranking-table td:nth-child(1){width:48px!important}
+ #estatisticas .stats-ranking-table th:nth-child(3),#estatisticas .stats-ranking-table td:nth-child(3){width:48px!important}
+ #estatisticas .stats-ranking-table th:nth-child(4),#estatisticas .stats-ranking-table td:nth-child(4){width:62px!important}
+ #estatisticas .stats-ranking-table th,#estatisticas .stats-ranking-table td{padding:10px 5px!important;min-width:0}
+ #estatisticas .stats-ranking-table .stats-jogador{font-size:13px!important;line-height:1.15;overflow-wrap:anywhere}
+ #estatisticas .stats-goalkeeper-table,#statsPanelPartidas .jogos-tabela{min-width:620px}
+ #estatisticas .stats-goleiros .stats-tabela-wrap,#statsPanelPartidas .tabela-wrap{width:100%;max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+}
