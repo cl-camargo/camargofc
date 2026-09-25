@@ -42,6 +42,7 @@
 </style>
 <style id="home-modalidades-style">
 #modalidades.home-modalidades{padding:clamp(2.5rem,5vw,4rem) 0;background:#fff;color:#1b1b1b}
+#modalidades .container{width:100%;max-width:1100px;padding-left:clamp(20px,5vw,32px);padding-right:clamp(20px,5vw,32px);box-sizing:border-box}
 .home-modalidades h2{font:clamp(2rem,4vw,3rem)/1.1 'Bebas Neue',sans-serif;margin:.25rem 0 .5rem}
 #modalidades .section-eyebrow{color:#b4142a}
 .home-modalidades-intro{color:#555;line-height:1.6;margin:0 0 1.5rem;max-width:650px}
@@ -134,11 +135,6 @@
           <img src="Chico-jpg.webp" alt="Chico – Capitão 2026" width="1600" height="1547">
         </a>
 
-        <!-- SLIDE 6 – Classificação para a semifinal -->
-        <a class="carousel-slide carousel-slide-link" href="noticia-classificacao-6x2-nova-geracao.html" aria-label="Ler notícia sobre a classificação do Camargo FC para a semifinal">
-          <img src="classificacao-camargo-foto-time.webp" alt="Elenco do Camargo FC classificado para a semifinal após vitória por 6 a 2" width="1200" height="760">
-        </a>
-
       </div>
 
       <!-- Legenda sobre o carrossel -->
@@ -149,7 +145,7 @@
           <button class="carousel-btn" id="carouselPrev" aria-label="Slide anterior">&#8249;</button>
           <div class="carousel-dots" id="carouselDots"></div>
           <button class="carousel-btn" id="carouselNext" aria-label="Próximo slide">&#8250;</button>
-          <span class="carousel-contador" id="carouselContador">1 / 6</span>
+          <span class="carousel-contador" id="carouselContador">1 / 5</span>
         </div>
       </div>
     </div>
@@ -206,21 +202,6 @@
   </div>
 </section>
 
-<!-- ÚLTIMA NOTÍCIA -->
-<section class="home-news" aria-labelledby="home-news-title">
-  <div class="container">
-    <div class="home-news-card">
-      <img class="home-news-arte" src="classificacao-camargo-foto-time.webp" alt="Foto do elenco do Camargo FC após a classificação para a semifinal" width="1200" height="760" loading="lazy" decoding="async">
-      <div class="home-news-content">
-        <p class="section-eyebrow">Última notícia · 16/set/2026</p>
-        <h2 id="home-news-title">Goleada e classificação: Camargo FC vence por 6 a 2</h2>
-        <p>Com quatro gols de André, um de Ariostocly e um de Clovis Henrique, o Camargo garantiu sua vaga na semifinal.</p>
-        <a class="hero-btn" href="noticia-classificacao-6x2-nova-geracao.html">Ler notícia completa</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 </main>
 
 
@@ -265,7 +246,7 @@
 </footer>
 
 <script src="menu-loader.js?v=20260925-2"></script>
-<script src="main.js?v=20260925-10"></script>
+<script src="main.js?v=20260925-11"></script>
 <script>
   // Oculta a chamada após o dia da partida em Paraíso do Tocantins.
   if (Date.now() > Date.parse("2026-09-28T00:00:00-03:00")) {
