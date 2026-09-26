@@ -53,6 +53,38 @@
 @media(max-width:700px){.home-modalidades-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:400px){.home-modalidades-grid{grid-template-columns:1fr 1fr}.home-modalidade{padding:.85rem}.home-modalidade strong{font-size:.85rem}}
 </style>
+<style id="hero-stats-alignment">
+/* Quatro indicadores em células iguais, com o número sempre acima da legenda. */
+.hero .hero-stats{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  width:min(100%,420px);
+  gap:1rem 1.25rem;
+  margin:1.25rem auto 1.5rem;
+  align-items:stretch;
+}
+.hero .hero-stat{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  min-width:0;
+  text-align:center;
+}
+.hero .hero-stat-num{line-height:1;flex:none}
+.hero .hero-stat-label{
+  display:block;
+  margin-top:.35rem;
+  width:100%;
+  line-height:1.3;
+  overflow-wrap:normal;
+  hyphens:auto;
+}
+@media(max-width:480px){
+  .hero .hero-stats{width:min(100%,360px);gap:1.15rem .65rem}
+  .hero .hero-stat-label{font-size:clamp(10px,2.9vw,12px);letter-spacing:.025em}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
