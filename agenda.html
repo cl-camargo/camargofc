@@ -15,6 +15,7 @@
 <title>Agenda · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>.agenda-gravados{margin-top:2.5rem;padding:2rem 0;border-top:3px solid #c0192e}.agenda-gravados h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);margin:.25rem 0}.agenda-gravados p{line-height:1.6}.agenda-video{position:relative;width:100%;aspect-ratio:16/9;background:#111}.agenda-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.agenda-gravados a{color:#c0192e;font-weight:700}</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -47,7 +48,7 @@
 <p class="section-eyebrow agenda-temporada-label">14ª Liga Paraíso de Futebol 2026 · 2ª Divisão</p>
     <div class="agenda-grupo agenda-timeline">
 <div class="agenda-jogo agenda-linha-item">
-        <span class="agenda-badge-proximo">🔴 Próximo jogo · Semifinal</span>
+        <span class="agenda-badge-encerrado">❌ Encerrado · Semifinal</span>
         <div class="agenda-jogo-meta">
           <span>📍 Antônio Damião</span>
           <span>📅 27 de set. | dom.</span>
@@ -59,15 +60,37 @@
             <div class="agenda-time-escudo"><img src="LOGOSITE-png.webp" alt="Camargo FC" decoding="async" width="989" height="1600"></div>
             <div class="agenda-time-nome">Camargo FC</div>
           </div>
-          <div class="agenda-vs">VS</div>
+          <div class="agenda-placar-final">2 · 4</div>
           <div class="agenda-time">
-            <div class="agenda-time-escudo">
-              <img src="Real_tocantins.png" alt="Escudo do Real Tocantins" decoding="async" width="1321" height="1600" loading="lazy">
-            </div>
+            <div class="agenda-time-escudo"><img src="Real_tocantins.png" alt="Escudo do Real Tocantins" decoding="async" width="1321" height="1600" loading="lazy"></div>
             <div class="agenda-time-nome">Real Tocantins</div>
           </div>
         </div>
-        <p style="text-align:center;margin:1rem 0 0;"><a href="index.html#transmissao" style="color:#c0192e;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Ver transmissão · em breve</a></p>
+        <div class="agenda-gols" aria-label="Gols do Camargo FC"><span class="agenda-gol-item">André</span><span class="agenda-gol-item">André</span></div>
+        <details class="agenda-escalacao">
+          <summary>Ver escalação</summary>
+          <div class="escalacao-bloco"><div class="escalacao-bloco-titulo">Titulares</div><div class="escalacao-lista">
+            <span class="escalacao-jogador"><span class="escalacao-num">12</span>José Ribamar Jr</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">2</span>Michael Davi</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">4</span>Daniel Mota</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">5</span>David Novaes</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">6</span>Guilherme</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">8</span>João Marcelo</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">10</span>Chico (c)</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">11</span>Ariostocly</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">7</span>Fabiano</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">17</span>Yokida</span>
+            <span class="escalacao-jogador"><span class="escalacao-num">9</span>André</span>
+          </div></div>
+          <div class="escalacao-bloco"><div class="escalacao-bloco-titulo">Substituições</div><div class="escalacao-subs-lista">
+            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span>Ariostocly<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">2</span>Leomar Loiola</span>
+            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span>Yokida<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span>Gabriel Tolintino</span>
+            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span>Chico<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span>Caio</span>
+            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span>Fabiano<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">18</span>Clovis Henrique</span>
+            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">8</span>João Marcelo<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span>Carlos Henrique</span>
+          </div></div>
+        </details>
+        <p style="text-align:center;margin:1rem 0 0;"><a href="noticia-semifinal-camargo-real-tocantins-2026.html" style="color:#c0192e;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Ler reportagem da semifinal →</a> · <a href="#jogos-gravados" style="color:#c0192e;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Ver jogo gravado →</a></p>
       </div>
 
 <div class="agenda-jogo agenda-linha-item" style="border-left-color:#2ecc71;">
@@ -399,6 +422,13 @@
       </div>
     </div>
 
+    <section id="jogos-gravados" class="agenda-gravados" aria-labelledby="gravados-titulo">
+      <p class="section-eyebrow">Arquivo de vídeos</p>
+      <h2 id="gravados-titulo">Jogos gravados</h2>
+      <p>Reveja a semifinal de 27 de setembro de 2026: Camargo FC 2 × 4 Real Tocantins.</p>
+      <div class="agenda-video"><iframe src="https://www.youtube-nocookie.com/embed/sl8g_FoQkJA" title="Jogo gravado: Camargo FC 2 x 4 Real Tocantins, semifinal 2026" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <p><a href="https://www.youtube.com/live/sl8g_FoQkJA" target="_blank" rel="noopener noreferrer">Assistir no YouTube ↗</a></p>
+    </section>
   </div>
 </section>
 
