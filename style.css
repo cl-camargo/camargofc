@@ -2621,3 +2621,12 @@ html,body{max-width:100%;overflow-x:hidden}
   .home-next-details { gap: 1.2rem; }
   .home-next-card .hero-btn { width: 100%; text-align: center; }
 }
+
+
+/* Alinhamento consistente dos títulos em todas as páginas e tamanhos de tela */
+main h1,
+main h2,
+main h3 {
+  text-align: center;
+  text-wrap: balance;
+}
