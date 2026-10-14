@@ -98,7 +98,7 @@
       { legenda: 'Campeão Liga Paraíso 2022', sub: 'Título histórico do Camargo FC' },
       { legenda: 'Campeão Torneio Nova Geração 2023', sub: 'Mais um título para a galeria' },
       { legenda: 'Kiley – Ídolo do Camargo FC', sub: 'Histórico: 48 jogos · 14 gols · Society e Campo' },
-      { legenda: 'Chico – Capitão 2026', sub: 'Histórico: 42 jogos · 2 gols · Society e Campo' }
+      { legenda: 'Chico – Capitão 2026', sub: 'Histórico: 43 jogos · 2 gols · Society e Campo' }
     ];
 
     var carouselEl = document.getElementById('heroCarousel');
