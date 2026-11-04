@@ -2633,3 +2633,11 @@ main h3 {
 
 /* Dá respiro entre o texto da notícia e os links de navegação. */
 .noticia-links { margin-top: 1.5rem; }
+
+
+/* Correção: evitar que o escudo do hero seja cortado em telas estreitas/baixas. */
+@media (min-width: 769px) {
+  .hero-top { height: auto; max-height: none; overflow: visible; }
+  .hero-panel-left { min-height: 0; overflow: visible; }
+  .hero-escudo { display: block; height: auto; max-height: none; object-fit: contain; }
+}
