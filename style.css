@@ -2641,3 +2641,12 @@ main h3 {
   .hero-panel-left { min-height: 0; overflow: visible; }
   .hero-escudo { display: block; height: auto; max-height: none; object-fit: contain; }
 }
+
+
+/* Enquadramento individual: Victor Vasco — preservar testa e rosto sem zoom. */
+.galeria-card-img.portrait img.portrait-victor {
+  object-fit: cover;
+  object-position: center top;
+  transform: none;
+  transform-origin: center top;
+}
