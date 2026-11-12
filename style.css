@@ -2697,3 +2697,24 @@ main h3 {
   width:100%; height:100%; justify-content:center;
   background:linear-gradient(160deg,#272727,#111);
 }
+
+/* Galeria de atletas: tamanho de foto idêntico para todos os cards. */
+#gal-atletas .galeria-grid .galeria-card-img.portrait {
+  width:100%;
+  height:auto;
+  aspect-ratio:4 / 5;
+  flex:0 0 auto;
+  overflow:hidden;
+  position:relative;
+}
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img {
+  display:block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  inset:0;
+  object-fit:cover;
+}
+#gal-atletas .galeria-grid .galeria-card {
+  align-self:stretch;
+}
