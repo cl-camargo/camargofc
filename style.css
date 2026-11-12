@@ -2698,23 +2698,41 @@ main h3 {
   background:linear-gradient(160deg,#272727,#111);
 }
 
-/* Galeria de atletas: tamanho de foto idêntico para todos os cards. */
+/* Retratos padronizados: uma altura física por breakpoint, sem zoom CSS cumulativo. */
 #gal-atletas .galeria-grid .galeria-card-img.portrait {
   width:100%;
-  height:auto;
-  aspect-ratio:4 / 5;
-  flex:0 0 auto;
+  height:320px;
+  aspect-ratio:auto;
   overflow:hidden;
   position:relative;
+  flex:none;
 }
 #gal-atletas .galeria-grid .galeria-card-img.portrait > img {
-  display:block;
-  width:100%;
-  height:100%;
   position:absolute;
   inset:0;
+  width:100%;
+  height:100%;
+  max-width:none;
   object-fit:cover;
+  object-position:center 12%;
+  transform:none;
+  transform-origin:center center;
 }
-#gal-atletas .galeria-grid .galeria-card {
-  align-self:stretch;
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img[src="historico-manoel-junior.webp"],
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img[src="historico-daniel-lucena.webp"] {
+  object-position:center 24%;
+}
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img[src="historico-tony-jr.webp"],
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img[src="historico-victor-vasco.webp"] {
+  object-position:center top;
+}
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img[src="historico-guthierre.webp"],
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img[src="historico-valder-jr.webp"] {
+  object-position:center 20%;
+}
+#gal-atletas .galeria-grid .galeria-card-img.portrait > .galeria-placeholder {
+  width:100%;height:100%;justify-content:center;
+}
+@media (max-width:600px) {
+  #gal-atletas .galeria-grid .galeria-card-img.portrait {height:300px;}
 }
