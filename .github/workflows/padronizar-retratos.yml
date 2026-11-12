@@ -1,0 +1,32 @@
+name: Padronizar fotos da galeria com detecção facial
+on:
+  push:
+    paths:
+      - 'scripts/padronizar_retratos.py'
+      - '.github/workflows/padronizar-retratos.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  padronizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Instalar processamento de imagens
+        run: pip install pillow opencv-python-headless numpy
+      - name: Gerar retratos 600x750
+        run: python scripts/padronizar_retratos.py
+      - name: Publicar fotos processadas e galeria
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add retratos-padronizados/ galeria.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Padroniza automaticamente fotos da galeria"
+            git push
+          fi
