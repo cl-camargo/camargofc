@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Instalar processamento de imagens
-        run: pip install pillow opencv-python-headless numpy
+        run: pip install "pillow>=10,<13" "opencv-python-headless>=4.9,<5" "numpy>=1.26,<3"
       - name: Gerar retratos 600x750
         run: python scripts/padronizar_retratos.py
       - name: Publicar fotos processadas e galeria
