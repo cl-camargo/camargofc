@@ -2736,3 +2736,21 @@ main h3 {
 @media (max-width:600px) {
   #gal-atletas .galeria-grid .galeria-card-img.portrait {height:300px;}
 }
+
+/* Padronização final: sem zoom e sem corte em NENHUMA foto dos atletas. */
+#gal-atletas .galeria-grid .galeria-card-img.portrait {
+  height:320px;
+  background:#151515;
+}
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img,
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img[src] {
+  width:100%;
+  height:100%;
+  object-fit:contain !important;
+  object-position:center center !important;
+  transform:none !important;
+  transform-origin:center center !important;
+}
+@media(max-width:600px) {
+  #gal-atletas .galeria-grid .galeria-card-img.portrait {height:300px;}
+}
