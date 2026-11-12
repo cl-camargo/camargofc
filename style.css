@@ -2673,3 +2673,27 @@ main h3 {
   transform: scale(1.18);
   transform-origin: center 10%;
 }
+
+/* Enquadramento uniforme dos jogadores históricos (novembro 2026). */
+#gal-atletas .galeria-card-img.portrait { aspect-ratio:4/5; overflow:hidden; }
+#gal-atletas .galeria-card-img.portrait > img {
+  width:100%; height:100%; display:block; object-fit:cover;
+  object-position:center 10%; transform:scale(1.34); transform-origin:center 10%;
+}
+#gal-atletas .galeria-card-img.portrait > img[src="historico-victor-vasco.webp"],
+#gal-atletas .galeria-card-img.portrait > img[src="historico-ilvane-bicon.webp"],
+#gal-atletas .galeria-card-img.portrait > img[src="historico-manoel-junior.webp"],
+#gal-atletas .galeria-card-img.portrait > img[src="historico-diogo.webp"],
+#gal-atletas .galeria-card-img.portrait > img[src="historico-tony-jr.webp"],
+#gal-atletas .galeria-card-img.portrait > img[src="historico-robinho.webp"],
+#gal-atletas .galeria-card-img.portrait > img[src="historico-carlos-leandro.webp"] {
+  transform:scale(1.04); object-position:center 8%; transform-origin:center 8%;
+}
+#gal-atletas .galeria-card-img.portrait > img[src="historico-guthierre.webp"],
+#gal-atletas .galeria-card-img.portrait > img[src="historico-valder-jr.webp"] {
+  transform:scale(1.46); object-position:center 8%; transform-origin:center 8%;
+}
+#gal-atletas .galeria-card-img.portrait > .galeria-placeholder {
+  width:100%; height:100%; justify-content:center;
+  background:linear-gradient(160deg,#272727,#111);
+}
