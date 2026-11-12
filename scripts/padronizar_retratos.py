@@ -16,7 +16,7 @@ html = HTML.read_text(encoding="utf-8")
 begin = html.index('id="gal-atletas"')
 end = html.index('<!-- Jogos -->', begin)
 section = html[begin:end]
-names = sorted(set(re.findall(r'src="([^"]+\.webp)"', section)))
+names = sorted(set(re.findall(r'src="(historico-[^"]+\.(?:webp|jpg)|Kiley-jpg\.webp)"', section)))
 face_detector = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 TARGET = (600, 750)
 
