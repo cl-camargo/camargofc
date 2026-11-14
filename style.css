@@ -2754,3 +2754,25 @@ main h3 {
 @media(max-width:600px) {
   #gal-atletas .galeria-grid .galeria-card-img.portrait {height:300px;}
 }
+
+/* Galeria 2026: fotografias recortadas no arquivo, sem qualquer zoom CSS. */
+#gal-atletas .galeria-grid .galeria-card-img.portrait {
+  width:100%;
+  height:auto;
+  aspect-ratio:4 / 5;
+  overflow:hidden;
+  background:#161616;
+}
+#gal-atletas .galeria-grid .galeria-card-img.portrait > img {
+  position:static !important;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover !important;
+  object-position:center center !important;
+  transform:none !important;
+  transform-origin:center center !important;
+}
+@media(max-width:600px) {
+  #gal-atletas .galeria-grid .galeria-card-img.portrait {height:auto;aspect-ratio:4 / 5;}
+}
