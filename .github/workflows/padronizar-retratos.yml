@@ -28,5 +28,6 @@ jobs:
           git add retratos-novos/ galeria.html
           if ! git diff --cached --quiet; then
             git commit -m "Padroniza automaticamente fotos da galeria"
+            git pull --rebase origin main
             git push
           fi
