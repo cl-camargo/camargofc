@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fotos, títulos, atletas marcantes, jogos e bastidores da história do Camargo Futebol Clube.">
+<link rel="canonical" href="https://cl-camargo.github.io/camargofc/galeria.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Galeria · Camargo Futebol Clube">
+<meta property="og:description" content="Fotos, títulos, atletas marcantes, jogos e bastidores da história do Camargo Futebol Clube.">
+<meta property="og:url" content="https://cl-camargo.github.io/camargofc/galeria.html">
+<meta property="og:image" content="https://cl-camargo.github.io/camargofc/Campeao2022.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
+<title>Galeria · Camargo Futebol Clube</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261114-3">
+<style>.galeria-card:target{scroll-margin-top:110px;outline:2px solid #c0192e;outline-offset:3px}</style>
+<style>.galeria-campanha-link{display:inline-block;margin-top:.6rem;color:#f2b7bd;font-size:.82rem;font-weight:700;text-decoration:underline;text-underline-offset:3px}</style>
+<style id="galeria-conquistas-style">
+.galeria-conquistas{margin-bottom:2.3rem;scroll-margin-top:110px}
+.galeria-conquistas h2,.galeria-fotos-titulo{font-family:'Bebas Neue',sans-serif;color:#f5f5f5;letter-spacing:.04em}
+.galeria-conquistas h2{font-size:clamp(2rem,4vw,2.8rem);margin:.25rem 0 1.2rem}
+.galeria-fotos-titulo{font-size:1.7rem;margin:0 0 1rem}
+.galeria-conquistas .titulo-card{color:#eee}
+.galeria-conquistas .titulo-card-link{display:block;color:inherit;text-decoration:none;cursor:pointer}
+.galeria-conquistas .titulo-card-link:focus-visible{outline:3px solid #e5b447;outline-offset:4px}
+.galeria-conquistas .titulo-cta{display:block;margin-top:.75rem;color:#f1b8be;font-size:.78rem;font-weight:700}
+.galeria-card:target{scroll-margin-top:110px}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button id="lb-fechar" aria-label="Fechar imagem">✕</button>
+  <div id="lb-contador"></div>
+  <button id="lb-prev" aria-label="Imagem anterior">&#8249;</button>
+  <div id="lb-img-wrap">
+    <img id="lb-img" src="" alt="" decoding="async">
+  </div>
+  <button id="lb-next" aria-label="Próxima imagem">&#8250;</button>
+  <div id="lb-legenda"><span id="lb-sub"></span></div>
+</div>
+
+<div id="site-menu"></div>
+<div class="nav-spacer" aria-hidden="true"></div>
+<main id="conteudo">
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Fotos & Memórias</p>
+      <h1 class="section-title">Galeria</h1>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="galeria-tabs">
+      <button class="galeria-tab ativo" onclick="abrirGaleria(this,'gal-titulos')">🏆 Conquistas</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-atletas')">👤 Jogadores históricos</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-jogos')">⚽ Times históricos</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-bastidores')">🎬 Bastidores</button>
+    </div>
+
+    <!-- Conquistas -->
+    <div id="gal-titulos" class="galeria-tab-content ativo">
+      <div id="titulos" class="galeria-conquistas">
+        <p class="section-eyebrow">Nossa trajetória</p>
+        <h2>Conquistas do Camargo FC</h2>
+    <div class="titulos-grid">
+      <a class="titulo-card titulo-card-link" href="noticia-titulo-liga-paraiso-2022.html" aria-label="Ler a reportagem completa do título da Liga Paraíso de 2022">
+        <span class="titulo-icon">🏆</span>
+        <div class="titulo-nome">Liga Municipal 2ª Divisão </div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2022</div>
+        <span class="titulo-cta">Ver campanha e escalações →</span>
+      </a>
+      <div class="titulo-card">
+        <span class="titulo-icon">🏆</span>
+        <div class="titulo-nome">Taça Nova Geração</div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2023</div>
+      </div>
+      <div class="titulo-card">
+        <span class="titulo-icon">🥇</span>
+        <div class="titulo-nome">Torneio de Inverno</div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2020</div>
+      </div>
+      <div class="titulo-card">
+        <span class="titulo-icon">🌟</span>
+        <div class="titulo-nome">Quadrangulares</div>
+        <div class="titulo-qtd">4</div>
+        <div class="titulo-anos">2017-2019-2020-2021</div>
+      </div>
+    </div>
+      </div>
+      <h3 class="galeria-fotos-titulo">Fotos das conquistas</h3>
+      <div class="galeria-grid">
+        <div class="galeria-card">
+          <div class="galeria-card-img">
+            <img src="Time2022-jpg.webp" alt="Time 2022" decoding="async" width="1600" height="1200" loading="lazy">
+          </div>
+          <div class="galeria-card-info">
+            <div class="galeria-card-titulo">Time Campeão de 2022</div><a class="galeria-campanha-link" href="noticia-titulo-liga-paraiso-2022.html">Ver jogos e escalações de 2022 →</a>
+          </div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img">
+            <img src="Campeao2022-jpg.webp" alt="Campeão 2022" decoding="async" width="1600" height="1200" loading="lazy">
+          </div>
+          <div class="galeria-card-info">
+            <div class="galeria-card-titulo">Campeão Liga Paraíso de Futebol - 2ª Divisão (2022)</div><a class="galeria-campanha-link" href="noticia-titulo-liga-paraiso-2022.html">Ver jogos e escalações de 2022 →</a>
+          </div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img">
+            <img src="CampeaoNG-jpeg.webp" alt="Campeão NG" decoding="async" width="1075" height="1200" loading="lazy">
+          </div>
+          <div class="galeria-card-info">
+            <div class="galeria-card-titulo">Campeão Torneio Nova Geração (2023)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Atletas -->
+    <div id="gal-atletas" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div style="grid-column:1/-1; margin:0 0 1.25rem;">
+          <p class="section-eyebrow" style="margin-bottom:.25rem;">Memória rubro-negra</p>
+          <h2 style="font-family:'Bebas Neue',sans-serif; font-size:2.4rem; color:#f5f5f5; margin:0;">Jogadores históricos</h2>
+          <p style="color:#c7c7c7; margin:.45rem 0 0; font-size:1rem;">Chico, Fabiano, Ariostocly e Gabriel Antônio integram o elenco atual de 2026.</p>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/fabiano.webp" alt="Fabiano com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Fabiano</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-ng">🏆 Campeão · Torneio NG 2023</span><span class="conquista conquista-society">🏆 Campeão · Torneio Society de Inverno 2020</span></div><div class="galeria-card-desc">Society: 34 jogos | 9 gols<br>Futsal: 15 jogos | 5 gols<br>Futebol de Campo: 35 jogos | 5 gols<br><strong>Total: 84 jogos | 19 gols</strong></div></div>
+        </div>
+        <div class="galeria-card" id="atleta-chico">
+          <div class="galeria-card-img portrait">
+            <img src="retratos-novos/chico.webp" alt="João Vitor Chico com a camisa do Camargo FC" decoding="async" loading="lazy">
+          </div>
+          <div class="galeria-card-info">
+            <div class="galeria-card-titulo">João Vitor 'Chico'</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div>
+            <div class="galeria-card-desc">Society: 5 jogos | 1 gol<br>Futebol de Campo: 38 jogos | 1 gol<br><strong>Total: 43 jogos | 2 gols</strong></div>
+          </div>
+        </div>
+        
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/ariostocly.webp" alt="Ariostocly com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Ariostocly</div><div class="galeria-card-conquistas"><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Society: 4 jogos | 0 gols<br>Futsal: 3 jogos | 1 gol<br>Futebol de Campo: 13 jogos | 3 gols<br><strong>Total: 20 jogos | 4 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/gabriel-antonio.webp" alt="Gabriel Antônio com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Gabriel Antônio</div><div class="galeria-card-conquistas"><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Society: 2 jogos | 0 gols<br>Futebol de Campo: 21 jogos | 1 gol<br>Futebol de Areia: 2 jogos | 0 gols<br><strong>Total: 25 jogos | 1 gol</strong></div></div>
+        </div>
+        <div style="grid-column:1/-1; margin:1.75rem 0 .5rem; padding-top:1.25rem; border-top:1px solid rgba(255,255,255,.14);">
+          <p style="color:#c7c7c7; margin:0; font-size:1.05rem;">Atletas que ajudaram a construir a história do Camargo Futebol Clube.</p>
+        </div>
+        <div class="galeria-card" id="atleta-kiley">
+          <div class="galeria-card-img portrait">
+            <img src="retratos-novos/kiley.webp" alt="Kiley – Lateral / Meia" decoding="async" loading="lazy">
+          </div>
+          <div class="galeria-card-info">
+            <div class="galeria-card-titulo">Kiley</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-society">🏆 Campeão · Torneio Society de Inverno 2020</span></div>
+            <div class="galeria-card-desc">Society: 29 jogos | 10 gols<br>Futebol de Campo: 19 jogos | 4 gols<br><strong>Total: 48 jogos | 14 gols</strong></div>
+          </div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/diogo.webp" alt="Diogo com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Diogo</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-ng">🏆 Campeão · Torneio NG 2023</span><span class="conquista conquista-society">🏆 Campeão · Torneio Society de Inverno 2020</span><span class="conquista conquista-individual">🥇 Artilheiro · Torneio NG 2023</span></div><div class="galeria-card-desc"><strong>Técnico do time de Futebol em 2025</strong><br><br>Como jogador:<br>Society: 39 jogos | 28 gols<br>Júnior: 1 jogo | 1 gol<br>Futebol de Campo: 22 jogos | 4 gols<br>Futebol de Areia: 4 jogos | 4 gols<br><strong>Total: 66 jogos | 37 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img class="portrait-zoom-strong" src="retratos-novos/daniel-lucena.webp" alt="Daniel Lucena com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Daniel Lucena</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-ng">🏆 Campeão · Torneio NG 2023</span><span class="conquista conquista-society">🏆 Campeão · Torneio Society de Inverno 2020</span></div><div class="galeria-card-desc">Society: 28 jogos | 9 gols<br>Júnior: 21 jogos | 14 gols<br>Futsal: 3 jogos | 4 gols<br>Futebol de Campo: 13 jogos | 0 gols<br>Futebol de Areia: 10 jogos | 2 gols<br><strong>Total: 75 jogos | 29 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img class="portrait-markinhos" src="retratos-novos/markinhos.webp" alt="Markinhos com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Markinhos</div><div class="galeria-card-desc"><strong>Técnico do time de Futebol em 2021</strong><br><br>Como jogador:<br>Society: 30 jogos<br>Júnior: 8 jogos<br>Futsal: 1 jogo<br>Futebol de Campo: 1 jogo<br><strong>Total: 40 jogos</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img class="portrait-guthierre" src="retratos-novos/guthierre.webp" alt="Guthierre com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Guthierre</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-individual">🧤 Goleiro menos vazado · Liga Paraíso 2022</span></div><div class="galeria-card-desc">Society: 3 jogos<br>Júnior: 4 jogos<br>Futebol de Campo: 37 jogos<br><strong>Total: 44 jogos</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img class="portrait-juninho" src="retratos-novos/juninho.webp" alt="Manoel Junior, Juninho, com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Manoel Junior (Juninho)</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Society: 37 jogos | 31 gols<br>Júnior: 2 jogos | 3 gols<br>Futsal: 21 jogos | 14 gols<br>Futebol de Campo: 22 jogos | 10 gols<br>Futebol de Areia: 3 jogos | 1 gol<br><strong>Total: 85 jogos | 59 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/ranyel.webp" alt="Ranyel com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Ranyel</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Society: 2 jogos | 1 gol<br>Futebol de Campo: 19 jogos | 5 gols<br><strong>Total: 21 jogos | 6 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/pablo-santos.webp" alt="Pablo Santos com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Pablo Santos</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Society: 2 jogos | 0 gols<br>Futebol de Campo: 26 jogos | 2 gols<br><strong>Total: 28 jogos | 2 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img class="portrait-victor" src="retratos-novos/victor-vasco.webp" alt="Victor Vasco com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Victor Vasco</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Futebol de Campo: 20 jogos | 7 gols<br><strong>Total: 20 jogos | 7 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/ilvane-bicon.webp" alt="Ilvane Bicon com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Ilvane (Bicon)</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-ng">🏆 Campeão · Torneio NG 2023</span></div><div class="galeria-card-desc">Society: 12 jogos | 3 gols<br>Futsal: 9 jogos | 1 gol<br>Futebol de Campo: 20 jogos | 2 gols<br>Futebol de Areia: 8 jogos | 9 gols<br><strong>Total: 49 jogos | 15 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/lucas-fabao.webp" alt="Lucas Fabão com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Lucas (Fabão)</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Society: 9 jogos | 1 gol<br>Futsal: 6 jogos | 4 gols<br>Futebol de Campo: 19 jogos | 0 gols<br>Futebol de Areia: 1 jogo | 0 gols<br><strong>Total: 35 jogos | 5 gols</strong></div></div>
+        </div>
+        
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img class="portrait-valder" src="retratos-novos/valder-jr.webp" alt="Valder Jr com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Valder Jr</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-individual">🥇 Artilheiro · Liga Paraíso 2022</span></div><div class="galeria-card-desc">Society: 8 jogos | 3 gols<br>Futebol de Campo: 18 jogos | 3 gols<br><strong>Total: 26 jogos | 6 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img class="portrait-tony" src="retratos-novos/tony-jr.webp" alt="Tony Jr com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Tony Jr</div><div class="galeria-card-conquistas"><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-individual">🥇 Artilheiro · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Society: 2 jogos | 2 gols<br>Futebol de Campo: 7 jogos | 8 gols<br><strong>Total: 9 jogos | 10 gols</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img class="portrait-zoom-medium" src="retratos-novos/paulo-henrique.webp" alt="Paulo Henrique com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Paulo Henrique (PH)</div><div class="galeria-card-conquistas"><span class="conquista conquista-society">🏆 Campeão · Torneio Society de Inverno 2020</span><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022 — Jogador</span></div><div class="galeria-card-desc">Society: 31 jogos | 1 gol<br>Futebol de Campo: 2 jogos | 0 gols<br><strong>Total: 33 jogos | 1 gol</strong></div></div>
+        </div>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/robinho.webp" alt="Robinho com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Robinho</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span></div><div class="galeria-card-desc">Society: 15 jogos | 5 gols<br>Futsal: 19 jogos | 8 gols<br>Futebol de Campo: 16 jogos | 1 gol<br>Futebol de Areia: 7 jogos | 1 gol<br><strong>Total: 57 jogos | 15 gols</strong></div></div>
+        </div>
+        <div class="galeria-card" id="atleta-caio-rodrigo">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/caio-rodrigo.webp" alt="Caio Rodrigo com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Caio Rodrigo</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span></div><div class="galeria-card-desc">Society: 18 jogos | 4 gols<br>Júnior: 18 jogos | 3 gols<br>Futsal: 1 jogo | 0 gols<br>Futebol de Campo: 12 jogos | 0 gols<br><strong>Total: 49 jogos | 7 gols</strong></div></div>
+        </div>
+        <div class="galeria-card" id="atleta-huan-gomes">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/huan-gomes.webp" alt="Huan Gomes com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Huan Gomes</div><div class="galeria-card-desc">Society: 23 jogos | 2 gols<br>Júnior: 21 jogos | 2 gols<br>Futsal: 2 jogos | 1 gol<br>Futebol de Campo: 2 jogos | 0 gols<br><strong>Total: 48 jogos | 5 gols</strong></div></div>
+        </div>
+        <div class="galeria-card" id="atleta-wallyson">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/walisson.webp" alt="Wallyson com uniforme de goleiro do Camargo FC" loading="lazy" decoding="async" onerror="this.onerror=null;this.style.display='none';this.parentNode.insertAdjacentHTML('beforeend','<div class=&quot;galeria-placeholder&quot;>Foto indisponível no Drive</div>')"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Walisson</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023</span><span class="conquista conquista-ng">🏆 Campeão · Torneio NG 2023</span></div><div class="galeria-card-desc">Society: 5 jogos<br>Futsal: 20 jogos | 5 gols<br>Futebol de Campo: 5 jogos<br>Futebol de Areia: 3 jogos<br><strong>Total: 33 jogos | 5 gols</strong></div></div>
+        </div>
+        <div style="grid-column:1/-1; margin:2rem 0 .5rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,.14);">
+          <p class="section-eyebrow" style="margin-bottom:.25rem;">Presidência e trajetória técnica</p>
+          <h2 style="font-family:'Bebas Neue',sans-serif; font-size:2.2rem; color:#f5f5f5; margin:0;">Carlos Leandro</h2>
+          
+        </div>
+        <div class="galeria-card galeria-card-presidente">
+          <div class="galeria-card-img portrait"><img src="retratos-novos/carlos-leandro.webp" alt="Carlos Leandro com a camisa do Camargo FC" decoding="async" loading="lazy"></div>
+          <div class="galeria-card-info"><div class="galeria-card-titulo">Carlos Leandro</div><div class="galeria-card-conquistas"><span class="conquista conquista-ouro">🏆 Campeão · Liga Paraíso 2022 — Presidente</span><span class="conquista conquista-prata">🥈 Vice-campeão · Liga Paraíso 2023 — Presidente</span><span class="conquista conquista-ng">🏆 Campeão · Torneio NG 2023 — Técnico</span><span class="conquista conquista-ouro">🏆 Campeão · Estadual Amador 2022 — CAP (Central) — Diretor de Futebol</span><span class="conquista conquista-society">🏆 Campeão · Torneio Society de Inverno 2020</span></div><div class="galeria-card-desc"><strong>Presidente do Camargo FC</strong><br>Técnico do time de Futebol: 2024 e 2026<br>Diretor de Futebol do CAP — Central no Estadual Amador de 2022<br><br>Como jogador:<br><strong>Campeão do Torneio Society de Inverno de 2020</strong><br>Society: 17 jogos | 2 gols<br><strong>Total: 17 jogos | 2 gols</strong></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Times históricos -->
+    <div id="gal-jogos" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/2%C2%AA%20COPA%20LUZIMANGUES.jpeg" alt="2ª COPA LUZIMANGUES" loading="lazy" decoding="async" style="object-fit:contain"></div><div class="galeria-card-info"><div class="galeria-card-titulo">2ª COPA LUZIMANGUES</div></div></div>
+        <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/Camargo%203x2%20Chico%20Rato%20-%202023.jpg" alt="Camargo 3x2 Chico Rato - 2023" loading="lazy" decoding="async" style="object-fit:contain"></div><div class="galeria-card-info"><div class="galeria-card-titulo">Camargo 3x2 Chico Rato - 2023</div></div></div>
+        <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/Campeao2022.jpg" alt="Campeao2022" loading="lazy" decoding="async" style="object-fit:contain"></div><div class="galeria-card-info"><div class="galeria-card-titulo">Campeao2022</div></div></div>
+        <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/Feminino-Society%202023.jpeg" alt="Feminino-Society 2023" loading="lazy" decoding="async" style="object-fit:contain"></div><div class="galeria-card-info"><div class="galeria-card-titulo">Feminino-Society 2023</div></div></div>
+        <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/Torneio%20Beneficente_Rafaela_Sandrini_2023.jpg" alt="Torneio Beneficente_Rafaela_Sandrini_2023" loading="lazy" decoding="async" style="object-fit:contain"></div><div class="galeria-card-info"><div class="galeria-card-titulo">Torneio Beneficente_Rafaela_Sandrini_2023</div></div></div>
+        <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/Torneio_beneficente_Stefany_e_Ranny_2023.jpg" alt="Torneio_beneficente_Stefany_e_Ranny_2023" loading="lazy" decoding="async" style="object-fit:contain"></div><div class="galeria-card-info"><div class="galeria-card-titulo">Torneio_beneficente_Stefany_e_Ranny_2023</div></div></div>
+        <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/vice-desafio-campeoes-2023.jpg" alt="vice-desafio-campeoes-2023" loading="lazy" decoding="async" style="object-fit:contain"></div><div class="galeria-card-info"><div class="galeria-card-titulo">vice-desafio-campeoes-2023</div></div></div>
+        <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/vice-liga-2023.jpeg" alt="vice-liga-2023" loading="lazy" decoding="async" style="object-fit:contain"></div><div class="galeria-card-info"><div class="galeria-card-titulo">vice-liga-2023</div></div></div>
+      </div>
+    </div>
+
+    <!-- Bastidores -->
+    <div id="gal-bastidores" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">🎬</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Bastidores em breve</p>
+          
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <img class="footer-escudo" src="LOGOSITE-png.webp" alt="Escudo Camargo FC" decoding="async" width="989" height="1600">
+  <div class="footer-logo">Camargo Futebol Clube</div>
+  <p>Fundado em 2015 · Unidos pela família, fortalecidos pelo futebol</p>
+  <p style="margin-top:0.25rem; font-size: 12px; opacity: 0.4;">© 2026 Camargo FC · Todos os direitos reservados</p>
+  <div class="footer-contatos">
+    <a href="https://instagram.com/camargofc.pso" target="_blank" rel="noopener" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      @camargofc.pso
+    </a>
+    <a href="https://wa.me/5563992994110" target="_blank" rel="noopener" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      (63) 99299-4110
+    </a>
+    <a href="mailto:camargofc.pso@gmail.com" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      camargofc.pso@gmail.com
+    </a>
+  </div>
+
+
+  <div class="footer-patro">
+    <div class="footer-patro-title">Patrocinadores e Apoio</div>
+    <!-- ALTERE APENAS O NOME DAS IMAGENS ABAIXO -->
+    <div class="footer-patro-grid">
+      <img src="VIP-png.webp" alt="Patrocinador 1" decoding="async" width="1064" height="1064" loading="lazy">
+      <img src="VIBER-png.webp" alt="Patrocinador 2" decoding="async" width="1600" height="1023" loading="lazy">
+      <img src="SOUZA-png.webp" alt="Patrocinador 3" decoding="async" width="1076" height="603" loading="lazy">
+      <img src="Bambam-png.webp" alt="Patrocinador 4" decoding="async" width="1333" height="1600" loading="lazy">
+    </div>
+  </div>
+
+  <div class="footer-cores">
+    <div class="footer-cor" style="background: #c0192e;"></div>
+    <div class="footer-cor" style="background: #111111;"></div>
+    <div class="footer-cor" style="background: #f5f5f5;"></div>
+  </div>
+</footer>
+
+<script src="menu-loader.js?v=20260925-2"></script>
+<script src="main.js"></script>
+<script>
+(function () {
+  function abrirDestino() {
+    var hash = decodeURIComponent(window.location.hash.slice(1));
+    if (!hash) return;
+    var alvo = document.getElementById(hash);
+    if (!alvo) return;
+    var painel = alvo.classList.contains("galeria-tab-content") ? alvo : alvo.closest(".galeria-tab-content");
+    if (!painel) return;
+    var botao = document.querySelector('.galeria-tab[onclick*="' + painel.id + '"]');
+    if (botao) abrirGaleria(botao, painel.id);
+    requestAnimationFrame(function () { alvo.scrollIntoView({block:"start"}); });
+  }
+  window.addEventListener("hashchange", abrirDestino);
+  abrirDestino();
+})();
+</script>
+
+</body>
+</html>

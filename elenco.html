@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Conheça o elenco atual, a comissão técnica e os atletas do Camargo Futebol Clube.">
+<link rel="canonical" href="https://cl-camargo.github.io/camargofc/elenco.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Elenco · Camargo Futebol Clube">
+<meta property="og:description" content="Conheça o elenco atual, a comissão técnica e os atletas do Camargo Futebol Clube.">
+<meta property="og:url" content="https://cl-camargo.github.io/camargofc/elenco.html">
+<meta property="og:image" content="https://cl-camargo.github.io/camargofc/Time2022.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
+<title>Elenco · Camargo Futebol Clube</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.elenco-grid-futsal{margin:1rem 0 2.5rem}
+.jogador-card-futsal{position:relative}
+.jogador-card-futsal .futsal-foto-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#262626,#c0192e);color:#fff;font:700 1.5rem 'Bebas Neue',sans-serif;letter-spacing:.08em}
+.jogador-card-futsal .jogador-avatar{aspect-ratio:3/4}
+.jogador-card-futsal .jogador-avatar img{width:100%;height:100%;object-fit:cover}
+.jogador-card-futsal--paulo .jogador-avatar img{transform:scale(2.5);transform-origin:50% 8%}
+.jogador-card-futsal--luiz .jogador-avatar img{object-position:50% 68%;transform:scale(1.3);transform-origin:50% 70%}
+.jogador-card-futsal--neiva .jogador-avatar img{transform:scale(2.7);transform-origin:56.5% 7%}
+.jogador-card-futsal--jadiel .jogador-avatar img{transform:scale(3.5);transform-origin:50% 23%}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button id="lb-fechar" aria-label="Fechar imagem">✕</button>
+  <div id="lb-contador"></div>
+  <button id="lb-prev" aria-label="Imagem anterior">&#8249;</button>
+  <div id="lb-img-wrap">
+    <img id="lb-img" src="" alt="" decoding="async">
+  </div>
+  <button id="lb-next" aria-label="Próxima imagem">&#8250;</button>
+  <div id="lb-legenda"><span id="lb-sub"></span></div>
+</div>
+
+<div id="site-menu"></div>
+<div class="nav-spacer" aria-hidden="true"></div>
+<main id="conteudo">
+
+<!-- ELENCO -->
+<section id="elenco">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Temporada 2026</p>
+      <h1 class="section-title">Elenco Atual</h1>
+      <div class="section-divider"></div>
+      <button class="compartilhar-btn" id="elenco-compartilhar-btn" type="button" style="margin-top:0.75rem;" onclick="compartilharConteudo(this,{titulo:'Elenco Camargo FC',texto:'Confira o elenco do Camargo FC!',url:window.location.href.split('#')[0]+'#elenco'})"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><line x1='8.59' y1='13.51' x2='15.42' y2='17.49'/><line x1='15.41' y1='6.51' x2='8.59' y2='10.49'/></svg> Compartilhar Elenco</button>
+    </div>
+
+    <div class="comissao-header" aria-label="Elenco de futsal"><span class="comissao-label">Futsal · 13ª Liga Paraíso 2026</span><div class="comissao-linha"></div></div>
+    <p class="elenco-stats-nota">Equipe jovem para a 13ª Liga Paraíso de Futsal. As posições dos atletas de futsal estão indicadas em cada ficha.</p>
+    <div class="elenco-grid elenco-grid-futsal">
+      <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><img src="LucasC.jpeg" alt="Foto de Lucas Cauã" decoding="async" loading="lazy"></div><div class="jogador-nome">Lucas Cauã</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">GL</span></div>
+      <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><div class="futsal-foto-placeholder" role="img" aria-label="Foto de Victor Soares ainda não localizada">VS</div></div><div class="jogador-nome">Victor Soares</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">27 anos</div><span class="jogador-posicao-badge">GL</span></div>
+      <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><img src="CarlosH.jpeg" alt="Foto de Carlos Henrique" decoding="async" loading="lazy"></div><div class="jogador-nome">Carlos Henrique</div><div class="jogador-posicao">Fixo/ala</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">FIX/ALA</span></div>
+      <div class="jogador-card jogador-card-futsal jogador-card-futsal--neiva"><div class="jogador-avatar"><img src="NeivaJunior.webp" alt="Foto de Neiva Junior" decoding="async" loading="lazy"></div><div class="jogador-nome">Neiva Junior</div><div class="jogador-posicao">Fixo/ala</div><div class="jogador-numero">21 anos</div><span class="jogador-posicao-badge">FIX/ALA</span></div>
+      <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><img src="Janio.jpeg" alt="Foto de Janio" decoding="async" loading="lazy"></div><div class="jogador-nome">Janio</div><div class="jogador-posicao">Ala/pivô</div><div class="jogador-numero">28 anos</div><span class="jogador-posicao-badge">ALA/PIV</span></div>
+      <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><img src="GabrielA.jpg" alt="Foto de Gabriel Antonio" decoding="async" loading="lazy"></div><div class="jogador-nome">Gabriel Antonio</div><div class="jogador-posicao">Ala · Capitão</div><div class="jogador-numero">23 anos</div><span class="jogador-posicao-badge">CAP</span></div>
+      <div class="jogador-card jogador-card-futsal jogador-card-futsal--paulo"><div class="jogador-avatar"><img src="PauloSergio.webp" alt="Foto de Paulo Sérgio" decoding="async" loading="lazy"></div><div class="jogador-nome">Paulo Sérgio</div><div class="jogador-posicao">Ala</div><div class="jogador-numero">25 anos</div><span class="jogador-posicao-badge">ALA</span></div>
+      <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><img src="JoaoMarcal.jpeg" alt="Foto de João Marçal" decoding="async" loading="lazy"></div><div class="jogador-nome">João Marçal</div><div class="jogador-posicao">Ala</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">ALA</span></div>
+      <div class="jogador-card jogador-card-futsal jogador-card-futsal--luiz"><div class="jogador-avatar"><img src="LuizNogueira.webp" alt="Foto de Luiz Nogueira" decoding="async" loading="lazy"></div><div class="jogador-nome">Luiz Nogueira</div><div class="jogador-posicao">Ala</div><div class="jogador-numero">25 anos</div><span class="jogador-posicao-badge">ALA</span></div>
+      <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><img src="Clovis.jpeg" alt="Foto de Clovis Henrique" decoding="async" loading="lazy"></div><div class="jogador-nome">Clovis Henrique</div><div class="jogador-posicao">Ala/pivô</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">ALA/PIV</span></div>
+      <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><div class="futsal-foto-placeholder" role="img" aria-label="Foto de Victor Gabriel ainda não localizada">VG</div></div><div class="jogador-nome">Victor Gabriel</div><div class="jogador-posicao">Ala/pivô</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">ALA/PIV</span></div>
+      <div class="jogador-card jogador-card-futsal jogador-card-futsal--jadiel"><div class="jogador-avatar"><img src="ViniciusJadiel.jpg" alt="Foto de Vinicius Jadiel" decoding="async" loading="lazy"></div><div class="jogador-nome">Vinicius Jadiel</div><div class="jogador-numero">23 anos</div><div class="jogador-posicao">Pivô</div><span class="jogador-posicao-badge">PIV</span></div>
+    </div>
+    <div class="comissao-header" aria-label="Comissão técnica do futsal"><span class="comissao-label">Comissão Técnica · Futsal</span><div class="comissao-linha"></div></div>
+    <div class="comissao-grid">
+      <div class="comissao-card">
+        <div class="comissao-avatar"><img src="CL.jpg" alt="Carlos Leandro" decoding="async" width="465" height="604" loading="lazy"></div>
+        <div class="comissao-cargo">Técnico de Futsal</div>
+        <div class="comissao-nome">Carlos Leandro</div>
+        <span class="comissao-badge">TEC</span>
+      </div>
+    </div>
+
+    <div class="comissao-header" aria-label="Elenco de futebol"><span class="comissao-label">Futebol</span><div class="comissao-linha"></div></div>
+
+    <div class="elenco-filtros">
+      <button class="filtro-btn ativo" onclick="filtrar(this, 'todos')">Todos</button>
+      <button class="filtro-btn" onclick="filtrar(this, 'goleiro')">Goleiros</button>
+      <button class="filtro-btn" onclick="filtrar(this, 'defensor')">Defensores</button>
+      <button class="filtro-btn" onclick="filtrar(this, 'meio')">Meio-campo</button>
+      <button class="filtro-btn" onclick="filtrar(this, 'atacante')">Atacantes</button>
+    </div>
+
+    
+
+    <div class="elenco-grid" id="elencoGrid">
+      <!-- GOLEIROS -->
+      <div class="jogador-card" data-pos="goleiro" data-foto="Jr.jpeg"><div class="jogador-avatar"><img src="Jr.jpeg" alt="Foto Jr" decoding="async" width="334" height="444" loading="lazy"></div><div class="jogador-nome">José Ribamar Jr</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">33 anos</div><div class="jogador-estatisticas jogador-estatisticas-goleiro" aria-label="Partidas de José Ribamar Jr na temporada 2026"><span><strong>2</strong> jogos</span></div><span class="jogador-posicao-badge">GL</span></div>
+      <div class="jogador-card" data-pos="goleiro" data-foto="fotos/iago.jpg"><div class="jogador-avatar"><img src="Iago.jpeg" alt="Foto Iago" decoding="async" width="569" height="768" loading="lazy"></div><div class="jogador-nome">Iago</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">20 anos</div><div class="jogador-estatisticas jogador-estatisticas-goleiro" aria-label="Partidas de Iago na temporada 2026"><span><strong>2</strong> jogos</span></div><span class="jogador-posicao-badge">GL</span></div>
+      <!-- ZAGUEIROS -->
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="DavidNovaes.jpeg" alt="Foto David Novaes" decoding="async" width="496" height="662" loading="lazy"></div><div class="jogador-nome">David Novaes</div><div class="jogador-posicao">Zagueiro / Volante</div><div class="jogador-numero">26 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de David Novaes na temporada 2026"><span><strong>6</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">ZAG/VOL</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Daniel.jpeg" alt="Foto Daniel Mota" decoding="async" width="559" height="746" loading="lazy"></div><div class="jogador-nome">Daniel Mota</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">24 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Daniel Mota na temporada 2026"><span><strong>6</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>1</strong> assist.</span></div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Peixao.jpeg" alt="Foto David Peixão" decoding="async" width="447" height="596" loading="lazy"></div><div class="jogador-nome">David Peixão</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">27 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de David Peixão na temporada 2026"><span><strong>2</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Janio.jpeg" alt="Foto Janio" decoding="async" width="181" height="241" loading="lazy"></div><div class="jogador-nome">Janio</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">28 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Janio na temporada 2026"><span><strong>3</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Leomar.jpeg" alt="Foto Leomar" decoding="async" width="228" height="301" loading="lazy"></div><div class="jogador-nome">Leomar</div><div class="jogador-posicao">Zagueiro/Volante</div><div class="jogador-numero">30 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Leomar na temporada 2026"><span><strong>3</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">ZAG</span></div>
+      <!-- LATERAIS -->
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="GabrielA.jpg" alt="Foto GabrielA" decoding="async" width="358" height="362" loading="lazy"></div><div class="jogador-nome">Gabriel Antonio</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">23 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Gabriel Antonio na temporada 2026"><span><strong>1</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">LD</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Michael.jpeg" alt="Foto Michael Davi" decoding="async" width="420" height="593" loading="lazy"></div><div class="jogador-nome">Michael Davi</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">17 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Michael Davi na temporada 2026"><span><strong>6</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">LD</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Eduardo.jpeg" alt="Foto Eduardo N." decoding="async" width="412" height="521" loading="lazy"></div><div class="jogador-nome">Eduardo N.</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Eduardo N. na temporada 2026"><span><strong>0</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">LE</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar"><img src="Guilherme.jpeg" alt="Foto Guilherme" decoding="async" width="268" height="370" loading="lazy"></div><div class="jogador-nome">Guilherme</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Guilherme na temporada 2026"><span><strong>6</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">LE</span></div>
+      <!-- VOLANTES -->
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="JP.jpeg" alt="Foto JP" decoding="async" width="170" height="228" loading="lazy"></div><div class="jogador-nome">João Paulo</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">28 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de João Paulo na temporada 2026"><span><strong>1</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">VOL</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="JoaoMarcelo.jpeg" alt="Foto João Marcelo" decoding="async" width="577" height="764" loading="lazy"></div><div class="jogador-nome">João Marcelo</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">21 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de João Marcelo na temporada 2026"><span><strong>6</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>1</strong> assist.</span></div><span class="jogador-posicao-badge">VOL</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Chico.jpeg" alt="Foto Chico" decoding="async" width="488" height="565" loading="lazy"></div><div class="jogador-nome">Chico</div><div class="jogador-posicao">Volante / Meia</div><div class="jogador-numero">26 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Chico na temporada 2026"><span><strong>7</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>1</strong> assist.</span></div><span class="jogador-posicao-badge">VOL/MEI</span></div>
+      <!-- MEIAS -->
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="CarlosH.jpeg" alt="Foto Carlos Henrique" decoding="async" width="900" height="1214" loading="lazy"></div><div class="jogador-nome">Carlos Henrique</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">16 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Carlos Henrique na temporada 2026"><span><strong>6</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">MEI</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Caio.jpeg" alt="Foto Caio" decoding="async" width="202" height="271" loading="lazy"></div><div class="jogador-nome">Caio</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">20 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Caio na temporada 2026"><span><strong>4</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>1</strong> assist.</span></div><span class="jogador-posicao-badge">MEI</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar"><img src="Ari.jpeg" alt="Foto Ariostocly" decoding="async" width="1267" height="1600" loading="lazy"></div><div class="jogador-nome">Ariostocly</div><div class="jogador-posicao">Meia Atacante</div><div class="jogador-numero">22 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Ariostocly na temporada 2026"><span><strong>7</strong> jogos</span><span><strong>2</strong> gols</span><span><strong>5</strong> assist.</span></div><span class="jogador-posicao-badge">MEI/ATA</span></div>
+      <!-- PONTAS / ATACANTES -->
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Fabiano.jpeg" alt="Foto Fabiano" decoding="async" width="278" height="359" loading="lazy"></div><div class="jogador-nome">Fabiano</div><div class="jogador-posicao">Ponta / Lateral</div><div class="jogador-numero">30 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Fabiano na temporada 2026"><span><strong>7</strong> jogos</span><span><strong>2</strong> gols</span><span><strong>1</strong> assist.</span></div><span class="jogador-posicao-badge">PTA/LD</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="JoaoMarcal.jpeg" alt="Foto João Marçal" decoding="async" width="283" height="379" loading="lazy"></div><div class="jogador-nome">João Marçal</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">16 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de João Marçal na temporada 2026"><span><strong>4</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">PTA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Clovis.jpeg" alt="Foto Clovis Henrique" decoding="async" width="214" height="285" loading="lazy"></div><div class="jogador-nome">Clovis Henrique</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">19 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Clovis Henrique na temporada 2026"><span><strong>6</strong> jogos</span><span><strong>3</strong> gols</span><span><strong>1</strong> assist.</span></div><span class="jogador-posicao-badge">PTA</span></div>
+     <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Yokida.jpeg" alt="Foto Yokida" decoding="async" width="273" height="364" loading="lazy"></div><div class="jogador-nome">Yokida</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">31 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Yokida na temporada 2026"><span><strong>7</strong> jogos</span><span><strong>1</strong> gol</span><span><strong>4</strong> assist.</span></div><span class="jogador-posicao-badge">PTA</span></div>
+     <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="GabrielT.jpeg" alt="Foto Gabriel Tolintino" decoding="async" width="1186" height="1599" loading="lazy"></div><div class="jogador-nome">Gabriel Tolintino</div><div class="jogador-posicao">Ponta / Atacante</div><div class="jogador-numero">25 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de Gabriel Tolintino na temporada 2026"><span><strong>6</strong> jogos</span><span><strong>0</strong> gols</span><span><strong>0</strong> assist.</span></div><span class="jogador-posicao-badge">PTA/ATA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar"><img src="Andre.jpeg" alt="Foto André" decoding="async" width="624" height="827" loading="lazy"></div><div class="jogador-nome">André</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">25 anos</div><div class="jogador-estatisticas" aria-label="Estatísticas de André na temporada 2026"><span><strong>5</strong> jogos</span><span><strong>11</strong> gols</span><span><strong>2</strong> assist.</span></div><span class="jogador-posicao-badge">ATA</span></div>
+    </div>
+
+    <!-- COMISSÃO TÉCNICA -->
+    <div class="comissao-header">
+      <span class="comissao-label">Comissão Técnica do Futebol</span>
+      <div class="comissao-linha"></div>
+    </div>
+    <div class="comissao-grid">
+
+      <div class="comissao-card">
+        <div class="comissao-avatar">
+          <img src="CL.jpg" alt="Carlos Leandro"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" decoding="async" width="465" height="604" loading="lazy">
+          <span class="comissao-avatar-placeholder" style="display:none;"><img src="CL.jpg" alt="Foto CL" decoding="async" width="465" height="604" loading="lazy"></span>
+        </div>
+        <div class="comissao-cargo">Técnico de Futebol</div>
+        <div class="comissao-nome">Carlos Leandro</div>
+        <div class="comissao-idade">33 anos</div>
+        <span class="comissao-badge">TEC</span>
+      </div>
+
+      <div class="comissao-card">
+        <div class="comissao-avatar">
+          <img src="Diogo.jpg" alt="Diogo Souza"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" decoding="async" width="252" height="370" loading="lazy">
+          <span class="comissao-avatar-placeholder" style="display:none;"><img src="Diogo.jpg" alt="Foto Diogo" decoding="async" width="252" height="370" loading="lazy"></span>
+        </div>
+        <div class="comissao-cargo">Auxiliar Técnico</div>
+        <div class="comissao-nome">Diogo Souza</div>
+        <div class="comissao-idade">34 anos</div>
+        <span class="comissao-badge">AUX</span>
+      </div>
+
+      <div class="comissao-card">
+        <div class="comissao-avatar">
+          <img src="KD.png" alt="Karllos Danyel"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" decoding="async" width="252" height="318" loading="lazy">
+          <span class="comissao-avatar-placeholder" style="display:none;"><img src="KD.png" alt="Foto KD" decoding="async" width="252" height="318" loading="lazy"></span>
+        </div>
+        <div class="comissao-cargo">Auxiliar Técnico</div>
+        <div class="comissao-nome">Karllos Danyel</div>
+        <div class="comissao-idade">25 anos</div>
+        <span class="comissao-badge">AUX</span>
+      </div>
+
+      <div class="comissao-card">
+        <div class="comissao-avatar">
+          <img src="Warly.jpeg" alt="Warly"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" decoding="async" width="233" height="310" loading="lazy">
+          <span class="comissao-avatar-placeholder" style="display:none;"><img src="Warly.jpeg" alt="Foto Warly" decoding="async" width="233" height="310" loading="lazy"></span>
+        </div>
+        <div class="comissao-cargo">Auxiliar Técnico</div>
+        <div class="comissao-nome">Warly</div>
+        <div class="comissao-idade">21 anos</div>
+        <span class="comissao-badge">AUX</span>
+      </div>
+
+
+    </div>
+
+    <!-- JOGADORES QUE SAÍRAM DO ELENCO -->
+    <div class="comissao-header ex-elenco-header">
+      <span class="comissao-label">Jogadores que saíram do elenco</span>
+      <div class="comissao-linha"></div>
+    </div>
+    <div class="ex-elenco-grid" aria-label="Jogadores que saíram do elenco em 2026">
+      <article class="ex-elenco-card">
+        <img class="ex-elenco-avatar" src="ArthurB.png" alt="Foto Arthur Sousa Bileu" width="239" height="225" loading="lazy" decoding="async">
+        <div><strong>Arthur Sousa Bileu</strong><span>Atacante</span></div>
+      </article>
+      <article class="ex-elenco-card">
+        <img class="ex-elenco-avatar" src="DaviLucas.jpeg" alt="Foto Davi Lucas" width="789" height="1002" loading="lazy" decoding="async">
+        <div><strong>Davi Lucas</strong><span>Volante</span></div>
+      </article>
+      <article class="ex-elenco-card">
+        <img class="ex-elenco-avatar" src="GustavoG.jpeg" alt="Foto Gustavo Gomes" width="762" height="1157" loading="lazy" decoding="async">
+        <div><strong>Gustavo Gomes</strong><span>Zagueiro</span></div>
+      </article>
+      </div>
+
+  </div>
+</section>
+
+
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <img class="footer-escudo" src="LOGOSITE-png.webp" alt="Escudo Camargo FC" decoding="async" width="989" height="1600">
+  <div class="footer-logo">Camargo Futebol Clube</div>
+  <p>Fundado em 2015 · Unidos pela família, fortalecidos pelo futebol</p>
+  <p style="margin-top:0.25rem; font-size: 12px; opacity: 0.4;">© 2026 Camargo FC · Todos os direitos reservados</p>
+  <div class="footer-contatos">
+    <a href="https://instagram.com/camargofc.pso" target="_blank" rel="noopener" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      @camargofc.pso
+    </a>
+    <a href="https://wa.me/5563992994110" target="_blank" rel="noopener" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      (63) 99299-4110
+    </a>
+    <a href="mailto:camargofc.pso@gmail.com" class="footer-contato-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      camargofc.pso@gmail.com
+    </a>
+  </div>
+
+
+  <div class="footer-patro">
+    <div class="footer-patro-title">Patrocinadores e Apoio</div>
+    <!-- ALTERE APENAS O NOME DAS IMAGENS ABAIXO -->
+    <div class="footer-patro-grid">
+      <img src="VIP-png.webp" alt="Patrocinador 1" decoding="async" width="1064" height="1064" loading="lazy">
+      <img src="VIBER-png.webp" alt="Patrocinador 2" decoding="async" width="1600" height="1023" loading="lazy">
+      <img src="SOUZA-png.webp" alt="Patrocinador 3" decoding="async" width="1076" height="603" loading="lazy">
+      <img src="Bambam-png.webp" alt="Patrocinador 4" decoding="async" width="1333" height="1600" loading="lazy">
+    </div>
+  </div>
+
+  <div class="footer-cores">
+    <div class="footer-cor" style="background: #c0192e;"></div>
+    <div class="footer-cor" style="background: #111111;"></div>
+    <div class="footer-cor" style="background: #f5f5f5;"></div>
+  </div>
+</footer>
+
+<script src="menu-loader.js?v=20260925-2"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
