@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://cl-camargo.github.io/camargofc/sitemap.xml
