@@ -5,5 +5,34 @@
     const corpo = document.getElementById('acc-' + modalidade);
     const tabela = corpo && corpo.querySelector('tbody');
     if (tabela) tabela.innerHTML = jogos[modalidade];
+    // Os indicadores de Campo são calculados a partir do histórico exibido.
+    if (modalidade === 'campo' && corpo && tabela) {
+      const partidas = Array.from(tabela.querySelectorAll('tr[data-res]'));
+      const totais = { V: 0, E: 0, D: 0 };
+      let golsPro = 0, golsContra = 0, placaresValidos = 0;
+      partidas.forEach(function (partida) {
+        const resultado = partida.getAttribute('data-res');
+        if (Object.prototype.hasOwnProperty.call(totais, resultado)) totais[resultado]++;
+        const placar = partida.querySelector('.placar-badge');
+        const numeros = placar && placar.textContent.match(/(\d+)\s*[x×]\s*(\d+)/i);
+        if (numeros) {
+          golsPro += Number(numeros[1]);
+          golsContra += Number(numeros[2]);
+          placaresValidos++;
+        }
+      });
+      const indicadores = corpo.querySelectorAll('.jogos-stats-bar .jstat-num');
+      const total = partidas.length;
+      const valores = [
+        String(total), String(totais.V), String(totais.E), String(totais.D),
+        golsPro + '×' + golsContra,
+        total ? ((totais.V * 3 + totais.E) / (total * 3) * 100).toFixed(1).replace('.', ',') + '%' : '0%'
+      ];
+      if (indicadores.length === valores.length && placaresValidos === total) {
+        indicadores.forEach(function (indicador, indice) { indicador.textContent = valores[indice]; });
+      }
+      const selo = corpo.parentElement && corpo.parentElement.querySelector('.jogos-acc-badge');
+      if (selo) selo.textContent = total + ' jogos';
+    }
   });
 })();
