@@ -2,18 +2,16 @@
   var placeholder = document.getElementById('site-menu');
   if (!placeholder) return;
 
-  fetch('menu.html?v=20260925-2')
-    .then(function (resp) {
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      return resp.text();
-    })
-    .then(function (html) {
-      placeholder.innerHTML = html;
-      ativarMenu();
-    })
-    .catch(function (err) {
-      console.error('Não foi possível carregar menu.html:', err);
-    });
+  // Menu embutido no HTML: funciona sem fetch e permanece acessível sem JavaScript.
+  if (placeholder.querySelector('nav')) {
+    ativarMenu();
+  } else {
+    // Compatibilidade com páginas antigas ainda não atualizadas.
+    fetch('menu.html?v=20261118-2')
+      .then(function (resp) { if (!resp.ok) throw new Error('HTTP ' + resp.status); return resp.text(); })
+      .then(function (html) { placeholder.innerHTML = html; ativarMenu(); })
+      .catch(function (err) { console.error('Não foi possível carregar menu.html:', err); });
+  }
 
   function ativarMenu() {
     // Marca o link da página atual como ativo
