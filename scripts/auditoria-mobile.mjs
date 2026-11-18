@@ -25,7 +25,7 @@ try {
           menuPresent: Boolean(document.querySelector('#site-menu nav')),
           missingImages: [...document.images].filter(i => i.complete && i.naturalWidth === 0 && i.getAttribute('src')).map(i => i.getAttribute('src')).slice(0, 20)
         }));
-        const name = pagePath === '/' ? 'inicio' : pagePath.replace(/^\\/|\\.html$/g, '').replace(/[^a-z0-9-]/gi, '-');
+        const name = pagePath === '/' ? 'inicio' : pagePath.slice(1).replace('.html', '').replace(/[^a-z0-9-]/gi, '-');
         await page.screenshot({ path: path.join(dir, name + '-' + width + '.png'), fullPage: true, animations: 'disabled' });
         summary.visual.push({ page: pagePath, width, status: response?.status(), overflow: info.documentWidth > info.viewportWidth + 2, ...info, errors: failures });
       } catch (e) {
@@ -43,7 +43,7 @@ try {
         formFactor: 'mobile',
         screenEmulation: { mobile: true, width: 390, height: 844, deviceScaleFactor: 1, disabled: false }
       });
-      const name = pagePath === '/' ? 'inicio' : pagePath.replace(/^\\/|\\.html$/g, '');
+      const name = pagePath === '/' ? 'inicio' : pagePath.slice(1).replace('.html', '');
       await fs.writeFile(path.join(dir, 'lighthouse-' + name + '.html'), result.report);
       summary.lighthouse.push({ page: pagePath, scores: Object.fromEntries(Object.entries(result.lhr.categories).map(([k, v]) => [k, Math.round(v.score * 100)])), lcp: result.lhr.audits['largest-contentful-paint']?.numericValue, cls: result.lhr.audits['cumulative-layout-shift']?.numericValue });
     } catch (e) { summary.lighthouse.push({ page: pagePath, error: String(e) }); }
