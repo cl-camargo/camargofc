@@ -5,8 +5,8 @@
     const corpo = document.getElementById('acc-' + modalidade);
     const tabela = corpo && corpo.querySelector('tbody');
     if (tabela) tabela.innerHTML = jogos[modalidade];
-    // Os indicadores de Campo são calculados a partir do histórico exibido.
-    if (modalidade === 'campo' && corpo && tabela) {
+    // Indicadores de todas as modalidades são calculados a partir dos jogos exibidos.
+    if (corpo && tabela) {
       const partidas = Array.from(tabela.querySelectorAll('tr[data-res]'));
       const totais = { V: 0, E: 0, D: 0 };
       let golsPro = 0, golsContra = 0, placaresValidos = 0;
