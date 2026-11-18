@@ -14,7 +14,7 @@
 <link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
 <title>Campeão em 2022 · Camargo Futebol Clube</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260925-10">
+<link rel="stylesheet" href="style.css?v=20261118-2">
 <style>
 .season-page{padding:3rem 0;background:#f3f3f3;color:#222}
 .season-story{max-width:980px;margin:auto;background:#fff;box-shadow:0 12px 36px rgba(0,0,0,.09)}
@@ -49,7 +49,40 @@
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-<div id="site-menu"></div>
+<div id="site-menu">
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="nav-escudo"><img src="LOGOSITE-png.webp" alt="Escudo Camargo FC" width="989" height="1600"></div>
+    <div class="nav-nome">Camargo FC <span>Futebol Clube</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="noticias.html#competicoes" data-page="noticias.html">Notícias</a>
+    <a href="agenda.html#agenda" data-page="agenda.html">Agenda</a>
+    <a href="elenco.html#elenco" data-page="elenco.html">Elenco</a>
+    <a href="estatisticas.html#estatisticas" data-pages="estatisticas.html jogos.html">Estatísticas</a>
+    <a href="historia.html#historia" data-page="historia.html">História</a>
+    <a href="galeria.html#galeria" data-page="galeria.html">Galeria</a>
+    <a href="patrocinadores.html#patrocinadores" data-page="patrocinadores.html">Patrocinadores</a>
+  </div>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navDrawer">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- DRAWER MOBILE -->
+<div class="nav-drawer" id="navDrawer" role="navigation" aria-label="Menu principal" aria-hidden="true">
+  <a href="noticias.html#competicoes" class="drawer-link" data-page="noticias.html">Notícias</a>
+  <a href="agenda.html#agenda" class="drawer-link" data-page="agenda.html">Agenda</a>
+  <a href="elenco.html#elenco" class="drawer-link" data-page="elenco.html">Elenco</a>
+  <a href="estatisticas.html#estatisticas" class="drawer-link" data-pages="estatisticas.html jogos.html">Estatísticas</a>
+  <a href="historia.html#historia" class="drawer-link" data-page="historia.html">História</a>
+  <a href="galeria.html#galeria" class="drawer-link" data-page="galeria.html">Galeria</a>
+  <a href="patrocinadores.html#patrocinadores" class="drawer-link" data-page="patrocinadores.html">Patrocinadores</a>
+</div>
+
+</div>
+<noscript><style>@media(max-width:1100px){#site-menu .nav-links{display:flex!important;flex-wrap:wrap!important;position:static!important;gap:8px!important}#site-menu .nav-hamburger{display:none!important}}</style></noscript>
 <div class="nav-spacer" aria-hidden="true"></div>
 <main id="conteudo">
 <section class="season-page">
@@ -103,7 +136,7 @@
   <p>Fundado em 2015 · Unidos pela família, fortalecidos pelo futebol</p>
   <p style="margin-top:.25rem;font-size:12px;opacity:.4;">© 2026 Camargo FC · Todos os direitos reservados</p>
 </footer>
-<script src="menu-loader.js?v=20260925-2"></script>
-<script src="main.js"></script>
+<script src="menu-loader.js?v=20261118-2"></script>
+<script src="main.js?v=20261118-2"></script>
 </body>
 </html>
