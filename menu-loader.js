@@ -20,6 +20,7 @@
       var paginas = (link.dataset.pages || link.dataset.page || '').split(/\s+/);
       if (paginas.indexOf(pagina) !== -1) {
         link.classList.add('nav-ativo');
+        link.setAttribute('aria-current', 'page');
       }
     });
 
