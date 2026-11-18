@@ -1,0 +1,36 @@
+name: Auditoria Lighthouse e visual mobile
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.css'
+      - '*.js'
+      - '.github/workflows/auditoria-site.yml'
+      - 'scripts/auditoria-mobile.mjs'
+permissions:
+  contents: read
+jobs:
+  auditoria:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar ferramentas de auditoria
+        run: |
+          npm install --no-save lighthouse@12 playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Executar Lighthouse e capturas mobile
+        run: node scripts/auditoria-mobile.mjs
+      - name: Publicar relatórios e capturas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-camargofc-mobile
+          path: auditoria-output/
+          if-no-files-found: warn
+          retention-days: 30
