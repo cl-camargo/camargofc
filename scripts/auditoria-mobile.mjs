@@ -52,8 +52,8 @@ try {
   await browser.close();
   await fs.writeFile(path.join(dir, 'resumo.json'), JSON.stringify(summary, null, 2));
 }
-const rows = summary.lighthouse.map(x => '| ' + x.page + ' | ' + (x.scores ? x.scores.performance : 'Erro') + ' | ' + (x.scores ? x.scores.accessibility : '-') + ' | ' + (x.scores ? x.scores['best-practices'] : '-') + ' | ' + (x.scores ? x.scores.seo : '-') + ' |').join('\\n');
-await fs.writeFile(path.join(dir, 'RELATORIO.md'), '# Auditoria Camargo FC — ' + summary.date + '\\n\\n| Página | Performance | Acessibilidade | Boas práticas | SEO |\\n|---|---:|---:|---:|---:|\\n' + rows + '\\n\\nResultados detalhados e capturas no mesmo artefato.\\n');
+const rows = summary.lighthouse.map(x => '| ' + x.page + ' | ' + (x.scores ? x.scores.performance : 'Erro') + ' | ' + (x.scores ? x.scores.accessibility : '-') + ' | ' + (x.scores ? x.scores['best-practices'] : '-') + ' | ' + (x.scores ? x.scores.seo : '-') + ' |').join('\n');
+await fs.writeFile(path.join(dir, 'RELATORIO.md'), '# Auditoria Camargo FC — ' + summary.date + '\n\n| Página | Performance | Acessibilidade | Boas práticas | SEO |\n|---|---:|---:|---:|---:|\n' + rows + '\n\nResultados detalhados e capturas no mesmo artefato.\n');
 const issues = summary.visual.filter(x => x.error || x.overflow || x.status >= 400 || !x.menuPresent || x.errors?.length || x.missingImages?.length);
 console.log(JSON.stringify({ lighthouse: summary.lighthouse, visualIssues: issues }, null, 2));
 if (issues.length || summary.lighthouse.some(x => x.error)) process.exitCode = 1;
