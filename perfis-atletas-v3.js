@@ -35,7 +35,7 @@ table.appendChild(tbody);info.appendChild(table);
 var years=records.filter(r=>norm(r.jogador)===norm(player.jogador)&&r.total?.jogos>0).sort((a,b)=>b.ano-a.ano);
 if(years.length){var y=document.createElement("h3");y.textContent="Temporadas registradas";info.appendChild(y);var ul=document.createElement("ul");years.forEach(r=>{var li=document.createElement("li");li.textContent=r.ano+" — "+r.total.jogos+" jogos · "+r.total.gols+" gols";ul.appendChild(li);});info.appendChild(ul);}
 }else{var note=document.createElement("p");note.className="cfc-player-note";note.textContent=matches.length>1?"Nome com mais de um registro oficial. Consulte a tabela para identificar o atleta.":"Não há correspondência exata com a base histórica; os números não foram atribuídos automaticamente.";info.appendChild(note);}
-var foot=document.createElement("p");foot.className="cfc-player-source";foot.textContent="Fonte: estatisticas-data.js · Atualizado até "+(stats.atualizadoAte||"data não informada")+". Assistências não constam nesta base consolidada.";info.appendChild(foot);
+var foot=document.createElement("p");foot.className="cfc-player-source";foot.textContent="Atualizado até "+(stats.atualizadoAte||"data não informada")+".";info.appendChild(foot);
 body.appendChild(info);dialog.showModal();
 }
 card.addEventListener("click",open);card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
