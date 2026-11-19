@@ -39,6 +39,15 @@ try {
             summary.interactions.push({ page: pagePath, action: 'filtro da galeria', passed: hiddenCount > 0 });
             await page.locator('#gal-bastidores .cfc-gallery-tools button').click();
             summary.interactions.push({ page: pagePath, action: 'limpar filtro', passed: await page.locator('#gal-bastidores .galeria-card[hidden]').count() === 0 });
+            // Legendas repetidas são válidas: várias fotos podem documentar a mesma campanha.
+            const captions = await page.locator('#gal-jogos .galeria-card-titulo').allTextContents();
+            const repeated = captions.some((caption, i) => captions.indexOf(caption) !== i);
+            summary.interactions.push({ page: pagePath, action: 'legendas repetidas preservadas', passed: repeated });
+            const selected = page.locator('.galeria-tab[aria-selected="true"]');
+            summary.interactions.push({ page: pagePath, action: 'aba acessível selecionada', passed: await selected.count() === 1 });
+            await selected.focus();
+            await page.keyboard.press('ArrowLeft');
+            summary.interactions.push({ page: pagePath, action: 'navegação por teclado nas abas', passed: await page.locator('.galeria-tab[aria-selected="true"]').count() === 1 && await page.locator('.galeria-tab[aria-selected="true"]').getAttribute('aria-controls') === 'gal-jogos' });
           }
           if (pagePath === '/estatisticas.html') {
             summary.interactions.push({ page: pagePath, action: 'ranking oficial carregado', passed: await page.locator('#stats-dashboard-v2 .v2-ranking-card').count() === 2 });
