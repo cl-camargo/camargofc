@@ -68,3 +68,42 @@ body.camargo-interna{background:#101010}
 .camargo-interna #elenco .comissao-header{margin-top:52px}
 @media(max-width:520px){.camargo-interna #elenco #elencoGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.camargo-interna #elenco #elencoGrid>.jogador-card{padding:12px 7px 16px}.camargo-interna #elenco #elencoGrid .jogador-avatar{height:150px}.camargo-interna #elenco #elencoGrid .jogador-estatisticas{gap:4px 7px;font-size:.68rem}}
 @media(prefers-reduced-motion:reduce){.camargo-interna #elenco #elencoGrid>.jogador-card{transition:none}}
+
+/* Estatísticas 2.0 — tema escuro coerente com Home, Elenco e Galeria.
+   A antiga folha de tema claro foi removida de estatisticas.html. */
+.camargo-interna #estatisticas{background:#101010;color:#e8e8e8;color-scheme:dark}
+.camargo-interna #estatisticas>.container{width:min(1180px,calc(100% - 36px));max-width:1180px;margin-inline:auto}
+.camargo-interna #estatisticas .section-header{background:linear-gradient(110deg,#282828,#171717 65%,#2a1219);border:1px solid #393135;border-left:5px solid #c0192e;text-align:left;padding:34px clamp(22px,4vw,50px);margin-bottom:30px;box-shadow:none}
+.camargo-interna #estatisticas .section-header .section-eyebrow{color:#fa7888;font-size:.78rem;letter-spacing:.15em}
+.camargo-interna #estatisticas .section-header .section-title{color:#fff!important;font:400 clamp(2.4rem,5.5vw,4.7rem)/1.02 'Bebas Neue',sans-serif;text-align:left;max-width:100%;overflow-wrap:break-word;letter-spacing:.03em;margin:12px 0}
+.camargo-interna #estatisticas .section-header .section-divider{margin:16px 0;background:#c0192e}
+.camargo-interna #estatisticas .section-header .stats-intro{color:#d0c5c8!important;max-width:750px;line-height:1.7;font-size:.95rem;text-align:left;position:relative;z-index:1}
+.camargo-interna #estatisticas .stats-section-stack{display:grid;gap:14px;margin:0 0 24px}
+.camargo-interna #estatisticas .stats-section-item{background:#1a1a1a;border:1px solid #393939;padding:0;margin:0;border-radius:3px;overflow:hidden}
+.camargo-interna #estatisticas .stats-section-toggle{display:flex;align-items:center;gap:14px;min-height:76px;width:100%;padding:18px 22px;border:0;background:#202020;color:#f5f5f5;text-align:left;cursor:pointer}
+.camargo-interna #estatisticas .stats-section-toggle:hover,.camargo-interna #estatisticas .stats-section-item.aberto>.stats-section-toggle{background:#2b1b1f}
+.camargo-interna #estatisticas .stats-section-toggle strong{font-size:1rem;color:#fff}
+.camargo-interna #estatisticas .stats-section-toggle small{font-size:.76rem;color:#b8b8b8}
+.camargo-interna #estatisticas .stats-section-arrow{border-color:#e94a60}
+.camargo-interna #estatisticas .stats-section-panel{background:#161616;color:#e8e8e8;padding:20px}
+.camargo-interna #estatisticas .stats-subheader h2{color:#fff}
+.camargo-interna #estatisticas .stats-subheader>p:last-child{color:#bbb}
+.camargo-interna #estatisticas .stats-filtros-diretos,.camargo-interna #estatisticas .stats-goalie-filters{background:transparent}
+.camargo-interna #estatisticas .stats-campo{color:#ddd}
+.camargo-interna #estatisticas .stats-campo select,.camargo-interna #estatisticas .stats-campo input,.camargo-interna #estatisticas .jogos-search-wrap input{background:#242424;color:#f5f5f5;border:1px solid #555;color-scheme:dark}
+.camargo-interna #estatisticas .stats-contexto{background:#321a20;color:#ffb5c0}
+.camargo-interna #estatisticas .stats-resumo,.camargo-interna #estatisticas .stats-resumo .jstat{background:#242424}
+.camargo-interna #estatisticas .stats-tabela-wrap{background:#171717;border:1px solid #3c3c3c}
+.camargo-interna #estatisticas .stats-tabela thead th{background:#2a2a2a;color:#f5f5f5}
+.camargo-interna #estatisticas .stats-tabela tbody td{background:#1b1b1b;color:#e8e8e8}
+.camargo-interna #estatisticas .stats-tabela tbody tr:nth-child(even) td{background:#242424}
+.camargo-interna #estatisticas .stats-tabela tbody tr:hover td{background:#372027}
+.camargo-interna #estatisticas .stats-tabela .stats-jogador,.camargo-interna #estatisticas .stats-tabela td strong{color:#fff}
+.camargo-interna #estatisticas .jogos-acc-item{background:#1c1c1c;border-color:#444}
+.camargo-interna #estatisticas .jogos-acc-header{background:#262626;color:#f5f5f5}
+.camargo-interna #estatisticas .jogos-acc-header:hover,.camargo-interna #estatisticas .jogos-acc-header.aberto{background:#392128}
+.camargo-interna #estatisticas .jogos-acc-body{background:#171717;color:#eee}
+.camargo-interna #estatisticas .jogos-acc-badge{background:#3a2429;color:#fff}
+.camargo-interna #estatisticas .res-btn{background:#252525;color:#eee;border:1px solid #555}
+.camargo-interna #estatisticas .res-btn.ativo{background:#c0192e;color:#fff;border-color:#c0192e}
+@media(max-width:700px){.camargo-interna #estatisticas>.container{width:100%;padding-inline:12px!important}.camargo-interna #estatisticas .section-header{padding:25px 18px}.camargo-interna #estatisticas .section-header .section-title{font-size:clamp(2.2rem,9vw,3.4rem)}.camargo-interna #estatisticas .stats-section-toggle{min-height:66px;padding:14px}.camargo-interna #estatisticas .stats-section-panel{padding:12px}}
