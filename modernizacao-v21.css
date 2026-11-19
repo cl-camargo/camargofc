@@ -70,3 +70,37 @@ body.camargo-interna #conteudo .section-header>p{position:relative;z-index:1}
   .cfc-subnav{gap:7px}
   .cfc-subnav a{font-size:.75rem;padding:9px 10px}
 }
+
+/* Camargo FC 3.0 — fichas e memorial, sem sobrescrever registros históricos */
+#elenco .jogador-card,#elenco .jogador-card-futsal{cursor:pointer}
+#elenco .jogador-card:focus-visible,#elenco .jogador-card-futsal:focus-visible,.cfc-match-open:focus-visible,.cfc-dialog-close:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
+.cfc-player-dialog,.cfc-match-dialog{background:#161616;color:#f5f5f5;border:1px solid #555;border-top:5px solid #c0192e;width:min(94vw,780px);max-height:90vh;padding:26px;box-shadow:0 18px 80px #000b}
+.cfc-player-dialog::backdrop,.cfc-match-dialog::backdrop{background:#000c}
+.cfc-dialog-close{position:absolute;top:10px;right:12px;width:40px;height:40px;border:1px solid #555;background:#252525;color:#fff;font-size:26px;cursor:pointer}
+.cfc-player-detail{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:25px;align-items:start}
+.cfc-player-photo{width:100%;max-height:270px;object-fit:contain;background:#222}
+.cfc-player-info h2,.cfc-match-detail h2,.cfc-memorial h2{font:400 clamp(2rem,4vw,3rem)/1.1 'Bebas Neue',sans-serif;color:#fff;margin:0 45px 12px 0}
+.cfc-player-info h3{font:400 1.5rem/1.2 'Bebas Neue',sans-serif;margin:20px 0 10px;color:#fff}
+.cfc-player-info p,.cfc-match-detail p{color:#ddd;line-height:1.6}
+.cfc-player-stats{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
+.cfc-player-stat{background:#252525;border-left:3px solid #c0192e;padding:14px 18px;display:flex;flex-direction:column;gap:6px}
+.cfc-player-stat strong{font-size:1.6rem;color:#fff}
+.cfc-player-stat span{font-size:.75rem;color:#ddd}
+.cfc-player-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.cfc-player-table th,.cfc-player-table td{border-bottom:1px solid #484848;padding:10px 8px;text-align:left}
+.cfc-player-table th{color:#fff}
+.cfc-player-source{font-size:.78rem!important;color:#aaa!important;margin-top:20px}
+.cfc-match-open{margin:14px 0 0;padding:10px 16px;min-height:44px;background:#c0192e;color:#fff;border:0;font-weight:700;cursor:pointer}
+.cfc-match-dialog .agenda-jogo-times{margin:16px 0}
+.cfc-match-detail ul{padding-left:20px;color:#ddd;line-height:1.9}
+.cfc-match-links{display:flex;flex-wrap:wrap;gap:12px}
+.cfc-match-links a,.cfc-memorial-card a{color:#ff8897;text-underline-offset:3px}
+.cfc-memorial{margin:0 0 36px;padding:24px;background:#151515;border:1px solid #3b3b3b;border-top:4px solid #c0192e}
+.cfc-memorial>p{color:#ccc;line-height:1.6}
+.cfc-memorial-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.cfc-memorial-card{background:#242424;border:1px solid #444;padding:20px;min-width:0}
+.cfc-memorial-card h3{color:#fff;font-size:1rem;margin:0 0 12px}
+.cfc-memorial-card p{font:400 2rem/1 'Bebas Neue',sans-serif;color:#fff;margin:0 0 12px}
+.cfc-memorial-card span{display:block;font-size:.78rem;color:#ccc;margin-bottom:16px}
+@media(max-width:850px){.cfc-memorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.cfc-player-detail{grid-template-columns:1fr}.cfc-player-photo{width:130px;max-height:175px}.cfc-player-dialog,.cfc-match-dialog{padding:20px 14px}.cfc-memorial-grid{grid-template-columns:1fr 1fr;gap:8px}.cfc-memorial{padding:15px}.cfc-memorial-card{padding:14px}}
