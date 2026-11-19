@@ -47,3 +47,26 @@ body.camargo-interna #conteudo .section-header>p{position:relative;z-index:1}
 @media(max-width:780px){.cfc-history-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}#estatisticas .v2-dashboard{grid-template-columns:1fr}}
 @media(max-width:500px){.cfc-history-timeline{grid-template-columns:1fr 1fr;gap:8px}.cfc-history-milestone{padding:15px}.cfc-history-milestone strong{font-size:2.1rem}.cfc-subnav a{flex:1 1 130px}.cfc-gallery-tools input{max-width:none}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+/* Etapa 5: acabamento responsivo, foco visível e acessibilidade das abas. */
+#galeria .galeria-tabs{display:flex;flex-wrap:wrap;gap:8px}
+#galeria .galeria-tab{min-height:44px;max-width:100%;white-space:normal;text-wrap:balance}
+#galeria .galeria-tab[aria-selected="true"]{box-shadow:inset 0 -3px 0 #fff}
+#galeria .galeria-tab:focus-visible,
+#galeria .cfc-gallery-tools input:focus-visible,
+#galeria .cfc-gallery-tools button:focus-visible,
+#estatisticas .stats-section-toggle:focus-visible,
+#elenco .filtro-btn:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
+#galeria .galeria-card-img img{max-width:100%;height:auto;object-fit:contain}
+#estatisticas .v2-ranking-card{min-width:0}
+#estatisticas .v2-ranking-card li{min-width:0}
+#estatisticas .v2-ranking-card li strong{font-variant-numeric:tabular-nums}
+@media(max-width:600px){
+  #galeria .galeria-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  #galeria .galeria-tab{width:100%;font-size:.78rem;padding:11px 8px}
+  #estatisticas .v2-ranking-card{padding:16px 12px}
+  #estatisticas .v2-ranking-card li{gap:8px;font-size:.78rem}
+  #estatisticas .v2-ranking-card li strong{font-size:.76rem}
+  .cfc-subnav{gap:7px}
+  .cfc-subnav a{font-size:.75rem;padding:9px 10px}
+}
