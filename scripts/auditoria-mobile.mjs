@@ -5,7 +5,7 @@ import path from 'node:path';
 
 const base = 'https://camargofc.com.br';
 const pages = ['/', '/noticias.html', '/agenda.html', '/elenco.html', '/estatisticas.html', '/galeria.html', '/historia.html', '/patrocinadores.html'];
-const widths = [360, 390, 430, 768];
+const widths = [360, 390, 430, 768, 1366];
 const dir = 'auditoria-output';
 await fs.mkdir(dir, { recursive: true });
 const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--remote-debugging-port=9222'] });
@@ -26,14 +26,14 @@ try {
           missingImages: [...document.images].filter(i => i.complete && i.naturalWidth === 0 && i.getAttribute('src')).map(i => i.getAttribute('src')).slice(0, 20)
         }));
         const name = pagePath === '/' ? 'inicio' : pagePath.slice(1).replace('.html', '').replace(/[^a-z0-9-]/gi, '-');
-        await page.screenshot({ path: path.join(dir, name + '-' + width + '.png'), fullPage: true, animations: 'disabled' });
+        await page.screenshot({ path: path.join(dir, name + '-' + width + '.jpeg'), fullPage: true, animations: 'disabled', type: 'jpeg', quality: 70 });
         summary.visual.push({ page: pagePath, width, status: response?.status(), overflow: info.documentWidth > info.viewportWidth + 2, ...info, errors: failures });
       } catch (e) {
         summary.visual.push({ page: pagePath, width, error: String(e) });
       } finally { await page.close(); }
     }
   }
-  for (const pagePath of ['/', '/agenda.html', '/elenco.html', '/galeria.html']) {
+  for (const pagePath of pages) {
     try {
       const result = await lighthouse(base + pagePath, {
         port: 9222,
@@ -52,6 +52,8 @@ try {
   await browser.close();
   await fs.writeFile(path.join(dir, 'resumo.json'), JSON.stringify(summary, null, 2));
 }
+const rows = summary.lighthouse.map(x => '| ' + x.page + ' | ' + (x.scores ? x.scores.performance : 'Erro') + ' | ' + (x.scores ? x.scores.accessibility : '-') + ' | ' + (x.scores ? x.scores['best-practices'] : '-') + ' | ' + (x.scores ? x.scores.seo : '-') + ' |').join('\\n');
+await fs.writeFile(path.join(dir, 'RELATORIO.md'), '# Auditoria Camargo FC — ' + summary.date + '\\n\\n| Página | Performance | Acessibilidade | Boas práticas | SEO |\\n|---|---:|---:|---:|---:|\\n' + rows + '\\n\\nResultados detalhados e capturas no mesmo artefato.\\n');
 const issues = summary.visual.filter(x => x.error || x.overflow || x.status >= 400 || !x.menuPresent || x.errors?.length || x.missingImages?.length);
 console.log(JSON.stringify({ lighthouse: summary.lighthouse, visualIssues: issues }, null, 2));
 if (issues.length || summary.lighthouse.some(x => x.error)) process.exitCode = 1;
