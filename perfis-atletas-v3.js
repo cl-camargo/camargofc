@@ -38,7 +38,19 @@ if(years.length){var y=document.createElement("h3");y.textContent="Temporadas re
 var foot=document.createElement("p");foot.className="cfc-player-source";foot.textContent="Atualizado até "+(stats.atualizadoAte||"data não informada")+".";info.appendChild(foot);
 body.appendChild(info);dialog.showModal();
 }
-card.addEventListener("click",open);card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
+// A foto também possuía um listener do lightbox antigo em main.js.
+ // Captura o clique antes dele: uma única ficha, um único botão de fechar.
+ card.addEventListener("click",function(e){
+   if(e.target.closest(".jogador-avatar img")){
+     e.stopPropagation();
+     open();
+   }
+ },true);
+ card.addEventListener("click",function(e){
+   if(e.target.closest(".jogador-avatar img"))return;
+   open();
+ });
+ card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
 });
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
