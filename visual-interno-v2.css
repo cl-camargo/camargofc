@@ -1,8 +1,8 @@
 /* Camargo FC 2.0 — camada visual das páginas internas.
    Mantém conteúdo, tabelas, fotos, legendas e funcionalidades existentes. */
-body.camargo-interna{background:#101010;color:#f5f5f5}
-.camargo-interna main#conteudo{background:#101010;color:#f5f5f5;min-height:70vh}
-.camargo-interna main#conteudo>section{padding-top:104px;padding-bottom:75px;background:transparent}
+body.camargo-interna{background:#101010}
+.camargo-interna main#conteudo{min-height:70vh}
+.camargo-interna main#conteudo>section{padding-top:104px;padding-bottom:75px}
 .camargo-interna main#conteudo>.container,.camargo-interna main#conteudo>section>.container{width:min(1180px,calc(100% - 36px));max-width:1180px;margin-left:auto;margin-right:auto}
 .camargo-interna .section-header{position:relative;overflow:hidden;background:linear-gradient(110deg,#272727 0%,#151515 64%,#261016 100%);border:1px solid #3b3335;border-left:5px solid #c0192e;border-radius:0;padding:36px clamp(22px,5vw,54px);margin:0 0 34px;box-shadow:none}
 .camargo-interna .section-header:after{content:"CAMARGO FC";position:absolute;right:-8px;bottom:-25px;color:rgba(255,255,255,.045);font:400 clamp(70px,12vw,160px)/1 'Bebas Neue',sans-serif;pointer-events:none;white-space:nowrap}
