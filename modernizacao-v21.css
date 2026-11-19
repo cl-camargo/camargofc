@@ -57,7 +57,7 @@ body.camargo-interna #conteudo .section-header>p{position:relative;z-index:1}
 #galeria .cfc-gallery-tools button:focus-visible,
 #estatisticas .stats-section-toggle:focus-visible,
 #elenco .filtro-btn:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
-#galeria .galeria-card-img img{max-width:100%;height:auto;object-fit:contain}
+#galeria .galeria-card-img img{max-width:100%;object-fit:contain}
 #estatisticas .v2-ranking-card{min-width:0}
 #estatisticas .v2-ranking-card li{min-width:0}
 #estatisticas .v2-ranking-card li strong{font-variant-numeric:tabular-nums}
