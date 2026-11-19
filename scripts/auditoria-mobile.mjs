@@ -20,7 +20,7 @@ try {
         const response = await page.goto(base + pagePath, { waitUntil: 'domcontentloaded', timeout: 45000 });
         await page.waitForTimeout(1200);
         // Carregar imagens lazy antes de verificar falhas de arquivo.
-        await page.evaluate(async () => { for (const img of document.images) img.loading = 'eager'; await Promise.all([...document.images].map(img => img.decode().catch(() => {}))); });
+        await page.evaluate(async () => { for (const img of document.images) img.loading = 'eager'; await Promise.all([...document.images].map(img => Promise.race([img.decode().catch(() => {}), new Promise(resolve => setTimeout(resolve, 5000))]))); });
         const info = await page.evaluate(() => ({
           documentWidth: document.documentElement.scrollWidth,
           viewportWidth: window.innerWidth,
@@ -32,7 +32,7 @@ try {
         summary.visual.push({ page: pagePath, width, status: response?.status(), overflow: info.documentWidth > info.viewportWidth + 2, ...info, errors: failures });
         if (width === 390) {
           if (pagePath === '/galeria.html') {
-            await page.locator('.galeria-tab').last().click();
+            await page.locator('.galeria-tab[onclick*="gal-bastidores"]').click();
             const input = page.locator('#cfc-busca-gal-bastidores');
             await input.fill('termo-que-nao-existe-123456');
             const hiddenCount = await page.locator('#gal-bastidores .galeria-card[hidden]').count();
