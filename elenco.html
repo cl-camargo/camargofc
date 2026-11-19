@@ -27,6 +27,7 @@
 .jogador-card-futsal--jadiel .jogador-avatar img{transform:scale(3.5);transform-origin:50% 23%}
 </style>
 <link rel="stylesheet" href="visual-interno-v2.css?v=20261119-3">
+<link rel="stylesheet" href="modernizacao-v21.css?v=1">
 </head>
 <body class="camargo-interna">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -90,7 +91,9 @@
       <button class="compartilhar-btn" id="elenco-compartilhar-btn" type="button" style="margin-top:0.75rem;" onclick="compartilharConteudo(this,{titulo:'Elenco Camargo FC',texto:'Confira o elenco do Camargo FC!',url:window.location.href.split('#')[0]+'#elenco'})"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><line x1='8.59' y1='13.51' x2='15.42' y2='17.49'/><line x1='15.41' y1='6.51' x2='8.59' y2='10.49'/></svg> Compartilhar Elenco</button>
     </div>
 
-    <div class="comissao-header" aria-label="Elenco de futebol"><span class="comissao-label">Futebol de Campo · Temporada 2026</span><div class="comissao-linha"></div></div>
+    <nav class="cfc-subnav" aria-label="Navegação dos elencos"><a href="#elenco-campo">Futebol de campo</a><a href="#elenco-futsal">Futsal</a><a href="estatisticas.html#estatisticas">Estatísticas</a></nav>
+
+    <div id="elenco-campo" class="comissao-header" aria-label="Elenco de futebol"><span class="comissao-label">Futebol de Campo · Temporada 2026</span><div class="comissao-linha"></div></div>
 
     <div class="elenco-filtros">
       <button class="filtro-btn ativo" onclick="filtrar(this, 'todos')">Todos</button>
@@ -214,7 +217,7 @@
 
 
     <!-- FUTSAL: após elenco e comissão do futebol -->
-    <div class="comissao-header" aria-label="Elenco de futsal"><span class="comissao-label">Futsal · 13ª Liga Paraíso 2026</span><div class="comissao-linha"></div></div>
+    <div id="elenco-futsal" class="comissao-header" aria-label="Elenco de futsal"><span class="comissao-label">Futsal · 13ª Liga Paraíso 2026</span><div class="comissao-linha"></div></div>
     <p class="elenco-stats-nota">Equipe jovem para a 13ª Liga Paraíso de Futsal. As posições dos atletas de futsal estão indicadas em cada ficha.</p>
     <div class="elenco-grid elenco-grid-futsal">
       <div class="jogador-card jogador-card-futsal"><div class="jogador-avatar"><img src="LucasC.jpeg" alt="Foto de Lucas Cauã" decoding="async" loading="lazy" width="90" height="120"></div><div class="jogador-nome">Lucas Cauã</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">GL</span></div>
