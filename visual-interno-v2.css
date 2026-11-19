@@ -1,0 +1,35 @@
+/* Camargo FC 2.0 — camada visual das páginas internas.
+   Mantém conteúdo, tabelas, fotos, legendas e funcionalidades existentes. */
+body.camargo-interna{background:#101010;color:#f5f5f5}
+.camargo-interna main#conteudo{background:#101010;color:#f5f5f5;min-height:70vh}
+.camargo-interna main#conteudo>section{padding-top:104px;padding-bottom:75px;background:transparent}
+.camargo-interna main#conteudo>.container,.camargo-interna main#conteudo>section>.container{width:min(1180px,calc(100% - 36px));max-width:1180px;margin-left:auto;margin-right:auto}
+.camargo-interna .section-header{position:relative;overflow:hidden;background:linear-gradient(110deg,#272727 0%,#151515 64%,#261016 100%);border:1px solid #3b3335;border-left:5px solid #c0192e;border-radius:0;padding:36px clamp(22px,5vw,54px);margin:0 0 34px;box-shadow:none}
+.camargo-interna .section-header:after{content:"CAMARGO FC";position:absolute;right:-8px;bottom:-25px;color:rgba(255,255,255,.045);font:400 clamp(70px,12vw,160px)/1 'Bebas Neue',sans-serif;pointer-events:none;white-space:nowrap}
+.camargo-interna .section-header .section-eyebrow{color:#f07383;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+.camargo-interna .section-header .section-title{color:#f5f5f5;font:400 clamp(2.8rem,6vw,5rem)/1 'Bebas Neue',sans-serif;letter-spacing:.035em;position:relative;z-index:1}
+.camargo-interna .section-header .section-divider{background:#c0192e}
+.camargo-interna .section-header p:not(.section-eyebrow){color:#d0c7c8}
+.camargo-interna .section-header button{position:relative;z-index:2}
+.camargo-interna .agenda-jogo,.camargo-interna .jogador-card,.camargo-interna .galeria-card,.camargo-interna .patro-card,.camargo-interna .noticia-destaque,.camargo-interna .titulo-card{transition:transform .18s ease,box-shadow .18s ease}
+.camargo-interna .agenda-jogo:hover,.camargo-interna .jogador-card:hover,.camargo-interna .galeria-card:hover,.camargo-interna .patro-card:hover,.camargo-interna .noticia-destaque:hover,.camargo-interna .titulo-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.camargo-interna .galeria-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.camargo-interna .galeria-tab{min-height:44px}
+.camargo-interna .galeria-card-img{overflow:hidden}
+.camargo-interna .galeria-card-img img{display:block;max-width:100%}
+.camargo-interna .noticia-destaque-titulo{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;line-height:1.1}
+.camargo-interna .patro-card img{max-width:100%;object-fit:contain}
+.camargo-interna .historia-texto{line-height:1.85}
+.camargo-interna .stats-section-stack,.camargo-interna .jogos-accordion{max-width:100%}
+.camargo-interna .tabela-wrap{max-width:100%;overflow-x:auto}
+.camargo-interna :where(a,button,input,select):focus-visible{outline:3px solid #ffb94a;outline-offset:3px}
+@media(max-width:700px){
+ .camargo-interna main#conteudo>section{padding-top:85px;padding-bottom:45px}
+ .camargo-interna .section-header{padding:28px 20px;margin-bottom:24px}
+ .camargo-interna .section-header:after{font-size:65px;bottom:-10px}
+ .camargo-interna .section-header .section-title{font-size:clamp(2.4rem,10vw,3.7rem)}
+ .camargo-interna .galeria-tabs{gap:6px}
+}
+@media(prefers-reduced-motion:reduce){
+ .camargo-interna .agenda-jogo,.camargo-interna .jogador-card,.camargo-interna .galeria-card,.camargo-interna .patro-card,.camargo-interna .noticia-destaque,.camargo-interna .titulo-card{transition:none}
+}
