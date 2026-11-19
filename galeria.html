@@ -93,15 +93,15 @@
     </div>
 
     <p class="cfc-section-intro">Explore os registros históricos do clube. Use as abas para separar conquistas, atletas, times históricos e bastidores; nas duas últimas, pesquise por ano, competição ou nome.</p>
-    <div class="galeria-tabs">
-      <button class="galeria-tab ativo" onclick="abrirGaleria(this,'gal-titulos')">🏆 Conquistas</button>
-      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-atletas')">👤 Jogadores históricos</button>
-      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-jogos')">⚽ Times históricos</button>
-      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-bastidores')">🎬 Bastidores</button>
+    <div class="galeria-tabs" role="tablist" aria-label="Categorias de fotografias">
+      <button class="galeria-tab ativo" type="button" aria-controls="gal-titulos" aria-selected="true" onclick="abrirGaleria(this,\x27gal-titulos\x27)">🏆 Conquistas</button>
+      <button class="galeria-tab" type="button" aria-controls="gal-atletas" aria-selected="false" onclick="abrirGaleria(this,\x27gal-atletas\x27)">👤 Jogadores históricos</button>
+      <button class="galeria-tab" type="button" aria-controls="gal-jogos" aria-selected="false" onclick="abrirGaleria(this,\x27gal-jogos\x27)">⚽ Times históricos</button>
+      <button class="galeria-tab" type="button" aria-controls="gal-bastidores" aria-selected="false" onclick="abrirGaleria(this,\x27gal-bastidores\x27)">🎬 Bastidores</button>
     </div>
 
     <!-- Conquistas -->
-    <div id="gal-titulos" class="galeria-tab-content ativo">
+    <div id="gal-titulos" role="tabpanel" class="galeria-tab-content ativo">
       <div id="titulos" class="galeria-conquistas">
         <p class="section-eyebrow">Nossa trajetória</p>
         <h2>Conquistas do Camargo FC</h2>
@@ -163,7 +163,7 @@
       </div>
     </div>
     <!-- Atletas -->
-    <div id="gal-atletas" class="galeria-tab-content">
+    <div id="gal-atletas" role="tabpanel" class="galeria-tab-content">
       <div class="galeria-grid">
         <div style="grid-column:1/-1; margin:0 0 1.25rem;">
           <p class="section-eyebrow" style="margin-bottom:.25rem;">Memória rubro-negra</p>
@@ -286,7 +286,7 @@
     </div>
 
     <!-- Times históricos -->
-    <div id="gal-jogos" class="galeria-tab-content">
+    <div id="gal-jogos" role="tabpanel" class="galeria-tab-content">
       <div class="galeria-grid">
         
         <div class="galeria-card"><div class="galeria-card-img"><img src="times-historicos/1wFHuILVAGz24CSFjju4d2EwnxssgzhWS.jpg" alt="ESTREINA NO CAMPO 2021" loading="lazy" decoding="async" style="object-fit:contain" width="400" height="300"></div><div class="galeria-card-info"><div class="galeria-card-titulo">Primeiro jogo oficial no futebol <br> Estádio Antonio do Chupé - Pugmil  <br> Camargo 2x1 BarsemLona | 2021 </div></div></div> 
@@ -355,7 +355,7 @@
     </div>
 
     <!-- Bastidores -->
-    <div id="gal-bastidores" class="galeria-tab-content">
+    <div id="gal-bastidores" role="tabpanel" class="galeria-tab-content">
       <div class="galeria-grid">
         <div class="galeria-card"><div class="galeria-card-img"><img src="bastidores/1_rakQciVgzBUbYRcMtY2qzPl7qNQAqNE.webp" alt="Henrique" loading="lazy" decoding="async" style="object-fit:contain" width="400" height="300"></div><div class="galeria-card-info"><div class="galeria-card-titulo">Presidente Leandro e Henrique (H&J) | Copa Amicro | 2021 </div></div></div>
         <div class="galeria-card"><div class="galeria-card-img"><img src="bastidores/12Replk91Z8VASFHXL2hlSKWcBMyY44yr.webp" alt="Juliano" loading="lazy" decoding="async" style="object-fit:contain" width="400" height="300"></div><div class="galeria-card-info"><div class="galeria-card-titulo">Presidente Leandro e Juliano (H&J) | Copa Amicro | 2021 </div></div></div>
