@@ -2,105 +2,71 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Site oficial do Camargo Futebol Clube, de Paraíso do Tocantins: história, elenco, jogos, notícias, títulos e modalidades.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="canonical" href="https://camargofc.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Camargo Futebol Clube · Site Oficial">
-<meta property="og:description" content="Site oficial do Camargo Futebol Clube, de Paraíso do Tocantins: história, elenco, jogos, notícias, títulos e modalidades.">
+<meta property="og:description" content="História, jogos, elenco, notícias e conquistas do Camargo Futebol Clube de Paraíso do Tocantins.">
 <meta property="og:url" content="https://camargofc.com.br/">
 <meta property="og:image" content="https://camargofc.com.br/Time2022.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsTeam",
-  "name": "Camargo Futebol Clube",
-  "alternateName": "Camargo FC",
-  "foundingDate": "2015",
-  "sport": "Futebol",
-  "url": "https://camargofc.com.br/",
-  "logo": "https://camargofc.com.br/LOGOSITE.png",
-  "sameAs": ["https://instagram.com/camargofc.pso"]
-}
-</script>
+<meta name="description" content="Site oficial do Camargo Futebol Clube de Paraíso do Tocantins: história, elenco, jogos, notícias, conquistas e modalidades.">
 <title>Camargo Futebol Clube · Site Oficial</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="LOGOSITE-png.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=20261118-3">
 <style>
-.home-stream{padding:3.5rem 0;background:#161616;color:#f5f5f5;border-top:4px solid #c0192e}
-.home-stream .section-eyebrow{color:#ef5c6c}
-.home-stream h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.04em;margin:.3rem 0}
-.home-stream-intro{color:#c9c9c9;line-height:1.55;margin:0 0 1.4rem}
-.home-stream-stage{position:relative;display:flex;justify-content:center;align-items:center;background:#080808;border:1px solid #424242;aspect-ratio:16/9;overflow:hidden}
-.home-stream-stage img{height:100%;width:100%;object-fit:contain}
-.home-stream-status{position:absolute;left:1rem;bottom:1rem;background:#b71026;color:#fff;padding:.65rem .9rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 3px 18px #000a}
-.home-stream-stage iframe{width:100%;height:100%;border:0}
-@media(max-width:650px){.home-stream{padding:2rem 0}.home-stream-stage{aspect-ratio:16/9}.home-stream-status{left:.5rem;bottom:.5rem;font-size:.72rem}}
-.carousel-slide--flyer img{object-fit:contain;object-position:center;opacity:1;background:#111}
-</style>
-<style id="home-modalidades-style">
-#modalidades.home-modalidades{padding:clamp(2.5rem,5vw,4rem) 0;background:#fff;color:#1b1b1b}
-#modalidades .container{width:100%;max-width:1100px;padding-left:clamp(20px,5vw,32px);padding-right:clamp(20px,5vw,32px);box-sizing:border-box}
-.home-modalidades h2{font:clamp(2rem,4vw,3rem)/1.1 'Bebas Neue',sans-serif;margin:.25rem 0 .5rem}
-#modalidades .section-eyebrow{color:#b4142a}
-.home-modalidades-intro{color:#555;line-height:1.6;margin:0 0 1.5rem;max-width:650px}
-.home-modalidades-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
-#modalidades .home-modalidade{display:grid;gap:.3rem;padding:1.15rem;background:#c0192e;color:#fff;border-left:3px solid #78101d;box-shadow:0 3px 12px #00000018}
-.home-modalidade span{font-size:1.6rem}.home-modalidade strong{font-size:.98rem}#modalidades .home-modalidade small{font-size:.78rem;color:#fff;opacity:.9}
-#modalidades .home-modalidades-link{display:inline-block;margin-top:1.3rem;color:#a91429;font-weight:700;text-decoration:underline;text-underline-offset:3px}
-@media(max-width:700px){.home-modalidades-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:400px){.home-modalidades-grid{grid-template-columns:1fr 1fr}.home-modalidade{padding:.85rem}.home-modalidade strong{font-size:.85rem}}
-</style>
-<style id="hero-stats-alignment">
-/* Quatro indicadores em células iguais, com o número sempre acima da legenda. */
-.hero .hero-stats{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  width:min(100%,420px);
-  gap:1rem 1.25rem;
-  margin:1.25rem auto 1.5rem;
-  align-items:stretch;
-}
-.hero .hero-stat{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  min-width:0;
-  text-align:center;
-}
-.hero .hero-stat-num{line-height:1;flex:none}
-.hero .hero-stat-label{
-  display:block;
-  margin-top:.35rem;
-  width:100%;
-  line-height:1.3;
-  overflow-wrap:normal;
-  hyphens:auto;
-}
-@media(max-width:480px){
-  .hero .hero-stats{width:min(100%,360px);gap:1.15rem .65rem}
-  .hero .hero-stat-label{font-size:clamp(10px,2.9vw,12px);letter-spacing:.025em}
-}
+body{background:#101010;color:#f5f5f5}
+.v2{--accent:#c0192e;--line:#343434;--muted:#aaa;color:#f5f5f5;background:#101010}
+.v2 a{text-decoration:none}
+.v2-container{width:min(1160px,calc(100% - 36px));margin:auto}
+.v2-kicker{font-size:.73rem;letter-spacing:.22em;font-weight:800;text-transform:uppercase;color:#ff6678}
+.v2-title{font:400 clamp(2.1rem,5vw,4rem)/1 'Bebas Neue',sans-serif;letter-spacing:.025em}
+.v2-hero{position:relative;min-height:650px;display:flex;align-items:end;background:linear-gradient(90deg,rgba(8,8,8,.96) 0%,rgba(8,8,8,.77) 44%,rgba(8,8,8,.18) 100%),linear-gradient(0deg,#101010 0%,transparent 60%),url('Time2022-jpg.webp') center 30%/cover no-repeat}
+.v2-hero-inner{padding:150px 0 100px;position:relative;z-index:1}
+.v2-hero h1{font:400 clamp(4.5rem,11vw,9.5rem)/.83 'Bebas Neue',sans-serif;max-width:740px;letter-spacing:.025em;margin:18px 0}
+.v2-hero h1 span{color:#e62d47}
+.v2-hero p{max-width:540px;color:#ddd;font-size:1.05rem;line-height:1.75}
+.v2-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.v2-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border:1px solid #777;color:white!important;font-weight:800;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em;min-height:46px}
+.v2-btn-primary{background:#c0192e;border-color:#c0192e}
+.v2-btn:hover{border-color:white}
+.v2-ticker{background:#c0192e;padding:14px 0}
+.v2-ticker-inner{display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.v2-ticker strong{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+.v2-ticker a{color:white;text-decoration:underline;text-underline-offset:4px;font-weight:700;font-size:.85rem}
+.v2-section{padding:76px 0}
+.v2-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+.v2-head a{color:#eee;border-bottom:1px solid #e62d47;padding-bottom:4px;font-size:.82rem;font-weight:700}
+.v2-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.v2-card{display:block;background:#1d1d1d;border:1px solid var(--line);color:white!important;overflow:hidden;transition:transform .2s,border-color .2s}
+.v2-card:hover{transform:translateY(-3px);border-color:#c0192e}
+.v2-card img{width:100%;height:230px;object-fit:cover;display:block}
+.v2-card-body{padding:20px}
+.v2-card small{display:block;color:#fa7e8e;text-transform:uppercase;letter-spacing:.08em;font-weight:800;font-size:.69rem;margin-bottom:9px}
+.v2-news-desc{color:#bbb;line-height:1.6;font-size:.88rem;margin-top:12px}.v2-card h3{font:400 1.65rem/1.1 'Bebas Neue',sans-serif;letter-spacing:.02em}
+.v2-feature{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#202020;border:1px solid #383838}
+.v2-feature img{width:100%;height:100%;min-height:300px;object-fit:cover}
+.v2-feature-copy{padding:clamp(25px,5vw,60px);display:flex;flex-direction:column;justify-content:center;align-items:start}
+.v2-feature-copy p{color:#bbb;line-height:1.75;margin:16px 0}
+.v2-numbers{background:#191919;border-top:1px solid #333;border-bottom:1px solid #333}
+.v2-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:40px 0}
+.v2-stat{border-left:3px solid #c0192e;padding:0 24px}
+.v2-stat strong{display:block;font:400 clamp(2.3rem,5vw,4.5rem)/1 'Bebas Neue',sans-serif}
+.v2-stat span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#aaa}
+.v2-footer{background:#080808;padding:45px 0;border-top:3px solid #c0192e}
+.v2-footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.v2-footer img{height:65px;width:auto}
+.v2-footer p{color:#aaa;font-size:.83rem}
+.v2-preview{position:fixed;z-index:150;bottom:16px;right:16px;background:#f5f5f5;color:#111;padding:10px 14px;border-radius:4px;box-shadow:0 5px 20px #0008;font-size:.75rem;font-weight:800}
+.v2-preview a{color:#b5122b;text-decoration:underline}
+@media(max-width:780px){.v2-hero{min-height:570px;background-position:55% center}.v2-hero-inner{padding:120px 0 65px}.v2-hero h1{font-size:clamp(4.4rem,14vw,7rem)}.v2-grid{grid-template-columns:1fr 1fr}.v2-feature{grid-template-columns:1fr}.v2-feature img{height:260px;min-height:0}.v2-section{padding:54px 0}}
+@media(max-width:520px){.v2-grid{grid-template-columns:1fr}.v2-card img{height:240px}.v2-stats{grid-template-columns:1fr;gap:28px}.v2-hero{background:linear-gradient(0deg,#101010 0%,rgba(8,8,8,.4) 90%),url('Time2022-jpg.webp') center/cover}.v2-head{align-items:start;flex-direction:column}.v2-preview{left:12px;right:12px;text-align:center}.v2-footer{padding-bottom:90px}}
+@media(prefers-reduced-motion:reduce){.v2-card{transition:none}}
 </style>
 </head>
 <body>
-<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-
-<!-- LIGHTBOX -->
-<div id="lightbox">
-  <button id="lb-fechar" aria-label="Fechar imagem">✕</button>
-  <div id="lb-contador"></div>
-  <button id="lb-prev" aria-label="Imagem anterior">&#8249;</button>
-  <div id="lb-img-wrap">
-    <img id="lb-img" src="" alt="" decoding="async">
-  </div>
-  <button id="lb-next" aria-label="Próxima imagem">&#8250;</button>
-  <div id="lb-legenda"><span id="lb-sub"></span></div>
-</div>
-
 <div id="site-menu">
 <!-- NAV -->
 <nav>
@@ -136,173 +102,35 @@
 </div>
 <noscript><style>@media(max-width:1100px){#site-menu .nav-links{display:flex!important;flex-wrap:wrap!important;position:static!important;gap:8px!important}#site-menu .nav-hamburger{display:none!important}}</style></noscript>
 
-<main id="conteudo">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-top">
-
-    <!-- Painel esquerdo: escudo + info -->
-    <div class="hero-panel-left">
-      <img class="hero-escudo" src="LOGOSITE-png.webp" alt="Escudo Camargo FC" decoding="async" width="989" height="1600" fetchpriority="high" loading="lazy">
-      <div class="hero-text">
-        <p class="hero-sub">Desde 2015</p>
-        <h1>Camargo <span>Futebol Clube</span></h1>
-        <p class="hero-origem">Nascido como time da família em 2015. Desde 2020, uma equipe amadora nos campeonatos.</p>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-num">11</div>
-            <div class="hero-stat-label">Anos de história</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">7</div>
-            <div class="hero-stat-label">Títulos</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">23</div>
-            <div class="hero-stat-label">Atletas no elenco</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">6</div>
-            <div class="hero-stat-label">Categorias no histórico</div>
-          </div>
-        </div>
-        <a href="historia.html#historia" class="hero-btn">Conheça o clube</a>
-      </div>
-    </div>
-
-    <!-- Carrossel de fotos à direita -->
-    <div class="hero-carousel" id="heroCarousel">
-      <div class="carousel-track" id="carouselTrack">
-
-        <!-- SLIDE 1 -->
-        <a class="carousel-slide carousel-slide-link" href="noticia-titulo-liga-paraiso-2022.html" aria-label="Ler a campanha do título da Liga Paraíso 2022">
-          <img src="Campeao2022-jpg.webp" alt="Campeão Liga Paraíso 2022" width="1600" height="1200" loading="lazy">
-        </a>
-
-        <!-- SLIDE 2 -->
-        <div class="carousel-slide">
-          <img src="CampeaoNG-jpeg.webp" alt="Campeão Torneio Nova Geração 2023" width="1075" height="1200" loading="lazy">
-        </div>
-
-        <!-- SLIDE 3 – Kiley -->
-        <a class="carousel-slide carousel-slide-link" href="galeria.html#atleta-kiley" aria-label="Ver a ficha histórica de Kiley">
-          <img src="retratos-novos/kiley.webp" alt="Kiley – Meia / Lateral Camargo FC" width="524" height="655" loading="lazy">
-        </a>
-
-        <!-- SLIDE 4 – Chico -->
-        <a class="carousel-slide carousel-slide-link" href="galeria.html#atleta-chico" aria-label="Ver a ficha histórica de Chico">
-          <img src="Chico-jpg.webp" alt="Chico – Capitão 2026" width="1600" height="1547" loading="lazy">
-        </a>
-
-      </div>
-
-      <!-- Legenda sobre o carrossel -->
-      <div class="carousel-overlay">
-        <div class="carousel-legenda" id="carouselLegenda">Campeão Liga Paraíso 2022</div>
-        <div class="carousel-sublinha" id="carouselSublinha">Título histórico do Camargo FC</div>
-        <div class="carousel-controles">
-          <button class="carousel-btn" id="carouselPrev" aria-label="Slide anterior">&#8249;</button>
-          <div class="carousel-dots" id="carouselDots"></div>
-          <button class="carousel-btn" id="carouselNext" aria-label="Próximo slide">&#8250;</button>
-          <span class="carousel-contador" id="carouselContador">1 / 4</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<main class="v2" id="conteudo">
+<section class="v2-hero" aria-labelledby="v2-main-title">
+<div class="v2-container v2-hero-inner">
+<div class="v2-kicker">Paraíso do Tocantins · Desde 2015</div>
+<h1 id="v2-main-title">Nossa história.<br><span>Nossa camisa.</span></h1>
+<p>Da união de uma família à paixão pelo futebol. Ao fundo, um registro do elenco campeão de 2022 — parte da história que construímos.</p>
+<div class="v2-actions"><a class="v2-btn v2-btn-primary" href="agenda.html#agenda">Ver jogos e agenda</a><a class="v2-btn" href="historia.html#historia">Conheça nossa história</a></div>
+</div>
 </section>
-
-<!-- PRÓXIMO JOGO -->
-<section class="home-next-match" id="homeNextMatch" aria-labelledby="home-next-title">
-  <div class="container">
-    <div class="home-next-card">
-      <div class="home-next-heading">
-        <p class="section-eyebrow">Próximo jogo · Semifinal</p>
-        <h2 id="home-next-title">Camargo FC <span>×</span> Real Tocantins</h2>
-        <p>14ª Liga Paraíso de Futebol · 2ª Divisão</p>
-      </div>
-      <div class="home-next-details">
-        <span><strong>27 SET</strong> Domingo</span>
-        <span><strong>17h30</strong> Antônio Damião</span>
-      </div>
-      <a class="hero-btn" href="agenda.html">Ver agenda</a>
-    </div>
-  </div>
-</section>
-
-<!-- MODALIDADES E CATEGORIAS -->
-<section class="home-modalidades" id="modalidades" aria-labelledby="home-modalidades-title">
-  <div class="container">
-    <p class="section-eyebrow">O futebol em várias formas</p>
-    <h2 id="home-modalidades-title">Modalidades e categorias</h2>
-    <p class="home-modalidades-intro">O histórico do Camargo FC registra jogos em seis categorias. Cada uma guarda um capítulo da nossa trajetória.</p>
-    <div class="home-modalidades-grid">
-      <div class="home-modalidade"><span aria-hidden="true">⚽</span><strong>Futebol de campo</strong><small>Competições no campo</small></div>
-      <div class="home-modalidade"><span aria-hidden="true">🏟️</span><strong>Society</strong><small>Futebol 7</small></div>
-      <div class="home-modalidade"><span aria-hidden="true">🥅</span><strong>Futsal</strong><small>Jogos de quadra</small></div>
-      <div class="home-modalidade"><span aria-hidden="true">🏖️</span><strong>Futebol de areia</strong><small>Jogos na areia</small></div>
-      <div class="home-modalidade"><span aria-hidden="true">👩</span><strong>Feminino</strong><small>Partidas do time feminino</small></div>
-      <div class="home-modalidade"><span aria-hidden="true">🧒</span><strong>Time Júnior de Society</strong><small>Partidas da categoria júnior</small></div>
-    </div>
-    <a class="home-modalidades-link" href="estatisticas.html">Ver jogos e estatísticas →</a>
-  </div>
-</section>
-
-
-
+<div class="v2-ticker"><div class="v2-container v2-ticker-inner"><strong>Camargo Futebol Clube · Futebol de campo · Society · Futsal</strong><a href="agenda.html#agenda">Acompanhe jogos e resultados</a></div></div>
+<section class="v2-section" id="jogos"><div class="v2-container"><div class="v2-head"><div><div class="v2-kicker">Dentro das quatro linhas</div><h2 class="v2-title">Jogos e resultados</h2></div><a href="jogos.html">Histórico completo de partidas</a></div>
+<div class="v2-feature"><img src="Campeao2022-jpg.webp" alt="Camargo FC em campanha histórica" width="1200" height="800" loading="lazy" decoding="async"><div class="v2-feature-copy"><div class="v2-kicker">Agenda oficial</div><h3 class="v2-title">Título da Liga Paraíso de 2022</h3><p>A fotografia registra a conquista da Liga Paraíso em 2022. Para consultar partidas recentes e próximas datas, acesse nossa Agenda.</p><a class="v2-btn v2-btn-primary" href="noticia-titulo-liga-paraiso-2022.html">Ver a campanha de 2022</a></div></div></div></section>
+<section class="v2-numbers" aria-label="Nossa trajetória"><div class="v2-container v2-stats"><div class="v2-stat"><strong>2015</strong><span>Início da história</span></div><div class="v2-stat"><strong>3</strong><span>Modalidades em destaque</span></div><div class="v2-stat"><strong>1 clube</strong><span>Uma só paixão</span></div></div></section>
+<section class="v2-section" id="noticias"><div class="v2-container"><div class="v2-head"><div><div class="v2-kicker">Noticiário rubro-negro</div><h2 class="v2-title">Últimas histórias</h2></div><a href="noticias.html">Todas as notícias</a></div><div class="v2-grid">
+<a class="v2-card" href="noticia-semifinal-camargo-real-tocantins-2026.html"><div class="v2-card-body"><small>Futebol de campo · 2026</small><h3>Real Tocantins vence a semifinal por 4 a 2</h3><p class="v2-news-desc">Leia o relato da partida, os gols e a análise do confronto.</p></div></a>
+<a class="v2-card" href="noticia-retorno-futsal-2026.html"><div class="v2-card-body"><small>Futsal · 2026</small><h3>Camargo FC retorna à Liga Paraíso de Futsal</h3><p class="v2-news-desc">Conheça o projeto e os atletas inscritos para a competição.</p></div></a>
+<a class="v2-card" href="noticia-titulo-liga-paraiso-2022.html"><img src="Campeao2022-jpg.webp" alt="Camargo FC campeão da Liga Paraíso em 2022" width="1600" height="1200" loading="lazy"><div class="v2-card-body"><small>Conquista · 2022</small><h3>O ano do título da Liga Paraíso</h3></div></a>
+</div></div></section>
+<section class="v2-section" style="background:#181818" id="elenco"><div class="v2-container"><div class="v2-head"><div><div class="v2-kicker">Quem veste a camisa</div><h2 class="v2-title">Nosso elenco</h2></div><a href="elenco.html#elenco">Elenco completo</a></div><div class="v2-feature"><img src="Time2022-jpg.webp" alt="Elenco do Camargo FC em 2022" width="1600" height="1200" loading="lazy"><div class="v2-feature-copy"><div class="v2-kicker">Atletas · História · Estatísticas</div><h3 class="v2-title">Conheça quem veste a camisa</h3><p>A imagem mostra o elenco de 2022. Confira na página de Elenco os atletas e seus dados registrados nas temporadas do clube.</p><a class="v2-btn v2-btn-primary" href="elenco.html#elenco">Conhecer os atletas</a></div></div></div></section>
+<section class="v2-section" id="conquistas"><div class="v2-container"><div class="v2-head"><div><div class="v2-kicker">Memória e conquistas</div><h2 class="v2-title">Nossa história em imagens</h2></div><a href="galeria.html#galeria">Galeria completa</a></div><div class="v2-grid">
+<a class="v2-card" href="noticia-titulo-liga-paraiso-2022.html"><img src="Campeao2022-jpg.webp" alt="Camargo FC campeão da Liga Paraíso em 2022" width="1600" height="1200" loading="lazy"><div class="v2-card-body"><small>Campeão · Liga Paraíso · 2022</small><h3>O título da Liga Paraíso</h3></div></a>
+<a class="v2-card" href="galeria.html#galeria"><img src="CampeaoNG-jpeg.webp" alt="Camargo FC campeão do Torneio Nova Geração em 2023" width="1075" height="1200" loading="lazy"><div class="v2-card-body"><small>Campeão · Torneio Nova Geração · 2023</small><h3>Conquista no Torneio Nova Geração</h3></div></a>
+<a class="v2-card" href="galeria.html#galeria"><img src="Time2022-jpg.webp" alt="Elenco campeão da Liga Paraíso de 2022" width="1600" height="1200" loading="lazy"><div class="v2-card-body"><small>Time histórico · 2022</small><h3>Elenco da temporada campeã</h3></div></a>
+</div></div></section>
+<footer class="v2-footer"><div class="v2-container v2-footer-inner"><div style="display:flex;align-items:center;gap:18px"><img src="LOGOSITE-png.webp" alt="Escudo Camargo FC" width="989" height="1600" loading="lazy"><div><strong>CAMARGO FUTEBOL CLUBE</strong><p>Paraíso do Tocantins · Desde 2015</p></div></div><a class="v2-btn" href="patrocinadores.html#patrocinadores">Nossos patrocinadores</a></div></footer>
 </main>
 
-
-<!-- FOOTER -->
-<footer>
-  <img class="footer-escudo" src="LOGOSITE-png.webp" alt="Escudo Camargo FC" decoding="async" width="989" height="1600" loading="lazy">
-  <div class="footer-logo">Camargo Futebol Clube</div>
-  <p>Fundado em 2015 · Unidos pela família, fortalecidos pelo futebol</p>
-  <p style="margin-top:0.25rem; font-size: 12px; opacity: 0.4;">© 2026 Camargo FC · Todos os direitos reservados</p>
-  <div class="footer-contatos">
-    <a href="https://instagram.com/camargofc.pso" target="_blank" rel="noopener" class="footer-contato-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      @camargofc.pso
-    </a>
-    <a href="https://wa.me/5563992994110" target="_blank" rel="noopener" class="footer-contato-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-      (63) 99299-4110
-    </a>
-    <a href="mailto:camargofc.pso@gmail.com" class="footer-contato-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      camargofc.pso@gmail.com
-    </a>
-  </div>
-
-
-  <div class="footer-patro">
-    <div class="footer-patro-title">Patrocinadores e Apoio</div>
-    <!-- ALTERE APENAS O NOME DAS IMAGENS ABAIXO -->
-    <div class="footer-patro-grid">
-      <img src="VIP-png.webp" alt="Patrocinador 1" decoding="async" width="1064" height="1064" loading="lazy">
-      <img src="VIBER-png.webp" alt="Patrocinador 2" decoding="async" width="1600" height="1023" loading="lazy">
-      <img src="SOUZA-png.webp" alt="Patrocinador 3" decoding="async" width="1076" height="603" loading="lazy">
-      <img src="Bambam-png.webp" alt="Patrocinador 4" decoding="async" width="1333" height="1600" loading="lazy">
-    </div>
-  </div>
-
-  <div class="footer-cores">
-    <div class="footer-cor" style="background: #c0192e;"></div>
-    <div class="footer-cor" style="background: #111111;"></div>
-    <div class="footer-cor" style="background: #f5f5f5;"></div>
-  </div>
-</footer>
-
-<script src="menu-loader.js?v=20261118-3"></script>
-<script src="main.js?v=20261118-2"></script>
-<script>
-  // Oculta a chamada após o dia da partida em Paraíso do Tocantins.
-  if (Date.now() > Date.parse("2026-09-28T00:00:00-03:00")) {
-    var proximoJogo = document.getElementById("homeNextMatch");
-    if (proximoJogo) proximoJogo.hidden = true;
-  }
-</script>
-
+<script src="menu-loader.js?v=20261118-3" defer></script>
+<script src="main.js?v=20261118-2" defer></script>
 </body>
 </html>
