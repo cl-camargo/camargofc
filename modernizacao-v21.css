@@ -104,3 +104,17 @@ body.camargo-interna #conteudo .section-header>p{position:relative;z-index:1}
 .cfc-memorial-card span{display:block;font-size:.78rem;color:#ccc;margin-bottom:16px}
 @media(max-width:850px){.cfc-memorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.cfc-player-detail{grid-template-columns:1fr}.cfc-player-photo{width:130px;max-height:175px}.cfc-player-dialog,.cfc-match-dialog{padding:20px 14px}.cfc-memorial-grid{grid-template-columns:1fr 1fr;gap:8px}.cfc-memorial{padding:15px}.cfc-memorial-card{padding:14px}}
+
+/* Correção: o seletor global 'nav' do style.css aplicava position:fixed aos submenus
+   internos e os sobrepunha ao menu principal. Apenas #site-menu > nav é fixo. */
+body .cfc-subnav{
+  position:static!important;
+  top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;
+  z-index:auto!important;
+  width:100%;height:auto!important;min-height:0;
+  display:flex;justify-content:flex-start;align-items:center;
+  padding:0!important;border:0!important;background:transparent!important;
+  margin:0 0 28px!important;
+}
+#site-menu > nav{position:fixed;top:0;left:0;right:0;z-index:1000}
+@media(max-width:600px){body .cfc-subnav{gap:8px}}
