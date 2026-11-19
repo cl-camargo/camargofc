@@ -1,0 +1,49 @@
+/* Camargo FC | Design 2.1. Camada incremental; preserva textos e dados oficiais. */
+:root{--cfc-red:#c0192e;--cfc-dark:#101010;--cfc-panel:#1d1d1d;--cfc-border:#3a3a3a;--cfc-muted:#bdbdbd}
+html{scroll-padding-top:90px}
+body.camargo-interna #conteudo .section-header{isolation:isolate}
+body.camargo-interna #conteudo .section-header:after{z-index:-1;color:rgba(255,255,255,.045)}
+body.camargo-interna #conteudo .section-header .section-title{color:#fff!important;text-shadow:none!important}
+body.camargo-interna #conteudo .section-header .section-eyebrow{color:#f77b8b!important}
+body.camargo-interna #conteudo .section-header .section-divider{margin:18px 0 0;background:var(--cfc-red)}
+body.camargo-interna #conteudo .section-header{text-align:left}
+body.camargo-interna #conteudo .section-header>p{position:relative;z-index:1}
+.cfc-subnav{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 28px;align-items:center}
+.cfc-subnav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 17px;border:1px solid #4b4b4b;background:#1b1b1b;color:#f5f5f5;text-decoration:none;font-size:.78rem;font-weight:800;letter-spacing:.025em}
+.cfc-subnav a:hover,.cfc-subnav a:focus-visible{background:#c0192e;border-color:#c0192e;color:#fff}
+.cfc-subnav a:focus-visible{outline:3px solid #ffbb51;outline-offset:3px}
+.cfc-section-intro{font-size:.95rem;line-height:1.7;color:#bbb;margin:0 0 22px;max-width:800px}
+.cfc-history-timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:4px 0 38px}
+.cfc-history-milestone{background:linear-gradient(135deg,#252525,#151515);border:1px solid #424242;border-top:4px solid #c0192e;padding:24px 20px}
+.cfc-history-milestone strong{display:block;color:#fff;font:400 2.6rem/1 'Bebas Neue',sans-serif}
+.cfc-history-milestone p{color:#ddd;font-size:.85rem;line-height:1.5;margin:10px 0 0}
+.cfc-gallery-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:12px 0 24px}
+.cfc-gallery-tools label{font-weight:700;font-size:.85rem;color:#ddd}
+.cfc-gallery-tools input{min-height:46px;flex:1 1 230px;max-width:470px;border:1px solid #666;border-radius:2px;padding:11px 14px;background:#222;color:#fff}
+.cfc-gallery-tools input::placeholder{color:#aaa}
+.cfc-gallery-tools button{min-height:44px;padding:8px 15px;background:#c0192e;color:white;border:0;cursor:pointer}
+.cfc-gallery-count{color:#bbb;font-size:.8rem}
+.cfc-gallery-empty{padding:25px;color:#ddd;border:1px dashed #777}
+#galeria .galeria-card[hidden]{display:none!important}
+#patrocinadores .patro-grid{gap:20px}
+#patrocinadores .patro-card{border:1px solid #393939;border-top:4px solid #c0192e;border-radius:3px;overflow:hidden}
+#patrocinadores .patro-card img{object-fit:contain}
+#competicoes .noticia-destaque{border-top:4px solid #c0192e;border-radius:3px}
+#competicoes .noticia-destaque-titulo{font:400 clamp(1.9rem,3.8vw,3rem)/1.05 'Bebas Neue',sans-serif;letter-spacing:.025em}
+#agenda .agenda-jogo{border-left:4px solid #c0192e}
+#agenda .agenda-jogo-times{gap:12px}
+#elenco .jogador-card .jogador-avatar img{object-position:center top}
+#estatisticas .v2-dashboard{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 0 30px}
+#estatisticas .v2-dashboard-heading{grid-column:1/-1}
+#estatisticas .v2-dashboard-heading h2{font:400 clamp(2.2rem,4vw,3.3rem)/1 'Bebas Neue',sans-serif;color:#fff;margin:5px 0 12px}
+#estatisticas .v2-dashboard-heading p:last-child{color:#bbb;line-height:1.6}
+#estatisticas .v2-ranking-card{background:#1c1c1c;border:1px solid #444;border-top:4px solid #c0192e;padding:22px}
+#estatisticas .v2-ranking-card h3{font:400 2rem/1 'Bebas Neue',sans-serif;color:#fff;margin:0 0 20px}
+#estatisticas .v2-ranking-card ol{margin:0;padding:0;list-style:none;counter-reset:rank}
+#estatisticas .v2-ranking-card li{counter-increment:rank;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #383838;padding:12px 0;color:#eee;font-size:.85rem}
+#estatisticas .v2-ranking-card li:before{content:counter(rank,decimal-leading-zero);color:#e65b6f;font-weight:800}
+#estatisticas .v2-ranking-card li span{flex:1;min-width:0;overflow-wrap:anywhere}
+#estatisticas .v2-ranking-card li strong{color:#fff;white-space:nowrap}
+@media(max-width:780px){.cfc-history-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}#estatisticas .v2-dashboard{grid-template-columns:1fr}}
+@media(max-width:500px){.cfc-history-timeline{grid-template-columns:1fr 1fr;gap:8px}.cfc-history-milestone{padding:15px}.cfc-history-milestone strong{font-size:2.1rem}.cfc-subnav a{flex:1 1 130px}.cfc-gallery-tools input{max-width:none}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
