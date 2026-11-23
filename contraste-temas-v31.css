@@ -173,3 +173,8 @@ body.camargo-interna #historia .historia-grid [class*="timeline"] li{color:#3033
  body.camargo-interna #conteudo .section-header .section-title{font-size:clamp(1.8rem,7vw,2.45rem)!important}
  body.camargo-interna #conteudo .agenda-temporada-label{padding:10px 12px!important}
 }
+
+body.camargo-interna #historia .historia-grid .timeline{color:#24262b!important}
+body.camargo-interna #historia .historia-grid .timeline li{color:#24262b!important;font-size:1rem;line-height:1.65}
+body.camargo-interna #historia .historia-grid .timeline-year{color:#94172a!important;font-weight:800!important;font-size:1.1rem}
+body.camargo-interna #historia .historia-grid .timeline-sub{color:#34363b!important;font-weight:500;line-height:1.6}
