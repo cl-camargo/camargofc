@@ -128,3 +128,48 @@ body:not(.camargo-interna) .v2-numbers *{color:#fff}
  body.camargo-interna #conteudo .section-header .section-title{font-size:clamp(2.2rem,8vw,3.1rem)}
  body.camargo-interna #conteudo .noticia-destaque-titulo{font-size:1.32rem}
 }
+
+/* Ajustes solicitados em 23/11: densidade visual e contraste de cartões claros. */
+body.camargo-interna #conteudo .cfc31-band{min-height:48px;padding:10px 16px;margin:22px 0 12px;gap:10px}
+body.camargo-interna #conteudo .cfc31-band strong{font-size:clamp(1.15rem,1.8vw,1.55rem)!important;font-weight:700!important;letter-spacing:.025em}
+body.camargo-interna #conteudo .cfc31-band span{font-size:.75rem!important}
+body.camargo-interna #conteudo .section-header .section-title{font-size:clamp(2rem,3.4vw,3rem)!important}
+body.camargo-interna #conteudo .section-header{padding-block:22px!important}
+body.camargo-interna #conteudo .agenda-temporada-label{margin:14px 0 12px!important;padding:12px 16px!important;font-size:clamp(.88rem,1.3vw,1rem)!important}
+body.camargo-interna #conteudo #elenco-campo,
+body.camargo-interna #conteudo #elenco-futsal{margin:20px 0 12px!important;padding:12px 16px!important}
+body.camargo-interna #conteudo #elenco-campo .comissao-label,
+body.camargo-interna #conteudo #elenco-futsal .comissao-label{font-size:clamp(1rem,1.6vw,1.35rem)!important}
+body.camargo-interna #conteudo .elenco-filtros .filtro-btn{color:#f5f5f5!important;background:#202023!important;border:1px solid #626268!important;font-weight:700}
+body.camargo-interna #conteudo .elenco-filtros .filtro-btn:hover{background:#414146!important}
+body.camargo-interna #conteudo .elenco-filtros .filtro-btn.ativo{background:#c0192e!important;color:#fff!important;border-color:#c0192e!important}
+/* A agenda usa cartões originalmente claros; textos precisam ser escuros. */
+body.camargo-interna #agenda .agenda-jogo{color:#202126}
+body.camargo-interna #agenda .agenda-jogo .agenda-jogo-meta,
+body.camargo-interna #agenda .agenda-jogo .agenda-jogo-meta span{color:#4a4c54!important;font-weight:600}
+body.camargo-interna #agenda .agenda-jogo .agenda-time-nome{color:#181a20!important;font-weight:800!important}
+body.camargo-interna #agenda .agenda-jogo .agenda-vs{color:#565b64!important}
+body.camargo-interna #agenda .agenda-jogo .agenda-badge-proximo,
+body.camargo-interna #agenda .agenda-jogo .agenda-badge-encerrado{color:#fff!important}
+body.camargo-interna #agenda .agenda-jogo .cfc-match-open{color:#fff!important}
+body.camargo-interna #agenda .agenda-jogo .agenda-share-btn{color:#41434a!important}
+body.camargo-interna #agenda .agenda-jogo .agenda-placar{color:#181a20!important}
+/* História: painel branco com textos e cronologia escuros e legíveis. */
+body.camargo-interna #historia .historia-grid{background:#fff!important;color:#1d1d21!important;border:1px solid #ddd;border-top:4px solid #c0192e}
+body.camargo-interna #historia .historia-grid p,
+body.camargo-interna #historia .historia-grid li,
+body.camargo-interna #historia .historia-grid strong,
+body.camargo-interna #historia .historia-grid h2,
+body.camargo-interna #historia .historia-grid h3,
+body.camargo-interna #historia .historia-grid h4{color:#22252b!important}
+body.camargo-interna #historia .historia-grid a{color:#9c1729!important}
+body.camargo-interna #historia .historia-grid strong{font-weight:800}
+body.camargo-interna #historia .historia-grid .historia-ano,
+body.camargo-interna #historia .historia-grid .historia-timeline-ano{color:#8c1425!important}
+body.camargo-interna #historia .historia-grid [class*="timeline"] li{color:#30333a!important}
+@media(max-width:700px){
+ body.camargo-interna #conteudo .cfc31-band{min-height:44px;padding:10px 12px;margin:16px 0 10px}
+ body.camargo-interna #conteudo .cfc31-band strong{font-size:1.16rem!important}
+ body.camargo-interna #conteudo .section-header .section-title{font-size:clamp(1.8rem,7vw,2.45rem)!important}
+ body.camargo-interna #conteudo .agenda-temporada-label{padding:10px 12px!important}
+}
