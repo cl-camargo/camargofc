@@ -46,3 +46,85 @@ body:not(.camargo-interna) #noticias h2,body:not(.camargo-interna) #noticias .v2
 body:not(.camargo-interna) #elenco{background:#28282b!important;border-top:5px solid #c0192e}
 body:not(.camargo-interna) #conquistas{background:#1a1a1c!important;border-top:5px solid #c0192e}
 @media(max-width:600px){.cfc31-band{padding:13px 15px;margin:24px 0 15px}.cfc31-panel{padding:13px}#elenco #elencoGrid,#elenco .elenco-grid-futsal,#agenda .agenda-grupo,#galeria .galeria-tab-content,#patrocinadores .patro-grid{padding:12px}#historia .historia-grid{padding:18px}}
+
+/* Revisão 3.1.1 — contraste legível, tipografia e alinhamento.
+   Mantém contraste por seção, sem inverter cores de componentes legados. */
+:root{--cfc31-text:#f5f5f5;--cfc31-muted:#d2d2d5;--cfc31-line:#545459}
+body.camargo-interna #conteudo .cfc31-band,
+body.camargo-interna #conteudo .cfc31-band *{color:#fff!important}
+body.camargo-interna #conteudo .cfc31-band{min-height:68px;box-sizing:border-box}
+body.camargo-interna #conteudo .cfc31-band strong{font-size:clamp(1.55rem,2.6vw,2.15rem)!important;font-weight:700!important;line-height:1.15}
+body.camargo-interna #conteudo .cfc31-band span{font-size:.83rem!important;font-weight:800!important}
+body.camargo-interna #conteudo .section-header .section-title{font-size:clamp(2.45rem,5vw,4.5rem);line-height:1.05;font-weight:700}
+body.camargo-interna #conteudo .section-header .section-eyebrow{font-weight:800;letter-spacing:.12em}
+body.camargo-interna #conteudo .section-header p{line-height:1.65}
+body.camargo-interna #conteudo .cfc-subnav{justify-content:flex-start!important;gap:10px}
+body.camargo-interna #conteudo .cfc-subnav a{font-weight:800;font-size:.83rem;line-height:1.3;text-align:center}
+body.camargo-interna #conteudo h2,body.camargo-interna #conteudo h3{line-height:1.25;overflow-wrap:break-word}
+body.camargo-interna #conteudo .cfc-memorial-card h3{font-size:1.08rem;font-weight:800}
+body.camargo-interna #conteudo .cfc-memorial-card p{color:#fff!important}
+body.camargo-interna #conteudo .cfc-memorial-card span{color:#e0e0e0!important}
+body.camargo-interna #conteudo .cfc-memorial-card a{color:#ffabb7!important;font-weight:700}
+body.camargo-interna #conteudo .cfc-memorial>p{color:#e1e1e1}
+body.camargo-interna #conteudo .cfc-memorial h2{font-weight:700}
+body.camargo-interna #conteudo .agenda-temporada-label{font-size:clamp(.9rem,1.8vw,1.12rem)!important;font-weight:800!important;line-height:1.5}
+body.camargo-interna #conteudo .agenda-grupo{color:#f5f5f5}
+body.camargo-interna #conteudo .agenda-grupo .agenda-jogo-meta,
+body.camargo-interna #conteudo .agenda-grupo .agenda-jogo-meta span{color:#dedee1}
+body.camargo-interna #conteudo .agenda-grupo .agenda-time-nome{color:#fff;font-weight:800}
+body.camargo-interna #conteudo .noticia-destaque-titulo{color:#fff!important;font-size:clamp(1.3rem,2.4vw,1.9rem);font-weight:800;line-height:1.22}
+body.camargo-interna #conteudo .noticia-destaque-desc{color:#e3e3e6!important;line-height:1.65}
+body.camargo-interna #conteudo .noticia-destaque .comp-info,
+body.camargo-interna #conteudo .noticia-destaque .comp-info span{color:#d6d6d9}
+body.camargo-interna #conteudo .noticia-destaque a{font-weight:800}
+body.camargo-interna #conteudo .historia-grid{
+ background:#29292c!important;color:#f5f5f5!important;border:1px solid #55555b;border-top:5px solid #c0192e
+}
+body.camargo-interna #conteudo .historia-grid p,
+body.camargo-interna #conteudo .historia-grid li,
+body.camargo-interna #conteudo .historia-grid strong{color:#f3f3f3!important}
+body.camargo-interna #conteudo .historia-grid a{color:#ff9baa!important}
+body.camargo-interna #conteudo .historia-grid strong{font-weight:800}
+body.camargo-interna #conteudo .cfc-history-milestone p{color:#e2e2e5}
+body.camargo-interna #conteudo .cfc-history-milestone strong{color:#fff;font-weight:800}
+body.camargo-interna #conteudo .patro-card a{color:#a31529!important;font-weight:800}
+body.camargo-interna #conteudo .patro-card a:hover{color:#700c1b!important}
+body.camargo-interna #conteudo .cfc-section-intro{line-height:1.65}
+body.camargo-interna #conteudo .stats-section-toggle strong{font-weight:800;font-size:1.08rem}
+body.camargo-interna #conteudo .stats-section-toggle small{color:#d6d6d9;font-size:.83rem}
+body.camargo-interna #conteudo .stats-section-panel{color:#f2f2f2}
+body.camargo-interna #conteudo .stats-section-panel h2,
+body.camargo-interna #conteudo .stats-section-panel h3{color:#fff}
+body.camargo-interna #conteudo .stats-section-panel .stats-tabela th{font-weight:800}
+body.camargo-interna #conteudo .jogador-card .jogador-nome,
+body.camargo-interna #conteudo .jogador-card-futsal .jogador-nome{color:#fff;font-weight:800}
+body.camargo-interna #conteudo .jogador-card .jogador-posicao,
+body.camargo-interna #conteudo .jogador-card-futsal .jogador-posicao{color:#dedee1}
+body.camargo-interna #conteudo #elenco-campo .comissao-label,
+body.camargo-interna #conteudo #elenco-futsal .comissao-label{font-size:clamp(1.2rem,2.5vw,1.75rem)!important;font-weight:800!important}
+body.camargo-interna #conteudo .galeria-card-titulo{color:#fff;font-weight:800;line-height:1.4}
+body.camargo-interna #conteudo .galeria-tab{font-weight:800}
+body.camargo-interna #conteudo .galeria-tab-content h2,
+body.camargo-interna #conteudo .galeria-tab-content h3{color:#fff}
+body.camargo-interna #conteudo .galeria-tab-content p{line-height:1.6}
+body:not(.camargo-interna) #noticias{background:#29292c!important;color:#f5f5f5!important}
+body:not(.camargo-interna) #noticias h2,
+body:not(.camargo-interna) #noticias .v2-section-title,
+body:not(.camargo-interna) #noticias h3{color:#fff!important}
+body:not(.camargo-interna) #noticias p,
+body:not(.camargo-interna) #noticias .v2-section-subtitle{color:#e2e2e5!important}
+body:not(.camargo-interna) #noticias a{color:#ffacb7;font-weight:800}
+body:not(.camargo-interna) #noticias .v2-section-title,
+body:not(.camargo-interna) #jogos .v2-section-title,
+body:not(.camargo-interna) #elenco .v2-section-title,
+body:not(.camargo-interna) #conquistas .v2-section-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.15}
+body:not(.camargo-interna) .v2-numbers{color:#fff}
+body:not(.camargo-interna) .v2-numbers *{color:#fff}
+@media(max-width:700px){
+ body.camargo-interna #conteudo .cfc31-band{padding:14px 15px;min-height:58px}
+ body.camargo-interna #conteudo .cfc31-band strong{font-size:1.45rem!important}
+ body.camargo-interna #conteudo .cfc-subnav{gap:8px}
+ body.camargo-interna #conteudo .cfc-subnav a{flex:1 1 auto;font-size:.78rem}
+ body.camargo-interna #conteudo .section-header .section-title{font-size:clamp(2.2rem,8vw,3.1rem)}
+ body.camargo-interna #conteudo .noticia-destaque-titulo{font-size:1.32rem}
+}
