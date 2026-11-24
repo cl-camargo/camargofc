@@ -578,7 +578,7 @@ window.CAMARGO_STATS = {
     {
       "jogador": "CHICO",
       "society": {
-        "jogos": 5,
+        "jogos": 6,
         "gols": 1
       },
       "junior": {
@@ -598,14 +598,14 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 43,
+        "jogos": 44,
         "gols": 2
       }
     },
     {
       "jogador": "CLOVIS HENRIQUE",
       "society": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "junior": {
@@ -625,7 +625,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 6,
+        "jogos": 7,
         "gols": 3
       }
     },
@@ -1658,7 +1658,7 @@ window.CAMARGO_STATS = {
     {
       "jogador": "ILVANE BICON",
       "society": {
-        "jogos": 12,
+        "jogos": 13,
         "gols": 3
       },
       "junior": {
@@ -1678,14 +1678,14 @@ window.CAMARGO_STATS = {
         "gols": 9
       },
       "total": {
-        "jogos": 49,
+        "jogos": 50,
         "gols": 15
       }
     },
     {
       "jogador": "JANIO",
       "society": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "junior": {
@@ -1705,7 +1705,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 3,
+        "jogos": 4,
         "gols": 0
       }
     },
@@ -1791,9 +1791,9 @@ window.CAMARGO_STATS = {
       }
     },
     {
-      "jogador": "JOAO MARCAL",
+      "jogador": "JOAO PEDRO MARCAL",
       "society": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "junior": {
@@ -1813,7 +1813,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 7,
+        "jogos": 8,
         "gols": 0
       }
     },
@@ -2630,7 +2630,7 @@ window.CAMARGO_STATS = {
     {
       "jogador": "MARKINHOS (Gol)",
       "society": {
-        "jogos": 30,
+        "jogos": 31,
         "gols": 0
       },
       "junior": {
@@ -2650,7 +2650,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 40,
+        "jogos": 41,
         "gols": 0
       }
     },
@@ -3980,7 +3980,7 @@ window.CAMARGO_STATS = {
     {
       "jogador": "YOKIDA",
       "society": {
-        "jogos": 3,
+        "jogos": 4,
         "gols": 1
       },
       "junior": {
@@ -4000,7 +4000,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 10,
+        "jogos": 11,
         "gols": 2
       }
     },
@@ -4070,6 +4070,33 @@ window.CAMARGO_STATS = {
       },
       "futsal": {
         "jogos": 1,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
+        "gols": 0
+      }
+    },
+    {
+      "jogador": "CACIO HEMILIANO",
+      "society": {
+        "jogos": 1,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
         "gols": 0
       },
       "campo": {
@@ -10557,7 +10584,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2025,
-      "jogador": "JOAO MARCAL",
+      "jogador": "JOAO PEDRO MARCAL",
       "society": {
         "jogos": 0,
         "gols": 0
@@ -11175,7 +11202,7 @@ window.CAMARGO_STATS = {
       "ano": 2026,
       "jogador": "CHICO",
       "society": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "junior": {
@@ -11195,7 +11222,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 7,
+        "jogos": 8,
         "gols": 0
       }
     },
@@ -11203,7 +11230,7 @@ window.CAMARGO_STATS = {
       "ano": 2026,
       "jogador": "CLOVIS HENRIQUE",
       "society": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "junior": {
@@ -11223,7 +11250,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 6,
+        "jogos": 7,
         "gols": 3
       }
     },
@@ -11483,7 +11510,7 @@ window.CAMARGO_STATS = {
       "ano": 2026,
       "jogador": "JANIO",
       "society": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "junior": {
@@ -11503,15 +11530,15 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 3,
+        "jogos": 4,
         "gols": 0
       }
     },
     {
       "ano": 2026,
-      "jogador": "JOAO MARCAL",
+      "jogador": "JOAO PEDRO MARCAL",
       "society": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "junior": {
@@ -11531,7 +11558,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 5,
+        "jogos": 6,
         "gols": 0
       }
     },
@@ -11735,7 +11762,7 @@ window.CAMARGO_STATS = {
       "ano": 2026,
       "jogador": "YOKIDA",
       "society": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "junior": {
@@ -11755,7 +11782,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 7,
+        "jogos": 8,
         "gols": 1
       }
     },
@@ -11785,6 +11812,90 @@ window.CAMARGO_STATS = {
       "total": {
         "jogos": 0,
         "gols": 1
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "MARKINHOS (Gol)",
+      "society": {
+        "jogos": 1,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
+        "gols": 0
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "CACIO HEMILIANO",
+      "society": {
+        "jogos": 1,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
+        "gols": 0
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "ILVANE BICON",
+      "society": {
+        "jogos": 1,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
+        "gols": 0
       }
     }
   ],
@@ -12049,6 +12160,15 @@ window.CAMARGO_STATS = {
       "minutos": 180,
       "tempos": null,
       "media": 3
+    },
+    {
+      "ano": 2026,
+      "jogador": "MARKINHOS (Gol)",
+      "golsSofridos": 1,
+      "jogosNoGol": 1,
+      "minutos": null,
+      "tempos": null,
+      "media": 1
     }
   ]
 };
