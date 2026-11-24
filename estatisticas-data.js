@@ -3870,33 +3870,6 @@ window.CAMARGO_STATS = {
       }
     },
     {
-      "jogador": "WELLYSON (Gol)",
-      "society": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "junior": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "futsal": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "campo": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "areia": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "total": {
-        "jogos": 0,
-        "gols": 0
-      }
-    },
-    {
       "jogador": "WESLEY VIEGA",
       "society": {
         "jogos": 1,
@@ -5822,7 +5795,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2021,
-      "jogador": "WELLYSON (Gol)",
+      "jogador": "WALISSON (Gol)",
       "society": {
         "jogos": 0,
         "gols": 0
