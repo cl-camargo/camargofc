@@ -657,7 +657,7 @@ window.CAMARGO_STATS = {
       }
     },
     {
-      "jogador": "CORDEIRO",
+      "jogador": "MARCOS CORDEIRO",
       "society": {
         "jogos": 1,
         "gols": 1
@@ -2115,7 +2115,7 @@ window.CAMARGO_STATS = {
       }
     },
     {
-      "jogador": "JV AQUINO",
+      "jogador": "JOÃO VICTOR AQUINO",
       "society": {
         "jogos": 3,
         "gols": 1
@@ -2142,7 +2142,7 @@ window.CAMARGO_STATS = {
       }
     },
     {
-      "jogador": "JV COLOMBIANO",
+      "jogador": "JOÃO VICTOR \"COLOMBIANO\"",
       "society": {
         "jogos": 0,
         "gols": 0
@@ -3411,7 +3411,7 @@ window.CAMARGO_STATS = {
       }
     },
     {
-      "jogador": "SOUZA",
+      "jogador": "GABRIEL \"SOUSA\"",
       "society": {
         "jogos": 0,
         "gols": 0
@@ -3573,7 +3573,7 @@ window.CAMARGO_STATS = {
       }
     },
     {
-      "jogador": "VICTOR GABRIEL",
+      "jogador": "VICTOR GABRIEL B.",
       "society": {
         "jogos": 0,
         "gols": 0
@@ -4424,7 +4424,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2021,
-      "jogador": "CORDEIRO",
+      "jogador": "MARCOS CORDEIRO",
       "society": {
         "jogos": 1,
         "gols": 1
@@ -5040,7 +5040,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2021,
-      "jogador": "JV AQUINO",
+      "jogador": "JOÃO VICTOR AQUINO",
       "society": {
         "jogos": 3,
         "gols": 1
@@ -7392,7 +7392,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2022,
-      "jogador": "VICTOR GABRIEL",
+      "jogador": "VICTOR GABRIEL B.",
       "society": {
         "jogos": 0,
         "gols": 0
@@ -8512,7 +8512,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2023,
-      "jogador": "JV COLOMBIANO",
+      "jogador": "JOÃO VICTOR \"COLOMBIANO\"",
       "society": {
         "jogos": 0,
         "gols": 0
@@ -10948,7 +10948,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2025,
-      "jogador": "SOUZA",
+      "jogador": "GABRIEL \"SOUSA\"",
       "society": {
         "jogos": 0,
         "gols": 0
