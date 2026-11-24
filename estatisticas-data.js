@@ -11923,7 +11923,7 @@ window.CAMARGO_STATS = {
       "jogador": "BRENNER (Gol)",
       "golsSofridos": 13,
       "jogosNoGol": 9,
-      "minutos": null,
+      "minutos": 300,
       "tempos": null,
       "media": 1.4444444444444444
     },
@@ -11932,7 +11932,7 @@ window.CAMARGO_STATS = {
       "jogador": "JOAO VICTOR MOTA",
       "golsSofridos": 23,
       "jogosNoGol": 6,
-      "minutos": null,
+      "minutos": 240,
       "tempos": null,
       "media": 3.8333333333333335
     },
@@ -11968,7 +11968,7 @@ window.CAMARGO_STATS = {
       "jogador": "MATHEUS LIMA (Gol)",
       "golsSofridos": 2,
       "jogosNoGol": 2,
-      "minutos": null,
+      "minutos": 180,
       "tempos": null,
       "media": 1
     },
@@ -11977,7 +11977,7 @@ window.CAMARGO_STATS = {
       "jogador": "BONFIM (Gol)",
       "golsSofridos": 3,
       "jogosNoGol": 2,
-      "minutos": null,
+      "minutos": 24,
       "tempos": null,
       "media": 1.5
     },
@@ -12150,7 +12150,14 @@ window.CAMARGO_STATS = {
       "jogosNoGol": 1,
       "minutos": 90,
       "tempos": null,
-      "media": 1
+      "media": 1,
+      "jogosPorModalidade": {
+        "campo": 1,
+        "society": 0,
+        "junior": 0,
+        "futsal": 0,
+        "areia": 0
+      }
     },
     {
       "ano": 2026,
