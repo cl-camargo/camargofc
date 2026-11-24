@@ -14,7 +14,9 @@ dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close();});
 function cell(label,value){var x=document.createElement("div");x.className="cfc-player-stat";var v=document.createElement("strong");v.textContent=value;var t=document.createElement("span");t.textContent=label;x.append(v,t);return x;}
 cards.forEach(card=>{
 var name=card.querySelector(".jogador-nome")?.textContent?.trim();if(!name)return;
-var matches=totals.filter(x=>norm(x.jogador)===norm(name));
+var aliases={"ANDRE":"ANDRE NUNES PUGMIL","ANDRE NUNES":"ANDRE NUNES PUGMIL","CARLOS HENRIQUE":"CARLOS HENRIQUE ROCHA"};
+var canonical=aliases[norm(name)]||norm(name);
+var matches=totals.filter(x=>norm(x.jogador)===canonical);
 card.setAttribute("tabindex","0");card.setAttribute("role","button");card.setAttribute("aria-label","Abrir ficha de "+name);
 function open(){
 var body=dialog.querySelector(".cfc-player-detail");body.replaceChildren();
