@@ -44,7 +44,7 @@
 @media(max-width:600px){#agenda .agenda-jogo.agenda-linha-item{padding:12px!important}#agenda .agenda-jogo .agenda-jogo-meta{gap:6px 10px;font-size:11px}#agenda .agenda-jogo.agenda-linha-item .agenda-jogo-times{gap:6px;padding:16px 0}#agenda .agenda-jogo .agenda-time-nome{font-size:11px}#agenda .agenda-jogo .agenda-placar-final{min-width:0;font-size:28px}}
 </style>
 <style>#agenda .agenda-jogo.agenda-linha-item{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 24px;align-items:center}#agenda .agenda-jogo .agenda-badge-proximo,#agenda .agenda-jogo .agenda-badge-encerrado{grid-column:1/-1;justify-self:start;position:static}#agenda .agenda-jogo.agenda-linha-item .agenda-jogo-times{grid-column:1;grid-row:2;width:100%!important;max-width:none!important;margin:0!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}#agenda .agenda-jogo .agenda-jogo-meta{grid-column:2;grid-row:2;margin:0;padding:12px 0 12px 20px;border:0;border-left:1px solid #ccc}#agenda .agenda-jogo .agenda-gols,#agenda .agenda-jogo .agenda-escalacao{grid-column:1/-1}#agenda .agenda-noticia-link{grid-column:1;margin:0}#agenda .agenda-jogo .compartilhar-btn{grid-column:2;justify-self:end;margin:0}@media(max-width:700px){#agenda .agenda-jogo.agenda-linha-item .agenda-jogo-times{grid-column:1/-1;grid-row:2}#agenda .agenda-jogo .agenda-jogo-meta{grid-column:1/-1;grid-row:3;border-left:0;border-top:1px solid #ccc;padding:10px 0}}</style>
-<style>#agenda .agenda-jogo .agenda-gols{grid-column:1;justify-content:flex-start;text-align:left;margin:0;padding:8px 0}#agenda .agenda-jogo .agenda-escalacao{grid-column:1/-1;width:100%;margin:0}#agenda .agenda-jogo .agenda-escalacao summary{text-align:left!important;justify-content:flex-start!important;padding:8px 0!important}#agenda .agenda-noticia-link{grid-column:1;text-align:left!important;margin:0}#agenda .agenda-noticia-link a{padding:6px 0!important}#agenda .agenda-jogo.agenda-linha-item{row-gap:5px!important}@media(max-width:700px){#agenda .agenda-jogo .agenda-gols{grid-column:1/-1}}</style></head>
+<style>#agenda .agenda-jogo .agenda-gols{grid-column:1;justify-content:flex-start;text-align:left;margin:0;padding:8px 0}#agenda .agenda-jogo .agenda-escalacao{grid-column:1/-1;width:100%;margin:0}#agenda .agenda-jogo .agenda-escalacao summary{text-align:left!important;justify-content:flex-start!important;padding:8px 0!important}#agenda .agenda-noticia-link{grid-column:1;text-align:left!important;margin:0}#agenda .agenda-noticia-link a{padding:6px 0!important}#agenda .agenda-jogo.agenda-linha-item{row-gap:5px!important}@media(max-width:700px){#agenda .agenda-jogo .agenda-gols{grid-column:1/-1}}</style><style>#agenda .escalacao-subs-lista{max-width:560px;width:100%;margin-left:0;margin-right:auto}#agenda .escalacao-subs-lista .escalacao-sub-item{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:center;justify-content:start!important}#agenda .escalacao-sub-item .sub-par{display:flex;align-items:center;gap:7px;min-width:0;text-align:left;justify-content:flex-start}#agenda .sub-par .escalacao-seta-entrada,#agenda .sub-par .escalacao-seta-saida{margin:0!important;flex-shrink:0}#agenda .sub-par .escalacao-num{flex-shrink:0}#agenda .sub-par>span:last-child{overflow-wrap:anywhere}@media(max-width:480px){#agenda .escalacao-subs-lista .escalacao-sub-item{gap:8px}#agenda .escalacao-sub-item .sub-par{gap:4px;font-size:12px}}</style></head>
 <body class="camargo-interna">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
@@ -190,11 +190,11 @@
             <span class="escalacao-jogador"><span class="escalacao-num">9</span>André</span>
           </div></div>
           <div class="escalacao-bloco"><div class="escalacao-bloco-titulo">Substituições</div><div class="escalacao-subs-lista">
-            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span>Ariostocly<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">2</span>Leomar Loiola</span>
-            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span>Yokida<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span>Gabriel Tolintino</span>
-            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span>Chico<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span>Caio</span>
-            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span>Fabiano<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">18</span>Clovis Henrique</span>
-            <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">8</span>João Marcelo<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span>Carlos Henrique</span>
+            <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span><span>Ariostocly</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">2</span><span>Leomar Loiola</span></span></span>
+            <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span><span>Yokida</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span><span>Gabriel Tolintino</span></span></span>
+            <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span><span>Chico</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span><span>Caio</span></span></span>
+            <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span><span>Fabiano</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">18</span><span>Clovis Henrique</span></span></span>
+            <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">8</span><span>João Marcelo</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span><span>Carlos Henrique</span></span></span>
           </div></div>
         </details>
         <p class="agenda-noticia-link"><a href="noticia-semifinal-camargo-real-tocantins-2026.html">Ler notícia do jogo →</a></p>
@@ -248,11 +248,11 @@
           <div class="escalacao-bloco">
             <div class="escalacao-bloco-titulo">Substituições</div>
             <div class="escalacao-subs-lista">
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span>Chico<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span>Caio</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span>Yokida<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span>Gabriel Tolintino</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">2</span>Michael Davi<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span>Carlos Henrique</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span>Fabiano<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">18</span>Clovis Henrique</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">4</span>Daniel Mota<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">13</span>Leomar Loiola</span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span><span>Chico</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span><span>Caio</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span><span>Yokida</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span><span>Gabriel Tolintino</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">2</span><span>Michael Davi</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span><span>Carlos Henrique</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span><span>Fabiano</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">18</span><span>Clovis Henrique</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">4</span><span>Daniel Mota</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">13</span><span>Leomar Loiola</span></span></span>
             </div>
           </div>
         </details>
@@ -299,11 +299,11 @@
           <div class="escalacao-bloco">
             <div class="escalacao-bloco-titulo">Substituições</div>
             <div class="escalacao-subs-lista">
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">16</span>Leomar Loiola<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">4</span>Daniel</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span>Clovis Henrique<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">2</span>Michael Davi</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span>Ariostocly<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">18</span>João Marçal</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span>Yokida<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span>Carlos Henrique</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span>Chico<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span>João Paulo</span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">16</span><span>Leomar Loiola</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">4</span><span>Daniel</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span><span>Clovis Henrique</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">2</span><span>Michael Davi</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span><span>Ariostocly</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">18</span><span>João Marçal</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span><span>Yokida</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span><span>Carlos Henrique</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span><span>Chico</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span><span>João Paulo</span></span></span>
             </div>
           </div>
         </details>
@@ -353,11 +353,11 @@
           <div class="escalacao-bloco">
             <div class="escalacao-bloco-titulo">Substituições</div>
             <div class="escalacao-subs-lista">
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">2</span>Gabriel Antonio<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">4</span>Daniel</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">14</span>Janio<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">5</span>David</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">18</span>João Marçal<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">9</span>André</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">5</span>David<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">7</span>Fabiano</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">15</span>Carlos Henrique<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">8</span>João Marcelo</span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">2</span><span>Gabriel Antonio</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">4</span><span>Daniel</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">14</span><span>Janio</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">5</span><span>David</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">18</span><span>João Marçal</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">9</span><span>André</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">5</span><span>David</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">7</span><span>Fabiano</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">15</span><span>Carlos Henrique</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">8</span><span>João Marcelo</span></span></span>
             </div>
           </div>
         </details>
@@ -409,9 +409,9 @@
           <div class="escalacao-bloco">
             <div class="escalacao-bloco-titulo">Substituições</div>
             <div class="escalacao-subs-lista">
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span>Ariostocly<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">8</span>Caio</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">18</span>João Marçal<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span>Janio</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">8</span>Caio<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span>Carlos Henrique</span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span><span>Ariostocly</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">8</span><span>Caio</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">18</span><span>João Marçal</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span><span>Janio</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">8</span><span>Caio</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span><span>Carlos Henrique</span></span></span>
             </div>
           </div>
         </details>
@@ -461,12 +461,12 @@
           <div class="escalacao-bloco">
             <div class="escalacao-bloco-titulo">Substituições</div>
             <div class="escalacao-subs-lista">
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">12</span>Iago<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">1</span>Lucas Cauã</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">6</span>Guilherme<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span>Yokida</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span>Fabiano<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">13</span>Michael D.</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span>Chico<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">3</span>Caio</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span>Gabriel Tolintino<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">14</span>João P. Marçal</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">16</span>David Peixão<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span>Clovis Henrique</span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">12</span><span>Iago</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">1</span><span>Lucas Cauã</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">6</span><span>Guilherme</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span><span>Yokida</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">17</span><span>Fabiano</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">13</span><span>Michael D.</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span><span>Chico</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">3</span><span>Caio</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">7</span><span>Gabriel Tolintino</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">14</span><span>João P. Marçal</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">16</span><span>David Peixão</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">19</span><span>Clovis Henrique</span></span></span>
             </div>
           </div>
         </details>
@@ -520,9 +520,9 @@
           <div class="escalacao-bloco">
             <div class="escalacao-bloco-titulo">Substituições</div>
             <div class="escalacao-subs-lista">
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span>Chico<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span>Carlos Henrique</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span>Ariostocly<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">7</span>Fabiano</span>
-              <span class="escalacao-sub-item"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">18</span>João Pedro<span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span>Clovis Henrique</span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">10</span><span>Chico</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">15</span><span>Carlos Henrique</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">11</span><span>Ariostocly</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">7</span><span>Fabiano</span></span></span>
+              <span class="escalacao-sub-item"><span class="sub-par"><span class="escalacao-seta-saida">↓</span><span class="escalacao-num">18</span><span>João Pedro</span></span><span class="sub-par"><span class="escalacao-seta-entrada">↑</span><span class="escalacao-num">20</span><span>Clovis Henrique</span></span></span>
             </div>
           </div>
         </details>
