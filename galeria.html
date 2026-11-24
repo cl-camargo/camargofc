@@ -35,7 +35,7 @@
 
 
 <link rel="stylesheet" href="camargo-layout.css?v=1">
-</head>
+<style id="profile-gallery-refresh">body.camargo-interna #conteudo #galeria .galeria-tabs{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px!important;background:transparent!important;border:0!important;padding:0!important;margin:0 0 16px!important}body.camargo-interna #conteudo #galeria .galeria-tabs .galeria-tab{display:flex!important;align-items:center!important;justify-content:center!important;gap:6px;width:100%!important;min-height:58px!important;padding:10px 8px!important;border:1px solid #555!important;border-radius:8px!important;background:#29292c!important;color:#eee!important;box-shadow:none!important;font-size:13px!important;line-height:1.25!important;text-align:center!important;letter-spacing:.02em!important}body.camargo-interna #conteudo #galeria .galeria-tabs .galeria-tab[aria-selected="true"],body.camargo-interna #conteudo #galeria .galeria-tabs .galeria-tab.ativo{background:#a9162b!important;border-color:#d22b40!important;color:#fff!important;box-shadow:inset 0 -3px 0 #fff!important}body.camargo-interna #conteudo #galeria .galeria-tab svg{width:20px;height:20px;flex:none}@media(max-width:700px){body.camargo-interna #conteudo #galeria .galeria-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.camargo-interna #conteudo #galeria .galeria-tabs .galeria-tab{font-size:12px!important;min-height:62px!important}}</style></head>
 <body class="camargo-interna">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
@@ -98,10 +98,10 @@
     <p class="cfc-section-intro">Explore os registros históricos do clube. Use as abas para separar conquistas, atletas, times históricos e bastidores; nas duas últimas, pesquise por ano, competição ou nome.</p>
     <div class="cfc31-band"><span>01 /</span><strong>Acervo fotográfico</strong></div>
     <div class="galeria-tabs" role="tablist" aria-label="Categorias de fotografias">
-      <button class="galeria-tab ativo" type="button" aria-controls="gal-titulos" aria-selected="true" onclick="abrirGaleria(this,'gal-titulos')">🏆 Conquistas</button>
-      <button class="galeria-tab" type="button" aria-controls="gal-atletas" aria-selected="false" onclick="abrirGaleria(this,'gal-atletas')">👤 Jogadores históricos</button>
-      <button class="galeria-tab" type="button" aria-controls="gal-jogos" aria-selected="false" onclick="abrirGaleria(this,'gal-jogos')">⚽ Times históricos</button>
-      <button class="galeria-tab" type="button" aria-controls="gal-bastidores" aria-selected="false" onclick="abrirGaleria(this,'gal-bastidores')">🎬 Bastidores</button>
+      <button class="galeria-tab ativo" type="button" aria-controls="gal-titulos" aria-selected="true" onclick="abrirGaleria(this,'gal-titulos')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v7a5 5 0 0 1-10 0zM7 6H3v2a4 4 0 0 0 4 4M17 6h4v2a4 4 0 0 1-4 4"/></svg> Conquistas</button>
+      <button class="galeria-tab" type="button" aria-controls="gal-atletas" aria-selected="false" onclick="abrirGaleria(this,'gal-atletas')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg> Jogadores históricos</button>
+      <button class="galeria-tab" type="button" aria-controls="gal-jogos" aria-selected="false" onclick="abrirGaleria(this,'gal-jogos')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m12 7 5 4-2 6H9l-2-6zM12 7V3M17 11l4-2M15 17l3 3M9 17l-3 3M7 11 3 9"/></svg> Times históricos</button>
+      <button class="galeria-tab" type="button" aria-controls="gal-bastidores" aria-selected="false" onclick="abrirGaleria(this,'gal-bastidores')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="m3 8 16-5 2 5M8 6l3 2M14 4l3 3M3 12h18"/></svg> Bastidores</button>
     </div>
 
     <!-- Conquistas -->
