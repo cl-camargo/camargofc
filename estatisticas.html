@@ -594,7 +594,7 @@ body.camargo-interna #conteudo #estatisticas .stats-section-number{font-family:I
           </label>
         </div>
         <p class="stats-goalie-context" id="goleirosContexto">Total histórico · todas as modalidades · ranking por jogos</p>
-        <p class="stats-goalie-note" id="goleirosNota" hidden>Na modalidade selecionada, o ranking considera as participações registradas. Gols sofridos e minutos são exibidos no total do período.</p>
+        <p class="stats-goalie-note" id="goleirosNota" hidden>Na modalidade selecionada, são usados os jogos no gol confirmados quando disponíveis; nos demais casos, o número é estimado pelas participações, limitado ao total de jogos no gol. Gols sofridos e minutos são exibidos no total do período.</p>
         <div class="tabela-wrap stats-tabela-wrap" id="goleirosTabelaWrap">
           <table class="jogos-tabela stats-tabela stats-goalkeeper-table">
             <thead>
@@ -619,7 +619,7 @@ body.camargo-interna #conteudo #estatisticas .stats-section-number{font-family:I
 
 <script src="menu-loader.js?v=20261118-3"></script>
 <script src="jogos-data.js?v=20261124-5"></script>
-<script src="estatisticas-data.js?v=20261124-6"></script>
+<script src="estatisticas-data.js?v=20261124-7"></script>
 <script src="dashboard-estatisticas-v2.js?v=20261124-4" defer></script>
 <script>
 (function () {
@@ -719,11 +719,17 @@ body.camargo-interna #conteudo #estatisticas .stats-section-number{font-family:I
           jogosNoGol: 0,
           golsSofridos: 0,
           minutos: 0,
-          possuiMinutos: false
+          possuiMinutos: false,
+          jogosModalidadeConfirmados: 0,
+          possuiModalidadeConfirmada: false
         };
       }
 
       agrupados[chave].jogosNoGol += Number(item.jogosNoGol) || 0;
+      if (item.jogosPorModalidade) {
+        agrupados[chave].possuiModalidadeConfirmada = true;
+        agrupados[chave].jogosModalidadeConfirmados += Number(item.jogosPorModalidade[modalidadeId]) || 0;
+      }
       agrupados[chave].golsSofridos += Number(item.golsSofridos) || 0;
       if (item.minutos !== null && item.minutos !== undefined) {
         agrupados[chave].minutos += Number(item.minutos) || 0;
@@ -733,7 +739,7 @@ body.camargo-interna #conteudo #estatisticas .stats-section-number{font-family:I
 
     var lista = Object.keys(agrupados).map(function (chave) {
       var item = agrupados[chave];
-      if (modalidadeId !== "todas") item.jogosNoGol = participacoes[chave] || 0;
+      if (modalidadeId !== "todas") item.jogosNoGol = item.possuiModalidadeConfirmada ? item.jogosModalidadeConfirmados : Math.min(item.jogosNoGol, participacoes[chave] || 0);
       return item;
     }).filter(function (item) {
       return item.jogosNoGol > 0 && (!termo || normalizar(item.jogador).includes(termo));
