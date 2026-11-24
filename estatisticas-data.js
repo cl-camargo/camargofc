@@ -12166,7 +12166,7 @@ window.CAMARGO_STATS = {
       "jogador": "MARKINHOS (Gol)",
       "golsSofridos": 1,
       "jogosNoGol": 1,
-      "minutos": null,
+      "minutos": 12,
       "tempos": null,
       "media": 1
     }
