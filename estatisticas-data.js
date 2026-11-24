@@ -2630,7 +2630,7 @@ window.CAMARGO_STATS = {
     {
       "jogador": "MARKINHOS (Gol)",
       "society": {
-        "jogos": 31,
+        "jogos": 33,
         "gols": 0
       },
       "junior": {
@@ -2650,7 +2650,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 41,
+        "jogos": 43,
         "gols": 0
       }
     },
@@ -7056,7 +7056,7 @@ window.CAMARGO_STATS = {
       "ano": 2022,
       "jogador": "MARKINHOS (Gol)",
       "society": {
-        "jogos": 12,
+        "jogos": 14,
         "gols": 0
       },
       "junior": {
@@ -7076,7 +7076,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 12,
+        "jogos": 14,
         "gols": 0
       }
     },
