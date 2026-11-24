@@ -178,3 +178,9 @@ body.camargo-interna #historia .historia-grid .timeline{color:#24262b!important}
 body.camargo-interna #historia .historia-grid .timeline li{color:#24262b!important;font-size:1rem;line-height:1.65}
 body.camargo-interna #historia .historia-grid .timeline-year{color:#94172a!important;font-weight:800!important;font-size:1.1rem}
 body.camargo-interna #historia .historia-grid .timeline-sub{color:#34363b!important;font-weight:500;line-height:1.6}
+
+/* Legibilidade: mantém vermelho dos titulares e paleta rubro-negra. */
+body.camargo-interna #agenda .agenda-jogo .escalacao-seta-saida+.escalacao-num{color:#b9152b}
+body.camargo-interna #agenda .agenda-jogo .escalacao-seta-entrada+.escalacao-num{color:#147a3e}
+body.camargo-interna #elenco .elenco-stats-nota{color:#c4c4c8}
+body.camargo-interna #estatisticas .stats-fonte{color:#b0b0b5}
