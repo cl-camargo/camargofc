@@ -12203,10 +12203,10 @@ window.CAMARGO_STATS = {
       "ano": 2023,
       "jogador": "WALISSON (Gol)",
       "golsSofridos": 78,
-      "jogosNoGol": 30,
+      "jogosNoGol": 31,
       "minutos": 1125,
       "tempos": 56,
-      "media": 2.6
+      "media": 2.52
     },
     {
       "ano": 2024,
