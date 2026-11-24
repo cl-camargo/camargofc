@@ -2858,3 +2858,6 @@ img, video, iframe { max-width: 100%; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Ícones de contato do rodapé */
+footer a[aria-label="Instagram"],footer a[aria-label="WhatsApp"],footer a[aria-label="E-mail"]{width:54px!important;height:54px!important}footer a[aria-label="Instagram"] svg,footer a[aria-label="WhatsApp"] svg,footer a[aria-label="E-mail"] svg{width:34px!important;height:34px!important;max-width:none!important;max-height:none!important;flex:none!important}
