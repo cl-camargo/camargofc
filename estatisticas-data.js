@@ -4138,6 +4138,33 @@ window.CAMARGO_STATS = {
         "jogos": 0,
         "gols": 0
       }
+    },
+    {
+      "jogador": "WELLYSON (Gol)",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 0,
+        "gols": 0
+      }
     }
   ],
   "registros": [
@@ -5795,7 +5822,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2021,
-      "jogador": "WALISSON (Gol)",
+      "jogador": "WELLYSON (Gol)",
       "society": {
         "jogos": 0,
         "gols": 0
