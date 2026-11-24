@@ -4,7 +4,21 @@
   Object.keys(jogos).forEach(function (modalidade) {
     const corpo = document.getElementById('acc-' + modalidade);
     const tabela = corpo && corpo.querySelector('tbody');
-    if (tabela) tabela.innerHTML = jogos[modalidade];
+    if (tabela) {
+      tabela.innerHTML = jogos[modalidade];
+      tabela.querySelectorAll('tr[data-res]').forEach(function (linha) {
+        const ordem = ['td-num','td-data','td-res','td-placar','td-adv','td-tipo','td-local'];
+        ordem.forEach(function (classe) {
+          let celula = linha.querySelector('.' + classe);
+          if (!celula) {
+            celula = document.createElement('td');
+            celula.className = classe;
+            celula.textContent = '—';
+          }
+          linha.appendChild(celula);
+        });
+      });
+    }
     // Indicadores de todas as modalidades são calculados a partir dos jogos exibidos.
     if (corpo && tabela) {
       const partidas = Array.from(tabela.querySelectorAll('tr[data-res]'));
