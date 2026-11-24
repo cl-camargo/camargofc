@@ -4111,6 +4111,60 @@ window.CAMARGO_STATS = {
         "jogos": 1,
         "gols": 0
       }
+    },
+    {
+      "jogador": "LUIZ NOGUEIRA",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 0,
+        "gols": 0
+      }
+    },
+    {
+      "jogador": "VICTOR GABRIEL",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 0,
+        "gols": 0
+      }
     }
   ],
   "registros": [
@@ -11895,6 +11949,62 @@ window.CAMARGO_STATS = {
       },
       "total": {
         "jogos": 1,
+        "gols": 0
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "LUIZ NOGUEIRA",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 0,
+        "gols": 0
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "VICTOR GABRIEL",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 0,
         "gols": 0
       }
     }
