@@ -134,6 +134,9 @@ html,body{max-width:100%;overflow-x:hidden}
 
 
 <link rel="stylesheet" href="camargo-layout.css?v=1">
+<style id="stats-section-number-standard">
+body.camargo-interna #conteudo #estatisticas .stats-section-number{font-family:Inter,sans-serif!important;font-size:.75rem!important;font-weight:800!important;letter-spacing:.13em!important;color:#fff!important;opacity:.85;margin-right:10px;vertical-align:middle}
+</style>
 </head>
 <body class="camargo-interna">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -182,7 +185,7 @@ html,body{max-width:100%;overflow-x:hidden}
 
     
 
-    <div class="cfc31-band"><strong>01 / Top 5 Atletas | +Jogos +Gols</strong></div>
+    <div class="cfc31-band"><span>01 /</span><strong>Top 5 Atletas | +Jogos +Gols</strong></div>
     <div id="stats-dashboard-v2" class="v2-dashboard" aria-label="Rankings gerais do Camargo FC"></div>
 
     
@@ -190,7 +193,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <section class="stats-section-item">
         <button class="stats-section-toggle" type="button" aria-expanded="false" aria-controls="statsPanelPartidas">
           <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span><strong>02 / Jogos por modalidade</strong><small>Placares e histórico de jogos</small></span>
+          <span><strong><span class="stats-section-number">02 /</span> Jogos por modalidade</strong><small>Placares e histórico de jogos</small></span>
           <span class="stats-section-arrow" aria-hidden="true"></span>
         </button>
         <div class="stats-section-panel" id="statsPanelPartidas" hidden>
@@ -526,7 +529,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <section class="stats-section-item">
         <button class="stats-section-toggle" type="button" aria-expanded="false" aria-controls="statsPanelJogadores">
           <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span><strong>03 / Jogadores</strong><small>Ranking por gols ou partidas disputadas</small></span>
+          <span><strong><span class="stats-section-number">03 /</span> Jogadores</strong><small>Ranking por gols ou partidas disputadas</small></span>
           <span class="stats-section-arrow" aria-hidden="true"></span>
         </button>
         <div class="stats-section-panel stats-player-panel" id="statsPanelJogadores" hidden>
@@ -572,7 +575,7 @@ html,body{max-width:100%;overflow-x:hidden}
     <section class="stats-goleiros stats-section-item" aria-labelledby="tituloGoleiros">
       <button class="stats-section-toggle" type="button" aria-expanded="false" aria-controls="statsPanelGoleiros">
         <span class="jogos-menu-hamb" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span><strong id="tituloGoleiros">04 / Goleiros</strong><small>Ranking de jogos por ano e modalidade</small></span>
+        <span><strong id="tituloGoleiros"><span class="stats-section-number">04 /</span> Goleiros</strong><small>Ranking de jogos por ano e modalidade</small></span>
         <span class="stats-section-arrow" aria-hidden="true"></span>
       </button>
       <div class="stats-section-panel stats-goalkeeper-panel" id="statsPanelGoleiros" hidden>
