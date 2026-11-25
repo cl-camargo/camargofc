@@ -16,9 +16,9 @@
   function ativarMenu() {
     // Marca o link da página atual como ativo
     var pagina = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a[data-page], .nav-links a[data-pages]').forEach(function (link) {
+    document.querySelectorAll('.nav-links a[data-page], .nav-links a[data-pages], .nav-drawer a[data-page], .nav-drawer a[data-pages]').forEach(function (link) {
       var paginas = (link.dataset.pages || link.dataset.page || '').split(/\s+/);
-      if (paginas.indexOf(pagina) !== -1) {
+      if (paginas.indexOf(pagina) !== -1 || (pagina.indexOf('noticia-') === 0 && paginas.indexOf('noticias.html') !== -1)) {
         link.classList.add('nav-ativo');
         link.setAttribute('aria-current', 'page');
       }
