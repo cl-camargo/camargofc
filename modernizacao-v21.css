@@ -118,3 +118,17 @@ body .cfc-subnav{
 }
 #site-menu > nav{position:fixed;top:0;left:0;right:0;z-index:1000}
 @media(max-width:600px){body .cfc-subnav{gap:8px}}
+
+/* Refinamento institucional do menu — 25/11/2026 */
+#site-menu > nav{box-shadow:0 3px 12px rgba(0,0,0,.22)}
+#site-menu > nav .nav-logo{flex-shrink:0;gap:12px}
+#site-menu > nav .nav-escudo img{max-height:calc(100% - 8px);width:auto;max-width:100%;object-fit:contain}
+#site-menu > nav .nav-links a{position:relative;color:#d5d5d8;border-bottom:0;padding-bottom:0;transition:color .2s ease}
+#site-menu > nav .nav-links a::after{content:"";position:absolute;bottom:9px;left:50%;width:0;height:2px;border-radius:2px;background:#e52b40;transform:translateX(-50%);transition:width .2s ease}
+#site-menu > nav .nav-links a:hover{color:#ff5265}
+#site-menu > nav .nav-links a.nav-ativo,#site-menu > nav .nav-links a[aria-current="page"]{color:#fff}
+#site-menu > nav .nav-links a:hover::after,#site-menu > nav .nav-links a.nav-ativo::after,#site-menu > nav .nav-links a[aria-current="page"]::after{width:calc(100% - 28px)}
+#site-menu a:focus-visible,#site-menu button:focus-visible{outline:2px solid #ff5265;outline-offset:-4px}
+#site-menu .nav-drawer a[aria-current="page"]{color:#fff;background:rgba(192,25,46,.14);box-shadow:inset 3px 0 #e52b40}
+@media(min-width:1101px){#site-menu > nav{padding-inline:clamp(24px,2.2vw,48px)}#site-menu > nav .nav-links{gap:clamp(0px,.35vw,7px)}}
+@media(prefers-reduced-motion:reduce){#site-menu > nav .nav-links a,#site-menu > nav .nav-links a::after{transition:none}}
