@@ -12358,11 +12358,18 @@ window.CAMARGO_STATS = {
     {
       "ano": 2026,
       "jogador": "LUCAS CAUA",
-      "golsSofridos": 8,
-      "jogosNoGol": 3,
-      "minutos": 260,
+      "golsSofridos": 12,
+      "jogosNoGol": 4,
+      "minutos": 300,
       "tempos": null,
-      "media": 2.6666666666666665
+      "media": 3,
+      "jogosPorModalidade": {
+        "campo": 3,
+        "futsal": 1,
+        "society": 0,
+        "junior": 0,
+        "areia": 0
+      }
     },
     {
       "ano": 2026,
