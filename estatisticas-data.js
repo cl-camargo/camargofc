@@ -505,7 +505,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -517,7 +517,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 6,
+        "jogos": 7,
         "gols": 0
       }
     },
@@ -4042,7 +4042,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 2,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -4054,7 +4054,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 2,
+        "jogos": 1,
         "gols": 0
       }
     },
@@ -11263,7 +11263,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -11275,7 +11275,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 6,
+        "jogos": 7,
         "gols": 0
       }
     },
@@ -12117,34 +12117,6 @@ window.CAMARGO_STATS = {
       "total": {
         "jogos": 1,
         "gols": 1
-      }
-    },
-    {
-      "ano": 2026,
-      "jogador": "CARLOS HENRIQUE",
-      "society": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "junior": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "futsal": {
-        "jogos": 1,
-        "gols": 0
-      },
-      "campo": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "areia": {
-        "jogos": 0,
-        "gols": 0
-      },
-      "total": {
-        "jogos": 1,
-        "gols": 0
       }
     }
   ],

@@ -15,7 +15,7 @@ function cell(label,value){var x=document.createElement("div");x.className="cfc-
 cards.forEach(card=>{
 var name=card.querySelector(".jogador-nome")?.textContent?.trim();if(!name)return;
 var aliases={"LEOMAR":"LEOMAR LOIOLA","EDUARDO N":"EDUARDO NASCIMENTO","EDUARDO":"EDUARDO NASCIMENTO","GUILHERME":"GUILHERME FERREIRA","NEIVA JUNIOR":"JUNIOR NEIVA","VICTOR SOARES":"VICTOR SOARES GOL","JOAO MARCAL":"JOAO PEDRO MARCAL","JOAO P MARCAL":"JOAO PEDRO MARCAL","ANDRE":"ANDRE NUNES PUGMIL","ANDRE NUNES":"ANDRE NUNES PUGMIL","CARLOS HENRIQUE":"CARLOS HENRIQUE ROCHA"};
-var canonical=norm(name)==="CARLOS HENRIQUE"&&card.classList.contains("jogador-card-futsal")?"CARLOS HENRIQUE":(aliases[norm(name)]||norm(name));
+var canonical=aliases[norm(name)]||norm(name);
 var matches=totals.filter(x=>norm(x.jogador)===canonical);
 card.setAttribute("tabindex","0");card.setAttribute("role","button");card.setAttribute("aria-label","Abrir ficha de "+name);
 function open(){
