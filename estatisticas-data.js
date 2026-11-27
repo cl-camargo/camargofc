@@ -1,5 +1,5 @@
 window.CAMARGO_STATS = {
-  "atualizadoAte": "27/09/2026",
+  "atualizadoAte": "26/11/2026",
   "anos": [
     2021,
     2022,
@@ -1693,7 +1693,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -1705,7 +1705,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 4,
+        "jogos": 5,
         "gols": 0
       }
     },
@@ -1801,7 +1801,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -1813,7 +1813,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 8,
+        "jogos": 9,
         "gols": 0
       }
     },
@@ -2098,8 +2098,8 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 4,
-        "gols": 0
+        "jogos": 5,
+        "gols": 1
       },
       "campo": {
         "jogos": 1,
@@ -2110,8 +2110,8 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 6,
-        "gols": 0
+        "jogos": 7,
+        "gols": 1
       }
     },
     {
@@ -2395,7 +2395,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -2407,7 +2407,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 3,
+        "jogos": 4,
         "gols": 0
       }
     },
@@ -3691,8 +3691,8 @@ window.CAMARGO_STATS = {
         "gols": 1
       },
       "futsal": {
-        "jogos": 2,
-        "gols": 0
+        "jogos": 3,
+        "gols": 1
       },
       "campo": {
         "jogos": 0,
@@ -3703,8 +3703,8 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 11,
-        "gols": 2
+        "jogos": 12,
+        "gols": 3
       }
     },
     {
@@ -4042,7 +4042,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 1,
+        "jogos": 2,
         "gols": 0
       },
       "campo": {
@@ -4054,7 +4054,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 1,
+        "jogos": 2,
         "gols": 0
       }
     },
@@ -4096,7 +4096,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -4108,7 +4108,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       }
     },
@@ -4123,7 +4123,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -4135,7 +4135,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       }
     },
@@ -4163,6 +4163,33 @@ window.CAMARGO_STATS = {
       },
       "total": {
         "jogos": 0,
+        "gols": 0
+      }
+    },
+    {
+      "jogador": "LUCAS ANTONIO",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 1,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
         "gols": 0
       }
     }
@@ -11572,7 +11599,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -11584,7 +11611,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 4,
+        "jogos": 5,
         "gols": 0
       }
     },
@@ -11600,7 +11627,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -11612,7 +11639,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 6,
+        "jogos": 7,
         "gols": 0
       }
     },
@@ -11768,7 +11795,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -11780,7 +11807,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 3,
+        "jogos": 4,
         "gols": 0
       }
     },
@@ -11964,7 +11991,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -11976,7 +12003,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       }
     },
@@ -11992,7 +12019,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "futsal": {
-        "jogos": 0,
+        "jogos": 1,
         "gols": 0
       },
       "campo": {
@@ -12004,7 +12031,119 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
+        "jogos": 1,
+        "gols": 0
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "JUNIOR NEIVA",
+      "society": {
         "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 1,
+        "gols": 1
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
+        "gols": 1
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "LUCAS ANTONIO",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 1,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
+        "gols": 0
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "VINICIUS JADIEL",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 1,
+        "gols": 1
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
+        "gols": 1
+      }
+    },
+    {
+      "ano": 2026,
+      "jogador": "CARLOS HENRIQUE",
+      "society": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "junior": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "futsal": {
+        "jogos": 1,
+        "gols": 0
+      },
+      "campo": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "areia": {
+        "jogos": 0,
+        "gols": 0
+      },
+      "total": {
+        "jogos": 1,
         "gols": 0
       }
     }
