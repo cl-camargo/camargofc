@@ -40,6 +40,20 @@
 .stats-dual-link strong{font-size:15px}.stats-dual-link small{color:#888;font-size:11px}
 .stats-dual-arrow{width:9px;height:9px;margin-left:auto;border-top:2px solid #777;border-right:2px solid #777;transform:rotate(45deg)}
 </style>
+<style id="modalidades-modernas-20261127">
+.jogos-accordion .jogos-acc-item{border:1px solid #8884!important;border-radius:12px!important;overflow:hidden;margin-bottom:10px!important}
+.jogos-accordion .jogos-acc-header{display:flex!important;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px!important;min-height:76px;border:0!important;border-left:4px solid transparent!important;background:transparent!important;color:inherit!important;transition:background .18s,border-color .18s;text-align:left}
+.jogos-accordion .jogos-acc-header:hover{background:rgba(192,25,46,.08)!important}
+.jogos-accordion .jogos-acc-header[aria-expanded="true"]{background:rgba(192,25,46,.12)!important;border-left-color:#d5223b!important;border-bottom:1px solid #c0192e55!important}
+.jogos-accordion .jogos-acc-titulo{display:flex;align-items:center;gap:13px;min-width:0;font-weight:700;letter-spacing:.01em}
+.jogos-accordion .jogos-acc-emoji{display:grid!important;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:10px;background:#c0192e14;color:#e13b50;border:1px solid #c0192e38}
+.jogos-accordion .jogos-acc-emoji svg{width:25px;height:25px}
+.jogos-accordion .jogos-acc-meta{display:flex;align-items:center;gap:16px;flex-shrink:0}
+.jogos-accordion .jogos-acc-badge{font-size:12px!important;font-weight:600!important;border:1px solid #8885!important;border-radius:20px!important;padding:5px 10px!important;background:transparent!important;color:inherit!important;white-space:nowrap}
+.jogos-accordion .jogos-acc-arrow{width:9px;height:9px;flex-shrink:0}
+.jogos-accordion .jogos-acc-header:focus-visible{outline:2px solid #e13b50;outline-offset:-4px}
+@media(max-width:600px){.jogos-accordion .jogos-acc-header{padding:11px 10px!important;min-height:66px;gap:8px}.jogos-accordion .jogos-acc-titulo{gap:9px;font-size:14px!important;line-height:1.25}.jogos-accordion .jogos-acc-emoji{width:34px;height:34px;flex-basis:34px}.jogos-accordion .jogos-acc-emoji svg{width:21px;height:21px}.jogos-accordion .jogos-acc-meta{gap:8px}.jogos-accordion .jogos-acc-badge{font-size:10px!important;padding:4px 6px!important}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -122,7 +136,7 @@
       <div class="jogos-acc-item">
         <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-campo')">
           <div class="jogos-acc-titulo">
-            <span class="jogos-acc-emoji">⚽</span> Campo (Futebol 11)
+            <span class="jogos-acc-emoji" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 8 4 3-1.5 4.5h-5L8 11zM12 8V3M16 11l5-2M14.5 15.5l3 4M9.5 15.5l-3 4M8 11 3 9"/></svg></span> Campo (Futebol 11)
           </div>
           <div class="jogos-acc-meta">
             <span class="jogos-acc-badge">50 jogos</span>
@@ -175,7 +189,7 @@
       <div class="jogos-acc-item">
         <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-society')">
           <div class="jogos-acc-titulo">
-            <span class="jogos-acc-emoji">🏟️</span> Society (Futebol 7)
+            <span class="jogos-acc-emoji" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14M3 9h4v6H3m18-6h-4v6h4"/><circle cx="12" cy="12" r="3"/></svg></span> Society (Futebol 7)
           </div>
           <div class="jogos-acc-meta">
             <span class="jogos-acc-badge">113 jogos</span>
@@ -229,7 +243,7 @@
       <div class="jogos-acc-item">
         <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-junior')">
           <div class="jogos-acc-titulo">
-            <span class="jogos-acc-emoji">👦</span> Society / Camargo JR
+            <span class="jogos-acc-emoji" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 3v6c0 4-4 7-8 9-4-2-8-5-8-9V6z"/><path d="m12 7 1.5 3 3.5.5-2.5 2.5.5 3.5-3-1.5-3 1.5.5-3.5L7 10.5l3.5-.5z"/></svg></span> Society / Camargo JR
           </div>
           <div class="jogos-acc-meta">
             <span class="jogos-acc-badge">23 jogos</span>
@@ -283,7 +297,7 @@
       <div class="jogos-acc-item">
         <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-futsal')">
           <div class="jogos-acc-titulo">
-            <span class="jogos-acc-emoji">🥅</span> Futsal
+            <span class="jogos-acc-emoji" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V5h18v15M3 9h18M7 5v15m5-15v15m5-15v15M3 14h18"/><circle cx="12" cy="18" r="3" fill="currentColor" stroke="none"/></svg></span> Futsal
           </div>
           <div class="jogos-acc-meta">
             <span class="jogos-acc-badge">36 jogos</span>
@@ -337,7 +351,7 @@
       <div class="jogos-acc-item">
         <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-beach')">
           <div class="jogos-acc-titulo">
-            <span class="jogos-acc-emoji">🏖️</span> Beach Soccer
+            <span class="jogos-acc-emoji" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M2 16q3-3 6 0t6 0 8 0M2 21q3-3 6 0t6 0 8 0"/></svg></span> Beach Soccer
           </div>
           <div class="jogos-acc-meta">
             <span class="jogos-acc-badge">13 jogos</span>
@@ -391,7 +405,7 @@
       <div class="jogos-acc-item">
         <button class="jogos-acc-header" aria-expanded="false" onclick="toggleAcc(this,'acc-feminino')">
           <div class="jogos-acc-titulo">
-            <span class="jogos-acc-emoji">👩</span> Feminino
+            <span class="jogos-acc-emoji" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M12 15v7m-4-3h8M9 8l3-2 3 2-1 4h-4z"/></svg></span> Feminino
           </div>
           <div class="jogos-acc-meta">
             <span class="jogos-acc-badge">12 jogos</span>
