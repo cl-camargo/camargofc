@@ -12331,11 +12331,18 @@ window.CAMARGO_STATS = {
     {
       "ano": 2024,
       "jogador": "IAGO",
-      "golsSofridos": 4,
-      "jogosNoGol": 1,
-      "minutos": 90,
+      "golsSofridos": 7,
+      "jogosNoGol": 3,
+      "minutos": 130,
       "tempos": null,
-      "media": 4
+      "media": 2.3333333333333335,
+      "jogosPorModalidade": {
+        "campo": 1,
+        "society": 2,
+        "futsal": 0,
+        "junior": 0,
+        "areia": 0
+      }
     },
     {
       "ano": 2025,
