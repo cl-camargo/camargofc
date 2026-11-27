@@ -1631,7 +1631,7 @@ window.CAMARGO_STATS = {
     {
       "jogador": "IAGO",
       "society": {
-        "jogos": 2,
+        "jogos": 4,
         "gols": 0
       },
       "junior": {
@@ -1651,7 +1651,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 7,
+        "jogos": 9,
         "gols": 0
       }
     },
@@ -9855,7 +9855,7 @@ window.CAMARGO_STATS = {
       "ano": 2024,
       "jogador": "IAGO",
       "society": {
-        "jogos": 0,
+        "jogos": 2,
         "gols": 0
       },
       "junior": {
@@ -9875,7 +9875,7 @@ window.CAMARGO_STATS = {
         "gols": 0
       },
       "total": {
-        "jogos": 1,
+        "jogos": 3,
         "gols": 0
       }
     },
