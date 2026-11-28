@@ -2,16 +2,20 @@
   var placeholder = document.getElementById('site-menu');
   if (!placeholder) return;
 
-  // Menu embutido no HTML: funciona sem fetch e permanece acessível sem JavaScript.
-  if (placeholder.querySelector('nav')) {
-    ativarMenu();
-  } else {
-    // Compatibilidade com páginas antigas ainda não atualizadas.
-    fetch('menu.html?v=20261128-crest')
-      .then(function (resp) { if (!resp.ok) throw new Error('HTTP ' + resp.status); return resp.text(); })
-      .then(function (html) { placeholder.innerHTML = html; ativarMenu(); })
-      .catch(function (err) { console.error('Não foi possível carregar menu.html:', err); });
-  }
+  // menu.html é a fonte única; HTML embutido serve apenas como contingência.
+  fetch('menu.html', {cache: 'no-cache'})
+    .then(function (resp) { if (!resp.ok) throw new Error('HTTP ' + resp.status); return resp.text(); })
+    .then(function (html) {
+      var temp = document.createElement('template');
+      temp.innerHTML = html;
+      if (!temp.content.querySelector('nav') || !temp.content.querySelector('#navDrawer')) throw new Error('Menu inválido');
+      placeholder.innerHTML = html;
+      ativarMenu();
+    })
+    .catch(function (err) {
+      console.error('Não foi possível carregar menu.html:', err);
+      if (placeholder.querySelector('nav')) ativarMenu();
+    });
 
   function ativarMenu() {
     var nav = placeholder.querySelector('nav');
