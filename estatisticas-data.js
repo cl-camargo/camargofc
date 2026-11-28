@@ -198,7 +198,7 @@ window.CAMARGO_STATS = {
       }
     },
     {
-      "jogador": "ANDRE NUNES (PUGMIL)",
+      "jogador": "ANDRE NUNES",
       "society": {
         "jogos": 0,
         "gols": 0
@@ -11169,7 +11169,7 @@ window.CAMARGO_STATS = {
     },
     {
       "ano": 2026,
-      "jogador": "ANDRE NUNES (PUGMIL)",
+      "jogador": "ANDRE NUNES",
       "society": {
         "jogos": 0,
         "gols": 0

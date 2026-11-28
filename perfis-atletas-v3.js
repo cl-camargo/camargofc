@@ -14,7 +14,7 @@ dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close();});
 function cell(label,value){var x=document.createElement("div");x.className="cfc-player-stat";var v=document.createElement("strong");v.textContent=value;var t=document.createElement("span");t.textContent=label;x.append(v,t);return x;}
 cards.forEach(card=>{
 var name=card.querySelector(".jogador-nome")?.textContent?.trim();if(!name)return;
-var aliases={"LEOMAR":"LEOMAR LOIOLA","EDUARDO N":"EDUARDO NASCIMENTO","EDUARDO":"EDUARDO NASCIMENTO","GUILHERME":"GUILHERME FERREIRA","NEIVA JUNIOR":"JUNIOR NEIVA","VICTOR SOARES":"VICTOR SOARES GOL","JOAO MARCAL":"JOAO PEDRO MARCAL","JOAO P MARCAL":"JOAO PEDRO MARCAL","ANDRE":"ANDRE NUNES PUGMIL","ANDRE NUNES":"ANDRE NUNES PUGMIL","CARLOS HENRIQUE":"CARLOS HENRIQUE ROCHA"};
+var aliases={"LEOMAR":"LEOMAR LOIOLA","EDUARDO N":"EDUARDO NASCIMENTO","EDUARDO":"EDUARDO NASCIMENTO","GUILHERME":"GUILHERME FERREIRA","NEIVA JUNIOR":"JUNIOR NEIVA","VICTOR SOARES":"VICTOR SOARES GOL","JOAO MARCAL":"JOAO PEDRO MARCAL","JOAO P MARCAL":"JOAO PEDRO MARCAL","ANDRE":"ANDRE NUNES","ANDRE NUNES":"ANDRE NUNES","CARLOS HENRIQUE":"CARLOS HENRIQUE ROCHA"};
 var canonical=aliases[norm(name)]||norm(name);
 var matches=totals.filter(x=>norm(x.jogador)===canonical);
 card.setAttribute("tabindex","0");card.setAttribute("role","button");card.setAttribute("aria-label","Abrir ficha de "+name);
